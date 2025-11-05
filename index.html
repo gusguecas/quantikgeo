@@ -1,0 +1,2578 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">QuantikGeo - Tecnología MFT™ para Prospección Minera</title>
+    <meta name="description" content="QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un 94%, detección hasta 9.8km de profundidad." data-translate="page.description">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Nueva paleta más vibrante pero elegante */
+            --primary-bg: #0a0e1a;
+            --secondary-bg: #1a1d29;
+            --accent-bg: #2a2d3a;
+            --text-primary: #ffffff;
+            --text-secondary: #a8b2d1;
+            --electric-blue: #00d4ff;
+            --electric-purple: #8b5cf6;
+            --vibrant-green: #10b981;
+            --border-color: #3d4663;
+            --hover-color: #4c5270;
+            
+            /* Gradientes dinámicos */
+            --bg-gradient: linear-gradient(135deg, #0a0e1a 0%, #1a1d29 50%, #2a2d3a 100%);
+            --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+            --green-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        /* Efectos de partículas sutiles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: rgba(10, 14, 26, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-circle {
+            width: 90px;
+            height: 90px;
+            background: rgba(248, 250, 252, 0.05);
+            border: 2px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .brand-info h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .brand-tagline {
+            font-size: 0.9rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-link:hover {
+            background: var(--hover-navy);
+            border-color: var(--vibrant-green);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Header Right Section */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(248, 250, 252, 0.08);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--border-gray);
+            backdrop-filter: blur(15px);
+        }
+        
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 18px;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .lang-btn:hover {
+            background: rgba(248, 250, 252, 0.05);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+        
+        .lang-btn.active {
+            background: var(--vibrant-green);
+            color: var(--text-primary);
+            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        }
+        
+        .lang-btn .flag {
+            font-size: 1rem;
+        }
+        
+        .lang-btn .lang-text {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 120px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 40px;
+            background: var(--secondary-navy);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 12px 24px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gradient-text {
+            background: var(--vibrant-green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tech-highlight {
+            color: var(--vibrant-green);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 25px;
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            backdrop-filter: blur(20px);
+            min-width: 160px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px);
+            background: rgba(248, 250, 252, 0.08);
+            border-color: var(--vibrant-green);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--vibrant-green);
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        .section {
+            min-height: 100vh;
+            padding: 120px 0 80px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            width: 100%;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(5, 150, 105, 0.1);
+            border: 1px solid var(--vibrant-green);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: var(--vibrant-green);
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-description {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, rgba(42, 45, 58, 0.8), rgba(26, 29, 41, 0.6));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(139, 92, 246, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: var(--electric-blue);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 212, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        .card-icon {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 2px solid transparent;
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            background-image: 
+                linear-gradient(rgba(42, 45, 58, 0.9), rgba(26, 29, 41, 0.8)),
+                var(--accent-gradient);
+            position: relative;
+        }
+        
+        /* Corner Checkmark Styles */
+        .card-with-corner-check {
+            position: relative;
+        }
+        
+        .corner-checkmark {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .corner-checkmark svg {
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .card-with-corner-check:hover .corner-checkmark {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .card-with-corner-check:hover .corner-checkmark svg {
+            filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.5));
+        }
+        
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+        
+        .card-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        /* Nosotros Section Styles */
+        .nosotros-section {
+            background: var(--secondary-navy);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .services-showcase {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 50px;
+            backdrop-filter: blur(20px);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--vibrant-green);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .service-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Technology Section */
+        .technology-section {
+            background: var(--secondary-navy);
+        }
+        
+        .tech-content {
+            margin-bottom: 60px;
+        }
+        
+        .tech-principles {
+            margin-bottom: 80px;
+        }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .principle-card {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            text-align: left;
+        }
+        
+        .principle-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .principle-title {
+            font-size: 1.3rem;
+            color: var(--vibrant-green);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .principle-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Process Timeline */
+        .process-timeline {
+            margin: 80px 0;
+        }
+        
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .phase-card {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .phase-number {
+            width: 40px;
+            height: 40px;
+            background: var(--vibrant-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .phase-title {
+            color: var(--vibrant-green);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .phase-subtitle {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .phase-text {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--secondary-navy);
+        }
+        
+        .contact-content {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 60px;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-icon {
+            font-size: 4rem;
+            color: var(--vibrant-green);
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+        
+        .contact-email {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .email-highlight {
+            color: var(--vibrant-green);
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Contact Form Styles */
+        .contact-info-section .contact-card {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 25px;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-section .contact-card:hover {
+            background: rgba(248, 250, 252, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-info-section .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--vibrant-green);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-form-section {
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 15px;
+            background: rgba(248, 250, 252, 0.05);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--vibrant-green);
+            background: rgba(248, 250, 252, 0.08);
+            box-shadow: 0 0 20px rgba(5, 150, 105, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(248, 250, 252, 0.6);
+        }
+        
+        .form-group select option {
+            background: var(--secondary-navy);
+            color: var(--text-primary);
+        }
+        
+        .submit-btn {
+            background: var(--vibrant-green);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.4);
+            background: #047857;
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .btn-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .submit-btn:hover .btn-icon {
+            transform: translateX(5px);
+        }
+        
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+        
+        /* Responsive - Header ULTRA COMPACTO para móvil */
+        @media (max-width: 768px) {
+            .header {
+                padding: 5px 0 !important; /* DRASTICAMENTE reducido */
+                min-height: auto;
+            }
+            
+            .header-content {
+                flex-direction: row !important; /* Cambiar a fila en lugar de columna */
+                gap: 8px;
+                padding: 0 15px;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            /* Logo MINI */
+            .logo-section {
+                gap: 8px;
+                flex-shrink: 0;
+            }
+            
+            .logo-circle {
+                width: 40px !important; /* MUY pequeño */
+                height: 40px !important;
+            }
+            
+            .brand-info h1 {
+                font-size: 1.1rem !important;
+                margin: 0;
+                line-height: 1.2;
+            }
+            
+            .brand-tagline {
+                font-size: 0.65rem !important;
+                margin: 0;
+            }
+            
+            /* Menú horizontal compacto */
+            .header-right {
+                flex-direction: row !important;
+                gap: 8px;
+                align-items: center;
+            }
+            
+            .nav-menu {
+                display: none !important; /* Ocultar navegación principal en móvil */
+            }
+            
+            /* Solo mostrar selector de idioma */
+            .language-switcher {
+                order: 0;
+                margin: 0;
+            }
+            
+            .lang-btn {
+                padding: 4px 6px;
+                font-size: 0.65rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .cards-grid, .about-grid, .principles-grid, .timeline-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section-container {
+                padding: 0 20px;
+            }
+            
+            .services-showcase {
+                padding: 30px 20px;
+            }
+            
+            .contact-content {
+                padding: 40px 20px;
+            }
+            
+            .header-right {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            .language-switcher {
+                order: -1;
+                margin-bottom: 10px;
+            }
+            
+            .lang-btn {
+                padding: 6px 10px;
+                font-size: 0.75rem;
+            }
+            
+            .lang-btn .flag {
+                font-size: 0.9rem;
+            }
+            
+            .lang-btn .lang-text {
+                font-size: 0.7rem;
+            }
+            
+            /* Notificaciones en móvil */
+            .notification {
+                right: 15px !important;
+                left: 15px !important;
+                max-width: none !important;
+                transform: translateY(-100px) !important;
+            }
+            
+            .notification.show {
+                transform: translateY(0) !important;
+            }
+        }
+        
+        /* Agregar menú hamburguesa solo para móvil */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+        
+        /* Pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .logo-circle {
+                width: 35px !important;
+                height: 35px !important;
+            }
+            
+            .brand-info h1 {
+                font-size: 1rem !important;
+            }
+            
+            .brand-tagline {
+                font-size: 0.6rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/3d5f786c2e6931db7a4d154bcc474d46" alt="QuantikGeo Logo" />
+                </div>
+                <div class="brand-info">
+                    <h1>QuantikGeo</h1>
+                    <p class="brand-tagline" data-translate="header.tagline">Tecnología MFT™</p>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <nav class="nav-menu">
+                    <a href="#inicio" class="nav-link" data-translate="nav.inicio">Inicio</a>
+                    <a href="#nosotros" class="nav-link" data-translate="nav.nosotros">Nosotros</a>
+                    <a href="#tecnologia" class="nav-link" data-translate="nav.tecnologia">Tecnología MFT</a>
+                    <a href="#ventajas" class="nav-link" data-translate="nav.ventajas">Ventajas</a>
+                    <a href="#contacto" class="nav-link" data-translate="nav.contacto">Contacto</a>
+                </nav>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="es" title="Español">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en" title="English">
+                        <span class="flag">🇺🇸</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                
+                <!-- Botón menú móvil -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    ≡
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge" data-translate="hero.badge">
+                    Distribuidor Autorizado CTAC
+                </div>
+                
+                <h1 class="hero-title" data-translate="hero.title">
+                    Revoluciona la
+                    <span class="gradient-text">Prospección Minera</span>
+                    con Tecnología
+                    <span class="tech-highlight">MFT™</span>
+                </h1>
+                
+                <p class="hero-description" data-translate="hero.description">
+                    Tecnología de prospección remota que identifica depósitos minerales a través de 
+                    frecuencias de electroresonancia magnética con 
+                    <strong>precisión excepcional</strong> y alcance de gran profundidad.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">Hasta un 94%</div>
+                        <div class="stat-label" data-translate="hero.stats.precision">PRECISION</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">9.8km</div>
+                        <div class="stat-label" data-translate="hero.stats.depth">Profundidad</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">MFT™</div>
+                        <div class="stat-label" data-translate="hero.stats.technology">Tecnología</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros Section -->
+        <section id="nosotros" class="section nosotros-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-badge" data-translate="nosotros.badge">
+                        Quiénes Somos
+                    </div>
+                    <h2 class="section-title" data-translate="nosotros.title">QuantikGeo</h2>
+                    <p class="section-description" data-translate="nosotros.description">Distribuidor Autorizado de CTAC</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="nosotros.mission.title">Nuestra Misión</h3>
+                        <p class="card-text" data-translate="nosotros.mission.text">
+                            Revolucionar la industria minera mediante la implementación de tecnología MFT™, 
+                            proporcionando soluciones de prospección remota con precisión excepcional y 
+                            sostenibilidad ambiental.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="nosotros.partnership.title">Partnership CTAC</h3>
+                        <p class="card-text" data-translate="nosotros.partnership.text">
+                            Como distribuidor autorizado de CTAC, ofrecemos acceso a la
+                            tecnología MFT™, que es la más avanzada del mercado.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Nueva sección: Tecnología y Mercado Objetivo -->
+                <div class="tech-market-section" style="margin: 60px 0; padding: 50px 0; background: rgba(5, 150, 105, 0.05); border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(5, 150, 105, 0.2);">
+                    <div class="tech-market-content" style="max-width: 1000px; margin: 0 auto; padding: 0 40px;">
+                        <div class="tech-market-header" style="text-align: center; margin-bottom: 50px;">
+                            <div class="section-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.1); color: var(--vibrant-green); padding: 12px 24px; border-radius: 8px; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(5, 150, 105, 0.3);" data-translate="nosotros.tech.badge">
+                                Nuestra Tecnología
+                            </div>
+                            <h3 style="font-size: 2.5rem; color: var(--text-primary); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.tech.title">Tecnología MFT™ Revolucionaria</h3>
+                        </div>
+                        
+                        <div class="tech-market-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                            <!-- Descripción de la Tecnología -->
+                            <div class="tech-description" style="background: rgba(248, 250, 252, 0.05); padding: 40px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
+                                <div class="tech-icon" style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);">
+                                    <div style="color: white; font-weight: 700;">TECH</div>
+                                </div>
+                                <h4 style="font-size: 1.8rem; color: var(--vibrant-green); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.tech.identification.title">Identificación Precisa</h4>
+                                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;" data-translate="nosotros.tech.identification.text">
+                                    Nuestra tecnología <strong>MFT™ (Mineral Finder Technology)</strong> identifica anomalías electromagnéticas originadas por depósitos minerales a través de su <strong>firma espectral única</strong>, utilizando frecuencias de electroresonancia magnética.
+                                </p>
+                                <div class="tech-highlight" style="background: rgba(5, 150, 105, 0.1); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--vibrant-green);">
+                                    <p style="color: var(--text-primary); font-size: 0.95rem; margin: 0; font-weight: 500;" data-translate="nosotros.tech.precision">
+                                        <strong>Precisión excepcional:</strong> Hasta un 94% de exactitud en detección mineral
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Mercado Objetivo -->
+                            <div class="market-description" style="background: rgba(248, 250, 252, 0.05); padding: 40px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
+                                <div class="market-icon" style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);">
+                                    <div style="color: white; font-weight: 700;">CLIENT</div>
+                                </div>
+                                <h4 style="font-size: 1.8rem; color: var(--vibrant-green); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.clients.title">Nuestros Clientes</h4>
+                                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;" data-translate="nosotros.clients.text">
+                                    Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>, ofreciendo la tecnología más avanzada del mercado.
+                                </p>
+                                
+                                <div class="client-types" style="display: flex; flex-direction: column; gap: 12px;">
+                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
+                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">CORP</span>
+                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.corporate">Empresas Mineras Corporativas</span>
+                                    </div>
+                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
+                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">EXPL</span>
+                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.exploration">Compañías de Exploración</span>
+                                    </div>
+                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
+                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">IND</span>
+                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.individual">Concesionarios Individuales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnología Section -->
+        <section id="tecnologia" class="section technology-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-badge" data-translate="tecnologia.badge">
+                        Tecnología Avanzada
+                    </div>
+                    <h2 class="section-title" data-translate="tecnologia.title">Tecnología MFT™</h2>
+                    <p class="section-description" data-translate="tecnologia.description">Mineral Finder Technology - Prospección Multiespectral Avanzada</p>
+                </div>
+                
+                <div class="tech-principles">
+                    <h3 style="font-size: 2.5rem; color: var(--text-primary); text-align: center; margin-bottom: 60px; font-weight: bold;" data-translate="tecnologia.how.title">Cómo Funciona MFT™</h3>
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <h4 class="principle-title" data-translate="tecnologia.electromagnetic.title">Principio Electromagnético</h4>
+                            <p class="principle-text" data-translate="tecnologia.electromagnetic.text">
+                                La acumulación de material en el subsuelo produce la polarización de las rocas adyacentes, alterando los campos electromagnéticos cuasi estacionarios de la Tierra, identificándose como anomalías electromagnéticas.
+                            </p>
+                        </div>
+                        <div class="principle-card">
+                            <h4 class="principle-title" data-translate="tecnologia.spectral.title">Firma Espectral</h4>
+                            <p class="principle-text" data-translate="tecnologia.spectral.text">
+                                Todos los materiales de la naturaleza tienen su propia frecuencia de resonancia. En MFT™ se utilizan frecuencias de electroresonancia magnética para caracterizar los materiales mediante análisis espectral de laboratorio.
+                            </p>
+                        </div>
+                        <div class="principle-card">
+                            <h4 class="principle-title" data-translate="tecnologia.multispectral.title">Prospección Multiespectral</h4>
+                            <p class="principle-text" data-translate="tecnologia.multispectral.text">
+                                Tecnología satelital avanzada para identificar anomalías electromagnéticas y crear mapas de mineralización con precisión excepcional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-timeline">
+                    <h3 style="font-size: 2.5rem; color: var(--vibrant-green); text-align: center; margin-bottom: 40px; font-weight: bold;" data-translate="tecnologia.process.title">Proceso MFT™ - 4 Fases Técnicas</h3>
+                    <div class="timeline-grid">
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <div class="phase-number">1</div>
+                                <h4 class="phase-title" data-translate="tecnologia.phase1.title">Análisis Espectral</h4>
+                            </div>
+                            <h5 class="phase-subtitle" data-translate="tecnologia.phase1.subtitle">Espectrografía Satelital de Electroresonancia</h5>
+                            <p class="phase-text" data-translate="tecnologia.phase1.text">
+                                Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.
+                            </p>
+                        </div>
+                        
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <div class="phase-number">2</div>
+                                <h4 class="phase-title" data-translate="tecnologia.phase2.title">Detección Electromagnética</h4>
+                            </div>
+                            <h5 class="phase-subtitle" data-translate="tecnologia.phase2.subtitle">Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)</h5>
+                            <p class="phase-text" data-translate="tecnologia.phase2.text">
+                                Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.
+                            </p>
+                        </div>
+                        
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <div class="phase-number">3</div>
+                                <h4 class="phase-title" data-translate="tecnologia.phase3.title">Procesamiento de Datos</h4>
+                            </div>
+                            <h5 class="phase-subtitle" data-translate="tecnologia.phase3.subtitle">Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)</h5>
+                            <p class="phase-text" data-translate="tecnologia.phase3.text">
+                                Análisis computacional avanzado utilizando algoritmos especializados para determinar composición mineral, concentración y viabilidad económica de extracción.
+                            </p>
+                        </div>
+                        
+                        <div class="phase-card">
+                            <div class="phase-header">
+                                <div class="phase-number">4</div>
+                                <h4 class="phase-title" data-translate="tecnologia.phase4.title">Reporte Técnico Especializado</h4>
+                            </div>
+                            <h5 class="phase-subtitle" data-translate="tecnologia.phase4.subtitle">Soporte Continuo y Monitoreo Operativo</h5>
+                            <p class="phase-text" data-translate="tecnologia.phase4.text">
+                                Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aplicaciones de la Tecnología MFT™ -->
+                <div class="applications-section" style="margin-top: 80px;">
+                    <div class="applications-header" style="text-align: center; margin-bottom: 60px;">
+                        <h3 style="font-size: 2.5rem; color: var(--vibrant-green); margin-bottom: 15px; font-weight: bold;" data-translate="tecnologia.applications.title">Aplicaciones de la Tecnología</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;" data-translate="tecnologia.applications.subtitle">Casos de uso específicos para maximizar el potencial MFT™</p>
+                    </div>
+                    
+                    <div class="applications-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                        
+                        <!-- Exploración -->
+                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid var(--vibrant-green);">
+                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
+                                <div class="category-icon" style="width: 60px; height: 60px; background: var(--vibrant-green); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);">
+                                    EXPLOR
+                                </div>
+                                <h4 style="color: var(--vibrant-green); font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.exploration.title">EXPLORACIÓN</h4>
+                            </div>
+                            
+                            <div class="application-item" style="margin-bottom: 30px; padding: 25px; background: rgba(5, 150, 105, 0.1); border-radius: 12px; border: 1px solid rgba(5, 150, 105, 0.2);">
+                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.greenfields.title">Green Fields o Áreas Exploratorias</h5>
+                                <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.greenfields.text">
+                                    La <strong>MFT™</strong> es el punto de partida de la exploración de áreas no estudiadas previamente. 
+                                    Al realizar la espectrografía se visualizan los prospectos presentes en el área, descartando las zonas 
+                                    donde no se evidencia la presencia de minerales.
+                                </p>
+                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                    Identificación inicial de prospectos
+                                </div>
+                            </div>
+                            
+                            <div class="application-item" style="padding: 25px; background: rgba(5, 150, 105, 0.1); border-radius: 12px; border: 1px solid rgba(5, 150, 105, 0.2);">
+                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.reinterpretation.title">Reinterpretación de Data</h5>
+                                <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.reinterpretation.text">
+                                    En aquellas áreas donde ya se han realizado estudios con las herramientas tradicionales, pero hay 
+                                    incertidumbre en cuanto a las zonas para las cuales la interpretación de data puede complicarse. 
+                                    La <strong>MFT™</strong> en estos casos es de suma ayuda para dilucidar la presencia del material buscado.
+                                </p>
+                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                    <span data-translate="tecnologia.applications.exploration.reinterpretation.badge">Clarificación de estudios previos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Producción -->
+                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid #f59e0b;">
+                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
+                                <div class="category-icon" style="width: 60px; height: 60px; background: #f59e0b; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);">
+                                    PROD
+                                </div>
+                                <h4 style="color: #f59e0b; font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.production.title">PRODUCCIÓN</h4>
+                            </div>
+                            
+                            <div class="application-item" style="padding: 25px; background: rgba(245, 158, 11, 0.1); border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.2);">
+                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.production.existing.title">Minas Existentes</h5>
+                                <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.production.existing.text">
+                                    En las minas ya desarrolladas, donde se requiere reingeniería para ubicar las zonas de acumulación 
+                                    del mineral que aún no han sido ubicadas e igualmente verificar la existencia del mineral en las 
+                                    estructuras conocidas para la optimización del recobro de los depósitos.
+                                </p>
+                                <div class="application-badge" style="display: inline-block; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                    <span data-translate="tecnologia.applications.production.existing.badge">Optimización de recobro mineral</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Perforación -->
+                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid #8b5cf6;">
+                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
+                                <div class="category-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);">
+                                    DRILL
+                                </div>
+                                <h4 style="color: #8b5cf6; font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.drilling.title">PERFORACIÓN</h4>
+                            </div>
+                            
+                            <div class="application-item" style="padding: 25px; background: rgba(139, 92, 246, 0.1); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.2);">
+                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.drilling.virtual.title">Perforación Virtual</h5>
+                                <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.drilling.virtual.text">
+                                    Un estudio de verificación con la <strong>MFT™</strong> permitirá pronosticar las capas polarizadas presentes, 
+                                    sus profundidades, espesores aproximados y las coordenadas de fondo a donde dirigir la perforación.
+                                </p>
+                                <div class="application-badge" style="display: inline-block; background: rgba(139, 92, 246, 0.2); color: #8b5cf6; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                    <span data-translate="tecnologia.applications.drilling.virtual.badge">Guía de perforación dirigida</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estadísticas de aplicaciones -->
+                    <div class="applications-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
+                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
+                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--vibrant-green); font-weight: 700;">GREEN</div>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.greenfields.title">Green Fields</h4>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.greenfields.text">Exploración inicial de áreas vírgenes</p>
+                        </div>
+                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
+                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #f59e0b; font-weight: 700;">REING</div>
+                            <h4 style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.reengineering.title">Reingeniería</h4>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.reengineering.text">Optimización de minas existentes</p>
+                        </div>
+                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
+                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #8b5cf6; font-weight: 700;">PERFORA</div>
+                            <h4 style="color: #8b5cf6; font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.drilling.title">Perforación</h4>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.drilling.text">Guía virtual para perforación dirigida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ventajas Section -->
+        <section id="ventajas" class="section" style="background: var(--secondary-navy);">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-badge" data-translate="ventajas.badge">
+                        Ventajas Competitivas
+                    </div>
+                    <h2 class="section-title" data-translate="ventajas.title">Ventajas de MFT™</h2>
+                    <p class="section-description" data-translate="ventajas.description">Superioridad comprobada frente a métodos tradicionales de prospección minera.</p>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.precision.title">Precisión Superior</h3>
+                        <p class="card-text" data-translate="ventajas.precision.text">
+                            Hasta un 94% de precisión, versus métodos tradicionales con resultados variables y menor confiabilidad técnica.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.efficiency.title">Eficiencia Temporal</h3>
+                        <p class="card-text" data-translate="ventajas.efficiency.text">
+                            Hasta 80% más rápido que métodos convencionales. Resultados en 30-60 días versus años de exploración tradicional.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.cost.title">Reducción de Costos</h3>
+                        <p class="card-text" data-translate="ventajas.cost.text">
+                            Hasta un 80% menor costo operativo comparado con perforaciones exploratorias tradicionales de alto riesgo económico.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.passive.title">Tecnología Pasiva</h3>
+                        <p class="card-text" data-translate="ventajas.passive.text">
+                            No invasiva al medio ambiente, sin excavaciones preliminares, mínimo impacto ecológico y operación silenciosa.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.depth.title">Profundidad Excepcional</h3>
+                        <p class="card-text" data-translate="ventajas.depth.text">
+                            Detección remota hasta 9.8 km de profundidad usando frecuencias de electroresonancia magnética.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.support.title">Soporte Continuo</h3>
+                        <p class="card-text" data-translate="ventajas.support.text">
+                            Asistencia técnica especializada desde perforación hasta producción operativa.
+                        </p>
+                    </div>
+                    
+                    <div class="card card-with-corner-check">
+                        <div class="corner-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
+                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title" data-translate="ventajas.success.title">Alto Éxito</h3>
+                        <p class="card-text" data-translate="ventajas.success.text">
+                            Tasas de éxito hasta un 50% de tasa de éxito de descubrimiento.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Tabla Comparativa MFT™ vs Métodos Tradicionales -->
+                <div class="comparison-table-section" style="margin-top: 80px;">
+                    <div class="comparison-header" style="text-align: center; margin-bottom: 50px;">
+                        <h3 style="font-size: 2.5rem; color: var(--text-primary); margin-bottom: 15px; font-weight: bold;" data-translate="ventajas.comparison.title">MFT™ vs Métodos Tradicionales</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;" data-translate="ventajas.comparison.subtitle">Comparativa detallada de rendimiento</p>
+                    </div>
+                    
+                    <div class="comparison-table-container" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 0; backdrop-filter: blur(20px); overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+                        <div class="comparison-table">
+                            <!-- Header de la tabla -->
+                            <div class="table-header" style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6)); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <div class="header-cell" style="padding: 25px 30px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+                                    <h4 style="color: var(--text-primary); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.aspect">ASPECTO</h4>
+                                </div>
+                                <div class="header-cell" style="padding: 25px 30px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+                                    <h4 style="color: var(--text-primary); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.traditional">MÉTODOS TRADICIONALES</h4>
+                                </div>
+                                <div class="header-cell" style="padding: 25px 30px; text-align: center;">
+                                    <h4 style="color: var(--vibrant-green); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.mft">TECNOLOGÍA MFT™</h4>
+                                </div>
+                            </div>
+                            
+                            <!-- Fila 1: Tiempo de Exploración -->
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.time.aspect">Tiempo de Exploración</p>
+                                </div>
+                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.time.traditional">Años</p>
+                                </div>
+                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
+                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.time.mft">30-60 días (Hasta 80% más rápido)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Fila 2: Costo -->
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.cost.aspect">Costo</p>
+                                </div>
+                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.cost.traditional">Alto (perforaciones)</p>
+                                </div>
+                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
+                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.cost.mft">Hasta un 80% Menor</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Fila 3: Permisos Ambientales -->
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.permits.aspect">Permisos Ambientales</p>
+                                </div>
+                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.permits.traditional">Requeridos</p>
+                                </div>
+                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
+                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.permits.mft">No Invasiva (Pasiva)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Fila 4: Precisión -->
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.aspect">Precisión</p>
+                                </div>
+                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.precision.traditional">Variable</p>
+                                </div>
+                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
+                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.precision.mft">Hasta un 94%</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Fila 5: Tasa de Éxito -->
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; transition: all 0.3s ease;">
+                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.aspect">Tasa de Éxito</p>
+                                </div>
+                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.success.traditional">20% - 30%</p>
+                                </div>
+                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
+                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.success.mft">Hasta un 50%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span data-translate="contacto.badge">Conexión Directa</span>
+                    </div>
+                    <h2 class="section-title" data-translate="contacto.tech.title">Contacto</h2>
+                    <p class="section-description" data-translate="contacto.tech.description">Conecta con el futuro de la prospección minera MFT™</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                    <!-- Información de Contacto -->
+                    <div class="contact-info-section">
+                        <h3 style="font-size: 2rem; color: var(--vibrant-green); margin-bottom: 30px; font-weight: bold;" data-translate="contacto.info.title">Información de Contacto</h3>
+                        
+                        <div class="contact-card" style="margin-bottom: 30px;">
+                            <div class="contact-icon" data-translate="contacto.icon.email">EMAIL</div>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.email.title">Email Principal</h4>
+                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7dcf3c2c6d2ddc7dad8d4d6dc9dd0dcde">[email&#160;protected]</a></p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.email.subtitle">Distribuidor autorizado MFT™</p>
+                        </div>
+                        
+                        <div class="contact-card" style="margin-bottom: 30px;">
+                            <div class="contact-icon" data-translate="contacto.icon.time">TIEMPO</div>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.response.title">Respuesta Rápida</h4>
+                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;" data-translate="contacto.info.response.time">< 24 horas</p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.response.subtitle">Tiempo promedio de respuesta</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon" data-translate="contacto.icon.support">SOPORTE</div>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.support.title">Soporte Técnico</h4>
+                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;" data-translate="contacto.info.support.availability">Disponible</p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.support.subtitle">Asistencia especializada MFT™</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-section">
+                        <h3 style="font-size: 2rem; color: var(--vibrant-green); margin-bottom: 30px; font-weight: bold;" data-translate="contacto.form.title">Solicita Información</h3>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="nombre" data-translate="contacto.form.name">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" data-translate="contacto.form.email">Email Corporativo *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="empresa" data-translate="contacto.form.company">Empresa / Organización</label>
+                                <input type="text" id="empresa" name="empresa">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono" data-translate="contacto.form.phone">Teléfono de Contacto</label>
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interes" data-translate="contacto.form.interest">Área de Interés</label>
+                                <select id="interes" name="interes">
+                                    <option value="" data-translate="contacto.form.interest.select">Selecciona una opción</option>
+                                    <option value="equipos" data-translate="contacto.form.interest.equipment">Equipos MFT™</option>
+                                    <option value="capacitacion" data-translate="contacto.form.interest.training">Capacitación Técnica</option>
+                                    <option value="consultoria" data-translate="contacto.form.interest.consulting">Consultoría Especializada</option>
+                                    <option value="soporte" data-translate="contacto.form.interest.support">Soporte Técnico</option>
+                                    <option value="partnership" data-translate="contacto.form.interest.partnership">Partnership Comercial</option>
+                                    <option value="otro" data-translate="contacto.form.interest.other">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje" data-translate="contacto.form.message">Mensaje / Consulta *</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required data-translate-placeholder="contacto.form.message.placeholder" placeholder="Describe tu consulta sobre tecnología MFT™..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span data-translate="contacto.form.submit.text">Enviar Consulta</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                            
+                            <p class="form-note">
+                                <span data-translate="contacto.form.note">* Campos requeridos. Tu información será tratada de forma confidencial.</span>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // 🌍 SISTEMA MULTIIDIOMA
+        const translations = {
+            es: {
+                // Page
+                'page.title': 'QuantikGeo - Tecnología MFT™ para Prospección Minera',
+                'page.description': 'QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un 94%, detección hasta 9.8km de profundidad.',
+                
+                // Header
+                'header.tagline': 'Tecnología MFT™',
+                
+                // Navigation
+                'nav.inicio': 'Inicio',
+                'nav.nosotros': 'Nosotros',
+                'nav.tecnologia': 'Tecnología MFT',
+                'nav.ventajas': 'Ventajas',
+                'nav.contacto': 'Contacto',
+                
+                // Hero Section
+                'hero.badge': 'Distribuidor Autorizado CTAC',
+                'hero.title': 'Revoluciona la <span class="gradient-text">Prospección Minera</span> con Tecnología <span class="tech-highlight">MFT™</span>',
+                'hero.description': 'Tecnología de prospección remota que identifica depósitos minerales a través de frecuencias de electroresonancia magnética con <strong>precisión excepcional</strong> y alcance de gran profundidad.',
+                'hero.stats.precision': 'Precisión',
+                'hero.stats.depth': 'Profundidad',
+                'hero.stats.technology': 'Tecnología',
+                
+                // Nosotros Section
+                'nosotros.badge': 'Quiénes Somos',
+                'nosotros.title': 'QuantikGeo',
+                'nosotros.description': 'Distribuidor Autorizado de CTAC',
+                'nosotros.mission.title': 'Nuestra Misión',
+                'nosotros.mission.text': 'Revolucionar la industria minera mediante la implementación de tecnología MFT™, proporcionando soluciones de prospección remota con precisión excepcional y sostenibilidad ambiental.',
+                'nosotros.partnership.title': 'Partnership CTAC',
+                'nosotros.partnership.text': 'Como distribuidor autorizado de CTAC, ofrecemos acceso a la tecnología MFT™, que es la más avanzada del mercado.',
+                'nosotros.tech.badge': 'Nuestra Tecnología',
+                'nosotros.tech.title': 'Tecnología MFT™ Revolucionaria',
+                'nosotros.tech.identification.title': 'Identificación Precisa',
+                'nosotros.tech.identification.text': 'Nuestra tecnología <strong>MFT™ (Mineral Finder Technology)</strong> identifica anomalías electromagnéticas originadas por depósitos minerales a través de su <strong>firma espectral única</strong>, utilizando frecuencias de electroresonancia magnética.',
+                'nosotros.tech.precision': '<strong>Precisión excepcional:</strong> Hasta un 94% de exactitud en detección mineral',
+                'nosotros.clients.title': 'Nuestros Clientes',
+                'nosotros.clients.text': 'Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>, ofreciendo la tecnología más avanzada del mercado.',
+                'nosotros.clients.corporate': 'Empresas Mineras Corporativas',
+                'nosotros.clients.exploration': 'Compañías de Exploración',
+                'nosotros.clients.individual': 'Concesionarios Individuales',
+                
+                // Tecnología Section
+                'tecnologia.badge': 'Tecnología Avanzada',
+                'tecnologia.title': 'Tecnología MFT™',
+                'tecnologia.description': 'Mineral Finder Technology - Prospección Multiespectral Avanzada',
+                'tecnologia.how.title': 'Cómo Funciona MFT™',
+                'tecnologia.electromagnetic.title': 'Principio Electromagnético',
+                'tecnologia.electromagnetic.text': 'La acumulación de material en el subsuelo produce la polarización de las rocas adyacentes, alterando los campos electromagnéticos cuasi estacionarios de la Tierra, identificándose como anomalías electromagnéticas.',
+                'tecnologia.spectral.title': 'Firma Espectral',
+                'tecnologia.spectral.text': 'Todos los materiales de la naturaleza tienen su propia frecuencia de resonancia. En MFT™ se utilizan frecuencias de electroresonancia magnética para caracterizar los materiales mediante análisis espectral de laboratorio.',
+                'tecnologia.multispectral.title': 'Prospección Multiespectral',
+                'tecnologia.multispectral.text': 'Tecnología satelital avanzada para identificar anomalías electromagnéticas y crear mapas de mineralización con precisión excepcional.',
+                'tecnologia.process.title': 'Proceso MFT™ - 4 Fases Técnicas',
+                'tecnologia.phase1.title': 'Análisis Espectral',
+                'tecnologia.phase1.subtitle': 'Espectrografía Satelital de Electroresonancia',
+                'tecnologia.phase1.text': 'Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.',
+                'tecnologia.phase2.title': 'Detección Electromagnética',
+                'tecnologia.phase2.subtitle': 'Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)',
+                'tecnologia.phase2.text': 'Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.',
+                'tecnologia.phase3.title': 'Procesamiento de Datos',
+                'tecnologia.phase3.subtitle': 'Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)',
+                'tecnologia.phase3.text': 'Análisis computacional avanzado utilizando algoritmos especializados para determinar composición mineral, concentración y viabilidad económica de extracción.',
+                'tecnologia.phase4.title': 'Reporte Técnico Especializado',
+                'tecnologia.phase4.subtitle': 'Soporte Continuo y Monitoreo Operativo',
+                'tecnologia.phase4.text': 'Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.',
+                'tecnologia.phase1.specs': 'Análisis espectral de frecuencias de electroresonancia magnética • Identificación de firmas espectrales únicas • Caracterización precisa de materiales minerales',
+                'tecnologia.phase2.specs': 'Detección de anomalías electromagnéticas • Alcance hasta 9.8 km de profundidad • Tecnología avanzada de campo',
+                'tecnologia.phase3.specs': 'Análisis computacional avanzado • Algoritmos especializados de procesamiento • Determinación de composición y concentración mineral',
+                'tecnologia.phase4.specs': 'Informes técnicos detallados • Coordenadas GPS precisas • Estimaciones de reservas y análisis de viabilidad económica',
+                
+                // Aplicaciones Tecnológicas
+                'tecnologia.applications.title': 'Aplicaciones de la Tecnología',
+                'tecnologia.applications.subtitle': 'Casos de uso específicos para maximizar el potencial MFT™',
+                'tecnologia.applications.exploration.title': 'EXPLORACIÓN',
+                'tecnologia.applications.exploration.greenfields.title': 'Green Fields o Áreas Exploratorias',
+                'tecnologia.applications.exploration.greenfields.text': 'La <strong>MFT™</strong> es el punto de partida de la exploración de áreas no estudiadas previamente. Al realizar la espectrografía se visualizan los prospectos presentes en el área, descartando las zonas donde no se evidencia la presencia de minerales.',
+                'tecnologia.applications.exploration.reinterpretation.title': 'Reinterpretación de Data',
+                'tecnologia.applications.exploration.reinterpretation.text': 'En aquellas áreas donde ya se han realizado estudios con las herramientas tradicionales, pero hay incertidumbre en cuanto a las zonas para las cuales la interpretación de data puede complicarse. La <strong>MFT™</strong> en estos casos es de suma ayuda para dilucidar la presencia del material buscado.',
+                'tecnologia.applications.exploration.reinterpretation.badge': 'Clarificación de estudios previos',
+                'tecnologia.applications.production.title': 'PRODUCCIÓN',
+                'tecnologia.applications.production.existing.title': 'Minas Existentes',
+                'tecnologia.applications.production.existing.text': 'En las minas ya desarrolladas, donde se requiere reingeniería para ubicar las zonas de acumulación del mineral que aún no han sido ubicadas e igualmente verificar la existencia del mineral en las estructuras conocidas para la optimización del recobro de los depósitos.',
+                'tecnologia.applications.production.existing.badge': 'Optimización de recobro mineral',
+                'tecnologia.applications.drilling.title': 'PERFORACIÓN',
+                'tecnologia.applications.drilling.virtual.title': 'Perforación Virtual',
+                'tecnologia.applications.drilling.virtual.text': 'Un estudio de verificación con la <strong>MFT™</strong> permitirá pronosticar las capas polarizadas presentes, sus profundidades, espesores aproximados y las coordenadas de fondo a donde dirigir la perforación.',
+                'tecnologia.applications.drilling.virtual.badge': 'Guía de perforación dirigida',
+                'tecnologia.applications.stats.greenfields.title': 'Green Fields',
+                'tecnologia.applications.stats.greenfields.text': 'Exploración inicial de áreas vírgenes',
+                'tecnologia.applications.stats.reengineering.title': 'Reingeniería',
+                'tecnologia.applications.stats.reengineering.text': 'Optimización de minas existentes',
+                'tecnologia.applications.stats.drilling.title': 'Perforación',
+                'tecnologia.applications.stats.drilling.text': 'Guía virtual para perforación dirigida',
+                
+                // Ventajas Section
+                'ventajas.badge': 'Ventajas Competitivas',
+                'ventajas.title': 'Ventajas de MFT™',
+                'ventajas.description': 'Superioridad comprobada frente a métodos tradicionales de prospección minera.',
+                'ventajas.precision.title': 'Precisión Superior',
+                'ventajas.precision.text': 'Precisión hasta un 94% versus métodos tradicionales con resultados variables y menor confiabilidad técnica.',
+                'ventajas.efficiency.title': 'Eficiencia Temporal',
+                'ventajas.efficiency.text': 'Hasta 80% más rápido que métodos convencionales. Resultados en 30-60 días versus años de exploración tradicional.',
+                'ventajas.cost.title': 'Reducción de Costos',
+                'ventajas.cost.text': 'Hasta un 80% menor costo operativo comparado con perforaciones exploratorias tradicionales de alto riesgo económico.',
+                'ventajas.passive.title': 'Tecnología Pasiva',
+                'ventajas.passive.text': 'No invasiva al medio ambiente, sin excavaciones preliminares, mínimo impacto ecológico y operación silenciosa.',
+                'ventajas.depth.title': 'Profundidad Excepcional',
+                'ventajas.depth.text': 'Detección remota hasta 9.8 km de profundidad usando frecuencias de electroresonancia magnética.',
+                'ventajas.support.title': 'Soporte Continuo',
+                'ventajas.support.text': 'Asistencia técnica especializada desde perforación hasta producción operativa.',
+                'ventajas.success.title': 'Alto Éxito',
+                'ventajas.success.text': 'Tasas de éxito hasta un 50% de tasa de éxito de descubrimiento.',
+                
+                // Tabla Comparativa
+                'ventajas.comparison.title': 'MFT™ vs Métodos Tradicionales',
+                'ventajas.comparison.subtitle': 'Comparativa detallada de rendimiento',
+                'ventajas.comparison.header.aspect': 'ASPECTO',
+                'ventajas.comparison.header.traditional': 'MÉTODOS TRADICIONALES',
+                'ventajas.comparison.header.mft': 'TECNOLOGÍA MFT™',
+                'ventajas.comparison.time.aspect': 'Tiempo de Exploración',
+                'ventajas.comparison.time.traditional': 'Años',
+                'ventajas.comparison.time.mft': '30-60 días (Hasta 80% más rápido)',
+                'ventajas.comparison.cost.aspect': 'Costo',
+                'ventajas.comparison.cost.traditional': 'Alto (perforaciones)',
+                'ventajas.comparison.cost.mft': 'Hasta un 80% Menor',
+                'ventajas.comparison.permits.aspect': 'Permisos Ambientales',
+                'ventajas.comparison.permits.traditional': 'Requeridos',
+                'ventajas.comparison.permits.mft': 'No Invasiva (Pasiva)',
+                'ventajas.comparison.precision.aspect': 'Precisión',
+                'ventajas.comparison.precision.traditional': 'Variable',
+                'ventajas.comparison.precision.mft': 'Hasta un 94%',
+                'ventajas.comparison.success.aspect': 'Tasa de Éxito',
+                'ventajas.comparison.success.traditional': '20% - 30%',
+                'ventajas.comparison.success.mft': 'Hasta un 50%',
+                'ventajas.comparison.stats.faster.title': 'Hasta 80% Más Rápido',
+                'ventajas.comparison.stats.faster.text': 'Resultados en semanas, no años',
+                'ventajas.comparison.stats.precision.title': 'Hasta un 94%',
+                'ventajas.comparison.stats.precision.text': 'Máxima exactitud comprobada',
+                'ventajas.comparison.stats.impact.title': '0% Impacto',
+                'ventajas.comparison.stats.impact.text': 'Tecnología completamente pasiva',
+                
+                // ¿Por qué la MFT™?
+                'ventajas.why.title': '¿Por qué la MFT™?',
+                'ventajas.why.subtitle': 'Razones fundamentales para elegir nuestra tecnología',
+                'ventajas.why.reason1': '<strong style="color: var(--text-primary);">Asegura un incremento de éxito</strong> en las campañas de perforación.',
+                'ventajas.why.reason2': '<strong style="color: var(--text-primary);">Reducción considerable del tiempo</strong> para obtener información.',
+                'ventajas.why.reason3': '<strong style="color: var(--text-primary);">Agiliza los procesos</strong> de certificación de reservas.',
+                'ventajas.why.reason4': '<strong style="color: var(--text-primary);">Planeación de producción</strong> más eficaz.',
+                'ventajas.why.reason5': '<strong style="color: var(--text-primary);">Amigable con el medio ambiente</strong> y las comunidades.',
+                'ventajas.why.reason6': '<strong style="color: var(--text-primary);">No requiere de licencias</strong> y permisos.',
+                'ventajas.why.reason7': '<strong style="color: var(--text-primary);">Costos inferiores</strong> a los métodos tradicionales.',
+                'ventajas.why.reason8': '<strong style="color: var(--text-primary);">Exploración remota</strong> en cualquier lugar del mundo.',
+                'ventajas.why.reason9': '<strong style="color: var(--text-primary);">Verificación a priori</strong> de coordenadas de perforación.',
+                
+                // Iconos de secciones
+                'nosotros.icon.company': 'EMPRESA',
+                'nosotros.icon.partnership': 'PARTNERSHIP',
+                'ventajas.icon.precision': 'PRECISIÓN',
+                'ventajas.icon.speed': 'VELOCIDAD',
+                'ventajas.icon.costs': 'COSTOS',
+                'ventajas.icon.eco': 'ECO',
+                'ventajas.icon.technology': 'TECNOLOGÍA',
+                'ventajas.icon.support': 'SOPORTE',
+                'ventajas.icon.success': 'ÉXITO',
+                'contacto.icon.email': 'EMAIL',
+                'contacto.icon.time': 'TIEMPO',
+                'contacto.icon.support': 'SOPORTE',
+                
+                // Footer
+                'footer.navigation': 'Navegación',
+                'footer.technology': 'Tecnología',
+                'footer.mft.description': 'Mineral Finder Technology',
+                'footer.spectrum.description': 'Electroresonancia Magnética',
+                'footer.distributor': 'Distribuidor autorizado de tecnología MFT™',
+                'footer.email.description': 'Email para consultas MFT™',
+                'footer.copyright': '© 2024 <strong style="color: var(--text-primary);">QuantikGeo</strong>. Todos los derechos reservados.',
+                'footer.ownership': 'MFT™ es una tecnología propiedad de <strong style="color: var(--vibrant-green);">CTAC</strong>.',
+                
+                // Contacto Section
+                'contacto.badge': 'Conexión Directa',
+                'contacto.tech.title': 'Contacto',
+                'contacto.tech.description': 'Conecta con el futuro de la prospección minera MFT™',
+                'contacto.info.title': 'Información de Contacto',
+                'contacto.info.email.title': 'Email Principal',
+                'contacto.info.email.subtitle': 'Distribuidor autorizado MFT™',
+                'contacto.info.response.title': 'Respuesta Rápida',
+                'contacto.info.response.time': '< 24 horas',
+                'contacto.info.response.subtitle': 'Tiempo promedio de respuesta',
+                'contacto.info.support.title': 'Soporte Técnico',
+                'contacto.info.support.availability': 'Disponible',
+                'contacto.info.support.subtitle': 'Asistencia especializada MFT™',
+                'contacto.form.title': 'Solicita Información',
+                'contacto.form.name': 'Nombre Completo *',
+                'contacto.form.email': 'Email Corporativo *',
+                'contacto.form.company': 'Empresa / Organización',
+                'contacto.form.phone': 'Teléfono de Contacto',
+                'contacto.form.interest': 'Área de Interés',
+                'contacto.form.interest.select': 'Selecciona una opción',
+                'contacto.form.interest.equipment': 'Equipos MFT™',
+                'contacto.form.interest.training': 'Capacitación Técnica',
+                'contacto.form.interest.consulting': 'Consultoría Especializada',
+                'contacto.form.interest.support': 'Soporte Técnico',
+                'contacto.form.interest.partnership': 'Partnership Comercial',
+                'contacto.form.interest.other': 'Otro',
+                'contacto.form.message': 'Mensaje / Consulta *',
+                'contacto.form.message.placeholder': 'Describe tu consulta sobre tecnología MFT™...',
+                'contacto.form.submit.text': 'Enviar Consulta',
+                'contacto.form.note': '* Campos requeridos. Tu información será tratada de forma confidencial.',
+                
+                // Form Validation Messages
+                'validation.required': 'Este campo es requerido',
+                'validation.name': 'Ingrese un nombre válido (solo letras y espacios)',
+                'validation.email': 'Ingrese un email válido',
+                'validation.phone': 'Ingrese un teléfono válido',
+                'validation.message': 'El mensaje debe tener al menos 10 caracteres',
+                'validation.error': 'Por favor, corrija los errores en el formulario',
+                'validation.success': '¡Consulta enviada exitosamente! Nos pondremos en contacto pronto.',
+                
+                // Footer
+                'footer.sat.description': 'Prospección Remota',
+                'footer.ctac.description': 'Partnership',
+                'footer.badge': 'DISTRIBUIDOR AUTORIZADO'
+            },
+            en: {
+                // Page
+                'page.title': 'QuantikGeo - MFT™ Technology for Mineral Prospecting',
+                'page.description': 'QuantikGeo - Authorized MFT™ technology distributor for mineral prospecting. Up to 94% precision, detection up to 9.8km depth.',
+                
+                // Header
+                'header.tagline': 'MFT™ Technology',
+                
+                // Navigation
+                'nav.inicio': 'Home',
+                'nav.nosotros': 'About Us',
+                'nav.tecnologia': 'MFT Technology',
+                'nav.ventajas': 'Advantages',
+                'nav.contacto': 'Contact',
+                
+                // Hero Section
+                'hero.badge': 'Authorized CTAC Distributor',
+                'hero.title': 'Revolutionize <span class="gradient-text">Mineral Prospecting</span> with <span class="tech-highlight">MFT™</span> Technology',
+                'hero.description': 'Remote prospecting technology that identifies mineral deposits through electromagnetic resonance frequencies with <strong>exceptional precision</strong> and great depth reach.',
+                'hero.stats.precision': 'Precision',
+                'hero.stats.depth': 'Depth',
+                'hero.stats.technology': 'Technology',
+                
+                // Nosotros Section
+                'nosotros.badge': 'Who We Are',
+                'nosotros.title': 'QuantikGeo',
+                'nosotros.description': 'Authorized CTAC Distributor',
+                'nosotros.mission.title': 'Our Mission',
+                'nosotros.mission.text': 'Revolutionize the mining industry through MFT™ technology implementation, providing remote prospecting solutions with exceptional precision and environmental sustainability.',
+                'nosotros.partnership.title': 'CTAC Partnership',
+                'nosotros.partnership.text': 'As authorized CTAC distributor, we offer access to MFT™ technology, which is the most advanced in the market.',
+                'nosotros.tech.badge': 'Our Technology',
+                'nosotros.tech.title': 'Revolutionary MFT™ Technology',
+                'nosotros.tech.identification.title': 'Precise Identification',
+                'nosotros.tech.identification.text': 'Our <strong>MFT™ (Mineral Finder Technology)</strong> identifies electromagnetic anomalies originated by mineral deposits through their <strong>unique spectral signature</strong>, using electromagnetic resonance frequencies.',
+                'nosotros.tech.precision': '<strong>Exceptional precision:</strong> Up to 94% accuracy in mineral detection',
+                'nosotros.clients.title': 'Our Clients',
+                'nosotros.clients.text': 'We work with <strong>mining companies</strong>, <strong>exploration companies</strong> and <strong>individual concession holders</strong>, offering the most advanced technology in the market.',
+                'nosotros.clients.corporate': 'Corporate Mining Companies',
+                'nosotros.clients.exploration': 'Exploration Companies',
+                'nosotros.clients.individual': 'Individual Concessionaires',
+                
+                // Tecnología Section
+                'tecnologia.badge': 'Advanced Technology',
+                'tecnologia.title': 'MFT™ Technology',
+                'tecnologia.description': 'Mineral Finder Technology - Advanced Multispectral Prospecting',
+                'tecnologia.how.title': 'How MFT™ Works',
+                'tecnologia.electromagnetic.title': 'Electromagnetic Principle',
+                'tecnologia.electromagnetic.text': 'Material accumulation in the subsoil produces polarization of adjacent rocks, altering Earth\'s quasi-stationary electromagnetic fields, identified as electromagnetic anomalies.',
+                'tecnologia.spectral.title': 'Spectral Signature',
+                'tecnologia.spectral.text': 'All natural materials have their own resonance frequency. MFT™ uses electromagnetic resonance frequencies to characterize materials through laboratory spectral analysis.',
+                'tecnologia.multispectral.title': 'Multispectral Prospecting',
+                'tecnologia.multispectral.text': 'Advanced satellite technology to identify electromagnetic anomalies and create mineralization maps with exceptional precision.',
+                'tecnologia.process.title': 'MFT™ Process - 4 Technical Phases',
+                'tecnologia.phase1.title': 'Spectral Analysis',
+                'tecnologia.phase1.subtitle': 'Electroresonance Satellite Spectrography',
+                'tecnologia.phase1.text': 'Identification of unique spectral signatures of mineral materials using electromagnetic resonance frequencies for maximum precision in characterization.',
+                'tecnologia.phase2.title': 'Electromagnetic Detection',
+                'tecnologia.phase2.subtitle': 'ECECI Mapping (Short Impulse Electromagnetic Fields)',
+                'tecnologia.phase2.text': 'Precise location of electromagnetic anomalies generated by mineral deposits up to exceptional depths of 9.8 kilometers with advanced field technology.',
+                'tecnologia.phase3.title': 'Data Processing',
+                'tecnologia.phase3.subtitle': 'SVER Vertical Sounding (Vertical Electro-Resonance Sounding)',
+                'tecnologia.phase3.text': 'Advanced computational analysis using specialized algorithms to determine mineral composition, concentration and economic extraction viability.',
+                'tecnologia.phase4.title': 'Specialized Technical Report',
+                'tecnologia.phase4.subtitle': 'Continuous Support and Operational Monitoring',
+                'tecnologia.phase4.text': 'Generation of detailed technical reports with precise GPS coordinates, reserve estimates, viability analysis and specific recommendations for directed drilling.',
+                'tecnologia.phase1.specs': 'Spectral analysis of electromagnetic resonance frequencies • Identification of unique spectral signatures • Precise characterization of mineral materials',
+                'tecnologia.phase2.specs': 'Detection of electromagnetic anomalies • Range up to 9.8 km depth • Advanced field technology',
+                'tecnologia.phase3.specs': 'Advanced computational analysis • Specialized processing algorithms • Determination of mineral composition and concentration',
+                'tecnologia.phase4.specs': 'Detailed technical reports • Precise GPS coordinates • Reserve estimates and economic viability analysis',
+                
+                // Technology Applications
+                'tecnologia.applications.title': 'Technology Applications',
+                'tecnologia.applications.subtitle': 'Specific use cases to maximize MFT™ potential',
+                'tecnologia.applications.exploration.title': 'EXPLORATION',
+                'tecnologia.applications.exploration.greenfields.title': 'Green Fields or Exploratory Areas',
+                'tecnologia.applications.exploration.greenfields.text': '<strong>MFT™</strong> is the starting point for exploration of previously unstudied areas. By performing spectrography, prospects present in the area are visualized, ruling out zones where the presence of minerals is not evident.',
+                'tecnologia.applications.exploration.reinterpretation.title': 'Data Reinterpretation',
+                'tecnologia.applications.exploration.reinterpretation.text': 'In those areas where studies have already been conducted with traditional tools, but there is uncertainty regarding zones for which data interpretation may become complicated. <strong>MFT™</strong> in these cases is extremely helpful in elucidating the presence of the sought material.',
+                'tecnologia.applications.exploration.reinterpretation.badge': 'Clarification of previous studies',
+                'tecnologia.applications.production.title': 'PRODUCTION',
+                'tecnologia.applications.production.existing.title': 'Existing Mines',
+                'tecnologia.applications.production.existing.text': 'In already developed mines, where reengineering is required to locate mineral accumulation zones that have not yet been located and equally verify the existence of mineral in known structures for optimization of deposit recovery.',
+                'tecnologia.applications.production.existing.badge': 'Mineral recovery optimization',
+                'tecnologia.applications.drilling.title': 'DRILLING',
+                'tecnologia.applications.drilling.virtual.title': 'Virtual Drilling',
+                'tecnologia.applications.drilling.virtual.text': 'A verification study with <strong>MFT™</strong> will allow forecasting the polarized layers present, their depths, approximate thicknesses and bottom coordinates where drilling should be directed.',
+                'tecnologia.applications.drilling.virtual.badge': 'Directed drilling guide',
+                'tecnologia.applications.stats.greenfields.title': 'Green Fields',
+                'tecnologia.applications.stats.greenfields.text': 'Initial exploration of virgin areas',
+                'tecnologia.applications.stats.reengineering.title': 'Reengineering',
+                'tecnologia.applications.stats.reengineering.text': 'Optimization of existing mines',
+                'tecnologia.applications.stats.drilling.title': 'Drilling',
+                'tecnologia.applications.stats.drilling.text': 'Virtual guide for directed drilling',
+                
+                // Ventajas Section
+                'ventajas.badge': 'Competitive Advantages',
+                'ventajas.title': 'MFT™ Advantages',
+                'ventajas.description': 'Proven superiority over traditional mineral prospecting methods.',
+                'ventajas.precision.title': 'Superior Precision',
+                'ventajas.precision.text': 'Up to 94% precision versus traditional methods with variable results and lower technical reliability.',
+                'ventajas.efficiency.title': 'Time Efficiency',
+                'ventajas.efficiency.text': 'Up to 80% faster than conventional methods. Results in 30-60 days versus years of traditional exploration.',
+                'ventajas.cost.title': 'Cost Reduction',
+                'ventajas.cost.text': 'Up to 80% lower operational cost compared to traditional high-risk exploratory drilling.',
+                'ventajas.passive.title': 'Passive Technology',
+                'ventajas.passive.text': 'Non-invasive to the environment, no preliminary excavations, minimum ecological impact and silent operation.',
+                'ventajas.depth.title': 'Exceptional Depth',
+                'ventajas.depth.text': 'Remote detection up to 9.8 km depth using electromagnetic resonance frequencies.',
+                'ventajas.support.title': 'Continuous Support',
+                'ventajas.support.text': 'Specialized technical assistance from drilling to operational production.',
+                'ventajas.success.title': 'High Success',
+                'ventajas.success.text': 'Success rates up to 50% discovery success rate.',
+                
+                // Comparison Table
+                'ventajas.comparison.title': 'MFT™ vs Traditional Methods',
+                'ventajas.comparison.subtitle': 'Detailed performance comparison',
+                'ventajas.comparison.header.aspect': 'ASPECT',
+                'ventajas.comparison.header.traditional': 'TRADITIONAL METHODS',
+                'ventajas.comparison.header.mft': 'MFT™ TECHNOLOGY',
+                'ventajas.comparison.time.aspect': 'Exploration Time',
+                'ventajas.comparison.time.traditional': 'Years',
+                'ventajas.comparison.time.mft': '30-60 days (Up to 80% faster)',
+                'ventajas.comparison.cost.aspect': 'Cost',
+                'ventajas.comparison.cost.traditional': 'High (drilling)',
+                'ventajas.comparison.cost.mft': 'Up to 80% Lower',
+                'ventajas.comparison.permits.aspect': 'Environmental Permits',
+                'ventajas.comparison.permits.traditional': 'Required',
+                'ventajas.comparison.permits.mft': 'Non-Invasive (Passive)',
+                'ventajas.comparison.precision.aspect': 'Precision',
+                'ventajas.comparison.precision.traditional': 'Variable',
+                'ventajas.comparison.precision.mft': 'Up to 94%',
+                'ventajas.comparison.success.aspect': 'Success Rate',
+                'ventajas.comparison.success.traditional': '20% - 30%',
+                'ventajas.comparison.success.mft': 'Up to 50%',
+                'ventajas.comparison.stats.faster.title': 'Up to 80% Faster',
+                'ventajas.comparison.stats.faster.text': 'Results in weeks, not years',
+                'ventajas.comparison.stats.precision.title': 'Up to 94%',
+                'ventajas.comparison.stats.precision.text': 'Maximum proven accuracy',
+                'ventajas.comparison.stats.impact.title': '0% Impact',
+                'ventajas.comparison.stats.impact.text': 'Completely passive technology',
+                
+                // Why MFT™?
+                'ventajas.why.title': 'Why MFT™?',
+                'ventajas.why.subtitle': 'Fundamental reasons to choose our technology',
+                'ventajas.why.reason1': '<strong style="color: var(--text-primary);">Ensures increased success</strong> in drilling campaigns.',
+                'ventajas.why.reason2': '<strong style="color: var(--text-primary);">Considerable time reduction</strong> to obtain information.',
+                'ventajas.why.reason3': '<strong style="color: var(--text-primary);">Streamlines processes</strong> for reserve certification.',
+                'ventajas.why.reason4': '<strong style="color: var(--text-primary);">More effective production planning</strong>.',
+                'ventajas.why.reason5': '<strong style="color: var(--text-primary);">Environmentally friendly</strong> with communities.',
+                'ventajas.why.reason6': '<strong style="color: var(--text-primary);">No licenses required</strong> and permits.',
+                'ventajas.why.reason7': '<strong style="color: var(--text-primary);">Lower costs</strong> than traditional methods.',
+                'ventajas.why.reason8': '<strong style="color: var(--text-primary);">Remote exploration</strong> anywhere in the world.',
+                'ventajas.why.reason9': '<strong style="color: var(--text-primary);">A priori verification</strong> of drilling coordinates.',
+                
+                // Section Icons
+                'nosotros.icon.company': 'COMPANY',
+                'nosotros.icon.partnership': 'PARTNERSHIP',
+                'ventajas.icon.precision': 'PRECISION',
+                'ventajas.icon.speed': 'SPEED',
+                'ventajas.icon.costs': 'COSTS',
+                'ventajas.icon.eco': 'ECO',
+                'ventajas.icon.technology': 'TECHNOLOGY',
+                'ventajas.icon.support': 'SUPPORT',
+                'ventajas.icon.success': 'SUCCESS',
+                'contacto.icon.email': 'EMAIL',
+                'contacto.icon.time': 'TIME',
+                'contacto.icon.support': 'SUPPORT',
+                
+                // Footer
+                'footer.navigation': 'Navigation',
+                'footer.technology': 'Technology',
+                'footer.mft.description': 'Mineral Finder Technology',
+                'footer.spectrum.description': 'Electromagnetic Resonance',
+                'footer.distributor': 'Authorized MFT™ technology distributor',
+                'footer.email.description': 'Email for MFT™ inquiries',
+                'footer.copyright': '© 2024 <strong style="color: var(--text-primary);">QuantikGeo</strong>. All rights reserved.',
+                'footer.ownership': 'MFT™ is a technology owned by <strong style="color: var(--vibrant-green);">CTAC</strong>.',
+                
+                // Contacto Section
+                'contacto.badge': 'Direct Connection',
+                'contacto.tech.title': 'Technical Contact',
+                'contacto.tech.description': 'Connect with the future of MFT™ mineral prospecting',
+                'contacto.info.title': 'Contact Information',
+                'contacto.info.email.title': 'Main Email',
+                'contacto.info.email.subtitle': 'Authorized MFT™ distributor',
+                'contacto.info.response.title': 'Quick Response',
+                'contacto.info.response.time': '< 24 hours',
+                'contacto.info.response.subtitle': 'Average response time',
+                'contacto.info.support.title': 'Technical Support',
+                'contacto.info.support.availability': 'Available',
+                'contacto.info.support.subtitle': 'Specialized MFT™ assistance',
+                'contacto.form.title': 'Request Information',
+                'contacto.form.name': 'Full Name *',
+                'contacto.form.email': 'Corporate Email *',
+                'contacto.form.company': 'Company / Organization',
+                'contacto.form.phone': 'Contact Phone',
+                'contacto.form.interest': 'Area of Interest',
+                'contacto.form.interest.select': 'Select an option',
+                'contacto.form.interest.equipment': 'MFT™ Equipment',
+                'contacto.form.interest.training': 'Technical Training',
+                'contacto.form.interest.consulting': 'Specialized Consulting',
+                'contacto.form.interest.support': 'Technical Support',
+                'contacto.form.interest.partnership': 'Commercial Partnership',
+                'contacto.form.interest.other': 'Other',
+                'contacto.form.message': 'Message / Inquiry *',
+                'contacto.form.message.placeholder': 'Describe your inquiry about MFT™ technology...',
+                'contacto.form.submit.text': 'Send Inquiry',
+                'contacto.form.note': '* Required fields. Your information will be treated confidentially.',
+                
+                // Form Validation Messages
+                'validation.required': 'This field is required',
+                'validation.name': 'Enter a valid name (letters and spaces only)',
+                'validation.email': 'Enter a valid email address',
+                'validation.phone': 'Enter a valid phone number',
+                'validation.message': 'Message must be at least 10 characters long',
+                'validation.error': 'Please correct the errors in the form',
+                'validation.success': 'Inquiry sent successfully! We will contact you soon.',
+                
+                // Footer
+                'footer.sat.description': 'Remote Prospecting',
+                'footer.ctac.description': 'Partnership',
+                'footer.badge': 'AUTHORIZED DISTRIBUTOR'
+            }
+        };
+
+        // Variables globales para el sistema de idiomas
+        let currentLanguage = localStorage.getItem('quantikgeo-language') || 'es';
+
+        // Función para cambiar idioma
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('quantikgeo-language', lang);
+            
+            // Actualizar botones de idioma
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Traducir todos los elementos
+            translatePage();
+            
+            // Mostrar notificación
+            const langName = lang === 'es' ? 'Español' : 'English';
+            showNotification(`Idioma cambiado a ${langName}`, 'success');
+        }
+
+        // Función para traducir la página
+        function translatePage() {
+            // Traducir elementos con data-translate
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    if (element.tagName === 'TITLE') {
+                        element.textContent = translations[currentLanguage][key];
+                    } else if (element.tagName === 'META') {
+                        element.setAttribute('content', translations[currentLanguage][key]);
+                    } else {
+                        element.innerHTML = translations[currentLanguage][key];
+                    }
+                }
+            });
+            
+            // Traducir placeholders con data-translate-placeholder
+            const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+            placeholderElements.forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.placeholder = translations[currentLanguage][key];
+                }
+            });
+        }
+
+        // Función para obtener traducción
+        function getTranslation(key) {
+            return translations[currentLanguage] && translations[currentLanguage][key] 
+                ? translations[currentLanguage][key] 
+                : key;
+        }
+
+        // Función de notificación simple
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                max-width: 400px;
+                padding: 20px 25px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                font-size: 0.95rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(20px);
+                border: 1px solid;
+                z-index: 10000;
+                transform: translateX(450px);
+                transition: all 0.4s ease;
+                background: ${type === 'success' ? 'rgba(5, 150, 105, 0.9)' : 'rgba(71, 85, 105, 0.9)'};
+                border-color: ${type === 'success' ? 'rgba(5, 150, 105, 0.3)' : 'rgba(71, 85, 105, 0.3)'};
+            `;
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Mostrar
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                notification.style.transform = 'translateX(450px)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 400);
+            }, 3000);
+        }
+
+        // Inicializar sistema de idiomas
+        function initLanguageSystem() {
+            // Configurar botones de idioma
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    changeLanguage(btn.dataset.lang);
+                });
+            });
+            
+            // Establecer idioma inicial
+            changeLanguage(currentLanguage);
+        }
+
+        // Smooth scrolling para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Validación de formulario
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+            const fieldName = field.name;
+            
+            // Limpiar errores previos
+            clearFieldError(field);
+            
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Validaciones específicas
+            switch(fieldName) {
+                case 'nombre':
+                    if (value.length < 2) {
+                        isValid = false;
+                        errorMessage = 'validation.name';
+                    } else if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(value)) {
+                        isValid = false;
+                        errorMessage = 'validation.name';
+                    }
+                    break;
+                    
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        isValid = false;
+                        errorMessage = 'validation.email';
+                    }
+                    break;
+                    
+                case 'telefono':
+                    if (value && !/^[\+]?[0-9\s\-\(\)]+$/.test(value)) {
+                        isValid = false;
+                        errorMessage = 'validation.phone';
+                    }
+                    break;
+                    
+                case 'mensaje':
+                    if (value.length < 10) {
+                        isValid = false;
+                        errorMessage = 'validation.message';
+                    }
+                    break;
+            }
+            
+            if (!isValid) {
+                showFieldError(field, getTranslation(errorMessage));
+            }
+            
+            return isValid;
+        }
+
+        // Mostrar error en campo
+        function showFieldError(field, message) {
+            const formGroup = field.closest('.form-group');
+            
+            // Agregar clase de error
+            field.style.borderColor = '#dc2626';
+            field.style.backgroundColor = 'rgba(220, 38, 38, 0.1)';
+            
+            // Crear elemento de error si no existe
+            let errorElement = formGroup.querySelector('.field-error');
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'field-error';
+                errorElement.style.cssText = `
+                    color: #dc2626;
+                    font-size: 0.85rem;
+                    margin-top: 5px;
+                    font-weight: 500;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                `;
+                formGroup.appendChild(errorElement);
+            }
+            
+            errorElement.textContent = message;
+            errorElement.style.opacity = '1';
+        }
+
+        // Limpiar error de campo
+        function clearFieldError(field) {
+            const formGroup = field.closest('.form-group');
+            const errorElement = formGroup.querySelector('.field-error');
+            
+            // Restaurar estilos del campo
+            field.style.borderColor = '';
+            field.style.backgroundColor = '';
+            
+            // Ocultar mensaje de error
+            if (errorElement) {
+                errorElement.style.opacity = '0';
+                setTimeout(() => {
+                    if (errorElement.parentNode) {
+                        errorElement.parentNode.removeChild(errorElement);
+                    }
+                }, 300);
+            }
+        }
+
+        // Limpiar errores al escribir
+        function clearErrors(e) {
+            clearFieldError(e.target);
+        }
+
+        // Manejo del envío del formulario
+        function handleFormSubmission(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            // Validar todos los campos requeridos
+            let isFormValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    showFieldError(field, getTranslation('validation.required'));
+                    isFormValid = false;
+                } else {
+                    const fieldEvent = { target: field };
+                    if (!validateField(fieldEvent)) {
+                        isFormValid = false;
+                    }
+                }
+            });
+            
+            if (!isFormValid) {
+                showNotification(getTranslation('validation.error'), 'error');
+                return;
+            }
+
+            // Cambiar estado del botón
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>Enviando...</span><span class="btn-icon">⏳</span>';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+
+            // Simulación de envío
+            setTimeout(() => {
+                // Datos del formulario
+                const contactData = {
+                    nombre: formData.get('nombre'),
+                    email: formData.get('email'),
+                    empresa: formData.get('empresa') || 'No especificada',
+                    telefono: formData.get('telefono') || 'No proporcionado',
+                    interes: formData.get('interes') || 'General',
+                    mensaje: formData.get('mensaje'),
+                    timestamp: new Date().toISOString(),
+                    source: 'QuantikGeo Website'
+                };
+
+                console.log('📧 Datos de contacto recibidos:', contactData);
+                
+                // Mostrar éxito
+                showNotification(getTranslation('validation.success'), 'success');
+                
+                // Resetear formulario
+                form.reset();
+                
+                // Restaurar botón
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                
+                // Scroll suave hacia arriba del formulario
+                document.querySelector('#contacto').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+                
+            }, 2000);
+        }
+
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            initLanguageSystem();
+            
+            // Funcionalidad del formulario de contacto
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                // Validación en tiempo real
+                const inputs = contactForm.querySelectorAll('input, select, textarea');
+                
+                inputs.forEach(input => {
+                    input.addEventListener('blur', validateField);
+                    input.addEventListener('input', clearErrors);
+                });
+
+                // Envío del formulario
+                contactForm.addEventListener('submit', handleFormSubmission);
+            }
+
+            // Navegación suave
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Añadir efectos hover mejorados
+            document.querySelectorAll('.card, .stat-item, .phase-card').forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-12px) scale(1.02)';
+                    this.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.4)';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer Corporativo -->
+    <footer style="background: var(--accent-navy); border-top: 1px solid var(--border-gray); padding: 80px 0 40px 0; margin-top: 0;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+            
+            <!-- Sección Principal del Footer -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
+                
+                <!-- Información Corporativa -->
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <div style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 15px 35px rgba(5, 150, 105, 0.3);">
+                            <img src="https://page.gensparksite.com/v1/base64_upload/3d5f786c2e6931db7a4d154bcc474d46" alt="QuantikGeo Logo" style="width: 50px; height: 50px; object-fit: contain;" />
+                        </div>
+                        <div>
+                            <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: bold; margin: 0;">QuantikGeo</h3>
+                            <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: 600; margin: 5px 0 0 0;" data-translate="footer.distributor">Distribuidor autorizado de tecnología MFT™</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(248, 250, 252, 0.05); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <span style="font-size: 1.5rem; margin-right: 15px; color: var(--vibrant-green); font-weight: 700;">EMAIL</span>
+                            <div>
+                                <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1929e9f859092859eb18084909f85989a96949edf929e9c">[email&#160;protected]</a></p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 2px 0 0 0;" data-translate="footer.email.description">Email para consultas MFT™</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navegación -->
+                <div>
+                    <h4 style="color: var(--vibrant-green); font-size: 1.4rem; font-weight: bold; margin-bottom: 25px; position: relative;">
+                        <span data-translate="footer.navigation">Navegación</span>
+                        <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
+                    </h4>
+                    <nav>
+                        <a href="#nosotros" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
+                            <span data-translate="nav.nosotros">Nosotros</span>
+                        </a>
+                        <a href="#tecnologia" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
+                            <span data-translate="nav.tecnologia">Tecnología MFT</span>
+                        </a>
+                        <a href="#ventajas" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
+                            <span data-translate="nav.ventajas">Ventajas</span>
+                        </a>
+                        <a href="#contacto" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
+                            <span data-translate="nav.contacto">Contacto</span>
+                        </a>
+                    </nav>
+                </div>
+                
+                <!-- Tecnología -->
+                <div>
+                    <h4 style="color: var(--vibrant-green); font-size: 1.4rem; font-weight: bold; margin-bottom: 25px; position: relative;">
+                        <span data-translate="footer.technology">Tecnología</span>
+                        <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
+                    </h4>
+                    <div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
+                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">MFT</span>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.mft.description">Mineral Finder Technology</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
+                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SPEC</span>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.spectrum.description">Electroresonancia Magnética</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
+                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SAT</span>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.sat.description">Prospección Remota</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
+                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">CTAC</span>
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.ctac.description">Partnership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Línea Separadora -->
+            <div style="height: 1px; background: linear-gradient(90deg, transparent, var(--border-gray), transparent); margin: 40px 0;"></div>
+            
+            <!-- Copyright y Información Legal -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+                        <span data-translate="footer.copyright">© 2024 <strong style="color: var(--text-primary);">QuantikGeo</strong>. Todos los derechos reservados.</span>
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 5px 0 0 0;">
+                        <span data-translate="footer.ownership">MFT™ es una tecnología propiedad de <strong style="color: var(--vibrant-green);">CTAC</strong>.</span>
+                    </p>
+                </div>
+                <div style="background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.3); padding: 12px 20px; border-radius: 8px; backdrop-filter: blur(10px);">
+                    <span style="color: var(--vibrant-green); font-size: 0.9rem; font-weight: 600;" data-translate="footer.badge">DISTRIBUIDOR AUTORIZADO</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Función para menú móvil (placeholder - se puede expandir más tarde)
+        function toggleMobileMenu() {
+            // Por ahora, hacer scroll suave al menú de navegación del footer
+            const footerNav = document.querySelector('nav');
+            if (footerNav) {
+                footerNav.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97b9335f5d336c6e","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
