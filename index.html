@@ -69,15 +69,39 @@
             left: 0;
             right: 0;
             z-index: 9999;
-            background: rgba(10, 14, 26, 0.95);
-            border-bottom: 1px solid var(--border-color);
+            background: rgba(0, 31, 63, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 20px 0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 212, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(20px);
+            transition: padding 0.3s ease, background 0.3s ease;
+        }
+
+        /* Header scrolled (reducido) */
+        .header.scrolled {
+            padding: 10px 0;
+            background: rgba(0, 31, 63, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .header.scrolled .logo-circle {
+            width: 60px;
+            height: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled .brand-info h1 {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled .brand-tagline {
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
         }
         
         .header-content {
-            max-width: 1400px;
+            max-width: 1800px;
             margin: 0 auto;
             padding: 0 40px;
             display: flex;
@@ -112,13 +136,13 @@
         }
         
         .brand-info h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--text-primary);
             margin: 0;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .brand-tagline {
             font-size: 0.9rem;
             background: var(--accent-gradient);
@@ -131,14 +155,14 @@
         /* Navigation */
         .nav-menu {
             display: flex;
-            gap: 15px;
+            gap: 50px;
             align-items: center;
         }
-        
+
         .nav-link {
             color: var(--text-primary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1.17rem;
             font-weight: 500;
             padding: 12px 20px;
             border-radius: 8px;
@@ -186,7 +210,7 @@
             border-radius: 18px;
             background: transparent;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -232,17 +256,6 @@
             overflow: hidden;
         }
         
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-        
         .hero-content {
             max-width: 1200px;
             position: relative;
@@ -259,7 +272,7 @@
             padding: 12px 24px;
             margin-bottom: 40px;
             backdrop-filter: blur(10px);
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             font-weight: 500;
             color: var(--text-primary);
         }
@@ -285,7 +298,7 @@
         }
         
         .hero-description {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             line-height: 1.7;
             color: var(--text-secondary);
             margin-bottom: 50px;
@@ -328,7 +341,7 @@
         }
         
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 1.7rem;
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -344,10 +357,48 @@
         }
         
         .section-container {
-            max-width: 1400px;
+            max-width: 1800px;
             margin: 0 auto;
             padding: 0 40px;
             width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ========== FONDO AZUL MARINO PURO ========== */
+        /* Azul marino puro sin gradientes */
+        .hero-section {
+            background: #001f3f;
+        }
+
+        .section {
+            background: #001f3f;
+        }
+
+        /* Sin variación - todas las secciones mismo color */
+        .section:nth-child(even) {
+            background: #001f3f;
+        }
+
+        /* Body con azul marino puro */
+        body {
+            background: #001f3f;
+        }
+
+        /* Quitar backdrop-filter que causa efecto visual sobre negro */
+        .card, .stat-item, .principle-card, .phase-card {
+            backdrop-filter: none !important;
+        }
+
+        /* Override específico para sección nosotros */
+        .nosotros-section,
+        #nosotros {
+            background: #001f3f !important;
         }
         
         .section-header {
@@ -378,7 +429,7 @@
         }
         
         .section-description {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto;
@@ -432,7 +483,7 @@
         }
         
         .card-icon {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             margin-bottom: 25px;
             background: var(--accent-gradient);
             -webkit-background-clip: text;
@@ -481,7 +532,7 @@
         }
         
         .card-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 20px;
@@ -490,13 +541,10 @@
         .card-text {
             color: var(--text-secondary);
             line-height: 1.6;
-            font-size: 1.1rem;
+            font-size: 1.7rem;
         }
         
         /* Nosotros Section Styles */
-        .nosotros-section {
-            background: var(--secondary-navy);
-        }
         
         .about-grid {
             display: grid;
@@ -533,14 +581,14 @@
         }
         
         .service-title {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: var(--text-primary);
             margin-bottom: 10px;
             font-weight: 600;
         }
         
         .service-text {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: var(--text-secondary);
         }
         
@@ -579,7 +627,7 @@
         }
         
         .principle-title {
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             color: var(--vibrant-green);
             margin-bottom: 15px;
             font-weight: 700;
@@ -588,7 +636,7 @@
         .principle-text {
             color: var(--text-secondary);
             line-height: 1.6;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
         }
         
         /* Process Timeline */
@@ -629,18 +677,18 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.7rem;
         }
         
         .phase-title {
             color: var(--vibrant-green);
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
         
         .phase-subtitle {
             color: var(--text-primary);
-            font-size: 1.1rem;
+            font-size: 1.7rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
@@ -648,7 +696,7 @@
         .phase-text {
             color: var(--text-secondary);
             line-height: 1.5;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
         }
         
         /* Contact Section */
@@ -685,13 +733,13 @@
             color: var(--text-secondary);
             margin-bottom: 20px;
             line-height: 1.6;
-            font-size: 1.1rem;
+            font-size: 1.7rem;
         }
         
         .email-highlight {
             color: var(--vibrant-green);
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.7rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
@@ -738,7 +786,7 @@
         }
         
         .form-group label {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 8px;
@@ -785,7 +833,7 @@
             border: none;
             padding: 18px 30px;
             border-radius: 8px;
-            font-size: 1.1rem;
+            font-size: 1.7rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -809,7 +857,7 @@
         }
         
         .btn-icon {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             transition: transform 0.3s ease;
         }
         
@@ -818,7 +866,7 @@
         }
         
         .form-note {
-            font-size: 0.85rem;
+            font-size: 1.25rem;
             color: var(--text-secondary);
             text-align: center;
             margin-top: 15px;
@@ -852,7 +900,7 @@
             }
             
             .brand-info h1 {
-                font-size: 1.1rem !important;
+                font-size: 0.9rem !important;
                 margin: 0;
                 line-height: 1.2;
             }
@@ -958,7 +1006,7 @@
             background: none;
             border: none;
             color: var(--text-primary);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             cursor: pointer;
             padding: 5px;
         }
@@ -983,6 +1031,188 @@
             .brand-tagline {
                 font-size: 0.6rem !important;
             }
+        }
+
+        /* ========== ANIMACIONES AL SCROLL ========== */
+        /* Elementos ocultos inicialmente */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Cuando se vuelven visibles */
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Variante de slide desde la izquierda */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-left.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Variante de slide desde la derecha */
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-right.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animación de escalado */
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scale-in.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ========== HOVER EFFECTS PREMIUM ========== */
+        /* KPI Stats hover mejorado */
+        .stat-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .stat-item:hover::before {
+            left: 100%;
+        }
+
+        /* Cards hover mejorado */
+        .card {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* Botones hover con efecto glow */
+        a[href="#contacto"] {
+            position: relative;
+            overflow: hidden;
+        }
+
+        a[href="#contacto"]::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        a[href="#contacto"]:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* ========== RIPPLE EFFECT ========== */
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* ========== ESPACIADO Y SOMBRAS PREMIUM ========== */
+        /* Sombras estratificadas para profundidad */
+        .section {
+            box-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        /* Cards con sombras más sofisticadas */
+        .card, .stat-item {
+            box-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        }
+
+        /* Espaciado mejorado entre secciones */
+        .section {
+            margin-bottom: 120px;
+        }
+
+        .section-header {
+            margin-bottom: 100px;
+        }
+
+        /* Separadores sutiles entre secciones */
+        .section::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+            z-index: 2;
+        }
+
+        /* Último section sin separador */
+        .section:last-of-type::after {
+            display: none;
+        }
+
+        /* Sombra elevada para elementos interactivos */
+        .nav-link, a[href="#contacto"] {
+            box-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link:hover, a[href="#contacto"]:hover {
+            box-shadow:
+                0 4px 16px rgba(59, 130, 246, 0.25),
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(59, 130, 246, 0.2);
         }
     </style>
 </head>
@@ -1052,25 +1282,46 @@
                     <strong>precisión excepcional</strong> y alcance de gran profundidad.
                 </p>
                 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">Hasta un 94%</div>
-                        <div class="stat-label" data-translate="hero.stats.precision">PRECISION</div>
+                <!-- CTA Button Hero -->
+                <div style="margin: 40px 0; text-align: center;">
+                    <a href="#contacto" style="display: inline-block; padding: 16px 45px; background: #1e40af; color: white; font-size: 1.7rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: all 0.2s ease; border: 1px solid rgba(255, 255, 255, 0.1);"
+                       onmouseover="this.style.background='#1e3a8a'; this.style.transform='translateY(-2px)';"
+                       onmouseout="this.style.background='#1e40af'; this.style.transform='translateY(0)';"
+                       data-translate="hero.cta">
+                        Solicitar Información
+                    </a>
+                </div>
+
+                <div class="hero-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 60px auto 0;">
+                    <!-- KPI 1: Precisión -->
+                    <div class="stat-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 30px; text-align: center; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(30, 64, 175, 0.3)';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div class="stat-number" style="font-size: 3rem; font-weight: 700; color: #3b82f6; margin-bottom: 12px; letter-spacing: -1px;" data-translate="hero.stats.precision.value">Hasta 94%</div>
+                        <div class="stat-label" style="font-size: 1.25rem; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1.5px;" data-translate="hero.stats.precision">PRECISIÓN</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">9.8km</div>
-                        <div class="stat-label" data-translate="hero.stats.depth">Profundidad</div>
+
+                    <!-- KPI 2: Profundidad -->
+                    <div class="stat-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 30px; text-align: center; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.3)';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div class="stat-number counter-animated" data-target="9.8" data-suffix="km" style="font-size: 3rem; font-weight: 700; color: #10b981; margin-bottom: 12px; letter-spacing: -1px;">0km</div>
+                        <div class="stat-label" style="font-size: 1.25rem; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1.5px;" data-translate="hero.stats.depth">PROFUNDIDAD</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">MFT™</div>
-                        <div class="stat-label" data-translate="hero.stats.technology">Tecnología</div>
+
+                    <!-- KPI 3: Tiempo -->
+                    <div class="stat-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 30px; text-align: center; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div class="stat-number" style="font-size: 3rem; font-weight: 700; color: #3b82f6; margin-bottom: 12px; letter-spacing: -1px;">MFT<sup style="font-size: 1.8rem;">™</sup></div>
+                        <div class="stat-label" style="font-size: 1.25rem; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1.5px;" data-translate="hero.stats.technology">DÍAS</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Nosotros Section -->
-        <section id="nosotros" class="section nosotros-section">
+        <section id="nosotros" class="section nosotros-section fade-in-section">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge" data-translate="nosotros.badge">
@@ -1080,31 +1331,29 @@
                     <p class="section-description" data-translate="nosotros.description">Distribuidor Autorizado de CTAC</p>
                 </div>
                 
-                <div class="about-grid">
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 35px; margin-bottom: 70px;">
+                    <!-- Nuestra Misión -->
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 40px; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(30, 64, 175, 0.3)';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div style="margin-bottom: 25px;">
+                            <h3 class="card-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 15px;" data-translate="nosotros.mission.title">Nuestra Misión</h3>
                         </div>
-                        <h3 class="card-title" data-translate="nosotros.mission.title">Nuestra Misión</h3>
-                        <p class="card-text" data-translate="nosotros.mission.text">
-                            Revolucionar la industria minera mediante la implementación de tecnología MFT™, 
-                            proporcionando soluciones de prospección remota con precisión excepcional y 
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.25rem; line-height: 1.7;" data-translate="nosotros.mission.text">
+                            Revolucionar la industria minera mediante la implementación de tecnología MFT™,
+                            proporcionando soluciones de prospección remota con precisión excepcional y
                             sostenibilidad ambiental.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+
+                    <!-- Partnership CTAC -->
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 40px; transition: all 0.2s ease;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.3)';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div style="margin-bottom: 25px;">
+                            <h3 class="card-title" style="font-size: 1.7rem; color: #10b981; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 15px;" data-translate="nosotros.partnership.title">Partnership CTAC</h3>
                         </div>
-                        <h3 class="card-title" data-translate="nosotros.partnership.title">Partnership CTAC</h3>
-                        <p class="card-text" data-translate="nosotros.partnership.text">
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.25rem; line-height: 1.7;" data-translate="nosotros.partnership.text">
                             Como distribuidor autorizado de CTAC, ofrecemos acceso a la
                             tecnología MFT™, que es la más avanzada del mercado.
                         </p>
@@ -1112,54 +1361,52 @@
                 </div>
                 
                 <!-- Nueva sección: Tecnología y Mercado Objetivo -->
-                <div class="tech-market-section" style="margin: 60px 0; padding: 50px 0; background: rgba(5, 150, 105, 0.05); border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(5, 150, 105, 0.2);">
-                    <div class="tech-market-content" style="max-width: 1000px; margin: 0 auto; padding: 0 40px;">
-                        <div class="tech-market-header" style="text-align: center; margin-bottom: 50px;">
-                            <div class="section-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.1); color: var(--vibrant-green); padding: 12px 24px; border-radius: 8px; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(5, 150, 105, 0.3);" data-translate="nosotros.tech.badge">
-                                Nuestra Tecnología
-                            </div>
-                            <h3 style="font-size: 2.5rem; color: var(--text-primary); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.tech.title">Tecnología MFT™ Revolucionaria</h3>
-                        </div>
-                        
-                        <div class="tech-market-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div class="tech-market-section" style="margin: 70px 0 0 0; padding: 50px 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="tech-market-content" style="max-width: 1400px; margin: 0 auto;">
+                        <div class="tech-market-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
                             <!-- Descripción de la Tecnología -->
-                            <div class="tech-description" style="background: rgba(248, 250, 252, 0.05); padding: 40px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
-                                <div class="tech-icon" style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);">
-                                    <div style="color: white; font-weight: 700;">TECH</div>
+                            <div class="tech-description" style="padding: 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s ease;"
+                                 onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)';"
+                                 onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                                <div style="margin-bottom: 25px;">
+                                    <h4 style="font-size: 1.6rem; color: #3b82f6; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="nosotros.tech.identification.title">Tecnología MFT™</h4>
                                 </div>
-                                <h4 style="font-size: 1.8rem; color: var(--vibrant-green); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.tech.identification.title">Identificación Precisa</h4>
-                                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;" data-translate="nosotros.tech.identification.text">
+                                <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;" data-translate="nosotros.tech.identification.text">
                                     Nuestra tecnología <strong>MFT™ (Mineral Finder Technology)</strong> identifica anomalías electromagnéticas originadas por depósitos minerales a través de su <strong>firma espectral única</strong>, utilizando frecuencias de electroresonancia magnética.
                                 </p>
-                                <div class="tech-highlight" style="background: rgba(5, 150, 105, 0.1); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--vibrant-green);">
-                                    <p style="color: var(--text-primary); font-size: 0.95rem; margin: 0; font-weight: 500;" data-translate="nosotros.tech.precision">
-                                        <strong>Precisión excepcional:</strong> Hasta un 94% de exactitud en detección mineral
+                                <div class="tech-highlight" style="padding: 18px 20px; border-radius: 4px; border-left: 3px solid #10b981;">
+                                    <p style="color: #10b981; font-size: 1.15rem; margin: 0; font-weight: 600;" data-translate="nosotros.tech.precision">
+                                        Precisión: 94% de exactitud en detección mineral
                                     </p>
                                 </div>
                             </div>
-                            
+
                             <!-- Mercado Objetivo -->
-                            <div class="market-description" style="background: rgba(248, 250, 252, 0.05); padding: 40px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
-                                <div class="market-icon" style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);">
-                                    <div style="color: white; font-weight: 700;">CLIENT</div>
+                            <div class="market-description" style="padding: 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s ease;"
+                                 onmouseover="this.style.borderColor='rgba(16, 185, 129, 0.3)';"
+                                 onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                                <div style="margin-bottom: 25px;">
+                                    <h4 style="font-size: 1.6rem; color: #10b981; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="nosotros.clients.title">Nuestros Clientes</h4>
                                 </div>
-                                <h4 style="font-size: 1.8rem; color: var(--vibrant-green); margin-bottom: 20px; font-weight: bold;" data-translate="nosotros.clients.title">Nuestros Clientes</h4>
-                                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;" data-translate="nosotros.clients.text">
+                                <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;" data-translate="nosotros.clients.text">
                                     Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>, ofreciendo la tecnología más avanzada del mercado.
                                 </p>
-                                
+
                                 <div class="client-types" style="display: flex; flex-direction: column; gap: 12px;">
-                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
-                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">CORP</span>
-                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.corporate">Empresas Mineras Corporativas</span>
+                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
+                                         onmouseover="this.style.borderLeftWidth='4px';"
+                                         onmouseout="this.style.borderLeftWidth='3px';">
+                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.corporate">Empresas Mineras Corporativas</span>
                                     </div>
-                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
-                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">EXPL</span>
-                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.exploration">Compañías de Exploración</span>
+                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
+                                         onmouseover="this.style.borderLeftWidth='4px';"
+                                         onmouseout="this.style.borderLeftWidth='3px';">
+                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.exploration">Compañías de Exploración</span>
                                     </div>
-                                    <div class="client-type" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(5, 150, 105, 0.1); border-radius: 8px; border: 1px solid rgba(5, 150, 105, 0.2);">
-                                        <span style="font-size: 1.2rem; color: var(--vibrant-green); font-weight: 700;">IND</span>
-                                        <span style="color: var(--text-primary); font-weight: 500;" data-translate="nosotros.clients.individual">Concesionarios Individuales</span>
+                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
+                                         onmouseover="this.style.borderLeftWidth='4px';"
+                                         onmouseout="this.style.borderLeftWidth='3px';">
+                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.individual">Concesionarios Individuales</span>
                                     </div>
                                 </div>
                             </div>
@@ -1170,7 +1417,7 @@
         </section>
 
         <!-- Tecnología Section -->
-        <section id="tecnologia" class="section technology-section">
+        <section id="tecnologia" class="section technology-section fade-in-section">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge" data-translate="tecnologia.badge">
@@ -1181,72 +1428,91 @@
                 </div>
                 
                 <div class="tech-principles">
-                    <h3 style="font-size: 2.5rem; color: var(--text-primary); text-align: center; margin-bottom: 60px; font-weight: bold;" data-translate="tecnologia.how.title">Cómo Funciona MFT™</h3>
-                    <div class="principles-grid">
-                        <div class="principle-card">
-                            <h4 class="principle-title" data-translate="tecnologia.electromagnetic.title">Principio Electromagnético</h4>
-                            <p class="principle-text" data-translate="tecnologia.electromagnetic.text">
+                    <h3 style="font-size: 2rem; color: var(--text-primary); text-align: center; margin-bottom: 50px; font-weight: 700;" data-translate="tecnologia.how.title">Fundamentos Tecnológicos</h3>
+                    <div class="principles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                            <h4 class="principle-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="tecnologia.electromagnetic.title">Principio Electromagnético</h4>
+                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.electromagnetic.text">
                                 La acumulación de material en el subsuelo produce la polarización de las rocas adyacentes, alterando los campos electromagnéticos cuasi estacionarios de la Tierra, identificándose como anomalías electromagnéticas.
                             </p>
                         </div>
-                        <div class="principle-card">
-                            <h4 class="principle-title" data-translate="tecnologia.spectral.title">Firma Espectral</h4>
-                            <p class="principle-text" data-translate="tecnologia.spectral.text">
+                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.3)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                            <h4 class="principle-title" style="font-size: 1.7rem; color: #10b981; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="tecnologia.spectral.title">Firma Espectral</h4>
+                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.spectral.text">
                                 Todos los materiales de la naturaleza tienen su propia frecuencia de resonancia. En MFT™ se utilizan frecuencias de electroresonancia magnética para caracterizar los materiales mediante análisis espectral de laboratorio.
                             </p>
                         </div>
-                        <div class="principle-card">
-                            <h4 class="principle-title" data-translate="tecnologia.multispectral.title">Prospección Multiespectral</h4>
-                            <p class="principle-text" data-translate="tecnologia.multispectral.text">
+                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                            <h4 class="principle-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="tecnologia.multispectral.title">Prospección Multiespectral</h4>
+                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.multispectral.text">
                                 Tecnología satelital avanzada para identificar anomalías electromagnéticas y crear mapas de mineralización con precisión excepcional.
                             </p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="process-timeline">
-                    <h3 style="font-size: 2.5rem; color: var(--vibrant-green); text-align: center; margin-bottom: 40px; font-weight: bold;" data-translate="tecnologia.process.title">Proceso MFT™ - 4 Fases Técnicas</h3>
-                    <div class="timeline-grid">
-                        <div class="phase-card">
-                            <div class="phase-header">
-                                <div class="phase-number">1</div>
-                                <h4 class="phase-title" data-translate="tecnologia.phase1.title">Análisis Espectral</h4>
+                <div class="process-timeline" style="margin-top: 70px;">
+                    <h3 style="font-size: 2rem; color: var(--text-primary); text-align: center; margin-bottom: 50px; font-weight: 700;" data-translate="tecnologia.process.title">Proceso de Implementación</h3>
+                    <div class="timeline-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+                        <!-- Fase 1 -->
+                        <div class="phase-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 28px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.4)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="phase-number" style="width: 40px; height: 40px; background: #3b82f6; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 700; color: white;">1</div>
+                                <h4 class="phase-title" style="font-size: 1.7rem; color: #3b82f6; margin: 0; font-weight: 700;" data-translate="tecnologia.phase1.title">Análisis Espectral</h4>
                             </div>
-                            <h5 class="phase-subtitle" data-translate="tecnologia.phase1.subtitle">Espectrografía Satelital de Electroresonancia</h5>
-                            <p class="phase-text" data-translate="tecnologia.phase1.text">
+                            <h5 class="phase-subtitle" style="font-size: 1.7rem; color: rgba(255,255,255,0.7); margin-bottom: 15px; font-weight: 600;" data-translate="tecnologia.phase1.subtitle">Espectrografía Satelital de Electroresonancia</h5>
+                            <p class="phase-text" style="color: rgba(255,255,255,0.85); font-size: 1.7rem; line-height: 1.6;" data-translate="tecnologia.phase1.text">
                                 Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.
                             </p>
                         </div>
-                        
-                        <div class="phase-card">
-                            <div class="phase-header">
-                                <div class="phase-number">2</div>
-                                <h4 class="phase-title" data-translate="tecnologia.phase2.title">Detección Electromagnética</h4>
+
+                        <!-- Fase 2 -->
+                        <div class="phase-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 28px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.4)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="phase-number" style="width: 40px; height: 40px; background: #10b981; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 700; color: white;">2</div>
+                                <h4 class="phase-title" style="font-size: 1.7rem; color: #10b981; margin: 0; font-weight: 700;" data-translate="tecnologia.phase2.title">Detección Electromagnética</h4>
                             </div>
-                            <h5 class="phase-subtitle" data-translate="tecnologia.phase2.subtitle">Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)</h5>
-                            <p class="phase-text" data-translate="tecnologia.phase2.text">
+                            <h5 class="phase-subtitle" style="font-size: 1.7rem; color: rgba(255,255,255,0.7); margin-bottom: 15px; font-weight: 600;" data-translate="tecnologia.phase2.subtitle">Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)</h5>
+                            <p class="phase-text" style="color: rgba(255,255,255,0.85); font-size: 1.7rem; line-height: 1.6;" data-translate="tecnologia.phase2.text">
                                 Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.
                             </p>
                         </div>
-                        
-                        <div class="phase-card">
-                            <div class="phase-header">
-                                <div class="phase-number">3</div>
-                                <h4 class="phase-title" data-translate="tecnologia.phase3.title">Procesamiento de Datos</h4>
+
+                        <!-- Fase 3 -->
+                        <div class="phase-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 28px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.4)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="phase-number" style="width: 40px; height: 40px; background: #3b82f6; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 700; color: white;">3</div>
+                                <h4 class="phase-title" style="font-size: 1.7rem; color: #3b82f6; margin: 0; font-weight: 700;" data-translate="tecnologia.phase3.title">Procesamiento de Datos</h4>
                             </div>
-                            <h5 class="phase-subtitle" data-translate="tecnologia.phase3.subtitle">Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)</h5>
-                            <p class="phase-text" data-translate="tecnologia.phase3.text">
+                            <h5 class="phase-subtitle" style="font-size: 1.7rem; color: rgba(255,255,255,0.7); margin-bottom: 15px; font-weight: 600;" data-translate="tecnologia.phase3.subtitle">Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)</h5>
+                            <p class="phase-text" style="color: rgba(255,255,255,0.85); font-size: 1.7rem; line-height: 1.6;" data-translate="tecnologia.phase3.text">
                                 Análisis computacional avanzado utilizando algoritmos especializados para determinar composición mineral, concentración y viabilidad económica de extracción.
                             </p>
                         </div>
-                        
-                        <div class="phase-card">
-                            <div class="phase-header">
-                                <div class="phase-number">4</div>
-                                <h4 class="phase-title" data-translate="tecnologia.phase4.title">Reporte Técnico Especializado</h4>
+
+                        <!-- Fase 4 -->
+                        <div class="phase-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 28px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
+                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.4)';"
+                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                <div class="phase-number" style="width: 40px; height: 40px; background: #10b981; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; font-weight: 700; color: white;">4</div>
+                                <h4 class="phase-title" style="font-size: 1.7rem; color: #10b981; margin: 0; font-weight: 700;" data-translate="tecnologia.phase4.title">Reporte Técnico Especializado</h4>
                             </div>
-                            <h5 class="phase-subtitle" data-translate="tecnologia.phase4.subtitle">Soporte Continuo y Monitoreo Operativo</h5>
-                            <p class="phase-text" data-translate="tecnologia.phase4.text">
+                            <h5 class="phase-subtitle" style="font-size: 1.7rem; color: rgba(255,255,255,0.7); margin-bottom: 15px; font-weight: 600;" data-translate="tecnologia.phase4.subtitle">Soporte Continuo y Monitoreo Operativo</h5>
+                            <p class="phase-text" style="color: rgba(255,255,255,0.85); font-size: 1.7rem; line-height: 1.6;" data-translate="tecnologia.phase4.text">
                                 Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.
                             </p>
                         </div>
@@ -1257,83 +1523,83 @@
                 <div class="applications-section" style="margin-top: 80px;">
                     <div class="applications-header" style="text-align: center; margin-bottom: 60px;">
                         <h3 style="font-size: 2.5rem; color: var(--vibrant-green); margin-bottom: 15px; font-weight: bold;" data-translate="tecnologia.applications.title">Aplicaciones de la Tecnología</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;" data-translate="tecnologia.applications.subtitle">Casos de uso específicos para maximizar el potencial MFT™</p>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.6rem;" data-translate="tecnologia.applications.subtitle">Casos de uso específicos para maximizar el potencial MFT™</p>
                     </div>
                     
                     <div class="applications-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
                         
                         <!-- Exploración -->
-                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid var(--vibrant-green);">
-                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
-                                <div class="category-icon" style="width: 60px; height: 60px; background: var(--vibrant-green); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);">
-                                    EXPLOR
-                                </div>
-                                <h4 style="color: var(--vibrant-green); font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.exploration.title">EXPLORACIÓN</h4>
+                        <div class="application-category" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(5, 150, 105, 0.12)); border: 2px solid transparent; border-image: linear-gradient(135deg, #10b981, #059669) 1; border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(16, 185, 129, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(16, 185, 129, 0.15)';">
+                            <div class="category-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                                <div style="font-size: 3.5rem;">🔍</div>
+                                <h4 style="color: var(--vibrant-green); font-size: 2rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.exploration.title">EXPLORACIÓN</h4>
                             </div>
                             
                             <div class="application-item" style="margin-bottom: 30px; padding: 25px; background: rgba(5, 150, 105, 0.1); border-radius: 12px; border: 1px solid rgba(5, 150, 105, 0.2);">
-                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.greenfields.title">Green Fields o Áreas Exploratorias</h5>
+                                <h5 style="color: var(--text-primary); font-size: 1.7rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.greenfields.title">Green Fields o Áreas Exploratorias</h5>
                                 <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.greenfields.text">
                                     La <strong>MFT™</strong> es el punto de partida de la exploración de áreas no estudiadas previamente. 
                                     Al realizar la espectrografía se visualizan los prospectos presentes en el área, descartando las zonas 
                                     donde no se evidencia la presencia de minerales.
                                 </p>
-                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 1.25rem; font-weight: 600;">
                                     Identificación inicial de prospectos
                                 </div>
                             </div>
                             
                             <div class="application-item" style="padding: 25px; background: rgba(5, 150, 105, 0.1); border-radius: 12px; border: 1px solid rgba(5, 150, 105, 0.2);">
-                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.reinterpretation.title">Reinterpretación de Data</h5>
+                                <h5 style="color: var(--text-primary); font-size: 1.7rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.reinterpretation.title">Reinterpretación de Data</h5>
                                 <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.exploration.reinterpretation.text">
                                     En aquellas áreas donde ya se han realizado estudios con las herramientas tradicionales, pero hay 
                                     incertidumbre en cuanto a las zonas para las cuales la interpretación de data puede complicarse. 
                                     La <strong>MFT™</strong> en estos casos es de suma ayuda para dilucidar la presencia del material buscado.
                                 </p>
-                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                <div class="application-badge" style="display: inline-block; background: rgba(5, 150, 105, 0.2); color: var(--vibrant-green); padding: 8px 16px; border-radius: 20px; font-size: 1.25rem; font-weight: 600;">
                                     <span data-translate="tecnologia.applications.exploration.reinterpretation.badge">Clarificación de estudios previos</span>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Producción -->
-                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid #f59e0b;">
-                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
-                                <div class="category-icon" style="width: 60px; height: 60px; background: #f59e0b; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);">
-                                    PROD
-                                </div>
-                                <h4 style="color: #f59e0b; font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.production.title">PRODUCCIÓN</h4>
+                        <div class="application-category" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.12)); border: 2px solid transparent; border-image: linear-gradient(135deg, #f59e0b, #d97706) 1; border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(245, 158, 11, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(245, 158, 11, 0.15)';">
+                            <div class="category-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                                <div style="font-size: 3.5rem;">⚙️</div>
+                                <h4 style="color: #f59e0b; font-size: 2rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.production.title">PRODUCCIÓN</h4>
                             </div>
                             
                             <div class="application-item" style="padding: 25px; background: rgba(245, 158, 11, 0.1); border-radius: 12px; border: 1px solid rgba(245, 158, 11, 0.2);">
-                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.production.existing.title">Minas Existentes</h5>
+                                <h5 style="color: var(--text-primary); font-size: 1.7rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.production.existing.title">Minas Existentes</h5>
                                 <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.production.existing.text">
                                     En las minas ya desarrolladas, donde se requiere reingeniería para ubicar las zonas de acumulación 
                                     del mineral que aún no han sido ubicadas e igualmente verificar la existencia del mineral en las 
                                     estructuras conocidas para la optimización del recobro de los depósitos.
                                 </p>
-                                <div class="application-badge" style="display: inline-block; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                <div class="application-badge" style="display: inline-block; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 8px 16px; border-radius: 20px; font-size: 1.25rem; font-weight: 600;">
                                     <span data-translate="tecnologia.applications.production.existing.badge">Optimización de recobro mineral</span>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Perforación -->
-                        <div class="application-category" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); border-left: 4px solid #8b5cf6;">
-                            <div class="category-header" style="display: flex; align-items: center; margin-bottom: 30px;">
-                                <div class="category-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: bold; color: white; margin-right: 20px; box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);">
-                                    DRILL
-                                </div>
-                                <h4 style="color: #8b5cf6; font-size: 1.8rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.drilling.title">PERFORACIÓN</h4>
+                        <div class="application-category" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(124, 58, 237, 0.12)); border: 2px solid transparent; border-image: linear-gradient(135deg, #8b5cf6, #7c3aed) 1; border-radius: 20px; padding: 40px; backdrop-filter: blur(20px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 50px rgba(139, 92, 246, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(139, 92, 246, 0.15)';">
+                            <div class="category-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+                                <div style="font-size: 3.5rem;">🔨</div>
+                                <h4 style="color: #8b5cf6; font-size: 2rem; font-weight: bold; margin: 0;" data-translate="tecnologia.applications.drilling.title">PERFORACIÓN</h4>
                             </div>
                             
                             <div class="application-item" style="padding: 25px; background: rgba(139, 92, 246, 0.1); border-radius: 12px; border: 1px solid rgba(139, 92, 246, 0.2);">
-                                <h5 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.drilling.virtual.title">Perforación Virtual</h5>
+                                <h5 style="color: var(--text-primary); font-size: 1.7rem; font-weight: 700; margin-bottom: 15px;" data-translate="tecnologia.applications.drilling.virtual.title">Perforación Virtual</h5>
                                 <p style="color: rgba(255,255,255,0.9); line-height: 1.6; font-size: 1rem; margin-bottom: 15px;" data-translate="tecnologia.applications.drilling.virtual.text">
                                     Un estudio de verificación con la <strong>MFT™</strong> permitirá pronosticar las capas polarizadas presentes, 
                                     sus profundidades, espesores aproximados y las coordenadas de fondo a donde dirigir la perforación.
                                 </p>
-                                <div class="application-badge" style="display: inline-block; background: rgba(139, 92, 246, 0.2); color: #8b5cf6; padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                <div class="application-badge" style="display: inline-block; background: rgba(139, 92, 246, 0.2); color: #8b5cf6; padding: 8px 16px; border-radius: 20px; font-size: 1.25rem; font-weight: 600;">
                                     <span data-translate="tecnologia.applications.drilling.virtual.badge">Guía de perforación dirigida</span>
                                 </div>
                             </div>
@@ -1342,20 +1608,26 @@
                     
                     <!-- Estadísticas de aplicaciones -->
                     <div class="applications-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
-                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
-                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--vibrant-green); font-weight: 700;">GREEN</div>
-                            <h4 style="color: var(--vibrant-green); font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.greenfields.title">Green Fields</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.greenfields.text">Exploración inicial de áreas vírgenes</p>
+                        <div class="app-stat" style="text-align: center; padding: 35px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.15)); border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 20px; backdrop-filter: blur(15px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(16, 185, 129, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div class="stat-icon" style="font-size: 3.5rem; margin-bottom: 20px;">🌱</div>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.7rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.greenfields.title">Green Fields</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem;" data-translate="tecnologia.applications.stats.greenfields.text">Exploración inicial de áreas vírgenes</p>
                         </div>
-                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
-                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #f59e0b; font-weight: 700;">REING</div>
-                            <h4 style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.reengineering.title">Reingeniería</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.reengineering.text">Optimización de minas existentes</p>
+                        <div class="app-stat" style="text-align: center; padding: 35px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.15)); border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 20px; backdrop-filter: blur(15px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(245, 158, 11, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div class="stat-icon" style="font-size: 3.5rem; margin-bottom: 20px;">🔄</div>
+                            <h4 style="color: #f59e0b; font-size: 1.7rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.reengineering.title">Reingeniería</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem;" data-translate="tecnologia.applications.stats.reengineering.text">Optimización de minas existentes</p>
                         </div>
-                        <div class="app-stat" style="text-align: center; padding: 30px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 15px; backdrop-filter: blur(10px);">
-                            <div class="stat-icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #8b5cf6; font-weight: 700;">PERFORA</div>
-                            <h4 style="color: #8b5cf6; font-size: 1.5rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.drilling.title">Perforación</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;" data-translate="tecnologia.applications.stats.drilling.text">Guía virtual para perforación dirigida</p>
+                        <div class="app-stat" style="text-align: center; padding: 35px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(124, 58, 237, 0.15)); border: 2px solid rgba(139, 92, 246, 0.3); border-radius: 20px; backdrop-filter: blur(15px); transition: all 0.3s ease;"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(139, 92, 246, 0.3)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div class="stat-icon" style="font-size: 3.5rem; margin-bottom: 20px;">🎯</div>
+                            <h4 style="color: #8b5cf6; font-size: 1.7rem; margin-bottom: 10px; font-weight: bold;" data-translate="tecnologia.applications.stats.drilling.title">Perforación</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem;" data-translate="tecnologia.applications.stats.drilling.text">Guía virtual para perforación dirigida</p>
                         </div>
                     </div>
                 </div>
@@ -1363,7 +1635,7 @@
         </section>
 
         <!-- Ventajas Section -->
-        <section id="ventajas" class="section" style="background: var(--secondary-navy);">
+        <section id="ventajas" class="section fade-in-section" style="background: var(--secondary-navy);">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge" data-translate="ventajas.badge">
@@ -1374,93 +1646,65 @@
                 </div>
                 
                 <div class="cards-grid">
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.precision.title">Precisión Superior</h3>
-                        <p class="card-text" data-translate="ventajas.precision.text">
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #3b82f6; margin-bottom: 15px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="ventajas.precision.title">Precisión Superior</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.precision.text">
                             Hasta un 94% de precisión, versus métodos tradicionales con resultados variables y menor confiabilidad técnica.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.efficiency.title">Eficiencia Temporal</h3>
-                        <p class="card-text" data-translate="ventajas.efficiency.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #10b981; margin-bottom: 15px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="ventajas.efficiency.title">Eficiencia Temporal</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.efficiency.text">
                             Hasta 80% más rápido que métodos convencionales. Resultados en 30-60 días versus años de exploración tradicional.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.cost.title">Reducción de Costos</h3>
-                        <p class="card-text" data-translate="ventajas.cost.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #3b82f6; margin-bottom: 15px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="ventajas.cost.title">Reducción de Costos</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.cost.text">
                             Hasta un 80% menor costo operativo comparado con perforaciones exploratorias tradicionales de alto riesgo económico.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.passive.title">Tecnología Pasiva</h3>
-                        <p class="card-text" data-translate="ventajas.passive.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #10b981; margin-bottom: 15px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="ventajas.passive.title">Tecnología Pasiva</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.passive.text">
                             No invasiva al medio ambiente, sin excavaciones preliminares, mínimo impacto ecológico y operación silenciosa.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.depth.title">Profundidad Excepcional</h3>
-                        <p class="card-text" data-translate="ventajas.depth.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #3b82f6; margin-bottom: 15px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="ventajas.depth.title">Profundidad Excepcional</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.depth.text">
                             Detección remota hasta 9.8 km de profundidad usando frecuencias de electroresonancia magnética.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.support.title">Soporte Continuo</h3>
-                        <p class="card-text" data-translate="ventajas.support.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #10b981; margin-bottom: 15px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="ventajas.support.title">Soporte Continuo</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.support.text">
                             Asistencia técnica especializada desde perforación hasta producción operativa.
                         </p>
                     </div>
-                    
-                    <div class="card card-with-corner-check">
-                        <div class="corner-checkmark">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="var(--vibrant-green)" stroke="var(--vibrant-green)" stroke-width="2"/>
-                                <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card-title" data-translate="ventajas.success.title">Alto Éxito</h3>
-                        <p class="card-text" data-translate="ventajas.success.text">
+
+                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 35px 30px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
+                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
+                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
+                        <h3 class="card-title" style="font-size: 1.7rem; font-weight: 700; color: #3b82f6; margin-bottom: 15px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="ventajas.success.title">Alto Éxito</h3>
+                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="ventajas.success.text">
                             Tasas de éxito hasta un 50% de tasa de éxito de descubrimiento.
                         </p>
                     </div>
@@ -1470,86 +1714,96 @@
                 <div class="comparison-table-section" style="margin-top: 80px;">
                     <div class="comparison-header" style="text-align: center; margin-bottom: 50px;">
                         <h3 style="font-size: 2.5rem; color: var(--text-primary); margin-bottom: 15px; font-weight: bold;" data-translate="ventajas.comparison.title">MFT™ vs Métodos Tradicionales</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;" data-translate="ventajas.comparison.subtitle">Comparativa detallada de rendimiento</p>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.6rem;" data-translate="ventajas.comparison.subtitle">Comparativa detallada de rendimiento</p>
                     </div>
                     
-                    <div class="comparison-table-container" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 0; backdrop-filter: blur(20px); overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+                    <div class="comparison-table-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 25px; padding: 0; backdrop-filter: blur(20px); overflow: hidden; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);">
                         <div class="comparison-table">
                             <!-- Header de la tabla -->
-                            <div class="table-header" style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6)); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                                <div class="header-cell" style="padding: 25px 30px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1);">
-                                    <h4 style="color: var(--text-primary); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.aspect">ASPECTO</h4>
+                            <div class="table-header" style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <div class="header-cell" style="padding: 25px 25px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+                                    <h4 style="color: var(--text-primary); font-size: 1.7rem; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 1.5px;" data-translate="ventajas.comparison.header.aspect">ASPECTO</h4>
                                 </div>
-                                <div class="header-cell" style="padding: 25px 30px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1);">
-                                    <h4 style="color: var(--text-primary); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.traditional">MÉTODOS TRADICIONALES</h4>
+                                <div class="header-cell" style="padding: 25px 25px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <h4 style="color: rgba(255,255,255,0.8); font-size: 1.7rem; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 1.5px;" data-translate="ventajas.comparison.header.traditional">MÉTODOS TRADICIONALES</h4>
                                 </div>
-                                <div class="header-cell" style="padding: 25px 30px; text-align: center;">
-                                    <h4 style="color: var(--vibrant-green); font-size: 1.3rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.header.mft">TECNOLOGÍA MFT™</h4>
+                                <div class="header-cell" style="padding: 25px 25px; text-align: center; background: rgba(16, 185, 129, 0.08);">
+                                    <h4 style="color: var(--vibrant-green); font-size: 1.7rem; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 1.5px;" data-translate="ventajas.comparison.header.mft">TECNOLOGÍA MFT™</h4>
                                 </div>
                             </div>
                             
                             <!-- Fila 1: Tiempo de Exploración -->
-                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
-                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.time.aspect">Tiempo de Exploración</p>
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s ease;"
+                                 onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
+                                 onmouseout="this.style.background='transparent';">
+                                <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.time.aspect">Tiempo de Exploración</p>
                                 </div>
-                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.time.traditional">Años</p>
+                                <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.time.traditional">Años</p>
                                 </div>
-                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
-                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.time.mft">30-60 días (Hasta 80% más rápido)</p>
+                                <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.time.mft">30-60 días</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Fila 2: Costo -->
-                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
-                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.cost.aspect">Costo</p>
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s ease;"
+                                 onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
+                                 onmouseout="this.style.background='transparent';">
+                                <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.cost.aspect">Costo</p>
                                 </div>
-                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.cost.traditional">Alto (perforaciones)</p>
+                                <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.cost.traditional">Alto</p>
                                 </div>
-                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
-                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.cost.mft">Hasta un 80% Menor</p>
+                                <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.cost.mft">80% Menor</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Fila 3: Permisos Ambientales -->
-                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
-                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.permits.aspect">Permisos Ambientales</p>
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s ease;"
+                                 onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
+                                 onmouseout="this.style.background='transparent';">
+                                <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.permits.aspect">Permisos Ambientales</p>
                                 </div>
-                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.permits.traditional">Requeridos</p>
+                                <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.permits.traditional">Requeridos</p>
                                 </div>
-                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
-                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.permits.mft">No Invasiva (Pasiva)</p>
+                                <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.permits.mft">No Invasiva</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Fila 4: Precisión -->
-                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
-                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.aspect">Precisión</p>
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s ease;"
+                                 onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
+                                 onmouseout="this.style.background='transparent';">
+                                <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.aspect">Precisión</p>
                                 </div>
-                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.precision.traditional">Variable</p>
+                                <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.precision.traditional">Variable</p>
                                 </div>
-                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
-                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.precision.mft">Hasta un 94%</p>
+                                <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.mft">94%</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Fila 5: Tasa de Éxito -->
-                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; transition: all 0.3s ease;">
-                                <div class="table-cell aspect-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.aspect">Tasa de Éxito</p>
+                            <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; transition: all 0.2s ease;"
+                                 onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
+                                 onmouseout="this.style.background='transparent';">
+                                <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.aspect">Tasa de Éxito</p>
                                 </div>
-                                <div class="table-cell traditional-cell" style="padding: 25px 30px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 0;" data-translate="ventajas.comparison.success.traditional">20% - 30%</p>
+                                <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.success.traditional">20-30%</p>
                                 </div>
-                                <div class="table-cell mft-cell" style="padding: 25px 30px; text-align: center; background: rgba(5, 150, 105, 0.1);">
-                                    <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: bold; margin: 0;" data-translate="ventajas.comparison.success.mft">Hasta un 50%</p>
+                                <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.mft">50%</p>
                                 </div>
                             </div>
                         </div>
@@ -1559,7 +1813,7 @@
         </section>
 
         <!-- Contacto Section -->
-        <section id="contacto" class="section contact-section">
+        <section id="contacto" class="section contact-section fade-in-section">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge">
@@ -1576,23 +1830,23 @@
                         
                         <div class="contact-card" style="margin-bottom: 30px;">
                             <div class="contact-icon" data-translate="contacto.icon.email">EMAIL</div>
-                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.email.title">Email Principal</h4>
-                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7dcf3c2c6d2ddc7dad8d4d6dc9dd0dcde">[email&#160;protected]</a></p>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.email.subtitle">Distribuidor autorizado MFT™</p>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.7rem; margin-bottom: 10px;" data-translate="contacto.info.email.title">Email Principal</h4>
+                            <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7dcf3c2c6d2ddc7dad8d4d6dc9dd0dcde">[email&#160;protected]</a></p>
+                            <p style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="contacto.info.email.subtitle">Distribuidor autorizado MFT™</p>
                         </div>
                         
                         <div class="contact-card" style="margin-bottom: 30px;">
                             <div class="contact-icon" data-translate="contacto.icon.time">TIEMPO</div>
-                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.response.title">Respuesta Rápida</h4>
-                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;" data-translate="contacto.info.response.time">< 24 horas</p>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.response.subtitle">Tiempo promedio de respuesta</p>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.7rem; margin-bottom: 10px;" data-translate="contacto.info.response.title">Respuesta Rápida</h4>
+                            <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600;" data-translate="contacto.info.response.time">< 24 horas</p>
+                            <p style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="contacto.info.response.subtitle">Tiempo promedio de respuesta</p>
                         </div>
                         
                         <div class="contact-card">
                             <div class="contact-icon" data-translate="contacto.icon.support">SOPORTE</div>
-                            <h4 style="color: var(--vibrant-green); font-size: 1.3rem; margin-bottom: 10px;" data-translate="contacto.info.support.title">Soporte Técnico</h4>
-                            <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600;" data-translate="contacto.info.support.availability">Disponible</p>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="contacto.info.support.subtitle">Asistencia especializada MFT™</p>
+                            <h4 style="color: var(--vibrant-green); font-size: 1.7rem; margin-bottom: 10px;" data-translate="contacto.info.support.title">Soporte Técnico</h4>
+                            <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600;" data-translate="contacto.info.support.availability">Disponible</p>
+                            <p style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="contacto.info.support.subtitle">Asistencia especializada MFT™</p>
                         </div>
                     </div>
                     
@@ -1677,7 +1931,9 @@
                 'hero.badge': 'Distribuidor Autorizado CTAC',
                 'hero.title': 'Revoluciona la <span class="gradient-text">Prospección Minera</span> con Tecnología <span class="tech-highlight">MFT™</span>',
                 'hero.description': 'Tecnología de prospección remota que identifica depósitos minerales a través de frecuencias de electroresonancia magnética con <strong>precisión excepcional</strong> y alcance de gran profundidad.',
+                'hero.cta': 'Solicitar Información',
                 'hero.stats.precision': 'Precisión',
+                'hero.stats.precision.value': 'Hasta 94%',
                 'hero.stats.depth': 'Profundidad',
                 'hero.stats.technology': 'Tecnología',
                 
@@ -1901,7 +2157,9 @@
                 'hero.badge': 'Authorized CTAC Distributor',
                 'hero.title': 'Revolutionize <span class="gradient-text">Mineral Prospecting</span> with <span class="tech-highlight">MFT™</span> Technology',
                 'hero.description': 'Remote prospecting technology that identifies mineral deposits through electromagnetic resonance frequencies with <strong>exceptional precision</strong> and great depth reach.',
+                'hero.cta': 'Request Information',
                 'hero.stats.precision': 'Precision',
+                'hero.stats.precision.value': 'Up to 94%',
                 'hero.stats.depth': 'Depth',
                 'hero.stats.technology': 'Technology',
                 
@@ -2178,7 +2436,7 @@
                 border-radius: 8px;
                 color: white;
                 font-weight: 600;
-                font-size: 0.95rem;
+                font-size: 1.15rem;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 backdrop-filter: blur(20px);
                 border: 1px solid;
@@ -2304,7 +2562,7 @@
                 errorElement.className = 'field-error';
                 errorElement.style.cssText = `
                     color: #dc2626;
-                    font-size: 0.85rem;
+                    font-size: 1.25rem;
                     margin-top: 5px;
                     font-weight: 500;
                     opacity: 0;
@@ -2462,11 +2720,116 @@
                 });
             });
         });
+
+        // ========== ANIMACIONES AL SCROLL ==========
+        // Intersection Observer para detectar cuando los elementos son visibles
+        const observerOptions = {
+            threshold: 0.15, // Activar cuando el 15% del elemento es visible
+            rootMargin: '0px 0px -50px 0px' // Activar un poco antes de que sea totalmente visible
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Opcional: dejar de observar después de la animación (solo animar una vez)
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos los elementos con clases de animación
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in-section, .slide-in-left, .slide-in-right, .scale-in');
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // ========== CONTADORES ANIMADOS ==========
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const suffix = element.getAttribute('data-suffix') || '';
+            const duration = 2000; // 2 segundos
+            const increment = target / (duration / 16); // 60 FPS
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = current.toFixed(1) + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target.toFixed(1) + suffix;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Observer para contadores
+        const counterObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Inicializar contadores
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter-animated');
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        });
+
+        // ========== STICKY HEADER QUE SE REDUCE ==========
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ========== RIPPLE EFFECT EN BOTONES ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('a[href="#contacto"], .nav-link');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple-effect');
+
+                    this.appendChild(ripple);
+
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+        });
     </script>
 
     <!-- Footer Corporativo -->
-    <footer style="background: var(--accent-navy); border-top: 1px solid var(--border-gray); padding: 80px 0 40px 0; margin-top: 0;">
-        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+    <footer style="background: #001f3f; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 80px 0 40px 0; margin-top: 0;">
+        <div style="max-width: 1800px; margin: 0 auto; padding: 0 40px;">
             
             <!-- Sección Principal del Footer -->
             <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
@@ -2479,16 +2842,16 @@
                         </div>
                         <div>
                             <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: bold; margin: 0;">QuantikGeo</h3>
-                            <p style="color: var(--vibrant-green); font-size: 1.1rem; font-weight: 600; margin: 5px 0 0 0;" data-translate="footer.distributor">Distribuidor autorizado de tecnología MFT™</p>
+                            <p style="color: var(--vibrant-green); font-size: 1.7rem; font-weight: 600; margin: 5px 0 0 0;" data-translate="footer.distributor">Distribuidor autorizado de tecnología MFT™</p>
                         </div>
                     </div>
                     
                     <div style="background: rgba(248, 250, 252, 0.05); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
                         <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                            <span style="font-size: 1.5rem; margin-right: 15px; color: var(--vibrant-green); font-weight: 700;">EMAIL</span>
+                            <span style="font-size: 1.7rem; margin-right: 15px; color: var(--vibrant-green); font-weight: 700;">EMAIL</span>
                             <div>
-                                <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1929e9f859092859eb18084909f85989a96949edf929e9c">[email&#160;protected]</a></p>
-                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 2px 0 0 0;" data-translate="footer.email.description">Email para consultas MFT™</p>
+                                <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600; margin: 0;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1929e9f859092859eb18084909f85989a96949edf929e9c">[email&#160;protected]</a></p>
+                                <p style="color: var(--text-secondary); font-size: 1.7rem; margin: 2px 0 0 0;" data-translate="footer.email.description">Email para consultas MFT™</p>
                             </div>
                         </div>
                     </div>
@@ -2496,7 +2859,7 @@
                 
                 <!-- Navegación -->
                 <div>
-                    <h4 style="color: var(--vibrant-green); font-size: 1.4rem; font-weight: bold; margin-bottom: 25px; position: relative;">
+                    <h4 style="color: var(--vibrant-green); font-size: 1.6rem; font-weight: bold; margin-bottom: 25px; position: relative;">
                         <span data-translate="footer.navigation">Navegación</span>
                         <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
                     </h4>
@@ -2518,26 +2881,26 @@
                 
                 <!-- Tecnología -->
                 <div>
-                    <h4 style="color: var(--vibrant-green); font-size: 1.4rem; font-weight: bold; margin-bottom: 25px; position: relative;">
+                    <h4 style="color: var(--vibrant-green); font-size: 1.6rem; font-weight: bold; margin-bottom: 25px; position: relative;">
                         <span data-translate="footer.technology">Tecnología</span>
                         <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
                     </h4>
                     <div>
                         <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">MFT</span>
-                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.mft.description">Mineral Finder Technology</span>
+                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">MFT</span>
+                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.mft.description">Mineral Finder Technology</span>
                         </div>
                         <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SPEC</span>
-                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.spectrum.description">Electroresonancia Magnética</span>
+                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SPEC</span>
+                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.spectrum.description">Electroresonancia Magnética</span>
                         </div>
                         <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SAT</span>
-                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.sat.description">Prospección Remota</span>
+                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SAT</span>
+                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.sat.description">Prospección Remota</span>
                         </div>
                         <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.2rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">CTAC</span>
-                            <span style="color: var(--text-secondary); font-size: 0.95rem;" data-translate="footer.ctac.description">Partnership</span>
+                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">CTAC</span>
+                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.ctac.description">Partnership</span>
                         </div>
                     </div>
                 </div>
@@ -2549,15 +2912,15 @@
             <!-- Copyright y Información Legal -->
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                 <div>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">
+                    <p style="color: var(--text-secondary); font-size: 1.15rem; margin: 0;">
                         <span data-translate="footer.copyright">© 2024 <strong style="color: var(--text-primary);">QuantikGeo</strong>. Todos los derechos reservados.</span>
                     </p>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 5px 0 0 0;">
+                    <p style="color: var(--text-secondary); font-size: 1.7rem; margin: 5px 0 0 0;">
                         <span data-translate="footer.ownership">MFT™ es una tecnología propiedad de <strong style="color: var(--vibrant-green);">CTAC</strong>.</span>
                     </p>
                 </div>
                 <div style="background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.3); padding: 12px 20px; border-radius: 8px; backdrop-filter: blur(10px);">
-                    <span style="color: var(--vibrant-green); font-size: 0.9rem; font-weight: 600;" data-translate="footer.badge">DISTRIBUIDOR AUTORIZADO</span>
+                    <span style="color: var(--vibrant-green); font-size: 1.7rem; font-weight: 600;" data-translate="footer.badge">DISTRIBUIDOR AUTORIZADO</span>
                 </div>
             </div>
         </div>
