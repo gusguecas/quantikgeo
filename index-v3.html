@@ -38,7 +38,7 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-gradient);
+            background: rgb(8, 26, 43);
             background-attachment: fixed;
             color: var(--text-primary);
             overflow-x: hidden;
@@ -48,18 +48,7 @@
         
         /* Efectos de partículas sutiles */
         body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 1;
+            display: none;
         }
         
         /* Header */
@@ -69,9 +58,9 @@
             left: 0;
             right: 0;
             z-index: 9999;
-            background: rgba(0, 31, 63, 0.95);
+            background: rgb(8, 26, 43);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px 0;
+            padding: 12px 0;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(20px);
             transition: padding 0.3s ease, background 0.3s ease;
@@ -80,14 +69,18 @@
         /* Header scrolled (reducido) */
         .header.scrolled {
             padding: 10px 0;
-            background: rgba(0, 31, 63, 0.98);
+            background: rgb(8, 26, 43);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .header.scrolled .logo-circle {
-            width: 60px;
-            height: 60px;
+            width: 192px;
+            height: auto;
             transition: all 0.3s ease;
+        }
+
+        .header.scrolled .logo-circle img {
+            max-height: 60px;
         }
 
         .header.scrolled .brand-info h1 {
@@ -116,12 +109,8 @@
         }
         
         .logo-circle {
-            width: 90px;
-            height: 90px;
-            background: rgba(248, 250, 252, 0.05);
-            border: 2px solid var(--border-color);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-            border-radius: 50%;
+            width: 336px;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -131,8 +120,8 @@
         
         .logo-circle img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-height: 96px;
+            object-fit: contain;
         }
         
         .brand-info h1 {
@@ -373,11 +362,11 @@
         /* ========== FONDO AZUL MARINO PURO ========== */
         /* Azul marino puro sin gradientes */
         .hero-section {
-            background: #001f3f;
+            background: rgb(8, 26, 43);
         }
 
         .section {
-            background: #001f3f;
+            background: rgb(8, 26, 43);
         }
 
         /* Sin variación - todas las secciones mismo color */
@@ -398,7 +387,7 @@
         /* Override específico para sección nosotros */
         .nosotros-section,
         #nosotros {
-            background: #001f3f !important;
+            background: rgb(8, 26, 43) !important;
         }
         
         .section-header {
@@ -594,7 +583,7 @@
         
         /* Technology Section */
         .technology-section {
-            background: var(--secondary-navy);
+            background: rgb(8, 26, 43);
         }
         
         .tech-content {
@@ -701,7 +690,7 @@
         
         /* Contact Section */
         .contact-section {
-            background: var(--secondary-navy);
+            background: rgb(8, 26, 43);
         }
         
         .contact-content {
@@ -895,8 +884,8 @@
             }
             
             .logo-circle {
-                width: 40px !important; /* MUY pequeño */
-                height: 40px !important;
+                width: 80px !important;
+                height: auto !important;
             }
             
             .brand-info h1 {
@@ -1020,8 +1009,8 @@
         /* Pantallas muy pequeñas */
         @media (max-width: 480px) {
             .logo-circle {
-                width: 35px !important;
-                height: 35px !important;
+                width: 60px !important;
+                height: auto !important;
             }
             
             .brand-info h1 {
@@ -1285,11 +1274,7 @@
         <div class="header-content">
             <div class="logo-section">
                 <div class="logo-circle">
-                    <img src="https://page.gensparksite.com/v1/base64_upload/3d5f786c2e6931db7a4d154bcc474d46" alt="QuantikGeo Logo" />
-                </div>
-                <div class="brand-info">
-                    <h1>QuantikGeo</h1>
-                    <p class="brand-tagline" data-translate="header.tagline">Tecnología MFT™</p>
+                    <img src="q444.png" alt="QuantikGeo Logo" style="object-fit: contain;" />
                 </div>
             </div>
             
@@ -1328,10 +1313,6 @@
         <!-- Hero Section -->
         <section id="inicio" class="hero-section">
             <div class="hero-content">
-                <div class="hero-badge" data-translate="hero.badge">
-                    Distribuidor Autorizado CTAC
-                </div>
-                
                 <h1 class="hero-title" data-translate="hero.title">
                     Revoluciona la
                     <span class="gradient-text">Prospección Minera</span>
@@ -1402,19 +1383,38 @@
                     <div class="section-badge" data-translate="nosotros.badge">
                         Quiénes Somos
                     </div>
-                    <h2 class="section-title" data-translate="nosotros.title">QuantikGeo</h2>
-                    <p class="section-description" data-translate="nosotros.description">Distribuidor Autorizado de CTAC</p>
                 </div>
-                
+
+                <!-- Badges QuantikGeo y CTAC -->
+                <div style="display: flex; justify-content: center; gap: 40px; margin: 40px 0 60px 0; flex-wrap: wrap;">
+                    <!-- Badge QuantikGeo -->
+                    <div style="padding: 40px 60px; background: rgba(255, 255, 255, 0.03); border: 3px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div style="text-align: center;">
+                            <img src="q444.png" alt="QuantikGeo Logo" style="height: 161px; width: auto;">
+                        </div>
+                    </div>
+
+                    <!-- Badge CTAC -->
+                    <div style="padding: 40px 80px; background: rgba(255, 255, 255, 0.03); border: 3px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        <div style="text-align: center;">
+                            <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">Distribuidor Oficial</div>
+                            <div style="margin-bottom: 20px;">
+                                <img src="ctac-logo.png" alt="CTAC Logo" style="height: 80px; width: auto; filter: brightness(1.1);">
+                            </div>
+                            <div style="font-size: 0.95rem; color: rgba(255,255,255,0.6); letter-spacing: 1px;">Tecnología MFT™ Certificada</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 35px; margin-bottom: 70px;">
                     <!-- Nuestra Misión -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 40px; transition: all 0.2s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(30, 64, 175, 0.3)';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                    <div class="card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 45px 40px; transition: all 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(59, 130, 246, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(59, 130, 246, 0.2)';">
+                        <!-- Decorative Circle -->
+                        <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent); border-radius: 50%; opacity: 0.5;"></div>
                         <div style="margin-bottom: 25px;">
-                            <h3 class="card-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 15px;" data-translate="nosotros.mission.title">Nuestra Misión</h3>
+                            <h3 class="card-title" style="font-size: 1.8rem; color: #3b82f6; margin: 0; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.3); padding-bottom: 15px;" data-translate="nosotros.mission.title">Nuestra Misión</h3>
                         </div>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.25rem; line-height: 1.7;" data-translate="nosotros.mission.text">
+                        <p class="card-text" style="color: rgba(255,255,255,0.9); font-size: 1.15rem; line-height: 1.8; position: relative; z-index: 1;" data-translate="nosotros.mission.text">
                             Revolucionar la industria minera mediante la implementación de tecnología MFT™,
                             proporcionando soluciones de prospección remota con precisión excepcional y
                             sostenibilidad ambiental.
@@ -1422,19 +1422,51 @@
                     </div>
 
                     <!-- Partnership CTAC -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 40px; transition: all 0.2s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.3)';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                    <div class="card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(16, 185, 129, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 45px 40px; transition: all 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(16, 185, 129, 0.3)'; this.style.borderColor='rgba(16, 185, 129, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(16, 185, 129, 0.2)';">
+                        <!-- Decorative Circle -->
+                        <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent); border-radius: 50%; opacity: 0.5;"></div>
                         <div style="margin-bottom: 25px;">
-                            <h3 class="card-title" style="font-size: 1.7rem; color: #10b981; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 15px;" data-translate="nosotros.partnership.title">Partnership CTAC</h3>
+                            <h3 class="card-title" style="font-size: 1.8rem; color: #10b981; margin: 0; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 15px;" data-translate="nosotros.partnership.title">Partnership CTAC</h3>
                         </div>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.25rem; line-height: 1.7;" data-translate="nosotros.partnership.text">
+                        <p class="card-text" style="color: rgba(255,255,255,0.9); font-size: 1.15rem; line-height: 1.8; position: relative; z-index: 1;" data-translate="nosotros.partnership.text">
                             Como distribuidor autorizado de CTAC, ofrecemos acceso a la
                             tecnología MFT™, que es la más avanzada del mercado.
                         </p>
                     </div>
                 </div>
-                
+
+                <!-- Valores Corporativos -->
+                <div class="valores-section" style="margin: 80px 0 70px 0;">
+                    <h3 style="font-size: 2.2rem; color: var(--text-primary); text-align: center; margin-bottom: 50px; font-weight: 800;" data-translate="nosotros.valores.title">Nuestros Valores</h3>
+                    <div class="valores-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+
+                        <!-- Innovación -->
+                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #8b5cf6;" onmouseover="this.style.background='rgba(139, 92, 246, 0.08)'; this.style.borderColor='rgba(139, 92, 246, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
+                            <h4 style="font-size: 1.5rem; color: #8b5cf6; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.innovacion">Innovación</h4>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.innovacion.text">Tecnología de vanguardia en exploración mineral</p>
+                        </div>
+
+                        <!-- Precisión -->
+                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #3b82f6;" onmouseover="this.style.background='rgba(59, 130, 246, 0.08)'; this.style.borderColor='rgba(59, 130, 246, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
+                            <h4 style="font-size: 1.5rem; color: #3b82f6; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.precision">Precisión</h4>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.precision.text">~65% de exactitud en detección mineral</p>
+                        </div>
+
+                        <!-- Sostenibilidad -->
+                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #10b981;" onmouseover="this.style.background='rgba(16, 185, 129, 0.08)'; this.style.borderColor='rgba(16, 185, 129, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
+                            <h4 style="font-size: 1.5rem; color: #10b981; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.sostenibilidad">Sostenibilidad</h4>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.sostenibilidad.text">Tecnología no invasiva, sin impacto ambiental</p>
+                        </div>
+
+                        <!-- Eficiencia -->
+                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #f59e0b;" onmouseover="this.style.background='rgba(245, 158, 11, 0.08)'; this.style.borderColor='rgba(245, 158, 11, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(245, 158, 11, 0.08)'; this.style.transform='translateY(0)';">
+                            <h4 style="font-size: 1.5rem; color: #f59e0b; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.eficiencia">Eficiencia</h4>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.eficiencia.text">Resultados en 4-8 semanas vs años</p>
+                        </div>
+
+                    </div>
+                </div>
+
                 <!-- Nueva sección: Tecnología y Mercado Objetivo -->
                 <div class="tech-market-section" style="margin: 70px 0 0 0; padding: 50px 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
                     <div class="tech-market-content" style="max-width: 1400px; margin: 0 auto;">
@@ -1553,112 +1585,188 @@
                     </div>
                 </div>
 
-                <!-- Proceso MFT - 4 Fases Dinámicas -->
-                <div class="process-timeline" style="margin-top: 100px;">
+                <!-- Proceso MFT - 4 Fases PRO con Timeline Vertical -->
+                <div class="process-timeline" style="margin-top: 100px; position: relative;">
                     <h3 style="font-size: 2.5rem; color: var(--text-primary); text-align: center; margin-bottom: 70px; font-weight: 800;" data-translate="tecnologia.process.title">Proceso MFT™ - 4 Fases Técnicas</h3>
 
-                    <!-- Fase 1: Análisis Espectral -->
-                    <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center;">
-                        <!-- Content Left -->
-                        <div class="phase-content" style="padding: 40px;">
-                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #3b82f6, #1e40af); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">1</div>
-                                <div>
-                                    <h4 style="font-size: 2rem; color: #3b82f6; margin: 0; font-weight: 800;" data-translate="tecnologia.phase1.title">Análisis Espectral</h4>
+                    <!-- Contenedor con Línea Vertical -->
+                    <div style="position: relative; max-width: 1300px; margin: 0 auto; padding-left: 60px;">
+
+                        <!-- Línea Vertical Conectora -->
+                        <div style="position: absolute; left: 35px; top: 50px; bottom: 100px; width: 4px; background: linear-gradient(180deg, #3b82f6, #10b981, #8b5cf6, #f59e0b); opacity: 0.4; border-radius: 10px;"></div>
+
+                        <!-- Fase 1: Análisis Espectral -->
+                        <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center; position: relative; animation-delay: 0.1s;">
+
+                            <!-- Progress Dot -->
+                            <div style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #3b82f6; border-radius: 50%; border: 4px solid rgba(10, 14, 26, 1); box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); z-index: 10;"></div>
+
+                            <!-- Content Left con Gradiente de Fondo -->
+                            <div class="phase-content" style="padding: 40px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(59, 130, 246, 0.02)); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.15); position: relative;">
+
+                                <!-- Progress Indicator -->
+                                <div style="position: absolute; top: 20px; right: 20px; font-size: 0.85rem; color: rgba(59, 130, 246, 0.6); font-weight: 700; letter-spacing: 1px;">1/4</div>
+
+                                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #3b82f6, #1e40af); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                                        <span style="font-size: 2.2rem;">🛰️</span>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 2rem; color: #3b82f6; margin: 0; font-weight: 800;" data-translate="tecnologia.phase1.title">Análisis Espectral</h4>
+                                        <!-- Badge Duración -->
+                                        <div style="display: inline-block; margin-top: 8px; padding: 4px 12px; background: rgba(59, 130, 246, 0.2); border-radius: 20px; font-size: 0.75rem; color: #3b82f6; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3);">⏱️ 15-30 días</div>
+                                    </div>
+                                </div>
+                                <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase1.subtitle">Espectrografía Satelital de Electroresonancia</h5>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase1.text">
+                                    Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.
+                                </p>
+                                <!-- Glassmorphism Box -->
+                                <div style="padding: 20px; background: rgba(59, 130, 246, 0.08); border-left: 4px solid #3b82f6; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(59, 130, 246, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+                                    <div style="font-size: 0.95rem; color: #3b82f6; font-weight: 700; margin-bottom: 8px;">TECNOLOGÍA CLAVE</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Análisis satelital • Frecuencias de resonancia • Firmas espectrales únicas</div>
                                 </div>
                             </div>
-                            <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase1.subtitle">Espectrografía Satelital de Electroresonancia</h5>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase1.text">
-                                Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.
-                            </p>
-                            <div style="padding: 20px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; border-radius: 8px;">
-                                <div style="font-size: 0.95rem; color: #3b82f6; font-weight: 700; margin-bottom: 8px;">TECNOLOGÍA CLAVE</div>
-                                <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Análisis satelital • Frecuencias de resonancia • Firmas espectrales únicas</div>
-                            </div>
-                        </div>
 
-                        <!-- Image Right -->
-                        <div class="phase-image" style="height: 400px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.3);">
-                            <img src="fase1-analisis-espectral.png" alt="Análisis Espectral - Vista satelital con análisis de frecuencias electromagnéticas" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-                        </div>
-                    </div>
-
-                    <!-- Fase 2: Detección Electromagnética -->
-                    <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center;">
-                        <!-- Image Left -->
-                        <div class="phase-image" style="height: 400px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.3);">
-                            <img src="fase2-deteccion-electromagnetica.png" alt="Detección Electromagnética - Equipo de campo MFT con antenas y sistemas de medición" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-                        </div>
-
-                        <!-- Content Right -->
-                        <div class="phase-content" style="padding: 40px;">
-                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">2</div>
-                                <div>
-                                    <h4 style="font-size: 2rem; color: #10b981; margin: 0; font-weight: 800;" data-translate="tecnologia.phase2.title">Detección Electromagnética</h4>
+                            <!-- Image Right con Hover Effects -->
+                            <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.3); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
+                                <img src="fase1-analisis-espectral.png" alt="Análisis Espectral - Vista satelital con análisis de frecuencias electromagnéticas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <!-- Overlay con icono -->
+                                <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
+                                    <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
                                 </div>
                             </div>
-                            <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase2.subtitle">Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)</h5>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase2.text">
-                                Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.
-                            </p>
-                            <div style="padding: 20px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid #10b981; border-radius: 8px;">
-                                <div style="font-size: 0.95rem; color: #10b981; font-weight: 700; margin-bottom: 8px;">CAPACIDADES</div>
-                                <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Profundidad 9.8km • Mapeo ECECI • Detección de anomalías</div>
-                            </div>
                         </div>
-                    </div>
 
-                    <!-- Fase 3: Procesamiento con AI -->
-                    <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center;">
-                        <!-- Content Left -->
-                        <div class="phase-content" style="padding: 40px;">
-                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">3</div>
-                                <div>
-                                    <h4 style="font-size: 2rem; color: #8b5cf6; margin: 0; font-weight: 800;" data-translate="tecnologia.phase3.title">Procesamiento de Datos</h4>
+                        <!-- Fase 2: Detección Electromagnética -->
+                        <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center; position: relative; animation-delay: 0.2s;">
+
+                            <!-- Progress Dot -->
+                            <div style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #10b981; border-radius: 50%; border: 4px solid rgba(10, 14, 26, 1); box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); z-index: 10;"></div>
+
+                            <!-- Image Left con Hover Effects -->
+                            <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.3); box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
+                                <img src="fase2-deteccion-electromagnetica.png" alt="Detección Electromagnética - Equipo de campo MFT con antenas y sistemas de medición" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <!-- Overlay con icono -->
+                                <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
+                                    <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
                                 </div>
                             </div>
-                            <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase3.subtitle">Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)</h5>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase3.text">
-                                Análisis computacional avanzado mediante <strong>Inteligencia Artificial</strong> y <strong>Machine Learning</strong>, integrando redes neuronales y algoritmos geofísicos especializados para generar mapas 3D de depósitos subsuperficiales, determinar composición mineral, concentración, volumen y viabilidad económica de extracción.
-                            </p>
-                            <div style="padding: 20px; background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; border-radius: 8px;">
-                                <div style="font-size: 0.95rem; color: #8b5cf6; font-weight: 700; margin-bottom: 8px;">TECNOLOGÍA AI</div>
-                                <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Machine Learning • Redes neuronales • Mapas 3D subsuperficiales</div>
-                            </div>
-                        </div>
 
-                        <!-- Image Right -->
-                        <div class="phase-image" style="height: 400px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(139, 92, 246, 0.3);">
-                            <img src="fase3-procesamiento-datos.png" alt="Procesamiento de Datos - Análisis con IA y Machine Learning de datos geológicos" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-                        </div>
-                    </div>
+                            <!-- Content Right con Gradiente de Fondo -->
+                            <div class="phase-content" style="padding: 40px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.02)); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(16, 185, 129, 0.15); position: relative;">
 
-                    <!-- Fase 4: Reporte Técnico -->
-                    <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; align-items: center;">
-                        <!-- Image Left -->
-                        <div class="phase-image" style="height: 400px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(245, 158, 11, 0.3);">
-                            <img src="fase4-reporte-tecnico.png" alt="Reporte Técnico - Informes detallados con GPS y estimaciones de reservas" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-                        </div>
+                                <!-- Progress Indicator -->
+                                <div style="position: absolute; top: 20px; right: 20px; font-size: 0.85rem; color: rgba(16, 185, 129, 0.6); font-weight: 700; letter-spacing: 1px;">2/4</div>
 
-                        <!-- Content Right -->
-                        <div class="phase-content" style="padding: 40px;">
-                            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">4</div>
-                                <div>
-                                    <h4 style="font-size: 2rem; color: #f59e0b; margin: 0; font-weight: 800;" data-translate="tecnologia.phase4.title">Reporte Técnico Especializado</h4>
+                                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                                        <span style="font-size: 2.2rem;">📡</span>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 2rem; color: #10b981; margin: 0; font-weight: 800;" data-translate="tecnologia.phase2.title">Detección Electromagnética</h4>
+                                        <!-- Badge Duración -->
+                                        <div style="display: inline-block; margin-top: 8px; padding: 4px 12px; background: rgba(16, 185, 129, 0.2); border-radius: 20px; font-size: 0.75rem; color: #10b981; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3);">⏱️ 1-6 semanas</div>
+                                    </div>
+                                </div>
+                                <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase2.subtitle">Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)</h5>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase2.text">
+                                    Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.
+                                </p>
+                                <!-- Glassmorphism Box -->
+                                <div style="padding: 20px; background: rgba(16, 185, 129, 0.08); border-left: 4px solid #10b981; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+                                    <div style="font-size: 0.95rem; color: #10b981; font-weight: 700; margin-bottom: 8px;">CAPACIDADES</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Profundidad 9.8km • Mapeo ECECI • Detección de anomalías</div>
                                 </div>
                             </div>
-                            <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase4.subtitle">Soporte Continuo y Monitoreo Operativo</h5>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase4.text">
-                                Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.
-                            </p>
-                            <div style="padding: 20px; background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; border-radius: 8px;">
-                                <div style="font-size: 0.95rem; color: #f59e0b; font-weight: 700; margin-bottom: 8px;">ENTREGABLES</div>
-                                <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Coordenadas GPS • Estimación de reservas • Guía de perforación dirigida</div>
+                        </div>
+
+                        <!-- Fase 3: Procesamiento con AI -->
+                        <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center; position: relative; animation-delay: 0.3s;">
+
+                            <!-- Progress Dot -->
+                            <div style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #8b5cf6; border-radius: 50%; border: 4px solid rgba(10, 14, 26, 1); box-shadow: 0 0 20px rgba(139, 92, 246, 0.6); z-index: 10;"></div>
+
+                            <!-- Content Left con Gradiente de Fondo -->
+                            <div class="phase-content" style="padding: 40px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(139, 92, 246, 0.02)); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(139, 92, 246, 0.15); position: relative;">
+
+                                <!-- Progress Indicator -->
+                                <div style="position: absolute; top: 20px; right: 20px; font-size: 0.85rem; color: rgba(139, 92, 246, 0.6); font-weight: 700; letter-spacing: 1px;">3/4</div>
+
+                                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                                        <span style="font-size: 2.2rem;">🧠</span>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 2rem; color: #8b5cf6; margin: 0; font-weight: 800;" data-translate="tecnologia.phase3.title">Procesamiento de Datos</h4>
+                                        <!-- Badge Duración -->
+                                        <div style="display: inline-block; margin-top: 8px; padding: 4px 12px; background: rgba(139, 92, 246, 0.2); border-radius: 20px; font-size: 0.75rem; color: #8b5cf6; font-weight: 700; border: 1px solid rgba(139, 92, 246, 0.3);">⏱️ 3-5 días</div>
+                                    </div>
+                                </div>
+                                <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase3.subtitle">Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)</h5>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase3.text">
+                                    Análisis computacional avanzado mediante <strong>Inteligencia Artificial</strong> y <strong>Machine Learning</strong>, integrando redes neuronales y algoritmos geofísicos especializados para generar mapas 3D de depósitos subsuperficiales, determinar composición mineral, concentración, volumen y viabilidad económica de extracción.
+                                </p>
+                                <!-- Glassmorphism Box -->
+                                <div style="padding: 20px; background: rgba(139, 92, 246, 0.08); border-left: 4px solid #8b5cf6; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+                                    <div style="font-size: 0.95rem; color: #8b5cf6; font-weight: 700; margin-bottom: 8px;">TECNOLOGÍA AI</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Machine Learning • Redes neuronales • Mapas 3D subsuperficiales</div>
+                                </div>
+                            </div>
+
+                            <!-- Image Right con Hover Effects -->
+                            <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(139, 92, 246, 0.3); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
+                                <img src="fase3-procesamiento-datos.png" alt="Procesamiento de Datos - Análisis con IA y Machine Learning de datos geológicos" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <!-- Overlay con icono -->
+                                <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
+                                    <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Fase 4: Reporte Técnico -->
+                        <div class="phase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; align-items: center; position: relative; animation-delay: 0.4s;">
+
+                            <!-- Progress Dot -->
+                            <div style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; background: #f59e0b; border-radius: 50%; border: 4px solid rgba(10, 14, 26, 1); box-shadow: 0 0 20px rgba(245, 158, 11, 0.6); z-index: 10;"></div>
+
+                            <!-- Image Left con Hover Effects -->
+                            <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(245, 158, 11, 0.3); box-shadow: 0 20px 60px rgba(245, 158, 11, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
+                                <img src="fase4-reporte-tecnico.png" alt="Reporte Técnico - Informes detallados con GPS y estimaciones de reservas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <!-- Overlay con icono -->
+                                <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
+                                    <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
+                                </div>
+                            </div>
+
+                            <!-- Content Right con Gradiente de Fondo -->
+                            <div class="phase-content" style="padding: 40px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(245, 158, 11, 0.02)); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(245, 158, 11, 0.15); position: relative;">
+
+                                <!-- Progress Indicator -->
+                                <div style="position: absolute; top: 20px; right: 20px; font-size: 0.85rem; color: rgba(245, 158, 11, 0.6); font-weight: 700; letter-spacing: 1px;">4/4</div>
+
+                                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+                                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: white; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                                        <span style="font-size: 2.2rem;">📊</span>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 2rem; color: #f59e0b; margin: 0; font-weight: 800;" data-translate="tecnologia.phase4.title">Reporte Técnico Especializado</h4>
+                                        <!-- Badge Duración -->
+                                        <div style="display: inline-block; margin-top: 8px; padding: 4px 12px; background: rgba(245, 158, 11, 0.2); border-radius: 20px; font-size: 0.75rem; color: #f59e0b; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3);">⏱️ 2-3 días</div>
+                                    </div>
+                                </div>
+                                <h5 style="font-size: 1.3rem; color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 600;" data-translate="tecnologia.phase4.subtitle">Soporte Continuo y Monitoreo Operativo</h5>
+                                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;" data-translate="tecnologia.phase4.text">
+                                    Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.
+                                </p>
+                                <!-- Glassmorphism Box -->
+                                <div style="padding: 20px; background: rgba(245, 158, 11, 0.08); border-left: 4px solid #f59e0b; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid rgba(245, 158, 11, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+                                    <div style="font-size: 0.95rem; color: #f59e0b; font-weight: 700; margin-bottom: 8px;">ENTREGABLES</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 1rem;">Coordenadas GPS • Estimación de reservas • Guía de perforación dirigida</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 
@@ -1775,7 +1883,7 @@
         </section>
 
         <!-- Ventajas Section -->
-        <section id="ventajas" class="section fade-in-section" style="background: var(--secondary-navy);">
+        <section id="ventajas" class="section fade-in-section" style="background: rgb(8, 26, 43);">
             <div class="section-container">
                 <div class="section-header">
                     <div class="section-badge" data-translate="ventajas.badge">
@@ -1936,7 +2044,7 @@
         </section>
 
         <!-- Case Studies Section -->
-        <section class="section case-studies-section fade-in-section" style="background: rgba(10, 14, 26, 0.8); padding: 100px 0;">
+        <section class="section case-studies-section fade-in-section" style="background: rgb(8, 26, 43); padding: 100px 0;">
             <div class="section-container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
                 <div class="section-header" style="text-align: center; margin-bottom: 80px;">
                     <div class="section-badge" style="display: inline-block; background: rgba(248, 250, 252, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px 24px; margin-bottom: 25px; font-size: 1.1rem; font-weight: 600; color: #10b981;">
@@ -1957,16 +2065,23 @@
                          onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(16, 185, 129, 0.4)'; this.style.boxShadow='0 20px 50px rgba(16, 185, 129, 0.2)';"
                          onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(16, 185, 129, 0.2)'; this.style.boxShadow='none';">
 
-                        <!-- Project Image/Video Placeholder -->
-                        <div class="case-media" style="background: linear-gradient(135deg, rgba(10, 14, 26, 0.9), rgba(26, 29, 41, 0.9)); height: 400px; display: flex; align-items: center; justify-content: center; border-bottom: 2px solid rgba(16, 185, 129, 0.2); position: relative;">
-                            <div style="text-align: center; padding: 40px;">
-                                <div style="font-size: 4rem; margin-bottom: 20px; opacity: 0.3;">📊</div>
-                                <div style="font-size: 1.2rem; color: rgba(255,255,255,0.5); font-weight: 600;">PLACEHOLDER: Imagen del Proyecto</div>
-                                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.3); margin-top: 10px;">Mapa de mineralización | Foto aérea | Video del proyecto</div>
-                            </div>
+                        <!-- Project Images -->
+                        <div class="case-media" style="background: linear-gradient(135deg, rgba(10, 14, 26, 0.9), rgba(26, 29, 41, 0.9)); padding: 30px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); position: relative;">
                             <!-- Badge overlay -->
-                            <div style="position: absolute; top: 20px; right: 20px; background: rgba(16, 185, 129, 0.9); padding: 10px 20px; border-radius: 6px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">
+                            <div style="position: absolute; top: 20px; right: 20px; background: rgba(16, 185, 129, 0.9); padding: 10px 20px; border-radius: 6px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; z-index: 10;">
                                 Proyecto Destacado
+                            </div>
+
+                            <!-- Visualización Tecnología MFT -->
+                            <div style="margin-bottom: 25px;">
+                                <img src="Gemini_Generated_Image_bwdqkwbwdqkwbwdq.png" alt="Tecnología MFT - Visualización 3D de depósitos minerales en profundidad" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 15px; text-align: center; font-style: italic;">Tecnología MFT™ - Tomografía de Frecuencia Electromagnética mostrando depósitos de Au, Ag, Cu hasta 3,100m de profundidad</div>
+                            </div>
+
+                            <!-- Comparación: Método Tradicional vs MFT -->
+                            <div>
+                                <img src="Gemini_Generated_Image_o6upquo6upquo6up.png" alt="Comparación: Método Tradicional 24 años vs Tecnología MFT 3 meses" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 15px; text-align: center; font-style: italic;">Comparación de eficiencia: Métodos tradicionales (24 años) vs Tecnología MFT™ (3 meses)</div>
                             </div>
                         </div>
 
@@ -1986,9 +2101,11 @@
                             </div>
 
                             <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 35px;">
-                                Mina de oro activa que requería expansión de reservas. Se aplicó tecnología MFT™ para prospección avanzada en área de 250 km².
-                                La tecnología identificó más de <strong>50 zonas con mineralización de oro, plata y cobre</strong>, descubriendo
-                                <strong>tres nuevas áreas con más de 10 millones de onzas de nuevas reservas de oro</strong>, representando un
+                                Compañía minera aplicó MFT™ para revisar activos en una mina de oro donde previamente se habían invertido
+                                <strong>cientos de millones de dólares durante 24 años</strong> en trabajo geofísico de campo y perforación,
+                                descubriendo 22 millones de onzas certificadas de oro. El estudio MFT™, completado en solo 3 meses,
+                                identificó <strong>más de 50 zonas con mineralización de oro, plata y cobre</strong>, descubriendo
+                                <strong>tres nuevas áreas con más de 10 millones de onzas de oro</strong>, representando un
                                 <strong>incremento del 50%</strong> sobre las reservas conocidas previamente.
                             </p>
 
@@ -1999,24 +2116,17 @@
                                     <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Zonas Identificadas</div>
                                 </div>
                                 <div style="text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                                    <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 5px;">250 km²</div>
-                                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Área Cubierta</div>
+                                    <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 5px;">3,100m</div>
+                                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Profundidad</div>
                                 </div>
                                 <div style="text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                                    <div style="font-size: 2rem; font-weight: 700; color: #8b5cf6; margin-bottom: 5px;">17 sem</div>
+                                    <div style="font-size: 2rem; font-weight: 700; color: #8b5cf6; margin-bottom: 5px;">3 meses</div>
                                     <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Duración</div>
                                 </div>
                                 <div style="text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.03); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                                    <div style="font-size: 2rem; font-weight: 700; color: #f59e0b; margin-bottom: 5px;">10M oz</div>
-                                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Nuevas Reservas</div>
+                                    <div style="font-size: 2rem; font-weight: 700; color: #f59e0b; margin-bottom: 5px;">+50%</div>
+                                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Incremento Reservas</div>
                                 </div>
-                            </div>
-
-                            <!-- Video Placeholder -->
-                            <div style="background: rgba(10, 14, 26, 0.6); border: 2px dashed rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 40px; text-align: center; margin-bottom: 25px;">
-                                <div style="font-size: 3rem; margin-bottom: 15px; opacity: 0.4;">▶️</div>
-                                <div style="font-size: 1.1rem; color: rgba(255,255,255,0.6); font-weight: 600; margin-bottom: 8px;">PLACEHOLDER: Video del Caso de Estudio</div>
-                                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">Reemplace con video demostrativo del proyecto real</div>
                             </div>
 
                             <!-- Results & Impact -->
@@ -2025,105 +2135,35 @@
                                 <ul style="list-style: none; padding: 0; margin: 0;">
                                     <li style="padding: 8px 0; font-size: 1.05rem; color: rgba(255,255,255,0.85); display: flex; align-items: start; gap: 10px;">
                                         <span style="color: var(--vibrant-green); font-size: 1.2rem;">✓</span>
-                                        <span>Identificación de <strong>más de 50 zonas mineralizadas</strong> con presencia de oro, plata y cobre en toda el área de estudio</span>
+                                        <span>Identificación de <strong>más de 50 zonas mineralizadas</strong> con presencia de oro, plata y cobre</span>
                                     </li>
                                     <li style="padding: 8px 0; font-size: 1.05rem; color: rgba(255,255,255,0.85); display: flex; align-items: start; gap: 10px;">
                                         <span style="color: var(--vibrant-green); font-size: 1.2rem;">✓</span>
-                                        <span>Descubrimiento de <strong>10 millones de onzas de oro en nuevas reservas</strong>, incrementando reservas totales en 50%</span>
+                                        <span>Descubrimiento de <strong>tres nuevas áreas con más de 10 millones de onzas de oro</strong> en nuevas reservas (+50%)</span>
                                     </li>
                                     <li style="padding: 8px 0; font-size: 1.05rem; color: rgba(255,255,255,0.85); display: flex; align-items: start; gap: 10px;">
                                         <span style="color: var(--vibrant-green); font-size: 1.2rem;">✓</span>
-                                        <span><strong>Reducción de 80% en costos</strong> comparado con métodos tradicionales de exploración con perforación extensiva</span>
+                                        <span>Exploración hasta <strong>3,100 metros de profundidad</strong>, confirmando depósitos desde 30m hasta 2,900m</span>
                                     </li>
                                     <li style="padding: 8px 0; font-size: 1.05rem; color: rgba(255,255,255,0.85); display: flex; align-items: start; gap: 10px;">
                                         <span style="color: var(--vibrant-green); font-size: 1.2rem;">✓</span>
-                                        <span>Tiempo de ejecución: <strong>4-8 semanas</strong> de análisis completo vs 5-7 años con métodos convencionales</span>
+                                        <span>Proyecto completado en <strong>3 meses</strong> (agosto-octubre 2020) vs 24 años de métodos tradicionales</span>
+                                    </li>
+                                    <li style="padding: 8px 0; font-size: 1.05rem; color: rgba(255,255,255,0.85); display: flex; align-items: start; gap: 10px;">
+                                        <span style="color: var(--vibrant-green); font-size: 1.2rem;">✓</span>
+                                        <span><strong>Reducción de hasta 80%</strong> en costos de exploración comparado con métodos convencionales</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Additional Cases Grid -->
-                    <div class="additional-cases" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 35px; margin-top: 40px;">
-
-                        <!-- Caso 2 -->
-                        <div class="case-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s ease;"
-                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)'; this.style.transform='translateY(-3px)';"
-                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)';">
-
-                            <!-- Image Placeholder -->
-                            <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(30, 64, 175, 0.2)); height: 220px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 2.5rem; opacity: 0.3;">🗺️</div>
-                                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 10px;">PLACEHOLDER</div>
-                                </div>
-                            </div>
-
-                            <div style="padding: 30px;">
-                                <h4 style="font-size: 1.6rem; color: var(--text-primary); font-weight: 700; margin-bottom: 10px;">[Proyecto 2]</h4>
-                                <div style="font-size: 0.95rem; color: #3b82f6; margin-bottom: 15px; font-weight: 600;">[Ubicación] • [Mineral]</div>
-                                <p style="font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 20px;">
-                                    [Breve descripción del proyecto y resultados principales]
-                                </p>
-                                <div style="display: flex; gap: 15px; font-size: 0.9rem;">
-                                    <div style="padding: 8px 16px; background: rgba(59, 130, 246, 0.15); border-radius: 6px; color: #3b82f6; font-weight: 600;">
-                                        [Métrica clave]
-                                    </div>
-                                    <div style="padding: 8px 16px; background: rgba(16, 185, 129, 0.15); border-radius: 6px; color: var(--vibrant-green); font-weight: 600;">
-                                        [Resultado]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Caso 3 -->
-                        <div class="case-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden; transition: all 0.3s ease;"
-                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(139, 92, 246, 0.3)'; this.style.transform='translateY(-3px)';"
-                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)';">
-
-                            <!-- Image Placeholder -->
-                            <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.2)); height: 220px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-                                <div style="text-align: center;">
-                                    <div style="font-size: 2.5rem; opacity: 0.3;">⛏️</div>
-                                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 10px;">PLACEHOLDER</div>
-                                </div>
-                            </div>
-
-                            <div style="padding: 30px;">
-                                <h4 style="font-size: 1.6rem; color: var(--text-primary); font-weight: 700; margin-bottom: 10px;">[Proyecto 3]</h4>
-                                <div style="font-size: 0.95rem; color: #8b5cf6; margin-bottom: 15px; font-weight: 600;">[Ubicación] • [Mineral]</div>
-                                <p style="font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 20px;">
-                                    [Breve descripción del proyecto y resultados principales]
-                                </p>
-                                <div style="display: flex; gap: 15px; font-size: 0.9rem;">
-                                    <div style="padding: 8px 16px; background: rgba(139, 92, 246, 0.15); border-radius: 6px; color: #8b5cf6; font-weight: 600;">
-                                        [Métrica clave]
-                                    </div>
-                                    <div style="padding: 8px 16px; background: rgba(16, 185, 129, 0.15); border-radius: 6px; color: var(--vibrant-green); font-weight: 600;">
-                                        [Resultado]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CTA for More Cases -->
-                    <div style="text-align: center; margin-top: 60px; padding: 45px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;">
-                        <h3 style="font-size: 1.8rem; color: var(--text-primary); margin-bottom: 15px; font-weight: 700;">¿Quieres conocer más casos de éxito?</h3>
-                        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 25px;">Solicita documentación técnica detallada de nuestros proyectos</p>
-                        <a href="#contacto" style="display: inline-block; padding: 16px 45px; background: var(--vibrant-green); color: white; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 6px; transition: all 0.3s ease;"
-                           onmouseover="this.style.background='#059669'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 30px rgba(16, 185, 129, 0.4)';"
-                           onmouseout="this.style.background='#10b981'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            Solicitar Portafolio Completo
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="section faq-section fade-in-section" style="background: rgba(10, 14, 26, 0.6); padding: 100px 0;">
+        <section class="section faq-section fade-in-section" style="background: rgb(8, 26, 43); padding: 100px 0;">
             <div class="section-container" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
                 <div class="section-header" style="text-align: center; margin-bottom: 70px;">
                     <div class="section-badge" style="display: inline-block; background: rgba(248, 250, 252, 0.05); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 12px 24px; margin-bottom: 25px; font-size: 1.1rem; font-weight: 600; color: #3b82f6;">
@@ -2230,7 +2270,7 @@
                         <div class="contact-card" style="margin-bottom: 30px;">
                             <div class="contact-icon" data-translate="contacto.icon.email">EMAIL</div>
                             <h4 style="color: var(--vibrant-green); font-size: 1.7rem; margin-bottom: 10px;" data-translate="contacto.info.email.title">Email Principal</h4>
-                            <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3d0dcddc7d2d0c7dcf3c2c6d2ddc7dad8d4d6dc9dd0dcde">[email&#160;protected]</a></p>
+                            <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600;"><a href="mailto:ventas@quantikgeo.com" style="color: var(--text-primary); text-decoration: none;">ventas@quantikgeo.com</a></p>
                             <p style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="contacto.info.email.subtitle">Distribuidor autorizado MFT™</p>
                         </div>
                         
@@ -2355,6 +2395,28 @@
                 'nosotros.clients.corporate': 'Empresas Mineras Corporativas',
                 'nosotros.clients.exploration': 'Compañías de Exploración',
                 'nosotros.clients.individual': 'Concesionarios Individuales',
+
+                // Valores
+                'nosotros.valores.title': 'Nuestros Valores',
+                'nosotros.valores.innovacion': 'Innovación',
+                'nosotros.valores.innovacion.text': 'Tecnología de vanguardia en exploración mineral',
+                'nosotros.valores.precision': 'Precisión',
+                'nosotros.valores.precision.text': '~65% de exactitud en detección mineral',
+                'nosotros.valores.sostenibilidad': 'Sostenibilidad',
+                'nosotros.valores.sostenibilidad.text': 'Tecnología no invasiva, sin impacto ambiental',
+                'nosotros.valores.eficiencia': 'Eficiencia',
+                'nosotros.valores.eficiencia.text': 'Resultados en 4-8 semanas vs años',
+
+                // Diferenciadores
+                'nosotros.diferenciadores.title': '¿Por Qué Elegir QuantikGeo?',
+                'nosotros.diferenciadores.remoto': 'Prospección 100% Remota',
+                'nosotros.diferenciadores.remoto.text': 'No requiere presencia física en terreno',
+                'nosotros.diferenciadores.profundidad': 'Profundidad Excepcional',
+                'nosotros.diferenciadores.profundidad.text': 'Detección hasta 9.8 km de profundidad',
+                'nosotros.diferenciadores.permisos': 'Sin Permisos Ambientales',
+                'nosotros.diferenciadores.permisos.text': 'Tecnología pasiva completamente no invasiva',
+                'nosotros.diferenciadores.costo': 'Reducción de Costos',
+                'nosotros.diferenciadores.costo.text': 'Hasta 80% menos que métodos tradicionales',
                 
                 // Tecnología Section
                 'tecnologia.badge': 'Tecnología Avanzada',
@@ -2371,15 +2433,19 @@
                 'tecnologia.phase1.title': 'Análisis Espectral',
                 'tecnologia.phase1.subtitle': 'Espectrografía Satelital de Electroresonancia',
                 'tecnologia.phase1.text': 'Identificación de firmas espectrales únicas de materiales minerales utilizando frecuencias de electroresonancia magnética para máxima precisión en la caracterización.',
+                'tecnologia.phase1.description': 'Identificación satelital de firmas electromagnéticas minerales mediante espectrografía avanzada',
                 'tecnologia.phase2.title': 'Detección Electromagnética',
                 'tecnologia.phase2.subtitle': 'Mapeo ECECI (Campos Electromagnéticos de Corto Impulso)',
                 'tecnologia.phase2.text': 'Localización precisa de anomalías electromagnéticas generadas por depósitos minerales hasta profundidades excepcionales de 9.8 kilómetros con tecnología avanzada de campo.',
+                'tecnologia.phase2.description': 'Mapeo de campo ECECI para localizar anomalías hasta 9.8 km de profundidad',
                 'tecnologia.phase3.title': 'Procesamiento de Datos',
                 'tecnologia.phase3.subtitle': 'Sondaje Vertical SVER (Sondaje Vertical por Electro-Resonancia)',
                 'tecnologia.phase3.text': 'Análisis computacional avanzado mediante <strong>Inteligencia Artificial</strong> y <strong>Machine Learning</strong>, integrando redes neuronales y algoritmos geofísicos especializados para generar mapas 3D de depósitos subsuperficiales, determinar composición mineral, concentración, volumen y viabilidad económica de extracción.',
+                'tecnologia.phase3.description': 'Análisis con IA y Machine Learning para generar mapas 3D subsuperficiales precisos',
                 'tecnologia.phase4.title': 'Reporte Técnico Especializado',
                 'tecnologia.phase4.subtitle': 'Soporte Continuo y Monitoreo Operativo',
                 'tecnologia.phase4.text': 'Generación de informes técnicos detallados con coordenadas GPS precisas, estimaciones de reservas, análisis de viabilidad y recomendaciones específicas para perforación dirigida.',
+                'tecnologia.phase4.description': 'Informes con coordenadas GPS, estimación de reservas y guía de perforación',
                 'tecnologia.phase1.specs': 'Análisis espectral de frecuencias de electroresonancia magnética • Identificación de firmas espectrales únicas • Caracterización precisa de materiales minerales',
                 'tecnologia.phase2.specs': 'Detección de anomalías electromagnéticas • Alcance hasta 9.8 km de profundidad • Tecnología avanzada de campo',
                 'tecnologia.phase3.specs': 'Análisis computacional avanzado • Algoritmos especializados de procesamiento • Determinación de composición y concentración mineral',
@@ -2600,7 +2666,29 @@
                 'nosotros.clients.corporate': 'Corporate Mining Companies',
                 'nosotros.clients.exploration': 'Exploration Companies',
                 'nosotros.clients.individual': 'Individual Concessionaires',
-                
+
+                // Valores
+                'nosotros.valores.title': 'Our Values',
+                'nosotros.valores.innovacion': 'Innovation',
+                'nosotros.valores.innovacion.text': 'Cutting-edge technology in mineral exploration',
+                'nosotros.valores.precision': 'Precision',
+                'nosotros.valores.precision.text': '~65% accuracy in mineral detection',
+                'nosotros.valores.sostenibilidad': 'Sustainability',
+                'nosotros.valores.sostenibilidad.text': 'Non-invasive technology, zero environmental impact',
+                'nosotros.valores.eficiencia': 'Efficiency',
+                'nosotros.valores.eficiencia.text': 'Results in 4-8 weeks vs years',
+
+                // Diferenciadores
+                'nosotros.diferenciadores.title': 'Why Choose QuantikGeo?',
+                'nosotros.diferenciadores.remoto': '100% Remote Prospecting',
+                'nosotros.diferenciadores.remoto.text': 'No physical presence on site required',
+                'nosotros.diferenciadores.profundidad': 'Exceptional Depth',
+                'nosotros.diferenciadores.profundidad.text': 'Detection up to 9.8 km depth',
+                'nosotros.diferenciadores.permisos': 'No Environmental Permits',
+                'nosotros.diferenciadores.permisos.text': 'Completely non-invasive passive technology',
+                'nosotros.diferenciadores.costo': 'Cost Reduction',
+                'nosotros.diferenciadores.costo.text': 'Up to 80% less than traditional methods',
+
                 // Tecnología Section
                 'tecnologia.badge': 'Advanced Technology',
                 'tecnologia.title': 'MFT™ Technology',
@@ -2616,15 +2704,19 @@
                 'tecnologia.phase1.title': 'Spectral Analysis',
                 'tecnologia.phase1.subtitle': 'Electroresonance Satellite Spectrography',
                 'tecnologia.phase1.text': 'Identification of unique spectral signatures of mineral materials using electromagnetic resonance frequencies for maximum precision in characterization.',
+                'tecnologia.phase1.description': 'Satellite identification of mineral electromagnetic signatures through advanced spectrography',
                 'tecnologia.phase2.title': 'Electromagnetic Detection',
                 'tecnologia.phase2.subtitle': 'ECECI Mapping (Short Impulse Electromagnetic Fields)',
                 'tecnologia.phase2.text': 'Precise location of electromagnetic anomalies generated by mineral deposits up to exceptional depths of 9.8 kilometers with advanced field technology.',
+                'tecnologia.phase2.description': 'ECECI field mapping to locate anomalies up to 9.8 km depth',
                 'tecnologia.phase3.title': 'Data Processing',
                 'tecnologia.phase3.subtitle': 'SVER Vertical Sounding (Vertical Electro-Resonance Sounding)',
                 'tecnologia.phase3.text': 'Advanced computational analysis through <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>, integrating neural networks and specialized geophysical algorithms to generate 3D maps of subsurface deposits, determining mineral composition, concentration, volume and economic extraction viability.',
+                'tecnologia.phase3.description': 'AI and Machine Learning analysis to generate accurate 3D subsurface maps',
                 'tecnologia.phase4.title': 'Specialized Technical Report',
                 'tecnologia.phase4.subtitle': 'Continuous Support and Operational Monitoring',
                 'tecnologia.phase4.text': 'Generation of detailed technical reports with precise GPS coordinates, reserve estimates, viability analysis and specific recommendations for directed drilling.',
+                'tecnologia.phase4.description': 'Reports with GPS coordinates, reserve estimates and drilling guidance',
                 'tecnologia.phase1.specs': 'Spectral analysis of electromagnetic resonance frequencies • Identification of unique spectral signatures • Precise characterization of mineral materials',
                 'tecnologia.phase2.specs': 'Detection of electromagnetic anomalies • Range up to 9.8 km depth • Advanced field technology',
                 'tecnologia.phase3.specs': 'Advanced computational analysis • Specialized processing algorithms • Determination of mineral composition and concentration',
@@ -3265,7 +3357,7 @@
     </script>
 
     <!-- Footer Corporativo -->
-    <footer style="background: #001f3f; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 80px 0 40px 0; margin-top: 0;">
+    <footer style="background: rgb(8, 26, 43); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 80px 0 40px 0; margin-top: 0;">
         <div style="max-width: 1800px; margin: 0 auto; padding: 0 40px;">
             
             <!-- Sección Principal del Footer -->
@@ -3275,7 +3367,7 @@
                 <div>
                     <div style="display: flex; align-items: center; margin-bottom: 30px;">
                         <div style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 15px 35px rgba(5, 150, 105, 0.3);">
-                            <img src="https://page.gensparksite.com/v1/base64_upload/3d5f786c2e6931db7a4d154bcc474d46" alt="QuantikGeo Logo" style="width: 50px; height: 50px; object-fit: contain;" />
+                            <img src="q444.png" alt="QuantikGeo Logo" style="width: 50px; height: 50px; object-fit: contain;" />
                         </div>
                         <div>
                             <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: bold; margin: 0;">QuantikGeo</h3>
@@ -3287,7 +3379,7 @@
                         <div style="display: flex; align-items: center; margin-bottom: 15px;">
                             <span style="font-size: 1.7rem; margin-right: 15px; color: var(--vibrant-green); font-weight: 700;">EMAIL</span>
                             <div>
-                                <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600; margin: 0;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f1929e9f859092859eb18084909f85989a96949edf929e9c">[email&#160;protected]</a></p>
+                                <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600; margin: 0;"><a href="mailto:ventas@quantikgeo.com" style="color: var(--text-primary); text-decoration: none;">ventas@quantikgeo.com</a></p>
                                 <p style="color: var(--text-secondary); font-size: 1.7rem; margin: 2px 0 0 0;" data-translate="footer.email.description">Email para consultas MFT™</p>
                             </div>
                         </div>
