@@ -5,8 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="page.title">QuantikGeo - Tecnología MFT™ para Prospección Minera Avanzada</title>
-    <meta name="description" content="QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un ~65%, detección hasta 9.8km de profundidad." data-translate="page.description">
-    
+    <meta name="description" content="QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un 94%, detección hasta 9.8km de profundidad." data-translate="page.description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="q444.png">
+    <link rel="apple-touch-icon" href="q444.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="prospección minera, MFT, mineral finder technology, exploración minera, tecnología satelital, detección minerales, oro, plata, cobre, geofísica, CTAC, QuantikGeo, análisis espectral, electroresonancia">
+    <meta name="author" content="QuantikGeo">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="MX">
+    <meta name="geo.placename" content="México">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantikgeo.com/">
+    <meta property="og:title" content="QuantikGeo - Tecnología MFT™ para Prospección Minera">
+    <meta property="og:description" content="Tecnología satelital MFT™ para detección de minerales. Precisión del 94% hasta 9.8km de profundidad. Distribuidor autorizado CTAC.">
+    <meta property="og:image" content="https://quantikgeo.com/q444.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="QuantikGeo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://quantikgeo.com/">
+    <meta name="twitter:title" content="QuantikGeo - Tecnología MFT™ para Prospección Minera">
+    <meta name="twitter:description" content="Tecnología satelital MFT™ para detección de minerales. Precisión del 94% hasta 9.8km de profundidad.">
+    <meta name="twitter:image" content="https://quantikgeo.com/q444.png">
+
+    <!-- WhatsApp specific -->
+    <meta property="og:image:alt" content="QuantikGeo - Logo MFT Mineral Finder Technology">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://quantikgeo.com/">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -1266,7 +1302,538 @@
                 0 8px 32px rgba(0, 0, 0, 0.2),
                 0 0 0 1px rgba(59, 130, 246, 0.2);
         }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9998;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .whatsapp-button:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-button:active {
+            transform: scale(1.05) translateY(-3px);
+        }
+
+        .whatsapp-icon {
+            width: 38px;
+            height: 38px;
+            fill: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+            80%, 100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        .whatsapp-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid #25D366;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        /* Tooltip */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #128C7E;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid white;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            right: 85px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .whatsapp-icon {
+                width: 34px;
+                height: 34px;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+
+        /* FAQ Accordion Styles */
+        .faq-accordion {
+            display: grid;
+            gap: 20px;
+        }
+
+        .faq-accordion-item {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion-item.active {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 25px 30px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .faq-accordion-item:nth-child(4n+1) .faq-question {
+            border-left-color: #3b82f6;
+        }
+
+        .faq-accordion-item:nth-child(4n+2) .faq-question {
+            border-left-color: #10b981;
+        }
+
+        .faq-accordion-item:nth-child(4n+3) .faq-question {
+            border-left-color: #8b5cf6;
+        }
+
+        .faq-accordion-item:nth-child(4n+4) .faq-question {
+            border-left-color: #f59e0b;
+        }
+
+        .faq-accordion-item.active .faq-question {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .faq-question-text {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #3b82f6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-accordion-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+        }
+
+        .faq-accordion-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 30px 25px 30px;
+        }
+
+        .faq-answer-text {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .faq-category-header {
+            font-size: 1.8rem;
+            color: var(--vibrant-green);
+            font-weight: 700;
+            margin: 40px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .faq-category-header:first-child {
+            margin-top: 0;
+        }
+
+        .faq-category-icon {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 20px;
+            }
+
+            .faq-question-text {
+                font-size: 1.1rem;
+            }
+
+            .faq-answer {
+                padding: 0 20px;
+            }
+
+            .faq-accordion-item.active .faq-answer {
+                padding: 0 20px 20px 20px;
+            }
+
+            .faq-answer-text {
+                font-size: 1rem;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            z-index: 9997;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top-button {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-to-top-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .back-to-top-button:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .back-to-top-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+        }
+
+        .back-to-top-button:active {
+            transform: translateY(-3px);
+        }
+
+        .back-to-top-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Pulse Animation for Back to Top */
+        @keyframes pulse-ring-blue {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+            80%, 100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        .back-to-top-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid #3b82f6;
+            animation: pulse-ring-blue 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 90px;
+                left: 20px;
+            }
+
+            .back-to-top-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .back-to-top-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            /* Back to Top Mobile */
+            .back-to-top {
+                bottom: 150px;
+                right: 20px;
+            }
+        }
     </style>
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "QuantikGeo",
+                "url": "https://quantikgeo.com",
+                "logo": "https://quantikgeo.com/q444.png",
+                "description": "Distribuidor autorizado de tecnología MFT™ (Mineral Finder Technology) para prospección minera avanzada mediante análisis satelital.",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+52-667-390-7814",
+                    "contactType": "Sales",
+                    "areaServed": ["MX", "LATAM"],
+                    "availableLanguage": ["Spanish", "English"]
+                },
+                "sameAs": [
+                    "https://wa.me/526673907814"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "MX"
+                }
+            },
+            {
+                "@type": "Service",
+                "serviceType": "Mineral Prospecting Technology",
+                "name": "MFT™ - Mineral Finder Technology",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "QuantikGeo"
+                },
+                "description": "Tecnología satelital de prospección minera con precisión del 94% hasta 9.8km de profundidad. Análisis espectral electromagnético no invasivo.",
+                "offers": {
+                    "@type": "Offer",
+                    "availability": "https://schema.org/InStock",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "priceCurrency": "USD"
+                    }
+                },
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "23.6345",
+                        "longitude": "-102.5528"
+                    },
+                    "geoRadius": "5000000"
+                }
+            },
+            {
+                "@type": "Product",
+                "name": "MFT™ Mineral Finder Technology",
+                "description": "Sistema de prospección mineral basado en detección de anomalías electromagnéticas mediante satélites geofísicos especializados",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "CTAC"
+                },
+                "manufacturer": {
+                    "@type": "Organization",
+                    "name": "CTAC"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "bestRating": "5",
+                    "ratingCount": "15"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://quantikgeo.com/#contacto",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                        "@type": "Organization",
+                        "name": "QuantikGeo"
+                    }
+                }
+            },
+            {
+                "@type": "WebSite",
+                "name": "QuantikGeo",
+                "url": "https://quantikgeo.com",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://quantikgeo.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué es la tecnología MFT™?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "MFT™ (Mineral Finder Technology) es un sistema de prospección mineral basado en la detección de anomalías electromagnéticas generadas por depósitos minerales subsuperficiales, utilizando análisis espectral satelital y frecuencias de electroresonancia magnética."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué minerales puede detectar MFT™?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "MFT™ puede detectar oro (Au), plata (Ag), cobre (Cu), platino (Pt), hierro (Fe), níquel (Ni), zinc (Zn), y otros minerales con firma espectral electromagnética distintiva."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué precisión tiene MFT™?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "MFT™ alcanza una precisión de hasta el 94% en la identificación de depósitos minerales subsuperficiales, con capacidad de detección hasta 9.8 kilómetros de profundidad."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -1314,16 +1881,16 @@
         <section id="inicio" class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title" data-translate="hero.title">
-                    Revoluciona la
-                    <span class="gradient-text">Prospección Minera</span>
-                    con Tecnología
+                    Tecnología Confiable e Innovadora
                     <span class="tech-highlight">MFT™</span>
+                    para la
+                    <span class="gradient-text">Prospección de Depósitos Minerales</span>
                 </h1>
                 
                 <p class="hero-description" data-translate="hero.description">
-                    Como una <strong>resonancia magnética para la Tierra</strong>, MFT™ identifica depósitos minerales a través de
-                    frecuencias electromagnéticas con <strong>precisión de ~65%</strong>, reduciendo costos hasta un <strong>80%</strong>
-                    y tiempos de exploración a solo <strong>4-8 semanas</strong>.
+                    Todos los materiales y elementos transmiten y absorben <strong>radiación electromagnética</strong>, y como resultado tienen su propia
+                    <strong>frecuencia resonante electromagnética y longitud de onda única</strong>. MFT™ detecta estas firmas espectrales, identificando
+                    depósitos minerales con <strong>precisión de hasta el 94%</strong>, hasta <strong>9.8km de profundidad</strong>.
                 </p>
                 
                 <!-- CTA Button Hero -->
@@ -1341,7 +1908,7 @@
                     <div class="stat-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 45px 30px; text-align: center; transition: all 0.2s ease;"
                          onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(30, 64, 175, 0.3)';"
                          onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                        <div class="stat-number" style="font-size: 3rem; font-weight: 700; color: #3b82f6; margin-bottom: 12px; letter-spacing: -1px;" data-translate="hero.stats.precision.value">~65%</div>
+                        <div class="stat-number" style="font-size: 3rem; font-weight: 700; color: #3b82f6; margin-bottom: 12px; letter-spacing: -1px;" data-translate="hero.stats.precision.value">94%</div>
                         <div class="stat-label" style="font-size: 1.25rem; font-weight: 500; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1.5px;" data-translate="hero.stats.precision">PRECISIÓN</div>
                     </div>
 
@@ -1365,12 +1932,141 @@
                 <!-- Hero Visual - MFT Technology Visualization -->
                 <div class="hero-visual" style="max-width: 1400px; margin: 80px auto 0; padding: 0 40px;">
                     <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); border: 2px solid rgba(16, 185, 129, 0.3);">
-                        <img src="mft-dashboard-analysis.png" alt="Sistema MFT Exploration - Análisis Espectral en Tiempo Real" style="width: 100%; height: auto; display: block;">
+                        <img src="mft-dashboard-analysis.png" alt="Sistema MFT Exploration - Análisis Espectral en Tiempo Real" style="width: 100%; height: auto; display: block;" loading="lazy">
                     </div>
                     <div style="text-align: center; margin-top: 20px;">
                         <p style="font-size: 0.95rem; color: rgba(255,255,255,0.5); font-style: italic;">
                             Sistema MFT™ Exploration: Análisis espectral de Au, Cu y Ag con señal del 98% - Profundidad 500m
                         </p>
+                    </div>
+                </div>
+
+                <!-- ¿Cómo Funciona MFT™? - 3 Tarjetas -->
+                <div style="max-width: 1400px; margin: 100px auto 0; padding: 0 40px;">
+                    <h2 style="font-size: 2.8rem; font-weight: 800; text-align: center; margin-bottom: 60px; color: var(--text-primary);" data-translate="hero.howworks.title">
+                        ¿Cómo Funciona MFT™?
+                    </h2>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+                        <!-- Tarjeta 1: Principio Físico -->
+                        <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 45px 35px; transition: all 0.4s ease; position: relative; overflow: hidden;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(59, 130, 246, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.5)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(59, 130, 246, 0.2)';">
+
+                            <!-- Icono -->
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #3b82f6, #1e40af); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);">
+                                <span style="font-size: 2.5rem;">⚡</span>
+                            </div>
+
+                            <!-- Número -->
+                            <div style="position: absolute; top: 20px; right: 20px; font-size: 4rem; font-weight: 900; color: rgba(59, 130, 246, 0.1); line-height: 1;">1</div>
+
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #3b82f6; margin-bottom: 20px;" data-translate="hero.howworks.physics.title">
+                                Principio Físico Establecido
+                            </h3>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8;" data-translate="hero.howworks.physics.text">
+                                Todos los materiales transmiten y absorben radiación electromagnética. Los depósitos minerales en el subsuelo crean <strong>anomalías electromagnéticas medibles</strong> en el campo magnético de la Tierra - un <strong>principio establecido en geología y geofísica</strong> moderna.
+                            </p>
+                        </div>
+
+                        <!-- Tarjeta 2: Detección Espectral -->
+                        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(16, 185, 129, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 45px 35px; transition: all 0.4s ease; position: relative; overflow: hidden;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(16, 185, 129, 0.3)'; this.style.borderColor='rgba(16, 185, 129, 0.5)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(16, 185, 129, 0.2)';">
+
+                            <!-- Icono -->
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);">
+                                <span style="font-size: 2.5rem;">🔬</span>
+                            </div>
+
+                            <!-- Número -->
+                            <div style="position: absolute; top: 20px; right: 20px; font-size: 4rem; font-weight: 900; color: rgba(16, 185, 129, 0.1); line-height: 1;">2</div>
+
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #10b981; margin-bottom: 20px;" data-translate="hero.howworks.spectral.title">
+                                Detección Espectral Avanzada
+                            </h3>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8;" data-translate="hero.howworks.spectral.text">
+                                MFT™ analiza el <strong>rango ultravioleta y azul profundo</strong> del espectro electromagnético, identificando las frecuencias de resonancia únicas de cada mineral. Nuestra base de datos propietaria contiene <strong>firmas espectrales de +100 elementos individuales</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Tarjeta 3: Precisión 3D -->
+                        <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 45px 35px; transition: all 0.4s ease; position: relative; overflow: hidden;"
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(139, 92, 246, 0.3)'; this.style.borderColor='rgba(139, 92, 246, 0.5)';"
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(139, 92, 246, 0.2)';">
+
+                            <!-- Icono -->
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #8b5cf6, #6d28d9); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);">
+                                <span style="font-size: 2.5rem;">🎯</span>
+                            </div>
+
+                            <!-- Número -->
+                            <div style="position: absolute; top: 20px; right: 20px; font-size: 4rem; font-weight: 900; color: rgba(139, 92, 246, 0.1); line-height: 1;">3</div>
+
+                            <h3 style="font-size: 1.8rem; font-weight: 700; color: #8b5cf6; margin-bottom: 20px;" data-translate="hero.howworks.precision.title">
+                                Precisión 3D Sin Perforación
+                            </h3>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.8;" data-translate="hero.howworks.precision.text">
+                                A través de satélites geofísicos especializados <strong>(Georesurs-P, DK)</strong>, mapeamos anomalías electromagnéticas subsuperficiales con <strong>precisión tridimensional hasta 9.8km</strong>. No existe otra tecnología pasiva que entregue este nivel de detalle sin perforación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banner de Validación Científica -->
+                <div style="max-width: 1400px; margin: 80px auto 0; padding: 0 40px;">
+                    <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15)); backdrop-filter: blur(30px); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 50px 60px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
+
+                        <!-- Decorative gradient overlay -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%); pointer-events: none;"></div>
+
+                        <div style="position: relative; z-index: 1;">
+                            <h3 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 45px; color: var(--text-primary);" data-translate="hero.validation.title">
+                                Tecnología Respaldada Científicamente
+                            </h3>
+
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 35px;">
+                                <!-- Item 1 -->
+                                <div style="text-align: center; padding: 25px 20px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateY(-5px)';"
+                                     onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.transform='translateY(0)';">
+                                    <div style="font-size: 2.5rem; margin-bottom: 15px;">✅</div>
+                                    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 600; line-height: 1.6;" data-translate="hero.validation.item1">
+                                        Principio establecido en <strong>geología y geofísica</strong>
+                                    </p>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div style="text-align: center; padding: 25px 20px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateY(-5px)';"
+                                     onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.transform='translateY(0)';">
+                                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🔬</div>
+                                    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 600; line-height: 1.6;" data-translate="hero.validation.item2">
+                                        <strong>+30 años</strong> de investigación electromagnética
+                                    </p>
+                                </div>
+
+                                <!-- Item 3 -->
+                                <div style="text-align: center; padding: 25px 20px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateY(-5px)';"
+                                     onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.transform='translateY(0)';">
+                                    <div style="font-size: 2.5rem; margin-bottom: 15px;">📊</div>
+                                    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 600; line-height: 1.6;" data-translate="hero.validation.item3">
+                                        Base de datos de <strong>+100 elementos</strong> minerales
+                                    </p>
+                                </div>
+
+                                <!-- Item 4 -->
+                                <div style="text-align: center; padding: 25px 20px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.transform='translateY(-5px)';"
+                                     onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.transform='translateY(0)';">
+                                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🌱</div>
+                                    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 600; line-height: 1.6;" data-translate="hero.validation.item4">
+                                        Tecnología <strong>pasiva sin impacto</strong> ambiental
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1390,7 +2086,7 @@
                     <!-- Badge QuantikGeo -->
                     <div style="padding: 40px 60px; background: rgba(255, 255, 255, 0.03); border: 3px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(20px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4)'; this.style.borderColor='rgba(255, 255, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
                         <div style="text-align: center;">
-                            <img src="q444.png" alt="QuantikGeo Logo" style="height: 161px; width: auto;">
+                            <img src="q444.png" alt="QuantikGeo Logo" style="height: 161px; width: auto;" loading="lazy">
                         </div>
                     </div>
 
@@ -1399,14 +2095,14 @@
                         <div style="text-align: center;">
                             <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">Distribuidor Oficial</div>
                             <div style="margin-bottom: 20px;">
-                                <img src="ctac-logo.png" alt="CTAC Logo" style="height: 80px; width: auto; filter: brightness(1.1);">
+                                <img src="ctac-logo.png" alt="CTAC Logo" style="height: 80px; width: auto; filter: brightness(1.1);" loading="lazy">
                             </div>
                             <div style="font-size: 0.95rem; color: rgba(255,255,255,0.6); letter-spacing: 1px;">Tecnología MFT™ Certificada</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 35px; margin-bottom: 70px;">
+                <div class="about-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin-bottom: 70px;">
                     <!-- Nuestra Misión -->
                     <div class="card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 45px 40px; transition: all 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(59, 130, 246, 0.3)'; this.style.borderColor='rgba(59, 130, 246, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(59, 130, 246, 0.2)';">
                         <!-- Decorative Circle -->
@@ -1433,94 +2129,26 @@
                             tecnología MFT™, que es la más avanzada del mercado.
                         </p>
                     </div>
-                </div>
 
-                <!-- Valores Corporativos -->
-                <div class="valores-section" style="margin: 80px 0 70px 0;">
-                    <h3 style="font-size: 2.2rem; color: var(--text-primary); text-align: center; margin-bottom: 50px; font-weight: 800;" data-translate="nosotros.valores.title">Nuestros Valores</h3>
-                    <div class="valores-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-
-                        <!-- Innovación -->
-                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #8b5cf6;" onmouseover="this.style.background='rgba(139, 92, 246, 0.08)'; this.style.borderColor='rgba(139, 92, 246, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
-                            <h4 style="font-size: 1.5rem; color: #8b5cf6; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.innovacion">Innovación</h4>
-                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.innovacion.text">Tecnología de vanguardia en exploración mineral</p>
+                    <!-- Nuestros Clientes -->
+                    <div class="card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.02)); backdrop-filter: blur(20px); border: 2px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 45px 40px; transition: all 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 60px rgba(139, 92, 246, 0.3)'; this.style.borderColor='rgba(139, 92, 246, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(0,0,0,0.2)'; this.style.borderColor='rgba(139, 92, 246, 0.2)';">
+                        <!-- Decorative Circle -->
+                        <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent); border-radius: 50%; opacity: 0.5;"></div>
+                        <div style="margin-bottom: 25px;">
+                            <h3 class="card-title" style="font-size: 1.8rem; color: #8b5cf6; margin: 0; font-weight: 700; border-bottom: 2px solid rgba(139, 92, 246, 0.3); padding-bottom: 15px;" data-translate="nosotros.clients.title">Nuestros Clientes</h3>
                         </div>
-
-                        <!-- Precisión -->
-                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #3b82f6;" onmouseover="this.style.background='rgba(59, 130, 246, 0.08)'; this.style.borderColor='rgba(59, 130, 246, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
-                            <h4 style="font-size: 1.5rem; color: #3b82f6; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.precision">Precisión</h4>
-                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.precision.text">~65% de exactitud en detección mineral</p>
-                        </div>
-
-                        <!-- Sostenibilidad -->
-                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #10b981;" onmouseover="this.style.background='rgba(16, 185, 129, 0.08)'; this.style.borderColor='rgba(16, 185, 129, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.08)'; this.style.transform='translateY(0)';">
-                            <h4 style="font-size: 1.5rem; color: #10b981; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.sostenibilidad">Sostenibilidad</h4>
-                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.sostenibilidad.text">Tecnología no invasiva, sin impacto ambiental</p>
-                        </div>
-
-                        <!-- Eficiencia -->
-                        <div class="valor-card" style="text-align: center; padding: 35px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; transition: all 0.3s ease; border-top: 3px solid #f59e0b;" onmouseover="this.style.background='rgba(245, 158, 11, 0.08)'; this.style.borderColor='rgba(245, 158, 11, 0.3)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(245, 158, 11, 0.08)'; this.style.transform='translateY(0)';">
-                            <h4 style="font-size: 1.5rem; color: #f59e0b; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;" data-translate="nosotros.valores.eficiencia">Eficiencia</h4>
-                            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.6;" data-translate="nosotros.valores.eficiencia.text">Resultados en 4-8 semanas vs años</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Nueva sección: Tecnología y Mercado Objetivo -->
-                <div class="tech-market-section" style="margin: 70px 0 0 0; padding: 50px 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="tech-market-content" style="max-width: 1400px; margin: 0 auto;">
-                        <div class="tech-market-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <!-- Descripción de la Tecnología -->
-                            <div class="tech-description" style="padding: 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s ease;"
-                                 onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.3)';"
-                                 onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                                <div style="margin-bottom: 25px;">
-                                    <h4 style="font-size: 1.6rem; color: #3b82f6; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="nosotros.tech.identification.title">Tecnología MFT™</h4>
-                                </div>
-                                <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;" data-translate="nosotros.tech.identification.text">
-                                    Nuestra tecnología <strong>MFT™ (Mineral Finder Technology)</strong> identifica anomalías electromagnéticas originadas por depósitos minerales a través de su <strong>firma espectral única</strong>, utilizando frecuencias de electroresonancia magnética.
-                                </p>
-                                <div class="tech-validation" style="padding: 20px 25px; background: rgba(59, 130, 246, 0.08); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2); margin-bottom: 20px;">
-                                    <p style="color: var(--text-primary); font-size: 1.1rem; margin: 0; font-weight: 600;" data-translate="nosotros.tech.validation">
-                                        ⭐ Respaldada por <strong style="color: #3b82f6;">+30 años de investigación electromagnética</strong>
-                                    </p>
-                                </div>
-                                <div class="tech-highlight" style="padding: 18px 20px; border-radius: 4px; border-left: 3px solid #10b981;">
-                                    <p style="color: #10b981; font-size: 1.15rem; margin: 0; font-weight: 600;" data-translate="nosotros.tech.precision">
-                                        Precisión: ~65% de exactitud en detección mineral
-                                    </p>
-                                </div>
+                        <p class="card-text" style="color: rgba(255,255,255,0.9); font-size: 1.15rem; line-height: 1.8; position: relative; z-index: 1; margin-bottom: 20px;" data-translate="nosotros.clients.text">
+                            Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>.
+                        </p>
+                        <div class="client-types" style="display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 1;">
+                            <div style="padding: 10px 15px; border-radius: 4px; background: rgba(139, 92, 246, 0.1); border-left: 3px solid #8b5cf6;">
+                                <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1rem;" data-translate="nosotros.clients.corporate">Empresas Mineras Corporativas</span>
                             </div>
-
-                            <!-- Mercado Objetivo -->
-                            <div class="market-description" style="padding: 40px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s ease;"
-                                 onmouseover="this.style.borderColor='rgba(16, 185, 129, 0.3)';"
-                                 onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                                <div style="margin-bottom: 25px;">
-                                    <h4 style="font-size: 1.6rem; color: #10b981; margin-bottom: 20px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="nosotros.clients.title">Nuestros Clientes</h4>
-                                </div>
-                                <p style="color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;" data-translate="nosotros.clients.text">
-                                    Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>, ofreciendo la tecnología más avanzada del mercado.
-                                </p>
-
-                                <div class="client-types" style="display: flex; flex-direction: column; gap: 12px;">
-                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
-                                         onmouseover="this.style.borderLeftWidth='4px';"
-                                         onmouseout="this.style.borderLeftWidth='3px';">
-                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.corporate">Empresas Mineras Corporativas</span>
-                                    </div>
-                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
-                                         onmouseover="this.style.borderLeftWidth='4px';"
-                                         onmouseout="this.style.borderLeftWidth='3px';">
-                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.exploration">Compañías de Exploración</span>
-                                    </div>
-                                    <div class="client-type" style="padding: 14px 18px; border-radius: 4px; border-left: 3px solid #3b82f6; transition: all 0.2s ease;"
-                                         onmouseover="this.style.borderLeftWidth='4px';"
-                                         onmouseout="this.style.borderLeftWidth='3px';">
-                                        <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1.15rem;" data-translate="nosotros.clients.individual">Concesionarios Individuales</span>
-                                    </div>
-                                </div>
+                            <div style="padding: 10px 15px; border-radius: 4px; background: rgba(139, 92, 246, 0.1); border-left: 3px solid #8b5cf6;">
+                                <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1rem;" data-translate="nosotros.clients.exploration">Compañías de Exploración</span>
+                            </div>
+                            <div style="padding: 10px 15px; border-radius: 4px; background: rgba(139, 92, 246, 0.1); border-left: 3px solid #8b5cf6;">
+                                <span style="color: rgba(255,255,255,0.9); font-weight: 500; font-size: 1rem;" data-translate="nosotros.clients.individual">Concesionarios Individuales</span>
                             </div>
                         </div>
                     </div>
@@ -1538,36 +2166,6 @@
                     <h2 class="section-title" data-translate="tecnologia.title">Tecnología MFT™</h2>
                     <p class="section-description" data-translate="tecnologia.description">Mineral Finder Technology - Prospección Multiespectral Avanzada</p>
                 </div>
-                
-                <div class="tech-principles">
-                    <h3 style="font-size: 2rem; color: var(--text-primary); text-align: center; margin-bottom: 50px; font-weight: 700;" data-translate="tecnologia.how.title">Fundamentos Tecnológicos</h3>
-                    <div class="principles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
-                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';"
-                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                            <h4 class="principle-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="tecnologia.electromagnetic.title">Principio Electromagnético</h4>
-                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.electromagnetic.text">
-                                La acumulación de material en el subsuelo produce la polarización de las rocas adyacentes, alterando los campos electromagnéticos cuasi estacionarios de la Tierra, identificándose como anomalías electromagnéticas.
-                            </p>
-                        </div>
-                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
-                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.3)';"
-                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                            <h4 class="principle-title" style="font-size: 1.7rem; color: #10b981; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 12px;" data-translate="tecnologia.spectral.title">Firma Espectral</h4>
-                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.spectral.text">
-                                Todos los materiales de la naturaleza tienen su propia frecuencia de resonancia. En MFT™ se utilizan frecuencias de electroresonancia magnética para caracterizar los materiales mediante análisis espectral de laboratorio, respaldado por una <strong>base de datos propietaria de firmas electromagnéticas</strong> que permite la identificación precisa de minerales específicos.
-                            </p>
-                        </div>
-                        <div class="principle-card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease;"
-                             onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';"
-                             onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
-                            <h4 class="principle-title" style="font-size: 1.7rem; color: #3b82f6; margin-bottom: 18px; font-weight: 700; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 12px;" data-translate="tecnologia.multispectral.title">Prospección Multiespectral</h4>
-                            <p class="principle-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7;" data-translate="tecnologia.multispectral.text">
-                                Utilizamos satélites geofísicos especializados <strong>(Georesurs-P, DK)</strong> para identificar anomalías electromagnéticas subsuperficiales y crear mapas de mineralización con precisión excepcional.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- MFT Technology in Action - Satellite Mapping -->
                 <div class="tech-visual" style="margin: 80px 0;">
@@ -1576,7 +2174,7 @@
                         <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7);">Visualización de mapeo electromagnético con coordenadas GPS de alta precisión</p>
                     </div>
                     <div style="max-width: 1200px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); border: 2px solid rgba(59, 130, 246, 0.3);">
-                        <img src="mft-satellite-analysis.png" alt="Análisis Satelital MFT - Mapeo Electromagnético con Coordenadas GPS" style="width: 100%; height: auto; display: block;">
+                        <img src="mft-satellite-analysis.png" alt="Análisis Satelital MFT - Mapeo Electromagnético con Coordenadas GPS" style="width: 100%; height: auto; display: block;" loading="lazy">
                     </div>
                     <div style="text-align: center; margin-top: 25px;">
                         <p style="font-size: 0.95rem; color: rgba(255,255,255,0.5); font-style: italic;">
@@ -1630,7 +2228,7 @@
 
                             <!-- Image Right con Hover Effects -->
                             <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.3); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
-                                <img src="fase1-analisis-espectral.png" alt="Análisis Espectral - Vista satelital con análisis de frecuencias electromagnéticas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <img src="fase1-analisis-espectral.png" alt="Análisis Espectral - Vista satelital con análisis de frecuencias electromagnéticas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" loading="lazy">
                                 <!-- Overlay con icono -->
                                 <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
                                     <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
@@ -1646,7 +2244,7 @@
 
                             <!-- Image Left con Hover Effects -->
                             <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.3); box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
-                                <img src="fase2-deteccion-electromagnetica.png" alt="Detección Electromagnética - Equipo de campo MFT con antenas y sistemas de medición" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <img src="fase2-deteccion-electromagnetica.png" alt="Detección Electromagnética - Equipo de campo MFT con antenas y sistemas de medición" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" loading="lazy">
                                 <!-- Overlay con icono -->
                                 <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
                                     <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
@@ -1716,7 +2314,7 @@
 
                             <!-- Image Right con Hover Effects -->
                             <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(139, 92, 246, 0.3); box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
-                                <img src="fase3-procesamiento-datos.png" alt="Procesamiento de Datos - Análisis con IA y Machine Learning de datos geológicos" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <img src="fase3-procesamiento-datos.png" alt="Procesamiento de Datos - Análisis con IA y Machine Learning de datos geológicos" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" loading="lazy">
                                 <!-- Overlay con icono -->
                                 <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
                                     <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
@@ -1732,7 +2330,7 @@
 
                             <!-- Image Left con Hover Effects -->
                             <div class="phase-image" style="height: 420px; border-radius: 16px; position: relative; overflow: hidden; border: 2px solid rgba(245, 158, 11, 0.3); box-shadow: 0 20px 60px rgba(245, 158, 11, 0.2); cursor: pointer; transition: all 0.4s ease;" onmouseover="this.querySelector('img').style.transform='scale(1.1)'; this.querySelector('.img-overlay').style.opacity='1';" onmouseout="this.querySelector('img').style.transform='scale(1)'; this.querySelector('.img-overlay').style.opacity='0';">
-                                <img src="fase4-reporte-tecnico.png" alt="Reporte Técnico - Informes detallados con GPS y estimaciones de reservas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                                <img src="fase4-reporte-tecnico.png" alt="Reporte Técnico - Informes detallados con GPS y estimaciones de reservas" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);" loading="lazy">
                                 <!-- Overlay con icono -->
                                 <div class="img-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease;">
                                     <div style="font-size: 4rem; color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">🔍</div>
@@ -1892,55 +2490,7 @@
                     <h2 class="section-title" data-translate="ventajas.title">Ventajas de MFT™</h2>
                     <p class="section-description" data-translate="ventajas.description">Superioridad comprobada frente a métodos tradicionales de prospección minera.</p>
                 </div>
-                
-                <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
-                    <!-- Tarjeta 1: Eficiencia Operativa -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
-                        <h3 class="card-title" style="font-size: 1.9rem; font-weight: 700; color: #10b981; margin-bottom: 20px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 15px;">Eficiencia Operativa</h3>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8; margin-bottom: 15px;">
-                            <strong>Hasta 80% más rápido</strong> que métodos convencionales. Resultados en 4-8 semanas versus años de exploración tradicional.
-                        </p>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8;">
-                            <strong>80% menor costo operativo</strong> comparado con perforaciones exploratorias tradicionales de alto riesgo económico.
-                        </p>
-                    </div>
 
-                    <!-- Tarjeta 2: Alta Precisión y Éxito -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
-                        <h3 class="card-title" style="font-size: 1.9rem; font-weight: 700; color: #3b82f6; margin-bottom: 20px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 15px;">Alta Precisión y Éxito</h3>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8; margin-bottom: 15px;">
-                            <strong>~65% de precisión</strong> en detección mineral, versus métodos tradicionales con resultados variables y menor confiabilidad técnica.
-                        </p>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8;">
-                            <strong>Tasa de éxito de descubrimiento</strong> significativamente superior a métodos tradicionales de exploración.
-                        </p>
-                    </div>
-
-                    <!-- Tarjeta 3: Tecnología No Invasiva -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease; border-left: 4px solid #10b981;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
-                        <h3 class="card-title" style="font-size: 1.9rem; font-weight: 700; color: #10b981; margin-bottom: 20px; border-bottom: 2px solid rgba(16, 185, 129, 0.2); padding-bottom: 15px;">Tecnología No Invasiva</h3>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8;">
-                            Tecnología completamente <strong>pasiva</strong> y no invasiva al medio ambiente. Sin excavaciones preliminares, <strong>mínimo impacto ecológico</strong>, operación silenciosa y <strong>sin requerir permisos ambientales</strong> para la fase de prospección remota.
-                        </p>
-                    </div>
-
-                    <!-- Tarjeta 4: Profundidad Excepcional -->
-                    <div class="card" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 40px 35px; transition: all 0.2s ease; border-left: 4px solid #3b82f6;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
-                        <h3 class="card-title" style="font-size: 1.9rem; font-weight: 700; color: #3b82f6; margin-bottom: 20px; border-bottom: 2px solid rgba(59, 130, 246, 0.2); padding-bottom: 15px;">Profundidad Excepcional</h3>
-                        <p class="card-text" style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.8;">
-                            Detección remota <strong>hasta 9.8 km de profundidad</strong> usando frecuencias de electroresonancia magnética. Capacidad de identificar depósitos minerales profundos inaccesibles para métodos convencionales de superficie.
-                        </p>
-                    </div>
-                </div>
-                
                 <!-- Tabla Comparativa MFT™ vs Métodos Tradicionales -->
                 <div class="comparison-table-section" style="margin-top: 80px;">
                     <div class="comparison-header" style="text-align: center; margin-bottom: 50px;">
@@ -2019,22 +2569,22 @@
                                     <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.precision.traditional">Variable</p>
                                 </div>
                                 <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
-                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.mft">~65%</p>
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.precision.mft">94%</p>
                                 </div>
                             </div>
 
-                            <!-- Fila 5: Tasa de Éxito -->
+                            <!-- Fila 5: Tasa de Éxito de Perforación -->
                             <div class="table-row" style="display: grid; grid-template-columns: 1fr 1fr 1fr; transition: all 0.2s ease;"
                                  onmouseover="this.style.background='rgba(59, 130, 246, 0.03)';"
                                  onmouseout="this.style.background='transparent';">
                                 <div class="table-cell aspect-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02);">
-                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.aspect">Tasa de Éxito</p>
+                                    <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.aspect">Tasa de Éxito de Perforación</p>
                                 </div>
                                 <div class="table-cell traditional-cell" style="padding: 25px; border-right: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.success.traditional">20-30%</p>
+                                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;" data-translate="ventajas.comparison.success.traditional">&lt;5%</p>
                                 </div>
                                 <div class="table-cell mft-cell" style="padding: 25px; text-align: center; background: rgba(16, 185, 129, 0.05);">
-                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.mft">50%</p>
+                                    <p style="color: var(--vibrant-green); font-size: 1rem; font-weight: 600; margin: 0;" data-translate="ventajas.comparison.success.mft">Significativamente Mayor</p>
                                 </div>
                             </div>
                         </div>
@@ -2074,13 +2624,13 @@
 
                             <!-- Visualización Tecnología MFT -->
                             <div style="margin-bottom: 25px;">
-                                <img src="Gemini_Generated_Image_bwdqkwbwdqkwbwdq.png" alt="Tecnología MFT - Visualización 3D de depósitos minerales en profundidad" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                                <img src="Gemini_Generated_Image_bwdqkwbwdqkwbwdq.png" alt="Tecnología MFT - Visualización 3D de depósitos minerales en profundidad" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" loading="lazy">
                                 <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 15px; text-align: center; font-style: italic;">Tecnología MFT™ - Tomografía de Frecuencia Electromagnética mostrando depósitos de Au, Ag, Cu hasta 3,100m de profundidad</div>
                             </div>
 
                             <!-- Comparación: Método Tradicional vs MFT -->
                             <div>
-                                <img src="Gemini_Generated_Image_o6upquo6upquo6up.png" alt="Comparación: Método Tradicional 24 años vs Tecnología MFT 3 meses" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                                <img src="Gemini_Generated_Image_o6upquo6upquo6up.png" alt="Comparación: Método Tradicional 24 años vs Tecnología MFT 3 meses" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" loading="lazy">
                                 <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 15px; text-align: center; font-style: italic;">Comparación de eficiencia: Métodos tradicionales (24 años) vs Tecnología MFT™ (3 meses)</div>
                             </div>
                         </div>
@@ -2177,75 +2727,96 @@
                     </p>
                 </div>
 
-                <div class="faq-grid" style="display: grid; gap: 25px;">
+                <div class="faq-accordion">
                     <!-- FAQ 1 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #3b82f6; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q1.question">¿Qué es la tecnología MFT™?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q1.answer">
-                            MFT™ (Mineral Finder Technology) es un sistema de prospección mineral basado en la detección de anomalías electromagnéticas generadas por depósitos minerales subsuperficiales, utilizando análisis espectral satelital y frecuencias de electroresonancia magnética.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q1.question">¿Qué es la tecnología MFT™?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q1.answer">
+                                MFT™ (Mineral Finder Technology) es un sistema de prospección mineral basado en la detección de anomalías electromagnéticas generadas por depósitos minerales subsuperficiales, utilizando análisis espectral satelital y frecuencias de electroresonancia magnética.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #10b981; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q2.question">¿Cuánto tiempo toma un estudio MFT™?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q2.answer">
-                            La fase remota toma entre 2-4 semanas. Las fases de campo y procesamiento adicional pueden tomar 2-4 semanas más. En total, un estudio completo se ejecuta en <strong>4-8 semanas</strong>, comparado con años en métodos tradicionales.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q2.question">¿Cuánto tiempo toma un estudio MFT™?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q2.answer">
+                                El proceso incluye una fase remota de análisis satelital, seguida de fases de campo y procesamiento de datos. El tiempo total es <strong>significativamente menor</strong> comparado con años de exploración en métodos tradicionales.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #8b5cf6; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#a78bfa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#8b5cf6';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q3.question">¿Funciona en cualquier tipo de terreno?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q3.answer">
-                            Sí. La tecnología MFT™ funciona globalmente ya que utiliza análisis satelital de campos electromagnéticos. Es efectiva en terrenos montañosos, desérticos, selváticos y hasta en áreas de difícil acceso donde los métodos tradicionales son impracticables.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q3.question">¿Funciona en cualquier tipo de terreno?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q3.answer">
+                                Sí. La tecnología MFT™ funciona globalmente ya que utiliza análisis satelital de campos electromagnéticos. Es efectiva en terrenos montañosos, desérticos, selváticos y hasta en áreas de difícil acceso donde los métodos tradicionales son impracticables.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #f59e0b; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#fbbf24';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#f59e0b';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q4.question">¿Qué minerales puede detectar MFT™?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q4.answer">
-                            MFT™ puede detectar oro (Au), plata (Ag), cobre (Cu), platino (Pt), hierro (Fe), níquel (Ni), zinc (Zn), y otros minerales con firma espectral electromagnética distintiva. Cada mineral genera una anomalía electromagnética característica identificable.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q4.question">¿Qué minerales puede detectar MFT™?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q4.answer">
+                                MFT™ puede detectar oro (Au), plata (Ag), cobre (Cu), platino (Pt), hierro (Fe), níquel (Ni), zinc (Zn), y otros minerales con firma espectral electromagnética distintiva. Cada mineral genera una anomalía electromagnética característica identificable.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #3b82f6; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#60a5fa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#3b82f6';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q5.question">¿Requiere permisos ambientales?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q5.answer">
-                            No. La fase remota de prospección MFT™ es completamente pasiva y no requiere permisos ambientales. Solo las fases de campo opcionales (verificación física) pueden requerir permisos estándar según la jurisdicción local.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q5.question">¿Requiere permisos ambientales?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q5.answer">
+                                No. La fase remota de prospección MFT™ es completamente pasiva y no requiere permisos ambientales. Solo las fases de campo opcionales (verificación física) pueden requerir permisos estándar según la jurisdicción local.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #10b981; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#34d399';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#10b981';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q6.question">¿Qué pasa si no se encuentran minerales?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q6.answer">
-                            El análisis MFT™ identifica o descarta la presencia de depósitos minerales en el área estudiada. Si no se detectan anomalías significativas, esto permite <strong>ahorrar millones en perforaciones exploratorias innecesarias</strong>, evitando inversiones en zonas sin potencial mineral comprobable.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q6.question">¿Qué pasa si no se encuentran minerales?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q6.answer">
+                                El análisis MFT™ identifica o descarta la presencia de depósitos minerales en el área estudiada. Si no se detectan anomalías significativas, esto permite <strong>ahorrar millones en perforaciones exploratorias innecesarias</strong>, evitando inversiones en zonas sin potencial mineral comprobable.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 35px 40px; border-left: 4px solid #8b5cf6; transition: all 0.3s ease;"
-                         onmouseover="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderLeftColor='#a78bfa';"
-                         onmouseout="this.style.background='rgba(255, 255, 255, 0.03)'; this.style.borderLeftColor='#8b5cf6';">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); font-weight: 700; margin-bottom: 15px;" data-translate="faq.q7.question">¿Cómo se compara con drones y otras tecnologías satelitales?</h3>
-                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;" data-translate="faq.q7.answer">
-                            MFT™ utiliza satélites geofísicos especializados (Georesurs-P, DK) que detectan <strong>anomalías electromagnéticas subsuperficiales</strong>, no solo características de superficie. Los drones capturan imágenes superficiales, mientras MFT™ penetra hasta 9.8 km de profundidad identificando depósitos minerales ocultos.
-                        </p>
+                    <div class="faq-accordion-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <h3 class="faq-question-text" data-translate="faq.q7.question">¿Cómo se compara con drones y otras tecnologías satelitales?</h3>
+                            <div class="faq-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <p class="faq-answer-text" data-translate="faq.q7.answer">
+                                MFT™ utiliza satélites geofísicos especializados (Georesurs-P, DK) que detectan <strong>anomalías electromagnéticas subsuperficiales</strong>, no solo características de superficie. Los drones capturan imágenes superficiales, mientras MFT™ penetra hasta 9.8 km de profundidad identificando depósitos minerales ocultos.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2354,7 +2925,7 @@
             es: {
                 // Page
                 'page.title': 'QuantikGeo - Tecnología MFT™ para Prospección Minera',
-                'page.description': 'QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un ~65%, detección hasta 9.8km de profundidad.',
+                'page.description': 'QuantikGeo - Distribuidor autorizado de tecnología MFT™ para prospección minera. Precisión Hasta un 94%, detección hasta 9.8km de profundidad.',
                 
                 // Header
                 'header.tagline': 'Tecnología MFT™',
@@ -2368,13 +2939,29 @@
                 
                 // Hero Section
                 'hero.badge': 'Distribuidor Autorizado CTAC',
-                'hero.title': 'Revoluciona la <span class="gradient-text">Prospección Minera</span> con Tecnología <span class="tech-highlight">MFT™</span>',
-                'hero.description': 'Como una <strong>resonancia magnética para la Tierra</strong>, MFT™ identifica depósitos minerales a través de frecuencias electromagnéticas con <strong>precisión de ~65%</strong>, reduciendo costos hasta un <strong>80%</strong> y tiempos de exploración a solo <strong>4-8 semanas</strong>.',
+                'hero.title': 'Tecnología Confiable e Innovadora <span class="tech-highlight">MFT™</span> para la <span class="gradient-text">Prospección de Depósitos Minerales</span>',
+                'hero.description': 'Todos los materiales y elementos transmiten y absorben <strong>radiación electromagnética</strong>, y como resultado tienen su propia <strong>frecuencia resonante electromagnética y longitud de onda única</strong>. MFT™ detecta estas firmas espectrales, identificando depósitos minerales con <strong>precisión de hasta el 94%</strong>, hasta <strong>9.8km de profundidad</strong>.',
                 'hero.cta': 'Solicitar Información',
                 'hero.stats.precision': 'Precisión',
-                'hero.stats.precision.value': 'Hasta ~65%',
+                'hero.stats.precision.value': 'Hasta 94%',
                 'hero.stats.depth': 'Profundidad',
                 'hero.stats.technology': 'Tecnología',
+
+                // Hero - ¿Cómo Funciona?
+                'hero.howworks.title': '¿Cómo Funciona MFT™?',
+                'hero.howworks.physics.title': 'Principio Físico Establecido',
+                'hero.howworks.physics.text': 'Todos los materiales transmiten y absorben radiación electromagnética. Los depósitos minerales en el subsuelo crean <strong>anomalías electromagnéticas medibles</strong> en el campo magnético de la Tierra - un <strong>principio establecido en geología y geofísica</strong> moderna.',
+                'hero.howworks.spectral.title': 'Detección Espectral Avanzada',
+                'hero.howworks.spectral.text': 'MFT™ analiza el <strong>rango ultravioleta y azul profundo</strong> del espectro electromagnético, identificando las frecuencias de resonancia únicas de cada mineral. Nuestra base de datos propietaria contiene <strong>firmas espectrales de +100 elementos individuales</strong>.',
+                'hero.howworks.precision.title': 'Precisión 3D Sin Perforación',
+                'hero.howworks.precision.text': 'A través de satélites geofísicos especializados <strong>(Georesurs-P, DK)</strong>, mapeamos anomalías electromagnéticas subsuperficiales con <strong>precisión tridimensional hasta 9.8km</strong>. No existe otra tecnología pasiva que entregue este nivel de detalle sin perforación.',
+
+                // Hero - Validación Científica
+                'hero.validation.title': 'Tecnología Respaldada Científicamente',
+                'hero.validation.item1': 'Principio establecido en <strong>geología y geofísica</strong>',
+                'hero.validation.item2': '<strong>+30 años</strong> de investigación electromagnética',
+                'hero.validation.item3': 'Base de datos de <strong>+100 elementos</strong> minerales',
+                'hero.validation.item4': 'Tecnología <strong>pasiva sin impacto</strong> ambiental',
                 
                 // Nosotros Section
                 'nosotros.badge': 'Quiénes Somos',
@@ -2389,7 +2976,7 @@
                 'nosotros.tech.identification.title': 'Identificación Precisa',
                 'nosotros.tech.identification.text': 'Nuestra tecnología <strong>MFT™ (Mineral Finder Technology)</strong> identifica anomalías electromagnéticas originadas por depósitos minerales a través de su <strong>firma espectral única</strong>, utilizando frecuencias de electroresonancia magnética.',
                 'nosotros.tech.validation': '⭐ Respaldada por <strong style="color: #3b82f6;">+30 años de investigación electromagnética</strong>',
-                'nosotros.tech.precision': '<strong>Precisión excepcional:</strong> Hasta un ~65% de exactitud en detección mineral',
+                'nosotros.tech.precision': '<strong>Precisión excepcional:</strong> Hasta un 94% de exactitud en detección mineral',
                 'nosotros.clients.title': 'Nuestros Clientes',
                 'nosotros.clients.text': 'Trabajamos con <strong>empresas mineras</strong>, <strong>compañías de exploración</strong> e <strong>individuos con concesiones mineras</strong>, ofreciendo la tecnología más avanzada del mercado.',
                 'nosotros.clients.corporate': 'Empresas Mineras Corporativas',
@@ -2401,11 +2988,11 @@
                 'nosotros.valores.innovacion': 'Innovación',
                 'nosotros.valores.innovacion.text': 'Tecnología de vanguardia en exploración mineral',
                 'nosotros.valores.precision': 'Precisión',
-                'nosotros.valores.precision.text': '~65% de exactitud en detección mineral',
+                'nosotros.valores.precision.text': '94% de exactitud en detección mineral',
                 'nosotros.valores.sostenibilidad': 'Sostenibilidad',
                 'nosotros.valores.sostenibilidad.text': 'Tecnología no invasiva, sin impacto ambiental',
                 'nosotros.valores.eficiencia': 'Eficiencia',
-                'nosotros.valores.eficiencia.text': 'Resultados en 4-8 semanas vs años',
+                'nosotros.valores.eficiencia.text': 'Resultados rápidos vs métodos tradicionales',
 
                 // Diferenciadores
                 'nosotros.diferenciadores.title': '¿Por Qué Elegir QuantikGeo?',
@@ -2480,7 +3067,7 @@
                 'ventajas.title': 'Ventajas de MFT™',
                 'ventajas.description': 'Superioridad comprobada frente a métodos tradicionales de prospección minera.',
                 'ventajas.precision.title': 'Precisión Superior',
-                'ventajas.precision.text': 'Precisión hasta un ~65% versus métodos tradicionales con resultados variables y menor confiabilidad técnica.',
+                'ventajas.precision.text': 'Precisión hasta un 94% versus métodos tradicionales con resultados variables y menor confiabilidad técnica.',
                 'ventajas.efficiency.title': 'Eficiencia Temporal',
                 'ventajas.efficiency.text': 'Hasta 80% más rápido que métodos convencionales. Resultados en 30-60 días versus años de exploración tradicional.',
                 'ventajas.cost.title': 'Reducción de Costos',
@@ -2492,7 +3079,7 @@
                 'ventajas.support.title': 'Soporte Continuo',
                 'ventajas.support.text': 'Asistencia técnica especializada desde perforación hasta producción operativa.',
                 'ventajas.success.title': 'Alto Éxito',
-                'ventajas.success.text': 'Tasas de éxito hasta un 50% de tasa de éxito de descubrimiento.',
+                'ventajas.success.text': 'Tasa de éxito de perforación significativamente superior comparado con métodos tradicionales de exploración (<5% de éxito).',
                 
                 // Tabla Comparativa
                 'ventajas.comparison.title': 'MFT™ vs Métodos Tradicionales',
@@ -2511,13 +3098,13 @@
                 'ventajas.comparison.permits.mft': 'No Invasiva (Pasiva)',
                 'ventajas.comparison.precision.aspect': 'Precisión',
                 'ventajas.comparison.precision.traditional': 'Variable',
-                'ventajas.comparison.precision.mft': 'Hasta un ~65%',
-                'ventajas.comparison.success.aspect': 'Tasa de Éxito',
-                'ventajas.comparison.success.traditional': '20% - 30%',
-                'ventajas.comparison.success.mft': 'Hasta un 50%',
+                'ventajas.comparison.precision.mft': 'Hasta un 94%',
+                'ventajas.comparison.success.aspect': 'Tasa de Éxito de Perforación',
+                'ventajas.comparison.success.traditional': '<5%',
+                'ventajas.comparison.success.mft': 'Significativamente Mayor',
                 'ventajas.comparison.stats.faster.title': 'Hasta 80% Más Rápido',
                 'ventajas.comparison.stats.faster.text': 'Resultados en semanas, no años',
-                'ventajas.comparison.stats.precision.title': 'Hasta un ~65%',
+                'ventajas.comparison.stats.precision.title': 'Hasta un 94%',
                 'ventajas.comparison.stats.precision.text': 'Máxima exactitud comprobada',
                 'ventajas.comparison.stats.impact.title': '0% Impacto',
                 'ventajas.comparison.stats.impact.text': 'Tecnología completamente pasiva',
@@ -2541,7 +3128,7 @@
                 'faq.q1.question': '¿Qué es la tecnología MFT™?',
                 'faq.q1.answer': 'MFT™ (Mineral Finder Technology) es un sistema de prospección mineral basado en la detección de anomalías electromagnéticas generadas por depósitos minerales subsuperficiales, utilizando análisis espectral satelital y frecuencias de electroresonancia magnética.',
                 'faq.q2.question': '¿Cuánto tiempo toma un estudio MFT™?',
-                'faq.q2.answer': 'La fase remota toma entre 2-4 semanas. Las fases de campo y procesamiento adicional pueden tomar 2-4 semanas más. En total, un estudio completo se ejecuta en <strong>4-8 semanas</strong>, comparado con años en métodos tradicionales.',
+                'faq.q2.answer': 'El proceso incluye una fase remota de análisis satelital, seguida de fases de campo y procesamiento de datos. El tiempo total es <strong>significativamente menor</strong> comparado con años de exploración en métodos tradicionales.',
                 'faq.q3.question': '¿Funciona en cualquier tipo de terreno?',
                 'faq.q3.answer': 'Sí. La tecnología MFT™ funciona globalmente ya que utiliza análisis satelital de campos electromagnéticos. Es efectiva en terrenos montañosos, desérticos, selváticos y hasta en áreas de difícil acceso donde los métodos tradicionales son impracticables.',
                 'faq.q4.question': '¿Qué minerales puede detectar MFT™?',
@@ -2625,7 +3212,7 @@
             en: {
                 // Page
                 'page.title': 'QuantikGeo - MFT™ Technology for Mineral Prospecting',
-                'page.description': 'QuantikGeo - Authorized MFT™ technology distributor for mineral prospecting. Up to ~65% precision, detection up to 9.8km depth.',
+                'page.description': 'QuantikGeo - Authorized MFT™ technology distributor for mineral prospecting. Up to 94% precision, detection up to 9.8km depth.',
                 
                 // Header
                 'header.tagline': 'MFT™ Technology',
@@ -2639,13 +3226,29 @@
                 
                 // Hero Section
                 'hero.badge': 'Authorized CTAC Distributor',
-                'hero.title': 'Revolutionize <span class="gradient-text">Mineral Prospecting</span> with <span class="tech-highlight">MFT™</span> Technology',
-                'hero.description': 'Like an <strong>MRI for the Earth</strong>, MFT™ identifies mineral deposits through electromagnetic frequencies with <strong>~65% precision</strong>, reducing costs by up to <strong>80%</strong> and exploration time to just <strong>4-8 weeks</strong>.',
+                'hero.title': 'Reliable and Innovative <span class="tech-highlight">MFT™</span> Technology for <span class="gradient-text">Mineral Deposit Prospecting</span>',
+                'hero.description': 'All materials and elements transmit and absorb <strong>electromagnetic radiation</strong> and as a result have their own unique <strong>electromagnetic resonant frequency and wavelength</strong>. MFT™ detects these spectral signatures, identifying mineral deposits with <strong>precision of up to 94%</strong>, up to <strong>9.8km depth</strong>.',
                 'hero.cta': 'Request Information',
                 'hero.stats.precision': 'Precision',
-                'hero.stats.precision.value': 'Up to ~65%',
+                'hero.stats.precision.value': 'Up to 94%',
                 'hero.stats.depth': 'Depth',
                 'hero.stats.technology': 'Technology',
+
+                // Hero - How It Works
+                'hero.howworks.title': 'How Does MFT™ Work?',
+                'hero.howworks.physics.title': 'Established Physical Principle',
+                'hero.howworks.physics.text': 'All materials transmit and absorb electromagnetic radiation. Mineral deposits in the subsoil create <strong>measurable electromagnetic anomalies</strong> in Earth\'s magnetic field - an <strong>established principle in geology and geophysics</strong>.',
+                'hero.howworks.spectral.title': 'Advanced Spectral Detection',
+                'hero.howworks.spectral.text': 'MFT™ analyzes the <strong>ultraviolet and deep blue range</strong> of the electromagnetic spectrum, identifying the unique resonance frequencies of each mineral. Our proprietary database contains <strong>spectral signatures of +100 individual elements</strong>.',
+                'hero.howworks.precision.title': '3D Precision Without Drilling',
+                'hero.howworks.precision.text': 'Through specialized geophysical satellites <strong>(Georesurs-P, DK)</strong>, we map subsurface electromagnetic anomalies with <strong>three-dimensional precision up to 9.8km</strong>. No other passive technology delivers this level of detail without drilling.',
+
+                // Hero - Scientific Validation
+                'hero.validation.title': 'Scientifically Backed Technology',
+                'hero.validation.item1': 'Established principle in <strong>geology and geophysics</strong>',
+                'hero.validation.item2': '<strong>+30 years</strong> of electromagnetic research',
+                'hero.validation.item3': 'Database of <strong>+100 mineral elements</strong>',
+                'hero.validation.item4': '<strong>Passive technology with no environmental</strong> impact',
                 
                 // Nosotros Section
                 'nosotros.badge': 'Who We Are',
@@ -2660,7 +3263,7 @@
                 'nosotros.tech.identification.title': 'Precise Identification',
                 'nosotros.tech.identification.text': 'Our <strong>MFT™ (Mineral Finder Technology)</strong> identifies electromagnetic anomalies originated by mineral deposits through their <strong>unique spectral signature</strong>, using electromagnetic resonance frequencies.',
                 'nosotros.tech.validation': '⭐ Backed by <strong style="color: #3b82f6;">+30 years of electromagnetic research</strong>',
-                'nosotros.tech.precision': '<strong>Exceptional precision:</strong> Up to ~65% accuracy in mineral detection',
+                'nosotros.tech.precision': '<strong>Exceptional precision:</strong> Up to 94% accuracy in mineral detection',
                 'nosotros.clients.title': 'Our Clients',
                 'nosotros.clients.text': 'We work with <strong>mining companies</strong>, <strong>exploration companies</strong> and <strong>individual concession holders</strong>, offering the most advanced technology in the market.',
                 'nosotros.clients.corporate': 'Corporate Mining Companies',
@@ -2672,11 +3275,11 @@
                 'nosotros.valores.innovacion': 'Innovation',
                 'nosotros.valores.innovacion.text': 'Cutting-edge technology in mineral exploration',
                 'nosotros.valores.precision': 'Precision',
-                'nosotros.valores.precision.text': '~65% accuracy in mineral detection',
+                'nosotros.valores.precision.text': '94% accuracy in mineral detection',
                 'nosotros.valores.sostenibilidad': 'Sustainability',
                 'nosotros.valores.sostenibilidad.text': 'Non-invasive technology, zero environmental impact',
                 'nosotros.valores.eficiencia': 'Efficiency',
-                'nosotros.valores.eficiencia.text': 'Results in 4-8 weeks vs years',
+                'nosotros.valores.eficiencia.text': 'Fast results vs traditional methods',
 
                 // Diferenciadores
                 'nosotros.diferenciadores.title': 'Why Choose QuantikGeo?',
@@ -2751,7 +3354,7 @@
                 'ventajas.title': 'MFT™ Advantages',
                 'ventajas.description': 'Proven superiority over traditional mineral prospecting methods.',
                 'ventajas.precision.title': 'Superior Precision',
-                'ventajas.precision.text': 'Up to ~65% precision versus traditional methods with variable results and lower technical reliability.',
+                'ventajas.precision.text': 'Up to 94% precision versus traditional methods with variable results and lower technical reliability.',
                 'ventajas.efficiency.title': 'Time Efficiency',
                 'ventajas.efficiency.text': 'Up to 80% faster than conventional methods. Results in 30-60 days versus years of traditional exploration.',
                 'ventajas.cost.title': 'Cost Reduction',
@@ -2763,7 +3366,7 @@
                 'ventajas.support.title': 'Continuous Support',
                 'ventajas.support.text': 'Specialized technical assistance from drilling to operational production.',
                 'ventajas.success.title': 'High Success',
-                'ventajas.success.text': 'Success rates up to 50% discovery success rate.',
+                'ventajas.success.text': 'Drilling success rate significantly higher compared to traditional exploration methods (<5% success rate).',
                 
                 // Comparison Table
                 'ventajas.comparison.title': 'MFT™ vs Traditional Methods',
@@ -2782,13 +3385,13 @@
                 'ventajas.comparison.permits.mft': 'Non-Invasive (Passive)',
                 'ventajas.comparison.precision.aspect': 'Precision',
                 'ventajas.comparison.precision.traditional': 'Variable',
-                'ventajas.comparison.precision.mft': 'Up to ~65%',
-                'ventajas.comparison.success.aspect': 'Success Rate',
-                'ventajas.comparison.success.traditional': '20% - 30%',
-                'ventajas.comparison.success.mft': 'Up to 50%',
+                'ventajas.comparison.precision.mft': 'Up to 94%',
+                'ventajas.comparison.success.aspect': 'Drilling Success Rate',
+                'ventajas.comparison.success.traditional': '<5%',
+                'ventajas.comparison.success.mft': 'Significantly Higher',
                 'ventajas.comparison.stats.faster.title': 'Up to 80% Faster',
                 'ventajas.comparison.stats.faster.text': 'Results in weeks, not years',
-                'ventajas.comparison.stats.precision.title': 'Up to ~65%',
+                'ventajas.comparison.stats.precision.title': 'Up to 94%',
                 'ventajas.comparison.stats.precision.text': 'Maximum proven accuracy',
                 'ventajas.comparison.stats.impact.title': '0% Impact',
                 'ventajas.comparison.stats.impact.text': 'Completely passive technology',
@@ -2812,7 +3415,7 @@
                 'faq.q1.question': 'What is MFT™ technology?',
                 'faq.q1.answer': 'MFT™ (Mineral Finder Technology) is a mineral prospecting system based on the detection of electromagnetic anomalies generated by subsurface mineral deposits, using satellite spectral analysis and electromagnetic resonance frequencies.',
                 'faq.q2.question': 'How long does an MFT™ study take?',
-                'faq.q2.answer': 'The remote phase takes 2-4 weeks. Field and additional processing phases can take another 2-4 weeks. In total, a complete study is executed in <strong>4-8 weeks</strong>, compared to years with traditional methods.',
+                'faq.q2.answer': 'The process includes a remote satellite analysis phase, followed by field and data processing phases. The total time is <strong>significantly shorter</strong> compared to years of exploration with traditional methods.',
                 'faq.q3.question': 'Does it work in any type of terrain?',
                 'faq.q3.answer': 'Yes. MFT™ technology works globally as it uses satellite analysis of electromagnetic fields. It is effective in mountainous, desert, jungle terrains and even in difficult-to-access areas where traditional methods are impractical.',
                 'faq.q4.question': 'What minerals can MFT™ detect?',
@@ -3357,104 +3960,90 @@
     </script>
 
     <!-- Footer Corporativo -->
-    <footer style="background: rgb(8, 26, 43); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 80px 0 40px 0; margin-top: 0;">
-        <div style="max-width: 1800px; margin: 0 auto; padding: 0 40px;">
-            
+    <footer style="background: rgb(8, 26, 43); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 40px 0 30px 0; margin-top: 0;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+
             <!-- Sección Principal del Footer -->
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px;">
-                
-                <!-- Información Corporativa -->
-                <div>
-                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
-                        <div style="width: 80px; height: 80px; background: var(--vibrant-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 15px 35px rgba(5, 150, 105, 0.3);">
-                            <img src="q444.png" alt="QuantikGeo Logo" style="width: 50px; height: 50px; object-fit: contain;" />
+            <div style="max-width: 900px; margin: 0 auto 25px auto;">
+                <!-- Contacto Directo - 3 columnas -->
+                <div style="display: flex; gap: 15px; align-items: stretch; justify-content: center;">
+                    <!-- Logo -->
+                    <div style="background: rgba(248, 250, 252, 0.03); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 120px;" onmouseover="this.style.background='rgba(248, 250, 252, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.2)';" onmouseout="this.style.background='rgba(248, 250, 252, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+                        <div style="width: 50px; height: 50px; background: var(--vibrant-green); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px auto; box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);">
+                            <img src="q444.png" alt="QuantikGeo Logo" style="width: 32px; height: 32px; object-fit: contain;" loading="lazy" />
                         </div>
-                        <div>
-                            <h3 style="color: var(--text-primary); font-size: 2rem; font-weight: bold; margin: 0;">QuantikGeo</h3>
-                            <p style="color: var(--vibrant-green); font-size: 1.7rem; font-weight: 600; margin: 5px 0 0 0;" data-translate="footer.distributor">Distribuidor autorizado de tecnología MFT™</p>
-                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.1rem; font-weight: bold; margin: 0 0 3px 0;">QuantikGeo</h3>
+                        <p style="color: var(--vibrant-green); font-size: 0.75rem; font-weight: 600; margin: 0;" data-translate="footer.distributor">Distribuidor MFT™</p>
                     </div>
-                    
-                    <div style="background: rgba(248, 250, 252, 0.05); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid var(--border-gray);">
-                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                            <span style="font-size: 1.7rem; margin-right: 15px; color: var(--vibrant-green); font-weight: 700;">EMAIL</span>
-                            <div>
-                                <p style="color: var(--text-primary); font-size: 1.7rem; font-weight: 600; margin: 0;"><a href="mailto:ventas@quantikgeo.com" style="color: var(--text-primary); text-decoration: none;">ventas@quantikgeo.com</a></p>
-                                <p style="color: var(--text-secondary); font-size: 1.7rem; margin: 2px 0 0 0;" data-translate="footer.email.description">Email para consultas MFT™</p>
+
+                    <!-- Email -->
+                    <div style="background: rgba(248, 250, 252, 0.03); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; flex: 1; display: flex; align-items: center; justify-content: center; min-height: 120px;" onmouseover="this.style.background='rgba(248, 250, 252, 0.05)'; this.style.borderColor='rgba(16, 185, 129, 0.2)';" onmouseout="this.style.background='rgba(248, 250, 252, 0.03)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="font-size: 1.1rem;">📧</span>
+                            <div style="flex: 1;">
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.7rem; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">Email</p>
+                                <a href="mailto:ventas@quantikgeo.com" style="color: var(--text-primary); font-size: 0.95rem; font-weight: 600; text-decoration: none; display: block; margin-top: 1px;">ventas@quantikgeo.com</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Navegación -->
-                <div>
-                    <h4 style="color: var(--vibrant-green); font-size: 1.6rem; font-weight: bold; margin-bottom: 25px; position: relative;">
-                        <span data-translate="footer.navigation">Navegación</span>
-                        <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
-                    </h4>
-                    <nav>
-                        <a href="#nosotros" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
-                            <span data-translate="nav.nosotros">Nosotros</span>
-                        </a>
-                        <a href="#tecnologia" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
-                            <span data-translate="nav.tecnologia">Tecnología MFT</span>
-                        </a>
-                        <a href="#ventajas" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
-                            <span data-translate="nav.ventajas">Ventajas</span>
-                        </a>
-                        <a href="#contacto" style="display: block; color: var(--text-secondary); text-decoration: none; padding: 8px 0; font-size: 1rem; transition: all 0.3s ease; border-left: 2px solid transparent; padding-left: 15px;">
-                            <span data-translate="nav.contacto">Contacto</span>
-                        </a>
-                    </nav>
-                </div>
-                
-                <!-- Tecnología -->
-                <div>
-                    <h4 style="color: var(--vibrant-green); font-size: 1.6rem; font-weight: bold; margin-bottom: 25px; position: relative;">
-                        <span data-translate="footer.technology">Tecnología</span>
-                        <span style="position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--vibrant-green); border-radius: 2px;"></span>
-                    </h4>
-                    <div>
-                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">MFT</span>
-                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.mft.description">Mineral Finder Technology</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SPEC</span>
-                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.spectrum.description">Electroresonancia Magnética</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">SAT</span>
-                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.sat.description">Prospección Remota</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 12px; padding: 8px 0;">
-                            <span style="font-size: 1.6rem; margin-right: 12px; color: var(--vibrant-green); font-weight: 700;">CTAC</span>
-                            <span style="color: var(--text-secondary); font-size: 1.15rem;" data-translate="footer.ctac.description">Partnership</span>
+
+                    <!-- WhatsApp -->
+                    <div style="background: rgba(37, 211, 102, 0.05); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(37, 211, 102, 0.2); transition: all 0.3s ease; cursor: pointer; flex: 1; display: flex; align-items: center; justify-content: center; min-height: 120px;" onclick="window.open('https://wa.me/526673907814', '_blank')" onmouseover="this.style.background='rgba(37, 211, 102, 0.1)'; this.style.borderColor='rgba(37, 211, 102, 0.4)';" onmouseout="this.style.background='rgba(37, 211, 102, 0.05)'; this.style.borderColor='rgba(37, 211, 102, 0.2)';">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="font-size: 1.1rem;">💬</span>
+                            <div style="flex: 1;">
+                                <p style="color: rgba(255,255,255,0.5); font-size: 0.7rem; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">WhatsApp</p>
+                                <p style="color: #25D366; font-size: 0.95rem; font-weight: 600; margin: 1px 0 0 0;">Haz click para contactarnos</p>
+                            </div>
+                            <span style="color: #25D366; font-size: 1rem;">→</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Línea Separadora -->
-            <div style="height: 1px; background: linear-gradient(90deg, transparent, var(--border-gray), transparent); margin: 40px 0;"></div>
+            <div style="height: 1px; background: linear-gradient(90deg, transparent, var(--border-gray), transparent); margin: 25px 0 20px 0;"></div>
             
             <!-- Copyright y Información Legal -->
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
                 <div>
-                    <p style="color: var(--text-secondary); font-size: 1.15rem; margin: 0;">
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
                         <span data-translate="footer.copyright">© 2024 <strong style="color: var(--text-primary);">QuantikGeo</strong>. Todos los derechos reservados.</span>
                     </p>
-                    <p style="color: var(--text-secondary); font-size: 1.7rem; margin: 5px 0 0 0;">
+                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin: 3px 0 0 0;">
                         <span data-translate="footer.ownership">MFT™ es una tecnología propiedad de <strong style="color: var(--vibrant-green);">CTAC</strong>.</span>
                     </p>
                 </div>
-                <div style="background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.3); padding: 12px 20px; border-radius: 8px; backdrop-filter: blur(10px);">
-                    <span style="color: var(--vibrant-green); font-size: 1.7rem; font-weight: 600;" data-translate="footer.badge">DISTRIBUIDOR AUTORIZADO</span>
+                <div style="background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.3); padding: 8px 16px; border-radius: 6px; backdrop-filter: blur(10px);">
+                    <span style="color: var(--vibrant-green); font-size: 0.75rem; font-weight: 600; letter-spacing: 1px;" data-translate="footer.badge">DISTRIBUIDOR AUTORIZADO</span>
                 </div>
             </div>
         </div>
     </footer>
     
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <span class="whatsapp-tooltip">¿Necesitas ayuda? Escríbenos</span>
+        <a href="https://wa.me/526673907814?text=Hola,%20me%20interesa%20información%20sobre%20la%20tecnología%20MFT™"
+           class="whatsapp-button"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <svg class="whatsapp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.948c-0.287-0.144-1.699-0.838-1.963-0.933-0.263-0.096-0.455-0.144-0.647 0.144s-0.743 0.933-0.911 1.125c-0.168 0.192-0.335 0.216-0.622 0.072s-1.213-0.447-2.312-1.426c-0.854-0.762-1.43-1.703-1.598-1.990s-0.018-0.442 0.126-0.586c0.129-0.129 0.287-0.335 0.431-0.503s0.192-0.287 0.287-0.479c0.096-0.192 0.048-0.359-0.024-0.503s-0.647-1.559-0.887-2.135c-0.233-0.561-0.47-0.485-0.647-0.494-0.168-0.008-0.359-0.010-0.551-0.010s-0.503 0.072-0.767 0.359c-0.263 0.287-1.005 0.982-1.005 2.396s1.029 2.779 1.173 2.971c0.144 0.192 2.033 3.104 4.926 4.353 0.688 0.297 1.225 0.474 1.644 0.607 0.691 0.219 1.319 0.188 1.816 0.114 0.554-0.083 1.699-0.695 1.939-1.366s0.24-1.247 0.168-1.366c-0.072-0.12-0.263-0.192-0.551-0.335z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <button class="back-to-top-button" onclick="scrollToTop()" aria-label="Volver arriba">
+            <svg class="back-to-top-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+            </svg>
+        </button>
+    </div>
+
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Función para menú móvil (placeholder - se puede expandir más tarde)
         function toggleMobileMenu() {
@@ -3464,6 +4053,47 @@
                 footerNav.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        // Función para acordeón FAQ
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-accordion-item');
+            const wasActive = item.classList.contains('active');
+
+            // Cerrar todos los items abiertos en el mismo grupo (accordion)
+            const accordion = item.closest('.faq-accordion');
+            const allItems = accordion.querySelectorAll('.faq-accordion-item');
+            allItems.forEach(i => {
+                i.classList.remove('active');
+                const icon = i.querySelector('.faq-icon');
+                if (icon) icon.textContent = '+';
+            });
+
+            // Si no estaba activo, abrirlo
+            if (!wasActive) {
+                item.classList.add('active');
+                const icon = item.querySelector('.faq-icon');
+                if (icon) icon.textContent = '+';
+            }
+        }
+
+        // Función para botón "Volver Arriba"
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mostrar/ocultar botón "Volver Arriba" al hacer scroll
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('backToTop');
+
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
     </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97b9335f5d336c6e","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
