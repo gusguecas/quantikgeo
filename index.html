@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Quantik Geo — Encontrar yacimientos minerales con más precisión, en menos tiempo</title>
-<meta name="description" content="Quantik Geo integra tecnología satelital e instrumentación geofísica de campo para localizar el recurso, priorizar objetivos y dirigir la perforación con menos incertidumbre.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://quantikgeo.com/">
-<link rel="icon" type="image/png" href="q444.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<meta content="Quantik Geo integra tecnología satelital e instrumentación geofísica de campo para localizar el recurso, priorizar objetivos y dirigir la perforación con menos incertidumbre." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://quantikgeo.com/" rel="canonical"/>
+<link href="q444.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --ink:#040f1a;
@@ -895,6 +896,20 @@ section{position:relative;scroll-margin-top:96px}
   .hero-attrib{gap:14px}
 }
 
+.lang-switch{
+  display:inline-flex;align-items:center;gap:2px;background:none;cursor:pointer;font:inherit;
+  border:1px solid var(--line-strong);border-radius:999px;padding:4px;transition:border-color .2s;
+}
+.lang-switch:hover{border-color:var(--gold)}
+.lang-switch span{
+  font-size:.76rem;font-weight:600;letter-spacing:.06em;color:var(--muted);
+  padding:4px 10px;border-radius:999px;transition:background .2s,color .2s;
+}
+.lang-switch span.on{background:var(--gold);color:#141005}
+@media(max-width:900px){
+  .lang-switch{align-self:flex-start;margin-top:18px;order:99}
+  .lang-switch span{font-size:.85rem;padding:6px 14px}
+}
 /* ---------- Reveal ---------- */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
@@ -909,1069 +924,986 @@ section{position:relative;scroll-margin-top:96px}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es una espectrografía?","acceptedAnswer":{"@type":"Answer","text":"Es la representación gráfica de las anomalías electromagnéticas, que evidencia la presencia o ausencia del material buscado en el área analizada."}},{"@type":"Question","name":"¿Qué tipo de información satelital se utiliza?","acceptedAnswer":{"@type":"Answer","text":"Información multiespectral proveniente de satélites dedicados a estudios geofísicos, tipo Georesurs-P y DK."}},{"@type":"Question","name":"¿Cómo se adquiere la información?","acceptedAnswer":{"@type":"Answer","text":"La adquisición se realiza desde plataformas pasivas que adquieren información multiespectral."}},{"@type":"Question","name":"¿Qué información se obtiene mediante la fase satelital?","acceptedAnswer":{"@type":"Answer","text":"Metadatos multiespectrales asociados a las coordenadas del área de interés, a partir de los cuales se elaboran los mapas espectrográficos de anomalías."}},{"@type":"Question","name":"¿Cómo se procesa la información?","acceptedAnswer":{"@type":"Answer","text":"La data satelital se transfiere a una plancha satelital en la que la información digital se convierte a análoga, para su análisis espectrométrico en laboratorio de geofísica."}},{"@type":"Question","name":"¿Qué precisión y nivel de éxito se publican?","acceptedAnswer":{"@type":"Answer","text":"CTAC publica una precisión de hasta 94% y un éxito entre 50% y 70% en el descubrimiento de recursos económicamente viables. Los resultados dependen del alcance y las características de cada proyecto."}},{"@type":"Question","name":"¿A qué profundidad puede mapear la fase satelital?","acceptedAnswer":{"@type":"Answer","text":"CTAC publica que la fase satelital puede generar mapas 2D de minerales bajo cubierta a profundidades de hasta 9,8 kilómetros . El alcance efectivo depende del recurso, el área, la escala y las condiciones técnicas del proyecto."}},{"@type":"Question","name":"¿Qué es el modelo 3D y cuándo se entrega?","acceptedAnswer":{"@type":"Answer","text":"Corresponde a la Fase 3: los resultados de las fases anteriores se integran mediante software de geointeligencia y análisis geofísico para generar un modelo 3D. Se entrega cuando el alcance contratado incluye esa fase."}},{"@type":"Question","name":"¿MFT™ sustituye la perforación?","acceptedAnswer":{"@type":"Answer","text":"MFT™ no sustituye la validación geológica, geofísica ni la perforación. Su función es generar y priorizar objetivos para orientar las siguientes etapas de exploración."}},{"@type":"Question","name":"¿MFT™ certifica reservas minerales?","acceptedAnswer":{"@type":"Answer","text":"MFT™ no constituye por sí sola una certificación de recursos o reservas minerales. Cualquier declaración de recursos o reservas requiere los estudios, validaciones y profesionales competentes aplicables."}},{"@type":"Question","name":"¿Es necesario realizar trabajos de campo?","acceptedAnswer":{"@type":"Answer","text":"Las fases 2.1 y 2.2 se ejecutan con instrumentación en campo y son las que aportan la vista superior refinada y la información de profundidad. Su ejecución depende del alcance contratado y de la tarea técnica definida para el proyecto."}},{"@type":"Question","name":"¿Cuánto tiempo requiere un estudio?","acceptedAnswer":{"@type":"Answer","text":"Tiempos de referencia por fase: • Fase 1 — Localización satelital: 8 semanas . • Fase 2.1 — Vista superior: 2 semanas . • Fase 2.2 — Vista lateral: 2 semanas . • Fase 3 — Integración y modelo 3D: 5 semanas . Un alcance completo de referencia para las fases 1 a 3 se presenta en aproximadamente 17 semanas . Pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado."}},{"@type":"Question","name":"¿Para qué sirven ECECI y SVER?","acceptedAnswer":{"@type":"Answer","text":"ECECI delimita en superficie la extensión de la anomalía electromagnética identificada durante la espectrografía. SVER determina las profundidades, la cantidad de intervalos polarizados y sus espesores."}},{"@type":"Question","name":"¿Qué información necesita Quantik Geo para evaluar un proyecto?","acceptedAnswer":{"@type":"Answer","text":"• Ubicación general. • Polígono o coordenadas. • Mineral objetivo. • Superficie. • Información geológica y geofísica disponible. • Historial de trabajos realizados. • Objetivo del estudio."}},{"@type":"Question","name":"¿Se requieren licencias ambientales para utilizar la tecnología?","acceptedAnswer":{"@type":"Answer","text":"MFT™ es una tecnología pasiva y no requiere licencias ambientales para su uso. Las actividades posteriores, como acceso al terreno, trabajos de exploración directa o perforación, estarán sujetas a los requisitos aplicables de cada proyecto y jurisdicción."}},{"@type":"Question","name":"¿Cómo se protege la información del cliente?","acceptedAnswer":{"@type":"Answer","text":"Quantik Geo puede formalizar acuerdos de confidencialidad antes de recibir información sensible del proyecto. El alcance y las condiciones se definen en cada caso."}}]}</script>
 </head>
 <body>
-<a class="skip" href="#main">Saltar al contenido</a>
-
+<a class="skip" data-i18n="k001" href="#main">Saltar al contenido</a>
 <header class="header" id="header">
-  <div class="wrap">
-    <nav class="nav" aria-label="Principal">
-      <a class="brand" href="#top" aria-label="Quantik Geo — inicio">
-        <img src="assets/quantikgeo-logo.png" alt="Quantik Geo" width="560" height="260">
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links" id="navLinks">
-        <div class="nav-group">
-          <button type="button" aria-haspopup="true">Tecnología</button>
-          <div class="nav-drop">
-            <a href="#mft">Qué es MFT™</a>
-            <a href="#etapas">Fases</a>
-            <a href="#comparativa">Impacto</a>
-            <a href="#aplicaciones">Aplicaciones</a>
-            <a href="#beneficios">Beneficios</a>
-          </div>
-        </div>
-        <a href="#proceso">Cómo trabajamos</a>
-        <a href="#faq">Preguntas frecuentes</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="btn btn-primary btn-sm" href="#contacto">Evaluar un proyecto</a>
-      </div>
-    </nav>
-  </div>
+<div class="wrap">
+<nav aria-label="Principal" class="nav">
+<a aria-label="Quantik Geo — inicio" class="brand" href="#top">
+<img alt="Quantik Geo" height="260" src="assets/quantikgeo-logo.png" width="560"/>
+</a>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-links" id="navLinks">
+<div class="nav-group">
+<button aria-haspopup="true" data-i18n="k002" type="button">Tecnología</button>
+<div class="nav-drop">
+<a data-i18n="k003" href="#mft">Qué es MFT™</a>
+<a data-i18n="k004" href="#etapas">Fases</a>
+<a data-i18n="k005" href="#comparativa">Impacto</a>
+<a data-i18n="k006" href="#aplicaciones">Aplicaciones</a>
+<a data-i18n="k007" href="#beneficios">Beneficios</a>
+</div>
+</div>
+<a data-i18n="k008" href="#proceso">Cómo trabajamos</a>
+<a data-i18n="k009" href="#faq">Preguntas frecuentes</a>
+<a data-i18n="k010" href="#nosotros">Nosotros</a>
+<a data-i18n="k011" href="#contacto">Contacto</a>
+<button aria-label="Cambiar idioma / Switch language" class="lang-switch" id="langSwitch" type="button"><span class="on">ES</span><span>EN</span></button>
+<a class="btn btn-primary btn-sm" data-i18n="k012" href="#contacto">Evaluar un proyecto</a>
+</div>
+</nav>
+</div>
 </header>
-
 <main id="main">
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="topo" aria-hidden="true">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false"><path d="M1164 300C1164 303 1163 306 1164 310C1164 313 1165 317 1165 320C1165 324 1166 329 1164 332C1163 336 1160 340 1155 343C1151 345 1144 347 1139 348C1133 349 1126 349 1120 350C1114 350 1109 350 1103 351C1098 351 1093 352 1088 353C1083 353 1077 354 1072 354C1067 353 1061 352 1057 351C1052 350 1048 348 1043 346C1039 344 1034 343 1030 341C1025 340 1020 339 1015 337C1010 335 1005 333 1001 330C997 328 993 325 990 322C987 318 985 315 983 311C981 308 980 304 980 300C980 296 981 292 984 289C986 285 991 282 995 280C999 277 1005 275 1010 273C1015 271 1019 270 1022 267C1026 265 1028 262 1031 260C1034 257 1037 253 1041 251C1045 248 1050 246 1055 245C1060 244 1066 244 1072 244C1077 244 1083 244 1088 245C1094 245 1099 245 1105 245C1111 246 1117 246 1122 247C1128 248 1133 250 1138 253C1142 255 1145 258 1148 261C1151 264 1153 268 1155 271C1157 274 1159 277 1160 281C1162 284 1163 287 1163 290C1164 294 1163 297 1164 300Z"/><path d="M1258 300C1261 307 1266 314 1268 322C1269 329 1271 338 1267 345C1264 352 1255 359 1246 364C1236 368 1222 371 1210 373C1198 376 1185 376 1175 378C1165 380 1156 382 1147 384C1139 386 1131 390 1123 393C1114 395 1105 398 1095 400C1085 401 1075 402 1065 403C1054 404 1043 404 1032 404C1021 404 1009 404 998 402C987 400 976 397 967 393C958 388 951 382 944 377C938 371 933 364 928 358C923 352 917 346 913 340C908 334 903 327 901 321C899 314 899 307 902 300C905 293 913 287 919 281C925 276 933 271 938 266C942 260 945 255 947 249C950 243 949 235 952 228C956 221 960 213 967 207C974 201 984 196 994 194C1005 191 1018 190 1029 189C1041 188 1052 189 1063 189C1075 190 1086 191 1096 193C1106 195 1116 197 1126 200C1135 203 1143 208 1151 211C1160 215 1167 218 1176 221C1184 225 1194 227 1202 231C1211 235 1220 239 1227 244C1234 249 1239 255 1243 261C1247 267 1247 274 1250 280C1252 287 1255 293 1258 300Z"/><path d="M1333 300C1343 310 1356 321 1359 332C1363 343 1361 356 1355 366C1350 376 1337 386 1325 394C1314 402 1299 409 1285 416C1272 423 1258 429 1243 434C1228 438 1212 442 1196 444C1180 446 1163 446 1147 447C1132 447 1117 446 1102 446C1087 446 1073 447 1058 447C1043 447 1028 447 1013 445C999 443 985 440 971 435C958 431 947 424 935 419C922 414 910 409 895 405C880 400 862 396 846 390C831 383 813 376 803 366C794 357 789 345 790 334C792 323 802 310 811 300C820 290 834 281 843 272C851 264 858 256 863 248C869 240 871 230 876 222C882 213 888 204 896 196C904 188 915 181 927 174C938 167 951 161 964 155C977 149 991 143 1006 139C1021 134 1038 131 1055 130C1071 129 1089 131 1105 133C1121 135 1136 140 1152 144C1167 148 1182 151 1196 156C1211 160 1226 164 1239 170C1251 176 1262 184 1269 193C1276 202 1277 214 1280 223C1282 233 1279 243 1282 251C1285 260 1291 266 1299 275C1308 283 1323 290 1333 300Z"/><path d="M1455 300C1448 314 1430 327 1418 339C1406 351 1393 361 1383 373C1374 384 1370 396 1361 408C1352 419 1345 433 1331 442C1317 451 1298 458 1279 463C1259 468 1236 467 1216 470C1197 472 1179 473 1161 477C1143 482 1128 489 1109 496C1090 503 1070 513 1047 518C1025 524 999 527 976 527C952 527 928 522 906 517C884 511 863 502 845 493C827 483 810 471 800 458C789 446 782 430 780 415C778 401 784 384 786 371C788 357 794 345 794 333C793 321 787 312 782 300C776 288 764 276 760 263C757 250 756 236 761 223C767 211 781 200 794 190C806 180 823 172 836 162C849 152 860 141 873 130C885 118 897 103 914 93C930 82 952 72 974 68C996 64 1023 66 1046 69C1069 73 1091 82 1112 88C1132 95 1150 103 1167 109C1185 116 1202 121 1219 127C1235 134 1251 140 1267 146C1283 153 1298 160 1315 167C1331 175 1350 181 1368 189C1387 198 1410 206 1425 217C1441 228 1456 242 1461 256C1466 270 1462 286 1455 300Z"/><path d="M1585 300C1588 318 1577 339 1565 356C1552 373 1530 389 1510 403C1490 417 1468 430 1446 441C1424 451 1401 461 1377 468C1354 476 1328 480 1306 486C1284 491 1263 495 1243 503C1223 511 1207 521 1186 532C1166 542 1144 557 1120 564C1095 572 1065 578 1038 578C1012 577 984 569 960 562C935 555 915 543 891 535C868 527 844 521 819 514C794 507 762 503 740 492C717 482 693 469 682 453C671 437 672 416 674 397C677 379 693 360 699 344C706 328 713 315 714 300C715 285 708 272 705 257C701 241 694 224 694 207C694 191 698 173 705 156C712 139 723 122 737 106C751 90 767 73 788 60C809 48 836 36 864 31C892 25 926 26 956 29C985 32 1016 43 1042 48C1069 54 1091 62 1115 65C1139 68 1162 66 1186 68C1211 70 1239 69 1261 75C1284 80 1305 90 1322 102C1338 113 1347 129 1361 141C1375 154 1385 165 1404 176C1423 186 1450 194 1474 205C1498 217 1531 230 1550 246C1568 261 1583 282 1585 300Z"/><path d="M1494 300C1490 317 1499 331 1506 349C1512 367 1529 388 1532 408C1534 428 1532 451 1521 469C1511 488 1489 504 1469 520C1450 536 1426 550 1402 565C1379 579 1355 596 1328 608C1300 621 1269 634 1236 641C1204 647 1166 649 1132 647C1098 646 1063 639 1030 632C998 626 967 618 938 609C909 600 880 591 857 577C835 564 815 546 801 529C787 512 784 490 773 474C762 457 757 443 738 431C718 419 688 413 657 402C625 390 578 378 549 362C521 345 493 321 485 300C477 279 489 254 503 233C517 213 548 195 570 178C593 160 616 146 637 130C658 114 674 97 696 83C718 69 742 55 770 45C797 36 830 31 860 26C891 22 921 22 951 18C980 15 1007 11 1036 8C1065 5 1095 0 1125 -1C1155 -1 1186 1 1216 4C1246 8 1274 15 1305 20C1336 25 1368 29 1402 36C1435 43 1476 47 1505 60C1535 72 1567 88 1580 108C1593 128 1591 156 1583 179C1575 202 1547 227 1532 248C1517 268 1499 283 1494 300Z"/><path d="M1590 300C1590 320 1593 338 1601 360C1610 383 1632 408 1642 435C1651 462 1665 496 1657 522C1650 548 1626 574 1594 591C1563 607 1511 614 1469 620C1427 626 1381 623 1342 627C1304 631 1272 637 1238 644C1203 650 1170 663 1135 667C1099 670 1060 670 1026 663C992 656 960 638 932 623C904 609 883 589 857 577C832 565 807 557 776 550C745 542 706 540 671 531C635 523 595 513 562 499C528 485 498 466 471 446C444 426 418 403 400 379C383 354 365 326 365 300C365 274 376 244 400 221C425 198 471 178 510 163C549 148 601 141 635 129C670 118 695 109 716 94C737 79 743 57 761 38C779 19 797 -5 824 -19C850 -33 887 -41 922 -45C956 -49 993 -44 1029 -44C1064 -45 1095 -44 1132 -48C1169 -52 1208 -64 1249 -67C1290 -71 1338 -77 1378 -71C1418 -66 1458 -52 1487 -34C1516 -17 1536 9 1553 33C1570 56 1579 82 1588 105C1597 129 1603 151 1606 174C1608 196 1605 218 1603 239C1600 260 1590 280 1590 300Z"/><path d="M1861 300C1857 329 1846 360 1828 387C1811 414 1788 441 1757 462C1725 484 1681 502 1640 515C1598 528 1546 532 1508 542C1469 551 1437 556 1411 571C1384 587 1373 612 1350 636C1327 661 1306 699 1273 720C1240 742 1193 762 1150 767C1106 773 1055 762 1012 752C970 742 932 721 892 709C853 697 816 688 776 679C735 670 687 666 650 653C612 640 572 623 549 600C526 578 517 546 511 518C506 491 516 461 516 436C516 410 516 389 511 366C506 343 493 323 485 300C477 277 468 254 463 228C458 203 456 178 453 149C451 121 445 90 449 58C452 26 454 -13 474 -42C495 -71 530 -102 573 -116C617 -130 682 -132 737 -127C791 -123 852 -102 901 -91C949 -80 987 -66 1026 -62C1065 -59 1097 -66 1135 -69C1173 -71 1216 -80 1253 -77C1291 -74 1329 -63 1361 -49C1392 -36 1413 -12 1440 4C1467 21 1489 37 1522 50C1556 63 1600 71 1641 85C1682 99 1734 114 1768 135C1803 156 1832 184 1847 211C1863 239 1864 271 1861 300Z"/><path d="M1935 300C1958 331 1974 371 1963 402C1952 434 1909 466 1867 489C1826 513 1761 528 1713 543C1665 558 1618 568 1578 581C1537 594 1505 607 1470 620C1436 634 1403 646 1369 659C1334 673 1301 685 1264 702C1228 719 1193 741 1149 761C1105 782 1055 811 1002 825C949 838 883 849 831 843C778 837 727 813 687 789C647 765 623 727 593 699C564 672 541 646 510 622C479 599 436 582 407 558C378 534 344 508 338 478C331 449 346 412 367 383C388 353 437 325 462 300C487 275 513 258 517 235C522 211 502 188 491 159C479 129 452 92 448 58C444 23 449 -15 466 -47C483 -79 516 -108 552 -133C588 -158 633 -181 681 -197C728 -213 784 -227 837 -228C891 -230 952 -222 1004 -209C1056 -196 1104 -168 1147 -149C1190 -130 1222 -108 1262 -97C1302 -85 1341 -85 1386 -80C1430 -76 1486 -79 1529 -69C1572 -58 1616 -41 1644 -19C1671 4 1680 37 1695 64C1710 91 1711 118 1733 143C1754 168 1790 188 1823 214C1857 240 1912 269 1935 300Z"/><path d="M313 780C312 784 312 787 311 791C311 794 310 798 308 801C306 804 303 808 300 810C296 813 292 815 288 817C285 819 281 821 277 823C273 825 269 827 264 828C260 830 256 831 251 832C246 832 241 832 237 832C232 832 228 831 223 832C218 832 214 833 208 833C203 834 196 836 191 835C185 835 178 834 173 832C169 830 165 826 163 823C161 819 161 814 160 810C159 806 160 803 160 799C159 796 158 793 158 789C157 786 156 783 156 780C156 777 157 774 158 771C159 767 160 765 162 761C163 758 164 755 166 752C167 749 169 745 171 742C174 739 177 736 180 734C184 731 188 729 193 727C197 726 202 724 207 722C211 721 217 719 222 718C227 717 233 717 238 717C243 718 249 721 253 723C257 726 260 730 263 733C266 736 268 740 271 742C274 744 278 745 282 747C286 749 291 750 296 752C300 754 304 756 307 759C310 762 311 766 312 769C313 773 313 776 313 780Z"/><path d="M379 780C379 786 379 793 377 799C374 805 368 811 362 816C357 821 349 824 344 829C338 834 335 838 331 845C328 851 327 859 323 866C319 874 315 883 307 889C300 895 289 899 279 901C269 903 256 901 246 899C235 898 225 893 215 890C206 887 197 884 189 881C181 877 173 874 166 870C159 866 153 861 147 857C141 853 136 848 131 843C125 839 119 835 113 831C107 826 99 822 94 817C89 812 84 806 81 799C79 793 79 787 78 780C78 773 79 767 79 760C78 753 77 746 77 739C78 731 77 722 81 716C86 709 93 702 102 698C111 694 124 693 135 692C147 692 159 694 169 694C178 694 186 694 194 692C202 690 209 687 217 684C226 682 235 678 244 677C253 676 263 676 272 676C282 677 291 679 300 682C309 684 319 687 327 690C335 694 344 698 350 703C357 709 361 715 365 722C368 728 369 735 371 742C372 748 373 755 375 761C376 767 379 774 379 780Z"/><path d="M467 780C468 790 465 801 462 810C458 820 450 829 444 838C438 847 432 856 425 864C418 873 412 883 402 890C393 897 381 904 368 908C355 911 338 911 323 911C309 911 294 907 282 908C269 908 260 909 248 913C236 917 224 926 210 932C196 938 178 946 162 947C146 949 128 948 114 943C100 939 88 929 78 921C68 913 60 902 53 893C46 884 39 874 34 865C29 856 25 846 23 836C21 826 23 816 24 807C25 798 29 789 30 780C32 771 32 763 33 754C34 745 34 736 36 728C39 719 44 710 51 702C57 694 66 688 74 681C82 673 90 666 98 657C105 648 112 637 121 627C131 618 143 606 157 600C171 595 189 592 205 593C221 595 239 604 252 611C266 619 277 630 288 638C299 646 307 652 318 657C328 661 340 663 352 667C363 671 375 675 385 681C396 686 404 694 412 701C421 708 427 716 434 725C441 733 449 741 455 751C460 760 465 770 467 780Z"/><path d="M506 780C507 792 509 804 511 817C513 830 519 844 518 858C517 872 515 887 507 900C499 913 485 924 471 934C457 944 439 951 422 958C405 965 387 971 368 974C350 978 330 980 311 978C292 977 272 971 255 967C238 963 223 955 207 953C191 951 178 952 159 954C141 956 119 964 97 966C76 969 48 971 28 967C8 963 -10 952 -22 941C-33 929 -36 911 -41 897C-45 883 -44 868 -47 855C-51 842 -56 830 -60 818C-64 805 -70 793 -69 780C-68 767 -62 754 -54 743C-46 731 -32 722 -21 712C-10 702 2 694 11 685C21 676 27 666 36 656C45 646 53 635 64 626C74 616 87 607 100 598C114 589 128 580 145 570C161 561 179 550 199 543C218 536 242 528 263 528C284 529 308 535 326 545C343 555 356 573 366 588C377 603 380 621 389 633C397 645 404 653 416 661C427 669 445 674 458 681C471 689 486 698 494 708C502 719 505 732 507 744C509 756 505 768 506 780Z"/><path d="M566 780C577 795 600 811 613 830C626 849 644 873 645 892C645 912 634 934 616 947C598 961 564 969 536 975C508 981 475 980 449 983C423 986 402 989 381 993C360 997 342 1004 322 1007C302 1011 281 1013 261 1013C240 1013 220 1008 200 1006C180 1003 162 999 142 997C121 995 100 996 78 994C56 992 31 990 10 984C-12 979 -33 970 -52 960C-72 950 -88 938 -106 926C-124 913 -144 901 -159 886C-175 871 -194 854 -200 836C-205 819 -204 797 -193 780C-182 763 -155 746 -133 733C-110 719 -78 712 -60 701C-41 691 -29 684 -21 671C-13 659 -17 642 -12 626C-7 609 -4 588 8 574C19 559 38 547 58 538C78 530 103 528 126 524C149 520 172 518 195 516C218 513 242 509 266 509C290 509 315 511 337 516C359 522 380 533 399 543C417 553 432 567 447 579C463 590 478 601 491 614C504 626 518 638 526 652C534 665 538 681 541 696C544 710 540 725 544 739C548 753 554 765 566 780Z"/><path d="M629 780C635 798 646 816 651 835C656 855 663 877 661 897C658 917 649 938 637 957C626 975 608 993 591 1010C574 1028 556 1047 535 1063C513 1078 490 1097 462 1105C433 1114 397 1118 365 1112C333 1107 297 1088 269 1073C241 1058 220 1034 198 1022C176 1011 162 1005 139 1005C115 1005 88 1016 59 1020C30 1024 -8 1031 -37 1028C-67 1025 -95 1014 -116 1001C-137 988 -150 968 -163 951C-177 933 -188 915 -199 896C-210 878 -225 860 -232 840C-239 821 -245 800 -242 780C-239 760 -227 740 -216 722C-204 704 -186 687 -172 671C-157 655 -144 639 -129 624C-114 610 -99 594 -80 582C-60 571 -36 562 -13 554C9 547 35 545 57 537C79 528 96 519 118 504C140 490 159 466 186 450C213 433 248 412 279 406C311 401 350 405 377 417C405 430 427 458 444 480C460 502 466 530 478 550C489 570 499 585 513 600C526 614 546 624 560 637C574 651 588 665 598 680C607 696 610 713 615 730C620 746 623 762 629 780Z"/></svg>
-    </div>
-    <div class="grid-lines" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <p class="hero-tag"><span class="dot"></span>Exploración de recursos naturales</p>
-          <h1>Encontrar yacimientos minerales <em>con más precisión, en menos tiempo</em></h1>
-          <p class="lead">Quantik Geo integra tecnología satelital e instrumentación geofísica de campo para localizar el recurso, priorizar objetivos y dirigir la perforación con menos incertidumbre.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contacto">Evaluar un proyecto</a>
-            <a class="btn btn-ghost" href="#mft">Conocer la tecnología MFT</a>
-          </div>
-          <div class="hero-attrib">
-            <span>Tecnologías MFT™, WFT™ y OFT™ desarrolladas por</span>
-            <span class="ctac-chip"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 460 420" fill="none" focusable="false">
-            <defs>
-              <linearGradient id="hvSky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#5b8fa8" stop-opacity=".22"/>
-                <stop offset="1" stop-color="#5b8fa8" stop-opacity="0"/>
-              </linearGradient>
-              <linearGradient id="hvBeam" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#c9a45c" stop-opacity=".42"/>
-                <stop offset="1" stop-color="#c9a45c" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-
-            <!-- marco de coordenadas -->
-            <rect x="20" y="16" width="420" height="388" rx="12" stroke="#aac5dd" stroke-opacity=".26"/>
-            <g stroke="#aac5dd" stroke-opacity=".34">
-              <path d="M20 60h10M20 110h10M20 160h10M20 210h10M20 260h10M20 310h10M20 360h10"/>
-              <path d="M80 404v-10M150 404v-10M220 404v-10M290 404v-10M360 404v-10"/>
-            </g>
-
-            <!-- satelite -->
-            <g transform="translate(300 52)">
-              <rect x="-13" y="-9" width="26" height="18" rx="3" stroke="#c9a45c" stroke-opacity=".9"/>
-              <path d="M-13 0h-22M13 0h22" stroke="#c9a45c" stroke-opacity=".6"/>
-              <rect x="-35" y="-6" width="18" height="12" stroke="#5b8fa8" stroke-opacity=".7"/>
-              <rect x="17" y="-6" width="18" height="12" stroke="#5b8fa8" stroke-opacity=".7"/>
-            </g>
-            <path d="M300 66 L232 214 L368 214 Z" fill="url(#hvBeam)"/>
-            <path d="M300 66 L232 214M300 66 L368 214" stroke="#c9a45c" stroke-opacity=".48" stroke-dasharray="3 5"/>
-
-            <!-- linea de barrido -->
-            <g class="hv-scan">
-              <path d="M232 150 H368" stroke="#c9a45c" stroke-opacity=".72"/>
-              <circle cx="368" cy="150" r="2.5" fill="#c9a45c"/>
-            </g>
-
-            <!-- superficie con relieve -->
-            <path d="M36 232 C90 214 118 240 168 228 C214 217 252 246 300 236 C346 227 386 248 424 238"
-                  stroke="#eef4fa" stroke-opacity=".72"/>
-            <path d="M36 232 C90 214 118 240 168 228 C214 217 252 246 300 236 C346 227 386 248 424 238 L424 392 L36 392 Z"
-                  fill="url(#hvSky)"/>
-
-            <!-- capas del subsuelo -->
-            <g stroke="#aac5dd" stroke-opacity=".44">
-              <path d="M36 268 C96 254 126 278 178 266 C226 255 262 282 310 272 C352 263 390 284 424 274"/>
-              <path d="M36 306 C96 294 126 316 178 304 C226 294 262 320 310 310 C352 302 390 322 424 312"/>
-              <path d="M36 348 C96 338 126 358 178 346 C226 336 262 360 310 352 C352 344 390 362 424 354"/>
-            </g>
-
-            <!-- anomalia -->
-            <g transform="translate(272 322)">
-              <ellipse rx="46" ry="19" stroke="#c9a45c" stroke-opacity=".62"/>
-              <ellipse rx="29" ry="12" stroke="#c9a45c" stroke-opacity=".88"/>
-              <ellipse rx="13" ry="5.5" fill="#c9a45c" fill-opacity=".28" stroke="#c9a45c" stroke-opacity=".9"/>
-              <circle class="hv-pulse" r="6" stroke="#c9a45c" stroke-opacity=".8"/>
-            </g>
-            <path d="M272 232 V300" stroke="#c9a45c" stroke-opacity=".55" stroke-dasharray="3 5"/>
-            <circle cx="272" cy="232" r="3.5" fill="#c9a45c"/>
-
-            <!-- etiquetas -->
-            <g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
-              <text x="42" y="204">ADQUISICIÓN SATELITAL</text>
-              <text x="42" y="256">SUPERFICIE</text>
-              <text x="42" y="382">SUBSUELO</text>
-            </g>
-            <g fill="#d8b877" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
-              <text x="326" y="330">ANOMALÍA</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VENTAJAS OFICIALES -->
-  <section class="adv" aria-label="Ventajas publicadas por CTAC">
-    <div class="wrap adv-inner rv">
-      <div class="adv-grid">
-        <div class="adv-item">
-          <p class="v"><small>Hasta</small>94%</p>
-          <p class="k">de precisión</p>
-        </div>
-        <div class="adv-item">
-          <p class="v"><small>Éxito</small>50%–70%</p>
-          <p class="k">en el descubrimiento de recursos económicamente viables</p>
-        </div>
-        <div class="adv-item">
-          <p class="v"><small>Hasta</small>80%</p>
-          <p class="k">menos tiempo</p>
-        </div>
-        <div class="adv-item">
-          <p class="v"><small>Hasta</small>80%</p>
-          <p class="k">menos costo</p>
-        </div>
-      </div>
-      <div class="adv-foot">
-        <span class="ctac-chip"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-        <span>Información publicada por CTAC. Los resultados dependen del alcance y las características del proyecto.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTRO -->
-  <section class="band band-tight band-alt">
-    <div class="wrap sec-head rv" style="margin-bottom:0">
-      <p class="eyebrow">Enfoque</p>
-      <h2>Mejores decisiones desde las <em>primeras etapas</em></h2>
-      <p class="lead">La exploración de recursos naturales requiere decidir dónde concentrar tiempo, capital y trabajo de campo. Quantik Geo ayuda a integrar información remota, geológica y geofísica para identificar áreas de interés y dirigir mejor las siguientes etapas de validación.</p>
-    </div>
-  </section>
-
-  <!-- COMPARATIVA -->
-  <section class="band band-deep" id="comparativa">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Impacto</p>
-        <h2>Frente al <em>método tradicional</em></h2>
-        <p class="lead">Comparación entre el ciclo de exploración convencional y un proyecto que incorpora MFT™.</p>
-      </div>
-
-      <div class="vs rv">
-        <div class="vs-row vs-head">
-          <span></span>
-          <span>Método tradicional</span>
-          <span class="is-mft">Con MFT™</span>
-        </div>
-        <div class="vs-row">
-          <span class="k">Tiempo total del ciclo</span>
-          <span class="a">6 – 10 años</span>
-          <span class="b">1 – 2 años</span>
-        </div>
-        <div class="vs-row">
-          <span class="k">Identificación del objetivo</span>
-          <span class="a">Prospección 2 – 4 años y exploración 3 – 6 años</span>
-          <span class="b">17 semanas</span>
-        </div>
-        <div class="vs-row">
-          <span class="k">Costo</span>
-          <span class="a">USD 20 M – USD 1 000 M</span>
-          <span class="b">Hasta 80% menos</span>
-        </div>
-        <div class="vs-row is-highlight">
-          <span class="k">Descubrimiento de recursos económicamente viables</span>
-          <span class="a">5% – 15%</span>
-          <span class="b">50% – 70%</span>
-        </div>
-      </div>
-
-      <p class="note rv"><strong>Sobre estas cifras.</strong> Los valores de la columna del método tradicional son rangos de referencia de la industria señalados por CTAC, no mediciones de Quantik Geo. Los resultados de cada proyecto dependen de su alcance y características.</p>
-    </div>
-  </section>
-
-  <!-- QUÉ ES MFT -->
-  <section class="band band-deep" id="mft">
-    <div class="wrap">
-      <div class="split">
-        <div class="rv">
-          <p class="eyebrow">Tecnología</p>
-          <h2 style="margin-bottom:22px">Qué es <em>MFT™</em></h2>
-          <p class="lead">MFT™ —Mineral Finder Technology— es una tecnología electromagnética multiespectral desarrollada por CTAC, orientada a la ubicación precisa de recursos minerales específicos. Identifica anomalías electromagnéticas asociadas con depósitos minerales combinando información satelital multiespectral con instrumentación geofísica de campo, para delimitar áreas de interés y dirigir los objetivos de perforación.</p>
-
-          <div class="principles">
-            <p class="principle"><span>Principio</span>Principio electromagnético</p>
-            <p class="principle"><span>Detección</span>Firma espectral</p>
-            <p class="principle"><span>Integración</span>Síntesis e integración de la información</p>
-          </div>
-
-          <div class="datum">
-            <span class="datum-tag">Dato oficial</span>
-            <p>Más de 30 años de investigación y trabajos sobre electromagnetismo como base de la tecnología.</p>
-            <footer>
-              <span>Fuente</span>
-              <span class="ctac-chip sm"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-            </footer>
-          </div>
-
-          <p class="note">Los resultados dependen de la escala, características del área, información disponible y alcance de las fases contratadas.</p>
-        </div>
-
-        <div class="tech-visual rv">
-          <svg viewBox="0 0 420 250" fill="none" focusable="false" aria-hidden="true">
-            <defs>
-              <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#8b5cf6" stop-opacity=".55"/>
-                <stop offset=".22" stop-color="#5b8fa8" stop-opacity=".55"/>
-                <stop offset=".55" stop-color="#5b8fa8" stop-opacity=".18"/>
-                <stop offset="1" stop-color="#c9a45c" stop-opacity=".14"/>
-              </linearGradient>
-            </defs>
-
-            <g stroke="#a3bed6" stroke-opacity=".14">
-              <path d="M40 40h350M40 80h350M40 120h350M40 160h350"/>
-            </g>
-            <path d="M40 20V186H392" stroke="#a3bed6" stroke-opacity=".3"/>
-
-            <rect x="40" y="196" width="352" height="12" rx="2" fill="url(#spec)"/>
-            <rect x="40" y="196" width="96" height="12" rx="2" fill="#c9a45c" fill-opacity=".12" stroke="#c9a45c" stroke-opacity=".8"/>
-            <path d="M88 208v10" stroke="#c9a45c" stroke-opacity=".55"/>
-
-            <path d="M40 172 C64 168 74 150 88 96 C98 58 108 44 118 66 C128 88 136 150 152 164
+<!-- HERO -->
+<section class="hero" id="top">
+<div aria-hidden="true" class="topo">
+<svg focusable="false" preserveaspectratio="xMidYMid slice" viewbox="0 0 1440 900"><path d="M1164 300C1164 303 1163 306 1164 310C1164 313 1165 317 1165 320C1165 324 1166 329 1164 332C1163 336 1160 340 1155 343C1151 345 1144 347 1139 348C1133 349 1126 349 1120 350C1114 350 1109 350 1103 351C1098 351 1093 352 1088 353C1083 353 1077 354 1072 354C1067 353 1061 352 1057 351C1052 350 1048 348 1043 346C1039 344 1034 343 1030 341C1025 340 1020 339 1015 337C1010 335 1005 333 1001 330C997 328 993 325 990 322C987 318 985 315 983 311C981 308 980 304 980 300C980 296 981 292 984 289C986 285 991 282 995 280C999 277 1005 275 1010 273C1015 271 1019 270 1022 267C1026 265 1028 262 1031 260C1034 257 1037 253 1041 251C1045 248 1050 246 1055 245C1060 244 1066 244 1072 244C1077 244 1083 244 1088 245C1094 245 1099 245 1105 245C1111 246 1117 246 1122 247C1128 248 1133 250 1138 253C1142 255 1145 258 1148 261C1151 264 1153 268 1155 271C1157 274 1159 277 1160 281C1162 284 1163 287 1163 290C1164 294 1163 297 1164 300Z"></path><path d="M1258 300C1261 307 1266 314 1268 322C1269 329 1271 338 1267 345C1264 352 1255 359 1246 364C1236 368 1222 371 1210 373C1198 376 1185 376 1175 378C1165 380 1156 382 1147 384C1139 386 1131 390 1123 393C1114 395 1105 398 1095 400C1085 401 1075 402 1065 403C1054 404 1043 404 1032 404C1021 404 1009 404 998 402C987 400 976 397 967 393C958 388 951 382 944 377C938 371 933 364 928 358C923 352 917 346 913 340C908 334 903 327 901 321C899 314 899 307 902 300C905 293 913 287 919 281C925 276 933 271 938 266C942 260 945 255 947 249C950 243 949 235 952 228C956 221 960 213 967 207C974 201 984 196 994 194C1005 191 1018 190 1029 189C1041 188 1052 189 1063 189C1075 190 1086 191 1096 193C1106 195 1116 197 1126 200C1135 203 1143 208 1151 211C1160 215 1167 218 1176 221C1184 225 1194 227 1202 231C1211 235 1220 239 1227 244C1234 249 1239 255 1243 261C1247 267 1247 274 1250 280C1252 287 1255 293 1258 300Z"></path><path d="M1333 300C1343 310 1356 321 1359 332C1363 343 1361 356 1355 366C1350 376 1337 386 1325 394C1314 402 1299 409 1285 416C1272 423 1258 429 1243 434C1228 438 1212 442 1196 444C1180 446 1163 446 1147 447C1132 447 1117 446 1102 446C1087 446 1073 447 1058 447C1043 447 1028 447 1013 445C999 443 985 440 971 435C958 431 947 424 935 419C922 414 910 409 895 405C880 400 862 396 846 390C831 383 813 376 803 366C794 357 789 345 790 334C792 323 802 310 811 300C820 290 834 281 843 272C851 264 858 256 863 248C869 240 871 230 876 222C882 213 888 204 896 196C904 188 915 181 927 174C938 167 951 161 964 155C977 149 991 143 1006 139C1021 134 1038 131 1055 130C1071 129 1089 131 1105 133C1121 135 1136 140 1152 144C1167 148 1182 151 1196 156C1211 160 1226 164 1239 170C1251 176 1262 184 1269 193C1276 202 1277 214 1280 223C1282 233 1279 243 1282 251C1285 260 1291 266 1299 275C1308 283 1323 290 1333 300Z"></path><path d="M1455 300C1448 314 1430 327 1418 339C1406 351 1393 361 1383 373C1374 384 1370 396 1361 408C1352 419 1345 433 1331 442C1317 451 1298 458 1279 463C1259 468 1236 467 1216 470C1197 472 1179 473 1161 477C1143 482 1128 489 1109 496C1090 503 1070 513 1047 518C1025 524 999 527 976 527C952 527 928 522 906 517C884 511 863 502 845 493C827 483 810 471 800 458C789 446 782 430 780 415C778 401 784 384 786 371C788 357 794 345 794 333C793 321 787 312 782 300C776 288 764 276 760 263C757 250 756 236 761 223C767 211 781 200 794 190C806 180 823 172 836 162C849 152 860 141 873 130C885 118 897 103 914 93C930 82 952 72 974 68C996 64 1023 66 1046 69C1069 73 1091 82 1112 88C1132 95 1150 103 1167 109C1185 116 1202 121 1219 127C1235 134 1251 140 1267 146C1283 153 1298 160 1315 167C1331 175 1350 181 1368 189C1387 198 1410 206 1425 217C1441 228 1456 242 1461 256C1466 270 1462 286 1455 300Z"></path><path d="M1585 300C1588 318 1577 339 1565 356C1552 373 1530 389 1510 403C1490 417 1468 430 1446 441C1424 451 1401 461 1377 468C1354 476 1328 480 1306 486C1284 491 1263 495 1243 503C1223 511 1207 521 1186 532C1166 542 1144 557 1120 564C1095 572 1065 578 1038 578C1012 577 984 569 960 562C935 555 915 543 891 535C868 527 844 521 819 514C794 507 762 503 740 492C717 482 693 469 682 453C671 437 672 416 674 397C677 379 693 360 699 344C706 328 713 315 714 300C715 285 708 272 705 257C701 241 694 224 694 207C694 191 698 173 705 156C712 139 723 122 737 106C751 90 767 73 788 60C809 48 836 36 864 31C892 25 926 26 956 29C985 32 1016 43 1042 48C1069 54 1091 62 1115 65C1139 68 1162 66 1186 68C1211 70 1239 69 1261 75C1284 80 1305 90 1322 102C1338 113 1347 129 1361 141C1375 154 1385 165 1404 176C1423 186 1450 194 1474 205C1498 217 1531 230 1550 246C1568 261 1583 282 1585 300Z"></path><path d="M1494 300C1490 317 1499 331 1506 349C1512 367 1529 388 1532 408C1534 428 1532 451 1521 469C1511 488 1489 504 1469 520C1450 536 1426 550 1402 565C1379 579 1355 596 1328 608C1300 621 1269 634 1236 641C1204 647 1166 649 1132 647C1098 646 1063 639 1030 632C998 626 967 618 938 609C909 600 880 591 857 577C835 564 815 546 801 529C787 512 784 490 773 474C762 457 757 443 738 431C718 419 688 413 657 402C625 390 578 378 549 362C521 345 493 321 485 300C477 279 489 254 503 233C517 213 548 195 570 178C593 160 616 146 637 130C658 114 674 97 696 83C718 69 742 55 770 45C797 36 830 31 860 26C891 22 921 22 951 18C980 15 1007 11 1036 8C1065 5 1095 0 1125 -1C1155 -1 1186 1 1216 4C1246 8 1274 15 1305 20C1336 25 1368 29 1402 36C1435 43 1476 47 1505 60C1535 72 1567 88 1580 108C1593 128 1591 156 1583 179C1575 202 1547 227 1532 248C1517 268 1499 283 1494 300Z"></path><path d="M1590 300C1590 320 1593 338 1601 360C1610 383 1632 408 1642 435C1651 462 1665 496 1657 522C1650 548 1626 574 1594 591C1563 607 1511 614 1469 620C1427 626 1381 623 1342 627C1304 631 1272 637 1238 644C1203 650 1170 663 1135 667C1099 670 1060 670 1026 663C992 656 960 638 932 623C904 609 883 589 857 577C832 565 807 557 776 550C745 542 706 540 671 531C635 523 595 513 562 499C528 485 498 466 471 446C444 426 418 403 400 379C383 354 365 326 365 300C365 274 376 244 400 221C425 198 471 178 510 163C549 148 601 141 635 129C670 118 695 109 716 94C737 79 743 57 761 38C779 19 797 -5 824 -19C850 -33 887 -41 922 -45C956 -49 993 -44 1029 -44C1064 -45 1095 -44 1132 -48C1169 -52 1208 -64 1249 -67C1290 -71 1338 -77 1378 -71C1418 -66 1458 -52 1487 -34C1516 -17 1536 9 1553 33C1570 56 1579 82 1588 105C1597 129 1603 151 1606 174C1608 196 1605 218 1603 239C1600 260 1590 280 1590 300Z"></path><path d="M1861 300C1857 329 1846 360 1828 387C1811 414 1788 441 1757 462C1725 484 1681 502 1640 515C1598 528 1546 532 1508 542C1469 551 1437 556 1411 571C1384 587 1373 612 1350 636C1327 661 1306 699 1273 720C1240 742 1193 762 1150 767C1106 773 1055 762 1012 752C970 742 932 721 892 709C853 697 816 688 776 679C735 670 687 666 650 653C612 640 572 623 549 600C526 578 517 546 511 518C506 491 516 461 516 436C516 410 516 389 511 366C506 343 493 323 485 300C477 277 468 254 463 228C458 203 456 178 453 149C451 121 445 90 449 58C452 26 454 -13 474 -42C495 -71 530 -102 573 -116C617 -130 682 -132 737 -127C791 -123 852 -102 901 -91C949 -80 987 -66 1026 -62C1065 -59 1097 -66 1135 -69C1173 -71 1216 -80 1253 -77C1291 -74 1329 -63 1361 -49C1392 -36 1413 -12 1440 4C1467 21 1489 37 1522 50C1556 63 1600 71 1641 85C1682 99 1734 114 1768 135C1803 156 1832 184 1847 211C1863 239 1864 271 1861 300Z"></path><path d="M1935 300C1958 331 1974 371 1963 402C1952 434 1909 466 1867 489C1826 513 1761 528 1713 543C1665 558 1618 568 1578 581C1537 594 1505 607 1470 620C1436 634 1403 646 1369 659C1334 673 1301 685 1264 702C1228 719 1193 741 1149 761C1105 782 1055 811 1002 825C949 838 883 849 831 843C778 837 727 813 687 789C647 765 623 727 593 699C564 672 541 646 510 622C479 599 436 582 407 558C378 534 344 508 338 478C331 449 346 412 367 383C388 353 437 325 462 300C487 275 513 258 517 235C522 211 502 188 491 159C479 129 452 92 448 58C444 23 449 -15 466 -47C483 -79 516 -108 552 -133C588 -158 633 -181 681 -197C728 -213 784 -227 837 -228C891 -230 952 -222 1004 -209C1056 -196 1104 -168 1147 -149C1190 -130 1222 -108 1262 -97C1302 -85 1341 -85 1386 -80C1430 -76 1486 -79 1529 -69C1572 -58 1616 -41 1644 -19C1671 4 1680 37 1695 64C1710 91 1711 118 1733 143C1754 168 1790 188 1823 214C1857 240 1912 269 1935 300Z"></path><path d="M313 780C312 784 312 787 311 791C311 794 310 798 308 801C306 804 303 808 300 810C296 813 292 815 288 817C285 819 281 821 277 823C273 825 269 827 264 828C260 830 256 831 251 832C246 832 241 832 237 832C232 832 228 831 223 832C218 832 214 833 208 833C203 834 196 836 191 835C185 835 178 834 173 832C169 830 165 826 163 823C161 819 161 814 160 810C159 806 160 803 160 799C159 796 158 793 158 789C157 786 156 783 156 780C156 777 157 774 158 771C159 767 160 765 162 761C163 758 164 755 166 752C167 749 169 745 171 742C174 739 177 736 180 734C184 731 188 729 193 727C197 726 202 724 207 722C211 721 217 719 222 718C227 717 233 717 238 717C243 718 249 721 253 723C257 726 260 730 263 733C266 736 268 740 271 742C274 744 278 745 282 747C286 749 291 750 296 752C300 754 304 756 307 759C310 762 311 766 312 769C313 773 313 776 313 780Z"></path><path d="M379 780C379 786 379 793 377 799C374 805 368 811 362 816C357 821 349 824 344 829C338 834 335 838 331 845C328 851 327 859 323 866C319 874 315 883 307 889C300 895 289 899 279 901C269 903 256 901 246 899C235 898 225 893 215 890C206 887 197 884 189 881C181 877 173 874 166 870C159 866 153 861 147 857C141 853 136 848 131 843C125 839 119 835 113 831C107 826 99 822 94 817C89 812 84 806 81 799C79 793 79 787 78 780C78 773 79 767 79 760C78 753 77 746 77 739C78 731 77 722 81 716C86 709 93 702 102 698C111 694 124 693 135 692C147 692 159 694 169 694C178 694 186 694 194 692C202 690 209 687 217 684C226 682 235 678 244 677C253 676 263 676 272 676C282 677 291 679 300 682C309 684 319 687 327 690C335 694 344 698 350 703C357 709 361 715 365 722C368 728 369 735 371 742C372 748 373 755 375 761C376 767 379 774 379 780Z"></path><path d="M467 780C468 790 465 801 462 810C458 820 450 829 444 838C438 847 432 856 425 864C418 873 412 883 402 890C393 897 381 904 368 908C355 911 338 911 323 911C309 911 294 907 282 908C269 908 260 909 248 913C236 917 224 926 210 932C196 938 178 946 162 947C146 949 128 948 114 943C100 939 88 929 78 921C68 913 60 902 53 893C46 884 39 874 34 865C29 856 25 846 23 836C21 826 23 816 24 807C25 798 29 789 30 780C32 771 32 763 33 754C34 745 34 736 36 728C39 719 44 710 51 702C57 694 66 688 74 681C82 673 90 666 98 657C105 648 112 637 121 627C131 618 143 606 157 600C171 595 189 592 205 593C221 595 239 604 252 611C266 619 277 630 288 638C299 646 307 652 318 657C328 661 340 663 352 667C363 671 375 675 385 681C396 686 404 694 412 701C421 708 427 716 434 725C441 733 449 741 455 751C460 760 465 770 467 780Z"></path><path d="M506 780C507 792 509 804 511 817C513 830 519 844 518 858C517 872 515 887 507 900C499 913 485 924 471 934C457 944 439 951 422 958C405 965 387 971 368 974C350 978 330 980 311 978C292 977 272 971 255 967C238 963 223 955 207 953C191 951 178 952 159 954C141 956 119 964 97 966C76 969 48 971 28 967C8 963 -10 952 -22 941C-33 929 -36 911 -41 897C-45 883 -44 868 -47 855C-51 842 -56 830 -60 818C-64 805 -70 793 -69 780C-68 767 -62 754 -54 743C-46 731 -32 722 -21 712C-10 702 2 694 11 685C21 676 27 666 36 656C45 646 53 635 64 626C74 616 87 607 100 598C114 589 128 580 145 570C161 561 179 550 199 543C218 536 242 528 263 528C284 529 308 535 326 545C343 555 356 573 366 588C377 603 380 621 389 633C397 645 404 653 416 661C427 669 445 674 458 681C471 689 486 698 494 708C502 719 505 732 507 744C509 756 505 768 506 780Z"></path><path d="M566 780C577 795 600 811 613 830C626 849 644 873 645 892C645 912 634 934 616 947C598 961 564 969 536 975C508 981 475 980 449 983C423 986 402 989 381 993C360 997 342 1004 322 1007C302 1011 281 1013 261 1013C240 1013 220 1008 200 1006C180 1003 162 999 142 997C121 995 100 996 78 994C56 992 31 990 10 984C-12 979 -33 970 -52 960C-72 950 -88 938 -106 926C-124 913 -144 901 -159 886C-175 871 -194 854 -200 836C-205 819 -204 797 -193 780C-182 763 -155 746 -133 733C-110 719 -78 712 -60 701C-41 691 -29 684 -21 671C-13 659 -17 642 -12 626C-7 609 -4 588 8 574C19 559 38 547 58 538C78 530 103 528 126 524C149 520 172 518 195 516C218 513 242 509 266 509C290 509 315 511 337 516C359 522 380 533 399 543C417 553 432 567 447 579C463 590 478 601 491 614C504 626 518 638 526 652C534 665 538 681 541 696C544 710 540 725 544 739C548 753 554 765 566 780Z"></path><path d="M629 780C635 798 646 816 651 835C656 855 663 877 661 897C658 917 649 938 637 957C626 975 608 993 591 1010C574 1028 556 1047 535 1063C513 1078 490 1097 462 1105C433 1114 397 1118 365 1112C333 1107 297 1088 269 1073C241 1058 220 1034 198 1022C176 1011 162 1005 139 1005C115 1005 88 1016 59 1020C30 1024 -8 1031 -37 1028C-67 1025 -95 1014 -116 1001C-137 988 -150 968 -163 951C-177 933 -188 915 -199 896C-210 878 -225 860 -232 840C-239 821 -245 800 -242 780C-239 760 -227 740 -216 722C-204 704 -186 687 -172 671C-157 655 -144 639 -129 624C-114 610 -99 594 -80 582C-60 571 -36 562 -13 554C9 547 35 545 57 537C79 528 96 519 118 504C140 490 159 466 186 450C213 433 248 412 279 406C311 401 350 405 377 417C405 430 427 458 444 480C460 502 466 530 478 550C489 570 499 585 513 600C526 614 546 624 560 637C574 651 588 665 598 680C607 696 610 713 615 730C620 746 623 762 629 780Z"></path></svg>
+</div>
+<div aria-hidden="true" class="grid-lines"></div>
+<div class="wrap">
+<div class="hero-grid">
+<div>
+<p class="hero-tag"><span class="dot"></span>Exploración de recursos naturales</p>
+<h1 data-i18n="k013">Encontrar yacimientos minerales <em>con más precisión, en menos tiempo</em></h1>
+<p class="lead" data-i18n="k014">Quantik Geo integra tecnología satelital e instrumentación geofísica de campo para localizar el recurso, priorizar objetivos y dirigir la perforación con menos incertidumbre.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" data-i18n="k015" href="#contacto">Evaluar un proyecto</a>
+<a class="btn btn-ghost" data-i18n="k016" href="#mft">Conocer la tecnología MFT</a>
+</div>
+<div class="hero-attrib">
+<span data-i18n="k017">Tecnologías MFT™, WFT™ y OFT™ desarrolladas por</span>
+<span class="ctac-chip"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-visual">
+<svg fill="none" focusable="false" viewbox="0 0 460 420">
+<defs>
+<lineargradient id="hvSky" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#5b8fa8" stop-opacity=".22"></stop>
+<stop offset="1" stop-color="#5b8fa8" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="hvBeam" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#c9a45c" stop-opacity=".42"></stop>
+<stop offset="1" stop-color="#c9a45c" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- marco de coordenadas -->
+<rect height="388" rx="12" stroke="#aac5dd" stroke-opacity=".26" width="420" x="20" y="16"></rect>
+<g stroke="#aac5dd" stroke-opacity=".34">
+<path d="M20 60h10M20 110h10M20 160h10M20 210h10M20 260h10M20 310h10M20 360h10"></path>
+<path d="M80 404v-10M150 404v-10M220 404v-10M290 404v-10M360 404v-10"></path>
+</g>
+<!-- satelite -->
+<g transform="translate(300 52)">
+<rect height="18" rx="3" stroke="#c9a45c" stroke-opacity=".9" width="26" x="-13" y="-9"></rect>
+<path d="M-13 0h-22M13 0h22" stroke="#c9a45c" stroke-opacity=".6"></path>
+<rect height="12" stroke="#5b8fa8" stroke-opacity=".7" width="18" x="-35" y="-6"></rect>
+<rect height="12" stroke="#5b8fa8" stroke-opacity=".7" width="18" x="17" y="-6"></rect>
+</g>
+<path d="M300 66 L232 214 L368 214 Z" fill="url(#hvBeam)"></path>
+<path d="M300 66 L232 214M300 66 L368 214" stroke="#c9a45c" stroke-dasharray="3 5" stroke-opacity=".48"></path>
+<!-- linea de barrido -->
+<g class="hv-scan">
+<path d="M232 150 H368" stroke="#c9a45c" stroke-opacity=".72"></path>
+<circle cx="368" cy="150" fill="#c9a45c" r="2.5"></circle>
+</g>
+<!-- superficie con relieve -->
+<path d="M36 232 C90 214 118 240 168 228 C214 217 252 246 300 236 C346 227 386 248 424 238" stroke="#eef4fa" stroke-opacity=".72"></path>
+<path d="M36 232 C90 214 118 240 168 228 C214 217 252 246 300 236 C346 227 386 248 424 238 L424 392 L36 392 Z" fill="url(#hvSky)"></path>
+<!-- capas del subsuelo -->
+<g stroke="#aac5dd" stroke-opacity=".44">
+<path d="M36 268 C96 254 126 278 178 266 C226 255 262 282 310 272 C352 263 390 284 424 274"></path>
+<path d="M36 306 C96 294 126 316 178 304 C226 294 262 320 310 310 C352 302 390 322 424 312"></path>
+<path d="M36 348 C96 338 126 358 178 346 C226 336 262 360 310 352 C352 344 390 362 424 354"></path>
+</g>
+<!-- anomalia -->
+<g transform="translate(272 322)">
+<ellipse rx="46" ry="19" stroke="#c9a45c" stroke-opacity=".62"></ellipse>
+<ellipse rx="29" ry="12" stroke="#c9a45c" stroke-opacity=".88"></ellipse>
+<ellipse fill="#c9a45c" fill-opacity=".28" rx="13" ry="5.5" stroke="#c9a45c" stroke-opacity=".9"></ellipse>
+<circle class="hv-pulse" r="6" stroke="#c9a45c" stroke-opacity=".8"></circle>
+</g>
+<path d="M272 232 V300" stroke="#c9a45c" stroke-dasharray="3 5" stroke-opacity=".55"></path>
+<circle cx="272" cy="232" fill="#c9a45c" r="3.5"></circle>
+<!-- etiquetas -->
+<g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
+<text x="42" y="204">ADQUISICIÓN SATELITAL</text>
+<text x="42" y="256">SUPERFICIE</text>
+<text x="42" y="382">SUBSUELO</text>
+</g>
+<g fill="#d8b877" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
+<text x="326" y="330">ANOMALÍA</text>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- VENTAJAS OFICIALES -->
+<section aria-label="Ventajas publicadas por CTAC" class="adv">
+<div class="wrap adv-inner rv">
+<div class="adv-grid">
+<div class="adv-item">
+<p class="v"><small data-i18n="k018">Hasta</small>94%</p>
+<p class="k" data-i18n="k019">de precisión</p>
+</div>
+<div class="adv-item">
+<p class="v"><small data-i18n="k020">Éxito</small>50%–70%</p>
+<p class="k" data-i18n="k021">en el descubrimiento de recursos económicamente viables</p>
+</div>
+<div class="adv-item">
+<p class="v"><small data-i18n="k022">Hasta</small>80%</p>
+<p class="k" data-i18n="k023">menos tiempo</p>
+</div>
+<div class="adv-item">
+<p class="v"><small data-i18n="k024">Hasta</small>80%</p>
+<p class="k" data-i18n="k025">menos costo</p>
+</div>
+</div>
+<div class="adv-foot">
+<span class="ctac-chip"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+<span data-i18n="k026">Información publicada por CTAC. Los resultados dependen del alcance y las características del proyecto.</span>
+</div>
+</div>
+</section>
+<!-- INTRO -->
+<section class="band band-tight band-alt">
+<div class="wrap sec-head rv" style="margin-bottom:0">
+<p class="eyebrow" data-i18n="k027">Enfoque</p>
+<h2 data-i18n="k028">Mejores decisiones desde las <em>primeras etapas</em></h2>
+<p class="lead" data-i18n="k029">La exploración de recursos naturales requiere decidir dónde concentrar tiempo, capital y trabajo de campo. Quantik Geo ayuda a integrar información remota, geológica y geofísica para identificar áreas de interés y dirigir mejor las siguientes etapas de validación.</p>
+</div>
+</section>
+<!-- COMPARATIVA -->
+<section class="band band-deep" id="comparativa">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k030">Impacto</p>
+<h2 data-i18n="k031">Frente al <em>método tradicional</em></h2>
+<p class="lead" data-i18n="k032">Comparación entre el ciclo de exploración convencional y un proyecto que incorpora MFT™.</p>
+</div>
+<div class="vs rv">
+<div class="vs-row vs-head">
+<span></span>
+<span data-i18n="k033">Método tradicional</span>
+<span class="is-mft" data-i18n="k034">Con MFT™</span>
+</div>
+<div class="vs-row">
+<span class="k" data-i18n="k035">Tiempo total del ciclo</span>
+<span class="a" data-i18n="k036">6 – 10 años</span>
+<span class="b" data-i18n="k037">1 – 2 años</span>
+</div>
+<div class="vs-row">
+<span class="k" data-i18n="k038">Identificación del objetivo</span>
+<span class="a" data-i18n="k039">Prospección 2 – 4 años y exploración 3 – 6 años</span>
+<span class="b" data-i18n="k040">17 semanas</span>
+</div>
+<div class="vs-row">
+<span class="k" data-i18n="k041">Costo</span>
+<span class="a" data-i18n="k042">USD 20 M – USD 1 000 M</span>
+<span class="b" data-i18n="k043">Hasta 80% menos</span>
+</div>
+<div class="vs-row is-highlight">
+<span class="k" data-i18n="k044">Descubrimiento de recursos económicamente viables</span>
+<span class="a">5% – 15%</span>
+<span class="b">50% – 70%</span>
+</div>
+</div>
+<p class="note rv"><strong data-i18n="k045">Sobre estas cifras.</strong> Los valores de la columna del método tradicional son rangos de referencia de la industria señalados por CTAC, no mediciones de Quantik Geo. Los resultados de cada proyecto dependen de su alcance y características.</p>
+</div>
+</section>
+<!-- QUÉ ES MFT -->
+<section class="band band-deep" id="mft">
+<div class="wrap">
+<div class="split">
+<div class="rv">
+<p class="eyebrow" data-i18n="k046">Tecnología</p>
+<h2 data-i18n="k047" style="margin-bottom:22px">Qué es <em>MFT™</em></h2>
+<p class="lead" data-i18n="k048">MFT™ —Mineral Finder Technology— es una tecnología electromagnética multiespectral desarrollada por CTAC, orientada a la ubicación precisa de recursos minerales específicos. Identifica anomalías electromagnéticas asociadas con depósitos minerales combinando información satelital multiespectral con instrumentación geofísica de campo, para delimitar áreas de interés y dirigir los objetivos de perforación.</p>
+<div class="principles">
+<p class="principle"><span data-i18n="k049">Principio</span>Principio electromagnético</p>
+<p class="principle"><span data-i18n="k050">Detección</span>Firma espectral</p>
+<p class="principle"><span data-i18n="k051">Integración</span>Síntesis e integración de la información</p>
+</div>
+<div class="datum">
+<span class="datum-tag" data-i18n="k052">Dato oficial</span>
+<p data-i18n="k053">Más de 30 años de investigación y trabajos sobre electromagnetismo como base de la tecnología.</p>
+<footer>
+<span data-i18n="k054">Fuente</span>
+<span class="ctac-chip sm"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+</footer>
+</div>
+<p class="note" data-i18n="k055">Los resultados dependen de la escala, características del área, información disponible y alcance de las fases contratadas.</p>
+</div>
+<div class="tech-visual rv">
+<svg aria-hidden="true" fill="none" focusable="false" viewbox="0 0 420 250">
+<defs>
+<lineargradient id="spec" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#8b5cf6" stop-opacity=".55"></stop>
+<stop offset=".22" stop-color="#5b8fa8" stop-opacity=".55"></stop>
+<stop offset=".55" stop-color="#5b8fa8" stop-opacity=".18"></stop>
+<stop offset="1" stop-color="#c9a45c" stop-opacity=".14"></stop>
+</lineargradient>
+</defs>
+<g stroke="#a3bed6" stroke-opacity=".14">
+<path d="M40 40h350M40 80h350M40 120h350M40 160h350"></path>
+</g>
+<path d="M40 20V186H392" stroke="#a3bed6" stroke-opacity=".3"></path>
+<rect fill="url(#spec)" height="12" rx="2" width="352" x="40" y="196"></rect>
+<rect fill="#c9a45c" fill-opacity=".12" height="12" rx="2" stroke="#c9a45c" stroke-opacity=".8" width="96" x="40" y="196"></rect>
+<path d="M88 208v10" stroke="#c9a45c" stroke-opacity=".55"></path>
+<path d="M40 172 C64 168 74 150 88 96 C98 58 108 44 118 66 C128 88 136 150 152 164
                      C172 180 188 158 206 166 C228 176 244 150 262 162 C284 176 300 156 320 168
-                     C344 181 364 170 392 174"
-                  stroke="#c9a45c" stroke-opacity=".9" stroke-width="1.4"/>
-            <circle cx="112" cy="52" r="3.5" fill="#c9a45c"/>
-            <path d="M112 56V186" stroke="#c9a45c" stroke-opacity=".5" stroke-dasharray="3 5"/>
-
-            <g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
-              <text x="40" y="234">ULTRAVIOLETA · AZUL PROFUNDO</text>
-              <text x="332" y="234">ESPECTRO</text>
-              <text x="16" y="34" transform="rotate(-90 16 34)">RESPUESTA</text>
-            </g>
-            <g fill="#d8b877" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
-              <text x="126" y="46">FIRMA DETECTADA</text>
-            </g>
-          </svg>
-          <p class="tech-caption">Las anomalías se identifican a partir de frecuencias de resonancia en el rango del azul profundo y el ultravioleta del espectro electromagnético.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FASES -->
-  <section class="band band-alt" id="etapas">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Metodología</p>
-        <h2>Las <em>fases</em> de MFT™</h2>
-        <p class="lead">Una fase satelital de laboratorio, dos fases de instrumentación en campo y una fase de integración y modelado, con acompañamiento posterior según el alcance contratado.</p>
-      </div>
-
-      <ol class="flow g4c rv">
-        <li class="flow-step">
-          <span class="flow-num">01</span>
-          <figure class="flow-shot">
-            <img src="assets/ctac-figuras/mapa-anomalias.jpg" alt="Mapa 2D de anomalías con curvas de nivel" width="760" height="1107" loading="lazy">
-          </figure>
-          <span class="stage-badge is-remote"><span class="dot"></span>Laboratorio</span>
-          <span class="phase-time">8 semanas</span>
-          <p class="phase-n">Fase 1</p>
-          <p class="phase-t">Localización satelital</p>
-          <ul>
-            <li>Espectrografía de electrorresonancia ultravioleta por satélite.</li>
-            <li>Localización de minerales dentro de grandes áreas.</li>
-            <li>Generación de mapas 2D preliminares.</li>
-            <li>Localización de fallas y mapeo de grado y clasificación.</li>
-          </ul>
-          <p class="flow-method"><b>Método</b>Espectrografía satelital (ES).</p>
-        </li>
-
-        <li class="flow-step">
-          <span class="flow-num">02</span>
-          <figure class="flow-shot">
-            <img src="assets/ctac-figuras/vista-superior.jpg" alt="Mapa de vista superior con ubicación y ley del depósito" width="760" height="1124" loading="lazy">
-          </figure>
-          <span class="stage-badge"><span class="dot"></span>Campo</span>
-          <span class="phase-time">2 semanas</span>
-          <p class="phase-n">Fase 2.1</p>
-          <p class="phase-t">Vista superior</p>
-          <ul>
-            <li>Instrumentación de campo.</li>
-            <li>Delimitación y refinamiento de anomalías en superficie.</li>
-            <li>Generación de mapas 2D con mayor precisión.</li>
-            <li>Ubicación y ley del depósito más precisas.</li>
-          </ul>
-          <p class="flow-method"><b>Método</b>Instrumentación patentada de topografía de campo.</p>
-        </li>
-
-        <li class="flow-step">
-          <span class="flow-num">03</span>
-          <figure class="flow-shot">
-            <img src="assets/ctac-figuras/perfil-profundidad.jpg" alt="Perfil de profundidad con intervalos y espesores" width="760" height="1037" loading="lazy">
-          </figure>
-          <span class="stage-badge"><span class="dot"></span>Campo</span>
-          <span class="phase-time">2 semanas</span>
-          <p class="phase-n">Fase 2.2</p>
-          <p class="phase-t">Vista lateral</p>
-          <ul>
-            <li>Obtención de información de profundidad.</li>
-            <li>Identificación de capas o intervalos.</li>
-            <li>Profundidades y espesores aproximados.</li>
-            <li>Volumen de reserva preliminar.</li>
-          </ul>
-          <p class="flow-method"><b>Método</b>Perfilaje desde superficie con equipos patentados.</p>
-        </li>
-
-        <li class="flow-step">
-          <span class="flow-num">04</span>
-          <figure class="flow-shot">
-            <img src="assets/ctac-figuras/modelo-3d.jpg" alt="Modelo tridimensional del cuerpo mineralizado" width="760" height="1113" loading="lazy">
-          </figure>
-          <span class="stage-badge is-remote"><span class="dot"></span>Laboratorio</span>
-          <span class="phase-time">5 semanas</span>
-          <p class="phase-n">Fase 3</p>
-          <p class="phase-t">Integración y modelo 3D</p>
-          <ul>
-            <li>Integración de resultados de las fases anteriores.</li>
-            <li>Software de geointeligencia y análisis geofísico.</li>
-            <li>Generación de modelo 3D y modelado de reservas.</li>
-            <li>Informe técnico final en formato NI 43-101 y datos para modelos de Micromine o Geociencia.</li>
-          </ul>
-          <p class="flow-method"><b>Método</b>Software de geointeligencia algorítmica multiespectral.</p>
-        </li>
-      </ol>
-
-      <div class="phase-support rv">
-        <div class="lbl">
-          <p class="phase-n">Fase 4</p>
-          <span>Laboratorio y campo</span>
-        </div>
-        <p>Acompañamiento y soporte técnico desde la perforación hasta la producción, de acuerdo con el alcance contratado.</p>
-      </div>
-
-      <div class="gallery-foot rv" style="margin-top:clamp(24px,2.8vw,32px)">
-        <span class="ctac-chip"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-        <span>Figuras de ejemplo publicadas por CTAC. Los entregables de cada proyecto dependen del alcance contratado.</span>
-      </div>
-
-      <p class="note rv"><strong>Alcance de referencia.</strong> Un alcance completo de referencia para las fases 1 a 3 se presenta en aproximadamente <span class="fig">17 semanas</span>. Los tiempos son de referencia y pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado.</p>
-
-      <p class="note rv"><strong>Métodos geofísicos.</strong> Los métodos que componen la tecnología son: <strong>ES</strong> —espectrografía satelital, correspondiente a la fase remota—, <strong>ECECI</strong> —Establecimiento de Campos Electromagnéticos de Corto Impulso, que delimita en superficie la extensión de la anomalía— y <strong>SVER</strong> —Sondaje Vertical por Electro Resonancia, que identifica los intervalos polarizados en profundidad, su cantidad y sus espesores aproximados.</p>
-    </div>
-  </section>
-
-  <!-- APLICACIONES -->
-  <section class="band band-deep" id="aplicaciones">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Aplicaciones</p>
-        <h2>Dónde se utiliza MFT™</h2>
-        <p class="lead">Categorías de aplicación para proyectos de exploración, producción y perforación.</p>
-      </div>
-
-      <div class="grid g4">
-        <article class="card app rv">
-          <div class="app-icon" aria-hidden="true">
-            <svg viewBox="0 0 60 46" fill="none" stroke="#c9a45c" stroke-width="1.1">
-              <path d="M4 38 L14 8 L44 4 L56 30 L30 42 Z" stroke="#5b8fa8" stroke-opacity=".7"/>
-              <circle cx="22" cy="20" r="2.6" fill="#c9a45c" stroke="none"/>
-              <circle cx="38" cy="14" r="2" fill="#c9a45c" fill-opacity=".55" stroke="none"/>
-              <circle cx="34" cy="30" r="2.3" fill="#c9a45c" fill-opacity=".8" stroke="none"/>
-              <circle cx="22" cy="20" r="8" stroke-opacity=".45"/>
-            </svg>
-          </div>
-          <span class="idx">A</span>
-          <h3>Greenfields o áreas exploratorias</h3>
-          <p>Punto de partida para la exploración de áreas no estudiadas previamente. La espectrografía permite visualizar los prospectos presentes en el área y descartar zonas donde no se evidencia el material buscado.</p>
-        </article>
-
-        <article class="card app rv">
-          <div class="app-icon" aria-hidden="true">
-            <svg viewBox="0 0 60 46" fill="none" stroke="#5b8fa8" stroke-width="1.1">
-              <path d="M6 16 L28 4 L50 16 L28 28 Z" stroke-opacity=".55"/>
-              <path d="M6 30 L28 18 L50 30 L28 42 Z" stroke="#c9a45c" stroke-opacity=".9"/>
-              <circle cx="28" cy="30" r="2.6" fill="#c9a45c" stroke="none"/>
-            </svg>
-          </div>
-          <span class="idx">B</span>
-          <h3>Reinterpretación de información</h3>
-          <p>En áreas donde ya existen estudios tradicionales y el análisis de la información resulta complicado, MFT™ puede apoyar la interpretación sobre la presencia del material buscado.</p>
-        </article>
-
-        <article class="card app rv">
-          <div class="app-icon" aria-hidden="true">
-            <svg viewBox="0 0 60 46" fill="none" stroke="#5b8fa8" stroke-width="1.1">
-              <path d="M2 10 H58" stroke="#e9f0f7" stroke-opacity=".45"/>
-              <path d="M10 10 V18 H20 V26 H30 V34 H42 V42" stroke-opacity=".8"/>
-              <path d="M50 10 V18 H40 V26 H32" stroke-opacity=".5"/>
-              <circle cx="46" cy="32" r="3" fill="#c9a45c" stroke="none"/>
-              <circle cx="46" cy="32" r="8" stroke="#c9a45c" stroke-opacity=".5"/>
-            </svg>
-          </div>
-          <span class="idx">C</span>
-          <h3>Minas existentes</h3>
-          <p>Apoya procesos de reingeniería orientados a ubicar zonas de acumulación mineral aún no localizadas y a verificar la existencia de mineral en estructuras conocidas, con miras a optimizar la recuperación del depósito.</p>
-        </article>
-
-        <article class="card app rv">
-          <div class="app-icon" aria-hidden="true">
-            <svg viewBox="0 0 60 46" fill="none" stroke="#5b8fa8" stroke-width="1.1">
-              <path d="M2 8 C16 3 26 12 40 7 C50 3 56 9 58 7" stroke="#e9f0f7" stroke-opacity=".45"/>
-              <path d="M2 20 H58" stroke-opacity=".3"/>
-              <path d="M2 32 H58" stroke-opacity=".25"/>
-              <path d="M24 6 V44" stroke="#c9a45c" stroke-opacity=".9"/>
-              <path d="M20 44 H28" stroke="#c9a45c"/>
-              <rect x="16" y="17" width="16" height="6" fill="#c9a45c" fill-opacity=".25" stroke="#c9a45c" stroke-opacity=".75"/>
-              <rect x="18" y="29" width="12" height="5" fill="#c9a45c" fill-opacity=".25" stroke="#c9a45c" stroke-opacity=".75"/>
-              <path d="M42 17 V23M42 29 V34" stroke="#c9a45c" stroke-opacity=".45"/>
-            </svg>
-          </div>
-          <span class="idx">D</span>
-          <h3>Priorización de perforación</h3>
-          <p>Un estudio de verificación puede aportar información sobre las capas o intervalos polarizados presentes, sus profundidades, espesores aproximados y coordenadas hacia donde orientar los siguientes trabajos.</p>
-        </article>
-      </div>
-
-      <p class="scopes-label rv">Otros ámbitos de aplicación</p>
-      <div class="scopes rv">
-        <span>Minerales, agua, petróleo y gas</span>
-        <span>En tierra y en alta mar</span>
-        <span>Grandes áreas y estudios de precisión</span>
-        <span>Campos nuevos, brownfield y maduros</span>
-        <span>Refinamiento y reinterpretación de estudios previos</span>
-        <span>Áreas con presal y subsal</span>
-      </div>
-
-      <div class="clarify rv">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-          <circle cx="12" cy="12" r="9.2"/><path d="M12 7.4v.2M12 11v6" stroke-linecap="round"/>
-        </svg>
-        <p>MFT™ no sustituye la perforación ni la validación geológica y geofísica en campo. Su función es generar y priorizar objetivos para orientar las siguientes etapas de exploración.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFICIOS -->
-  <section class="band band-alt" id="beneficios" style="padding-bottom:clamp(38px,4.4vw,58px)">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Beneficios</p>
-        <h2>Qué aporta al proyecto</h2>
-        <p class="lead">Aplicables según el alcance y las características de cada proyecto.</p>
-      </div>
-
-      <div class="grid g3">
-        <div class="ben-group rv">
-          <p class="ben-n">01</p>
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-              <circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="4.2"/><circle cx="12" cy="12" r=".9" fill="#c9a45c"/>
-            </svg>
+                     C344 181 364 170 392 174" stroke="#c9a45c" stroke-opacity=".9" stroke-width="1.4"></path>
+<circle cx="112" cy="52" fill="#c9a45c" r="3.5"></circle>
+<path d="M112 56V186" stroke="#c9a45c" stroke-dasharray="3 5" stroke-opacity=".5"></path>
+<g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
+<text x="40" y="234">ULTRAVIOLETA · AZUL PROFUNDO</text>
+<text x="332" y="234">ESPECTRO</text>
+<text transform="rotate(-90 16 34)" x="16" y="34">RESPUESTA</text>
+</g>
+<g fill="#d8b877" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
+<text x="126" y="46">FIRMA DETECTADA</text>
+</g>
+</svg>
+<p class="tech-caption" data-i18n="k056">Las anomalías se identifican a partir de frecuencias de resonancia en el rango del azul profundo y el ultravioleta del espectro electromagnético.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FASES -->
+<section class="band band-alt" id="etapas">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k057">Metodología</p>
+<h2 data-i18n="k058">Las <em>fases</em> de MFT™</h2>
+<p class="lead" data-i18n="k059">Una fase satelital de laboratorio, dos fases de instrumentación en campo y una fase de integración y modelado, con acompañamiento posterior según el alcance contratado.</p>
+</div>
+<ol class="flow g4c rv">
+<li class="flow-step">
+<span class="flow-num">01</span>
+<figure class="flow-shot">
+<img alt="Mapa 2D de anomalías con curvas de nivel" height="1107" loading="lazy" src="assets/ctac-figuras/mapa-anomalias.jpg" width="760"/>
+</figure>
+<span class="stage-badge is-remote"><span class="dot"></span>Laboratorio</span>
+<span class="phase-time" data-i18n="k060">8 semanas</span>
+<p class="phase-n" data-i18n="k061">Fase 1</p>
+<p class="phase-t" data-i18n="k062">Localización satelital</p>
+<ul>
+<li data-i18n="k063">Espectrografía de electrorresonancia ultravioleta por satélite.</li>
+<li data-i18n="k064">Localización de minerales dentro de grandes áreas.</li>
+<li data-i18n="k065">Generación de mapas 2D preliminares.</li>
+<li data-i18n="k066">Localización de fallas y mapeo de grado y clasificación.</li>
+</ul>
+<p class="flow-method" data-i18n="k067"><b>Método</b>Espectrografía satelital (ES).</p>
+</li>
+<li class="flow-step">
+<span class="flow-num">02</span>
+<figure class="flow-shot">
+<img alt="Mapa de vista superior con ubicación y ley del depósito" height="1124" loading="lazy" src="assets/ctac-figuras/vista-superior.jpg" width="760"/>
+</figure>
+<span class="stage-badge"><span class="dot"></span>Campo</span>
+<span class="phase-time" data-i18n="k068">2 semanas</span>
+<p class="phase-n" data-i18n="k069">Fase 2.1</p>
+<p class="phase-t" data-i18n="k070">Vista superior</p>
+<ul>
+<li data-i18n="k071">Instrumentación de campo.</li>
+<li data-i18n="k072">Delimitación y refinamiento de anomalías en superficie.</li>
+<li data-i18n="k073">Generación de mapas 2D con mayor precisión.</li>
+<li data-i18n="k074">Ubicación y ley del depósito más precisas.</li>
+</ul>
+<p class="flow-method" data-i18n="k075"><b>Método</b>Instrumentación patentada de topografía de campo.</p>
+</li>
+<li class="flow-step">
+<span class="flow-num">03</span>
+<figure class="flow-shot">
+<img alt="Perfil de profundidad con intervalos y espesores" height="1037" loading="lazy" src="assets/ctac-figuras/perfil-profundidad.jpg" width="760"/>
+</figure>
+<span class="stage-badge"><span class="dot"></span>Campo</span>
+<span class="phase-time" data-i18n="k076">2 semanas</span>
+<p class="phase-n" data-i18n="k077">Fase 2.2</p>
+<p class="phase-t" data-i18n="k078">Vista lateral</p>
+<ul>
+<li data-i18n="k079">Obtención de información de profundidad.</li>
+<li data-i18n="k080">Identificación de capas o intervalos.</li>
+<li data-i18n="k081">Profundidades y espesores aproximados.</li>
+<li data-i18n="k082">Volumen de reserva preliminar.</li>
+</ul>
+<p class="flow-method" data-i18n="k083"><b>Método</b>Perfilaje desde superficie con equipos patentados.</p>
+</li>
+<li class="flow-step">
+<span class="flow-num">04</span>
+<figure class="flow-shot">
+<img alt="Modelo tridimensional del cuerpo mineralizado" height="1113" loading="lazy" src="assets/ctac-figuras/modelo-3d.jpg" width="760"/>
+</figure>
+<span class="stage-badge is-remote"><span class="dot"></span>Laboratorio</span>
+<span class="phase-time" data-i18n="k084">5 semanas</span>
+<p class="phase-n" data-i18n="k085">Fase 3</p>
+<p class="phase-t" data-i18n="k086">Integración y modelo 3D</p>
+<ul>
+<li data-i18n="k087">Integración de resultados de las fases anteriores.</li>
+<li data-i18n="k088">Software de geointeligencia y análisis geofísico.</li>
+<li data-i18n="k089">Generación de modelo 3D y modelado de reservas.</li>
+<li data-i18n="k090">Informe técnico final en formato NI 43-101 y datos para modelos de Micromine o Geociencia.</li>
+</ul>
+<p class="flow-method" data-i18n="k091"><b>Método</b>Software de geointeligencia algorítmica multiespectral.</p>
+</li>
+</ol>
+<div class="phase-support rv">
+<div class="lbl">
+<p class="phase-n" data-i18n="k092">Fase 4</p>
+<span data-i18n="k093">Laboratorio y campo</span>
+</div>
+<p data-i18n="k094">Acompañamiento y soporte técnico desde la perforación hasta la producción, de acuerdo con el alcance contratado.</p>
+</div>
+<div class="gallery-foot rv" style="margin-top:clamp(24px,2.8vw,32px)">
+<span class="ctac-chip"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+<span data-i18n="k095">Figuras de ejemplo publicadas por CTAC. Los entregables de cada proyecto dependen del alcance contratado.</span>
+</div>
+<p class="note rv"><strong data-i18n="k096">Alcance de referencia.</strong> Un alcance completo de referencia para las fases 1 a 3 se presenta en aproximadamente <span class="fig" data-i18n="k097">17 semanas</span>. Los tiempos son de referencia y pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado.</p>
+<p class="note rv"><strong data-i18n="k098">Métodos geofísicos.</strong> Los métodos que componen la tecnología son: <strong data-i18n="k099">ES</strong> —espectrografía satelital, correspondiente a la fase remota—, <strong data-i18n="k100">ECECI</strong> —Establecimiento de Campos Electromagnéticos de Corto Impulso, que delimita en superficie la extensión de la anomalía— y <strong data-i18n="k101">SVER</strong> —Sondaje Vertical por Electro Resonancia, que identifica los intervalos polarizados en profundidad, su cantidad y sus espesores aproximados.</p>
+</div>
+</section>
+<!-- APLICACIONES -->
+<section class="band band-deep" id="aplicaciones">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k102">Aplicaciones</p>
+<h2 data-i18n="k103">Dónde se utiliza MFT™</h2>
+<p class="lead" data-i18n="k104">Categorías de aplicación para proyectos de exploración, producción y perforación.</p>
+</div>
+<div class="grid g4">
+<article class="card app rv">
+<div aria-hidden="true" class="app-icon">
+<svg fill="none" stroke="#c9a45c" stroke-width="1.1" viewbox="0 0 60 46">
+<path d="M4 38 L14 8 L44 4 L56 30 L30 42 Z" stroke="#5b8fa8" stroke-opacity=".7"></path>
+<circle cx="22" cy="20" fill="#c9a45c" r="2.6" stroke="none"></circle>
+<circle cx="38" cy="14" fill="#c9a45c" fill-opacity=".55" r="2" stroke="none"></circle>
+<circle cx="34" cy="30" fill="#c9a45c" fill-opacity=".8" r="2.3" stroke="none"></circle>
+<circle cx="22" cy="20" r="8" stroke-opacity=".45"></circle>
+</svg>
+</div>
+<span class="idx">A</span>
+<h3 data-i18n="k105">Greenfields o áreas exploratorias</h3>
+<p data-i18n="k106">Punto de partida para la exploración de áreas no estudiadas previamente. La espectrografía permite visualizar los prospectos presentes en el área y descartar zonas donde no se evidencia el material buscado.</p>
+</article>
+<article class="card app rv">
+<div aria-hidden="true" class="app-icon">
+<svg fill="none" stroke="#5b8fa8" stroke-width="1.1" viewbox="0 0 60 46">
+<path d="M6 16 L28 4 L50 16 L28 28 Z" stroke-opacity=".55"></path>
+<path d="M6 30 L28 18 L50 30 L28 42 Z" stroke="#c9a45c" stroke-opacity=".9"></path>
+<circle cx="28" cy="30" fill="#c9a45c" r="2.6" stroke="none"></circle>
+</svg>
+</div>
+<span class="idx">B</span>
+<h3 data-i18n="k107">Reinterpretación de información</h3>
+<p data-i18n="k108">En áreas donde ya existen estudios tradicionales y el análisis de la información resulta complicado, MFT™ puede apoyar la interpretación sobre la presencia del material buscado.</p>
+</article>
+<article class="card app rv">
+<div aria-hidden="true" class="app-icon">
+<svg fill="none" stroke="#5b8fa8" stroke-width="1.1" viewbox="0 0 60 46">
+<path d="M2 10 H58" stroke="#e9f0f7" stroke-opacity=".45"></path>
+<path d="M10 10 V18 H20 V26 H30 V34 H42 V42" stroke-opacity=".8"></path>
+<path d="M50 10 V18 H40 V26 H32" stroke-opacity=".5"></path>
+<circle cx="46" cy="32" fill="#c9a45c" r="3" stroke="none"></circle>
+<circle cx="46" cy="32" r="8" stroke="#c9a45c" stroke-opacity=".5"></circle>
+</svg>
+</div>
+<span class="idx">C</span>
+<h3 data-i18n="k109">Minas existentes</h3>
+<p data-i18n="k110">Apoya procesos de reingeniería orientados a ubicar zonas de acumulación mineral aún no localizadas y a verificar la existencia de mineral en estructuras conocidas, con miras a optimizar la recuperación del depósito.</p>
+</article>
+<article class="card app rv">
+<div aria-hidden="true" class="app-icon">
+<svg fill="none" stroke="#5b8fa8" stroke-width="1.1" viewbox="0 0 60 46">
+<path d="M2 8 C16 3 26 12 40 7 C50 3 56 9 58 7" stroke="#e9f0f7" stroke-opacity=".45"></path>
+<path d="M2 20 H58" stroke-opacity=".3"></path>
+<path d="M2 32 H58" stroke-opacity=".25"></path>
+<path d="M24 6 V44" stroke="#c9a45c" stroke-opacity=".9"></path>
+<path d="M20 44 H28" stroke="#c9a45c"></path>
+<rect fill="#c9a45c" fill-opacity=".25" height="6" stroke="#c9a45c" stroke-opacity=".75" width="16" x="16" y="17"></rect>
+<rect fill="#c9a45c" fill-opacity=".25" height="5" stroke="#c9a45c" stroke-opacity=".75" width="12" x="18" y="29"></rect>
+<path d="M42 17 V23M42 29 V34" stroke="#c9a45c" stroke-opacity=".45"></path>
+</svg>
+</div>
+<span class="idx">D</span>
+<h3 data-i18n="k111">Priorización de perforación</h3>
+<p data-i18n="k112">Un estudio de verificación puede aportar información sobre las capas o intervalos polarizados presentes, sus profundidades, espesores aproximados y coordenadas hacia donde orientar los siguientes trabajos.</p>
+</article>
+</div>
+<p class="scopes-label rv" data-i18n="k113">Otros ámbitos de aplicación</p>
+<div class="scopes rv">
+<span data-i18n="k114">Minerales, agua, petróleo y gas</span>
+<span data-i18n="k115">En tierra y en alta mar</span>
+<span data-i18n="k116">Grandes áreas y estudios de precisión</span>
+<span data-i18n="k117">Campos nuevos, brownfield y maduros</span>
+<span data-i18n="k118">Refinamiento y reinterpretación de estudios previos</span>
+<span data-i18n="k119">Áreas con presal y subsal</span>
+</div>
+<div class="clarify rv">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9.2"></circle><path d="M12 7.4v.2M12 11v6" stroke-linecap="round"></path>
+</svg>
+<p data-i18n="k120">MFT™ no sustituye la perforación ni la validación geológica y geofísica en campo. Su función es generar y priorizar objetivos para orientar las siguientes etapas de exploración.</p>
+</div>
+</div>
+</section>
+<!-- BENEFICIOS -->
+<section class="band band-alt" id="beneficios" style="padding-bottom:clamp(38px,4.4vw,58px)">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k121">Beneficios</p>
+<h2 data-i18n="k122">Qué aporta al proyecto</h2>
+<p class="lead" data-i18n="k123">Aplicables según el alcance y las características de cada proyecto.</p>
+</div>
+<div class="grid g3">
+<div class="ben-group rv">
+<p class="ben-n">01</p>
+<h3 data-i18n="k124">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="8.6"></circle><circle cx="12" cy="12" r="4.2"></circle><circle cx="12" cy="12" fill="#c9a45c" r=".9"></circle>
+</svg>
             Precisión y éxito
           </h3>
-          <ul>
-            <li>Precisión de hasta <span class="fig">94%</span>.</li>
-            <li>Éxito entre <span class="fig">50% y 70%</span> en el descubrimiento de recursos económicamente viables.</li>
-          </ul>
-        </div>
-
-        <div class="ben-group rv">
-          <p class="ben-n">02</p>
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-              <circle cx="12" cy="12.6" r="8.4"/><path d="M12 7.8v5l3.2 2M9 2.6h6" stroke-linecap="round"/>
-            </svg>
+<ul>
+<li>Precisión de hasta <span class="fig">94%</span>.</li>
+<li>Éxito entre <span class="fig" data-i18n="k125">50% y 70%</span> en el descubrimiento de recursos económicamente viables.</li>
+</ul>
+</div>
+<div class="ben-group rv">
+<p class="ben-n">02</p>
+<h3 data-i18n="k126">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<circle cx="12" cy="12.6" r="8.4"></circle><path d="M12 7.8v5l3.2 2M9 2.6h6" stroke-linecap="round"></path>
+</svg>
             Tiempo y costo
           </h3>
-          <ul>
-            <li>Hasta <span class="fig">80% menos tiempo</span>.</li>
-            <li>Hasta <span class="fig">80% menos costo</span>.</li>
-          </ul>
-        </div>
-
-        <div class="ben-group rv">
-          <p class="ben-n">03</p>
-          <h3>
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-              <path d="M3 17.6c4-2 6.6 1.4 10.4-.6M3 21c4-2 6.6 1.4 10.4-.6" stroke-linecap="round" stroke-opacity=".6"/>
-              <rect x="9.4" y="3" width="7.4" height="5.2" rx="1.4"/><path d="M9.4 5.6H4.6M16.8 5.6h2.8"/>
-              <path d="M13.1 8.2v4.6" stroke-dasharray="2 2.6"/>
-            </svg>
+<ul>
+<li>Hasta <span class="fig" data-i18n="k127">80% menos tiempo</span>.</li>
+<li>Hasta <span class="fig" data-i18n="k128">80% menos costo</span>.</li>
+</ul>
+</div>
+<div class="ben-group rv">
+<p class="ben-n">03</p>
+<h3 data-i18n="k129">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<path d="M3 17.6c4-2 6.6 1.4 10.4-.6M3 21c4-2 6.6 1.4 10.4-.6" stroke-linecap="round" stroke-opacity=".6"></path>
+<rect height="5.2" rx="1.4" width="7.4" x="9.4" y="3"></rect><path d="M9.4 5.6H4.6M16.8 5.6h2.8"></path>
+<path d="M13.1 8.2v4.6" stroke-dasharray="2 2.6"></path>
+</svg>
             Operación y enfoque
           </h3>
-          <ul>
-            <li>Tecnología pasiva.</li>
-            <li>No requiere licencias ambientales para su uso.</li>
-            <li>Perforación altamente dirigida.</li>
-            <li>Mayor enfoque en la ubicación precisa del recurso.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONSIDERACIONES TÉCNICAS Y OPERATIVAS -->
-  <section class="band official" id="consideraciones">
-    <div class="wrap">
-      <div class="official-head rv">
-        <div>
-          <p class="eyebrow">Consideraciones técnicas y operativas</p>
-          <h2 style="margin:0">Información publicada por <em>CTAC</em></h2>
-        </div>
-        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-          <span class="seal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-              <path d="M12 2.6 20 6v6c0 4.6-3.4 7.9-8 9.4-4.6-1.5-8-4.8-8-9.4V6z"/><path d="M8.6 12.2 11 14.6l4.6-4.8" stroke-linecap="round"/>
-            </svg>
+<ul>
+<li data-i18n="k130">Tecnología pasiva.</li>
+<li data-i18n="k131">No requiere licencias ambientales para su uso.</li>
+<li data-i18n="k132">Perforación altamente dirigida.</li>
+<li data-i18n="k133">Mayor enfoque en la ubicación precisa del recurso.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CONSIDERACIONES TÉCNICAS Y OPERATIVAS -->
+<section class="band official" id="consideraciones">
+<div class="wrap">
+<div class="official-head rv">
+<div>
+<p class="eyebrow" data-i18n="k134">Consideraciones técnicas y operativas</p>
+<h2 data-i18n="k135" style="margin:0">Información publicada por <em>CTAC</em></h2>
+</div>
+<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+<span class="seal" data-i18n="k136">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<path d="M12 2.6 20 6v6c0 4.6-3.4 7.9-8 9.4-4.6-1.5-8-4.8-8-9.4V6z"></path><path d="M8.6 12.2 11 14.6l4.6-4.8" stroke-linecap="round"></path>
+</svg>
             Fuente oficial
           </span>
-          <span class="ctac-chip"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-        </div>
-      </div>
-
-      <div class="grid g2">
-        <article class="official-card rv">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-            <path d="M12 21.4c0-6.4 2.6-10.4 8-12-0.4 6.8-3 10.8-8 12Z"/><path d="M12 21.4C12 15 9.4 11 4 9.4c.4 6.8 3 10.8 8 12Z" stroke-opacity=".55"/><path d="M12 21.4v-4.6"/>
-          </svg>
-          <h3>Tecnología con impacto ambiental nulo</h3>
-          <p>El uso de la tecnología MFT™ tiene impacto ambiental nulo: no requiere explosiones, no genera ruido y no provoca afectaciones a la flora, la fauna ni a la propiedad privada.</p>
-          <p>La fase remota permite analizar áreas de interés sin intervención física directa en el terreno.</p>
-        </article>
-
-        <article class="official-card rv">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-            <rect x="4.6" y="3" width="14.8" height="18" rx="2"/><path d="M8.2 8.4h7.6M8.2 12h7.6M8.2 15.6h4.4" stroke-opacity=".65" stroke-linecap="round"/>
-          </svg>
-          <h3>Sin permisos ni licencias para utilizar la tecnología</h3>
-          <p>Para el uso de la tecnología MFT™ no se requieren permisos o licencias.</p>
-          <p>Esta característica permite realizar una evaluación inicial de grandes extensiones antes de ejecutar campañas de exploración directa. Las actividades posteriores, como acceso al terreno, trabajos de exploración directa o perforación, estarán sujetas a los requisitos aplicables de cada proyecto y jurisdicción.</p>
-        </article>
-
-        <article class="official-card rv">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-            <path d="M3.4 17.4a9.4 9.4 0 1 1 17.2 0" stroke-linecap="round"/><path d="M12 17.4 16.4 10" stroke-linecap="round"/><circle cx="12" cy="17.4" r="1.5"/>
-          </svg>
-          <h3>Precisión y éxito</h3>
-          <p>Precisión de hasta <span class="fig">94%</span> y éxito entre <span class="fig">50% y 70%</span> en el descubrimiento de recursos económicamente viables.</p>
-          <p>Los resultados específicos dependen del área de estudio, su extensión, las condiciones del proyecto, la información disponible y las fases técnicas contratadas.</p>
-        </article>
-
-        <article class="official-card rv">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-            <circle cx="12" cy="12.6" r="8.4"/><path d="M12 7.8v5l3.2 2M9 2.6h6" stroke-linecap="round"/>
-          </svg>
-          <h3>Tiempos de ejecución</h3>
-          <p>Tiempos de referencia para cada fase:</p>
-          <ul class="bullets">
-            <li>Fase 1 — Localización satelital: <span class="fig">8 semanas</span>.</li>
-            <li>Fase 2.1 — Vista superior: <span class="fig">2 semanas</span>.</li>
-            <li>Fase 2.2 — Vista lateral: <span class="fig">2 semanas</span>.</li>
-            <li>Fase 3 — Integración y modelo 3D: <span class="fig">5 semanas</span>.</li>
-            <li>Referencia total para las fases 1 a 3: <span class="fig">17 semanas</span>.</li>
-          </ul>
-          <p>Los tiempos son referencias publicadas por CTAC y pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado. Los tiempos definitivos se establecen en la propuesta técnica de cada proyecto.</p>
-        </article>
-      </div>
-
-      <div class="official-strip rv">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a45c" stroke-width="1.3" aria-hidden="true">
-            <path d="M3 6.4c4-2 6.6 1.4 10.4-.6 3.4-1.8 5.6.4 7.6-.4" stroke-linecap="round"/>
-            <path d="M3 12h18M3 17.4h18" stroke-opacity=".45"/>
-            <path d="M12 5.4v14.4" stroke-linecap="round"/><path d="M9.4 19.8h5.2" stroke-linecap="round"/>
-          </svg>
+<span class="ctac-chip"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+</div>
+</div>
+<div class="grid g2">
+<article class="official-card rv">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<path d="M12 21.4c0-6.4 2.6-10.4 8-12-0.4 6.8-3 10.8-8 12Z"></path><path d="M12 21.4C12 15 9.4 11 4 9.4c.4 6.8 3 10.8 8 12Z" stroke-opacity=".55"></path><path d="M12 21.4v-4.6"></path>
+</svg>
+<h3 data-i18n="k137">Tecnología con impacto ambiental nulo</h3>
+<p data-i18n="k138">El uso de la tecnología MFT™ tiene impacto ambiental nulo: no requiere explosiones, no genera ruido y no provoca afectaciones a la flora, la fauna ni a la propiedad privada.</p>
+<p data-i18n="k139">La fase remota permite analizar áreas de interés sin intervención física directa en el terreno.</p>
+</article>
+<article class="official-card rv">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<rect height="18" rx="2" width="14.8" x="4.6" y="3"></rect><path d="M8.2 8.4h7.6M8.2 12h7.6M8.2 15.6h4.4" stroke-linecap="round" stroke-opacity=".65"></path>
+</svg>
+<h3 data-i18n="k140">Sin permisos ni licencias para utilizar la tecnología</h3>
+<p data-i18n="k141">Para el uso de la tecnología MFT™ no se requieren permisos o licencias.</p>
+<p data-i18n="k142">Esta característica permite realizar una evaluación inicial de grandes extensiones antes de ejecutar campañas de exploración directa. Las actividades posteriores, como acceso al terreno, trabajos de exploración directa o perforación, estarán sujetas a los requisitos aplicables de cada proyecto y jurisdicción.</p>
+</article>
+<article class="official-card rv">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<path d="M3.4 17.4a9.4 9.4 0 1 1 17.2 0" stroke-linecap="round"></path><path d="M12 17.4 16.4 10" stroke-linecap="round"></path><circle cx="12" cy="17.4" r="1.5"></circle>
+</svg>
+<h3 data-i18n="k143">Precisión y éxito</h3>
+<p>Precisión de hasta <span class="fig">94%</span> y éxito entre <span class="fig" data-i18n="k144">50% y 70%</span> en el descubrimiento de recursos económicamente viables.</p>
+<p data-i18n="k145">Los resultados específicos dependen del área de estudio, su extensión, las condiciones del proyecto, la información disponible y las fases técnicas contratadas.</p>
+</article>
+<article class="official-card rv">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<circle cx="12" cy="12.6" r="8.4"></circle><path d="M12 7.8v5l3.2 2M9 2.6h6" stroke-linecap="round"></path>
+</svg>
+<h3 data-i18n="k146">Tiempos de ejecución</h3>
+<p data-i18n="k147">Tiempos de referencia para cada fase:</p>
+<ul class="bullets">
+<li>Fase 1 — Localización satelital: <span class="fig" data-i18n="k148">8 semanas</span>.</li>
+<li>Fase 2.1 — Vista superior: <span class="fig" data-i18n="k149">2 semanas</span>.</li>
+<li>Fase 2.2 — Vista lateral: <span class="fig" data-i18n="k150">2 semanas</span>.</li>
+<li>Fase 3 — Integración y modelo 3D: <span class="fig" data-i18n="k151">5 semanas</span>.</li>
+<li>Referencia total para las fases 1 a 3: <span class="fig" data-i18n="k152">17 semanas</span>.</li>
+</ul>
+<p data-i18n="k153">Los tiempos son referencias publicadas por CTAC y pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado. Los tiempos definitivos se establecen en la propuesta técnica de cada proyecto.</p>
+</article>
+</div>
+<div class="official-strip rv">
+<h3 data-i18n="k154">
+<svg aria-hidden="true" fill="none" stroke="#c9a45c" stroke-width="1.3" viewbox="0 0 24 24">
+<path d="M3 6.4c4-2 6.6 1.4 10.4-.6 3.4-1.8 5.6.4 7.6-.4" stroke-linecap="round"></path>
+<path d="M3 12h18M3 17.4h18" stroke-opacity=".45"></path>
+<path d="M12 5.4v14.4" stroke-linecap="round"></path><path d="M9.4 19.8h5.2" stroke-linecap="round"></path>
+</svg>
           Profundidad de mapeo
         </h3>
-        <p>CTAC publica que la fase satelital puede generar mapas 2D de minerales bajo cubierta a profundidades de hasta <span class="fig">9,8 kilómetros</span>.</p>
-        <p>El alcance efectivo depende del recurso, el área, la escala y las condiciones técnicas del proyecto.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="band band-deep" id="proceso">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Cómo trabajamos</p>
-        <h2>Cómo se desarrolla un <em>proyecto</em></h2>
-        <p class="lead">Cada proyecto se estructura de acuerdo con su ubicación, superficie, recurso objetivo, información disponible y necesidades de validación.</p>
-      </div>
-
-      <ol class="timeline rv">
-        <li class="tl-step"><span class="tl-n">01</span><h3>Contacto y evaluación inicial</h3><p>Revisión del área, el recurso objetivo y la etapa actual de exploración.</p></li>
-        <li class="tl-step"><span class="tl-n">02</span><h3>Acuerdo de confidencialidad</h3><p>Formalización de la confidencialidad antes de recibir información sensible del proyecto.</p></li>
-        <li class="tl-step"><span class="tl-n">03</span><h3>Entrega del polígono y datos disponibles</h3><p>Coordenadas del área e información geológica y geofísica con la que ya cuenta el cliente.</p></li>
-        <li class="tl-step"><span class="tl-n">04</span><h3>Revisión y definición del alcance con CTAC</h3><p>Análisis técnico conjunto para determinar la escala y las fases aplicables al proyecto.</p></li>
-        <li class="tl-step"><span class="tl-n">05</span><h3>Propuesta técnica y económica</h3><p>Alcance, entregables, tiempos estimados y condiciones comerciales.</p></li>
-        <li class="tl-step"><span class="tl-n">06</span><h3>Ejecución de la fase remota</h3><p>Espectrografía satelital sobre el área definida.</p></li>
-        <li class="tl-step"><span class="tl-n">07</span><h3>Fases de campo, cuando correspondan</h3><p>ECECI y SVER, según la tarea técnica y la información disponible del área.</p></li>
-        <li class="tl-step"><span class="tl-n">08</span><h3>Procesamiento y reporte</h3><p>Análisis de la información adquirida y elaboración del informe.</p></li>
-        <li class="tl-step"><span class="tl-n">09</span><h3>Presentación de resultados y recomendaciones</h3><p>Entrega y explicación de los resultados, con recomendaciones para las siguientes etapas.</p></li>
-      </ol>
-
-      <p class="note rv"><strong>Sobre los tiempos.</strong> Se determinan en cada proyecto de acuerdo con la superficie, el recurso, la escala, la topografía, la información disponible y el alcance técnico contratado, y quedan establecidos en la propuesta técnica. Los tiempos de referencia por fase están en <a href="#consideraciones" style="color:var(--gold-soft)">Tiempos de ejecución</a>.</p>
-    </div>
-  </section>
-
-  <!-- RESULTADOS -->
-  <section class="band band-alt" style="padding-bottom:clamp(40px,4.8vw,62px)">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Resultados</p>
-        <h2>Qué recibe el <em>cliente</em></h2>
-        <p class="lead">Entregables orientados a decidir dónde y cómo continuar el trabajo de campo.</p>
-      </div>
-
-      <div class="report-visual rv" style="max-width:640px" aria-hidden="true">
-        <svg viewBox="0 0 400 268" fill="none" focusable="false">
-          <rect x="8" y="8" width="384" height="252" rx="10" stroke="#aac5dd" stroke-opacity=".18"/>
-          <path d="M8 44H392" stroke="#aac5dd" stroke-opacity=".18"/>
-          <g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
-            <text x="24" y="30">REPORTE TÉCNICO</text>
-            <text x="24" y="76">MAPA DE ANOMALÍAS</text>
-            <text x="228" y="76">INTERVALOS</text>
-            <text x="24" y="238">OBJETIVOS PRIORIZADOS</text>
-          </g>
-          <rect x="24" y="86" width="176" height="118" rx="4" stroke="#c9a45c" stroke-opacity=".26"/>
-          <g stroke="#aac5dd" stroke-opacity=".14">
-            <path d="M68 86v118M112 86v118M156 86v118M24 116h176M24 146h176M24 176h176"/>
-          </g>
-          <path d="M62 168 C70 140 96 132 118 140 C140 148 148 172 132 186 C112 202 74 194 62 168Z" stroke="#c9a45c" stroke-opacity=".75"/>
-          <path d="M78 166 C84 150 102 146 114 152 C126 158 128 172 118 180 C104 190 84 182 78 166Z" stroke="#c9a45c" stroke-opacity=".5"/>
-          <circle cx="102" cy="166" r="3" fill="#c9a45c"/>
-          <path d="M150 108 C158 98 172 100 176 110 C180 120 170 128 160 124 C152 121 147 116 150 108Z" stroke="#5b8fa8" stroke-opacity=".6"/>
-          <rect x="228" y="86" width="148" height="118" rx="4" stroke="#c9a45c" stroke-opacity=".26"/>
-          <g stroke="#aac5dd" stroke-opacity=".28">
-            <path d="M240 104h124M240 128h124M240 152h124M240 176h124"/>
-          </g>
-          <path d="M282 92v106" stroke="#c9a45c" stroke-opacity=".8"/>
-          <rect x="266" y="120" width="32" height="14" fill="#c9a45c" fill-opacity=".22" stroke="#c9a45c" stroke-opacity=".8"/>
-          <rect x="270" y="164" width="24" height="10" fill="#c9a45c" fill-opacity=".22" stroke="#c9a45c" stroke-opacity=".8"/>
-          <g stroke="#c9a45c" stroke-opacity=".45"><path d="M312 120v14M312 164v10"/></g>
-          <g>
-            <rect x="24" y="246" width="46" height="5" rx="2.5" fill="#c9a45c" fill-opacity=".85"/>
-            <rect x="76" y="246" width="34" height="5" rx="2.5" fill="#c9a45c" fill-opacity=".55"/>
-            <rect x="116" y="246" width="26" height="5" rx="2.5" fill="#c9a45c" fill-opacity=".3"/>
-            <rect x="148" y="246" width="18" height="5" rx="2.5" fill="#aac5dd" fill-opacity=".22"/>
-          </g>
-        </svg>
-      </div>
-
-      <div class="rv" style="margin-top:clamp(30px,3.6vw,44px)">
-        <ul class="deliver">
-          <li><b>01</b>Mapas 2D de anomalías.</li>
-          <li><b>02</b>Delimitación de áreas de interés.</li>
-          <li><b>03</b>Vista superior de la mineralización.</li>
-          <li><b>04</b>Perfiles laterales o verticales.</li>
-          <li><b>05</b>Profundidades y espesores aproximados.</li>
-          <li><b>06</b>Modelo 3D integrado, cuando el alcance incluya las fases correspondientes.</li>
-          <li><b>07</b>Reporte técnico final en formato NI 43-101, con datos para modelos de Micromine o Geociencia.</li>
-          <li><b>08</b>Información para orientar perforación dirigida.</li>
-          <li><b>09</b>Acompañamiento posterior, según el alcance contratado.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- NOSOTROS / CTAC -->
-  <section class="band band-mid" id="nosotros">
-    <div class="wrap">
-      <div class="sec-head rv" style="max-width:78ch">
-        <p class="eyebrow">Quantik Geo + CTAC</p>
-        <h2>Una relación técnica y comercial definida</h2>
-        <p class="lead" style="max-width:78ch">Las tecnologías MFT™, WFT™ y OFT™ fueron desarrolladas por CTAC, empresa que conserva su propiedad intelectual. Quantik Geo coordina su comercialización, integración y desarrollo con los clientes.</p>
-        <p class="lead" style="max-width:78ch;margin-top:16px">Quantik Geo trabaja en coordinación con CTAC para estructurar y desarrollar proyectos de prospección de minerales, agua, petróleo y gas, acompañando al cliente desde la evaluación inicial hasta la entrega de resultados y recomendaciones.</p>
-      </div>
-
-      <div class="chain rv">
-        <div class="chain-node">
-          <span class="chain-role">Desarrollador y propietario</span>
-          <div class="chain-box is-light"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></div>
-        </div>
-        <div class="chain-link" aria-hidden="true"></div>
-        <div class="chain-node">
-          <span class="chain-role">Tecnología</span>
-          <div class="chain-box"><p>MFT™ · WFT™ · OFT™</p></div>
-        </div>
-        <div class="chain-link" aria-hidden="true"></div>
-        <div class="chain-node">
-          <span class="chain-role">Comercialización e integración</span>
-          <div class="chain-box"><img src="assets/quantikgeo-logo.png" alt="Quantik Geo" width="560" height="260"></div>
-        </div>
-        <div class="chain-link" aria-hidden="true"></div>
-        <div class="chain-node">
-          <span class="chain-role">Destinatario</span>
-          <div class="chain-box"><p>Cliente<small>Proyecto de exploración</small></p></div>
-        </div>
-      </div>
-
-      <div class="roles">
-        <div class="role-card rv">
-          <h3>CTAC <span>Desarrollador y propietario</span></h3>
-          <ul class="bullets">
-            <li>Desarrollador y propietario de las tecnologías MFT™, WFT™ y OFT™.</li>
-            <li>Responsable de la metodología y de la ejecución técnica especializada.</li>
-            <li>CTAC reporta más de <span class="fig">400 proyectos</span> exitosos de investigación y comerciales.</li>
-          </ul>
-        </div>
-        <div class="role-card rv">
-          <h3>Quantik Geo <span>Coordinación comercial</span></h3>
-          <ul class="bullets">
-            <li>Evaluación comercial inicial.</li>
-            <li>Coordinación con el cliente.</li>
-            <li>Definición del alcance.</li>
-            <li>Gestión del proyecto.</li>
-            <li>Acompañamiento durante la presentación y entrega de resultados.</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="note rv" style="margin-top:clamp(28px,3.4vw,40px)">MFT™, WFT™ y OFT™ son tecnologías propiedad de <strong>CTAC</strong>.</p>
-    </div>
-  </section>
-
-  <!-- OTRAS SOLUCIONES -->
-  <section class="band band-deep" id="soluciones">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Otras soluciones</p>
-        <h2>Agua, petróleo y gas</h2>
-        <p class="lead">CTAC desarrolla además dos tecnologías de prospección remota para otros recursos, que Quantik Geo también comercializa e integra.</p>
-      </div>
-      <div class="grid g3">
-
-        <article class="card rv">
-          <div class="sol-glyph" aria-hidden="true">
-            <svg viewBox="0 0 200 66" fill="none" stroke="#5b8fa8" stroke-width="1.1">
-              <path d="M0 18 C40 8 60 28 100 18 C140 8 160 28 200 18" opacity=".8"/>
-              <path d="M0 34 C40 24 60 44 100 34 C140 24 160 44 200 34" opacity=".55"/>
-              <path d="M0 50 C40 40 60 60 100 50 C140 40 160 60 200 50" opacity=".3"/>
-              <path d="M100 6 L100 62" stroke="#c9a45c" opacity=".5" stroke-dasharray="3 4"/>
-              <circle cx="100" cy="34" r="4" fill="#c9a45c" stroke="none"/>
-            </svg>
-          </div>
-          <div class="sol-mark"><span class="code">WFT</span><span class="tm">™</span></div>
-          <h3>Agua</h3>
-          <p>Tecnología de prospección de depósitos de agua.</p>
-          <div class="sol-meta"><span>Prospección remota</span></div>
-        </article>
-
-        <article class="card rv">
-          <div class="sol-glyph" aria-hidden="true">
-            <svg viewBox="0 0 200 66" fill="none" stroke="#5b8fa8" stroke-width="1.1">
-              <path d="M0 14 H200" opacity=".35"/>
-              <path d="M0 28 H200" opacity=".3"/>
-              <path d="M0 44 H200" opacity=".25"/>
-              <path d="M0 60 H200" opacity=".2"/>
-              <path d="M60 6 L60 66" stroke="#c9a45c" opacity=".55"/>
-              <path d="M60 40 C74 40 78 52 96 52 C112 52 118 44 132 44" stroke="#c9a45c" opacity=".8"/>
-              <circle cx="132" cy="44" r="4" fill="#c9a45c" stroke="none"/>
-            </svg>
-          </div>
-          <div class="sol-mark"><span class="code">OFT</span><span class="tm">™</span></div>
-          <h3>Petróleo y gas</h3>
-          <p>Tecnología para la prospección de yacimientos de petróleo y gas, tanto terrestres como costa afuera.</p>
-          <div class="sol-meta"><span>Prospección remota</span></div>
-        </article>
-
-        <article class="card rv">
-          <div class="sol-glyph" aria-hidden="true">
-            <svg viewBox="0 0 200 66" fill="none" stroke="#c9a45c" stroke-width="1.1">
-              <path d="M0 52 L34 34 L58 44 L92 20 L124 32 L158 12 L200 26" opacity=".9"/>
-              <path d="M0 62 L34 46 L58 55 L92 33 L124 44 L158 26 L200 38" opacity=".35" stroke="#5b8fa8"/>
-              <circle cx="92" cy="20" r="4.5" fill="#c9a45c" stroke="none"/>
-              <circle cx="92" cy="20" r="10" opacity=".45"/>
-              <path d="M92 30 L92 66" opacity=".3" stroke-dasharray="3 4"/>
-            </svg>
-          </div>
-          <div class="sol-mark"><span class="code">MFT</span><span class="tm">™</span></div>
-          <h3>Minerales</h3>
-          <p>Tecnología satelital y geofísica de campo para la identificación de anomalías asociadas con depósitos minerales.</p>
-          <div class="sol-meta"><a href="#mft" style="color:var(--gold-soft)">Ver la tecnología MFT™</a></div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PREGUNTAS FRECUENTES -->
-  <section class="band band-alt" id="faq">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Preguntas frecuentes</p>
-        <h2>Dudas habituales sobre MFT™</h2>
-        <p class="lead">Dudas habituales sobre la tecnología, los tiempos y el alcance de los proyectos.</p>
-      </div>
-
-      <div class="faq rv">
-        <div class="faq-group">
-          <h3>Tecnología</h3>
-          <details name="faq">
-          <summary>¿Qué es una espectrografía?</summary>
-          <div class="answer"><p>Es la representación gráfica de las anomalías electromagnéticas, que evidencia la presencia o ausencia del material buscado en el área analizada.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿Qué tipo de información satelital se utiliza?</summary>
-          <div class="answer"><p>Información multiespectral proveniente de satélites dedicados a estudios geofísicos, tipo Georesurs-P y DK.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿Cómo se adquiere la información?</summary>
-          <div class="answer"><p>La adquisición se realiza desde plataformas pasivas que adquieren información multiespectral.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿Qué información se obtiene mediante la fase satelital?</summary>
-          <div class="answer"><p>Metadatos multiespectrales asociados a las coordenadas del área de interés, a partir de los cuales se elaboran los mapas espectrográficos de anomalías.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿Cómo se procesa la información?</summary>
-          <div class="answer"><p>La data satelital se transfiere a una plancha satelital en la que la información digital se convierte a análoga, para su análisis espectrométrico en laboratorio de geofísica.</p></div>
-          </details>
-        </div>
-        <div class="faq-group">
-          <h3>Resultados y alcance técnico</h3>
-          <details name="faq">
-          <summary>¿Qué precisión y nivel de éxito se publican?</summary>
-          <div class="answer"><p>CTAC publica una precisión de hasta <span class="fig">94%</span> y un éxito entre <span class="fig">50% y 70%</span> en el descubrimiento de recursos económicamente viables. Los resultados dependen del alcance y las características de cada proyecto.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿A qué profundidad puede mapear la fase satelital?</summary>
-          <div class="answer">
-          <p>CTAC publica que la fase satelital puede generar mapas 2D de minerales bajo cubierta a profundidades de hasta <span class="fig">9,8 kilómetros</span>.</p>
-          <p>El alcance efectivo depende del recurso, el área, la escala y las condiciones técnicas del proyecto.</p>
-          </div>
-          </details>
-          <details name="faq">
-          <summary>¿Qué es el modelo 3D y cuándo se entrega?</summary>
-          <div class="answer"><p>Corresponde a la Fase 3: los resultados de las fases anteriores se integran mediante software de geointeligencia y análisis geofísico para generar un modelo 3D. Se entrega cuando el alcance contratado incluye esa fase.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿MFT™ sustituye la perforación?</summary>
-          <div class="answer"><p>MFT™ no sustituye la validación geológica, geofísica ni la perforación. Su función es generar y priorizar objetivos para orientar las siguientes etapas de exploración.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿MFT™ certifica reservas minerales?</summary>
-          <div class="answer"><p>MFT™ no constituye por sí sola una certificación de recursos o reservas minerales. Cualquier declaración de recursos o reservas requiere los estudios, validaciones y profesionales competentes aplicables.</p></div>
-          </details>
-        </div>
-        <div class="faq-group">
-          <h3>Tiempos y trabajos de campo</h3>
-          <details name="faq">
-          <summary>¿Es necesario realizar trabajos de campo?</summary>
-          <div class="answer"><p>Las fases 2.1 y 2.2 se ejecutan con instrumentación en campo y son las que aportan la vista superior refinada y la información de profundidad. Su ejecución depende del alcance contratado y de la tarea técnica definida para el proyecto.</p></div>
-          </details>
-          <details name="faq">
-          <summary>¿Cuánto tiempo requiere un estudio?</summary>
-          <div class="answer">
-          <p>Tiempos de referencia por fase:</p>
-          <ul class="bullets">
-          <li><strong>Fase 1</strong> — Localización satelital: <span class="fig">8 semanas</span>.</li>
-          <li><strong>Fase 2.1</strong> — Vista superior: <span class="fig">2 semanas</span>.</li>
-          <li><strong>Fase 2.2</strong> — Vista lateral: <span class="fig">2 semanas</span>.</li>
-          <li><strong>Fase 3</strong> — Integración y modelo 3D: <span class="fig">5 semanas</span>.</li>
-          </ul>
-          <p>Un alcance completo de referencia para las fases 1 a 3 se presenta en aproximadamente <span class="fig">17 semanas</span>. Pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado.</p>
-          </div>
-          </details>
-          <details name="faq">
-          <summary>¿Para qué sirven ECECI y SVER?</summary>
-          <div class="answer">
-          <p><strong>ECECI</strong> delimita en superficie la extensión de la anomalía electromagnética identificada durante la espectrografía.</p>
-          <p><strong>SVER</strong> determina las profundidades, la cantidad de intervalos polarizados y sus espesores.</p>
-          </div>
-          </details>
-        </div>
-        <div class="faq-group">
-          <h3>Alcance del proyecto</h3>
-          <details name="faq">
-          <summary>¿Qué información necesita Quantik Geo para evaluar un proyecto?</summary>
-          <div class="answer">
-          <ul class="bullets two">
-          <li>Ubicación general.</li>
-          <li>Polígono o coordenadas.</li>
-          <li>Mineral objetivo.</li>
-          <li>Superficie.</li>
-          <li>Información geológica y geofísica disponible.</li>
-          <li>Historial de trabajos realizados.</li>
-          <li>Objetivo del estudio.</li>
-          </ul>
-          </div>
-          </details>
-        </div>
-        <div class="faq-group">
-          <h3>Permisos y confidencialidad</h3>
-          <details name="faq">
-          <summary>¿Se requieren licencias ambientales para utilizar la tecnología?</summary>
-          <div class="answer">
-          <p>MFT™ es una tecnología pasiva y no requiere licencias ambientales para su uso.</p>
-          <p>Las actividades posteriores, como acceso al terreno, trabajos de exploración directa o perforación, estarán sujetas a los requisitos aplicables de cada proyecto y jurisdicción.</p>
-          </div>
-          </details>
-          <details name="faq">
-          <summary>¿Cómo se protege la información del cliente?</summary>
-          <div class="answer"><p>Quantik Geo puede formalizar acuerdos de confidencialidad antes de recibir información sensible del proyecto. El alcance y las condiciones se definen en cada caso.</p></div>
-          </details>
-        </div>
-      </div>
-
-      <p class="source-note rv">Las referencias técnicas de esta sección provienen de la información publicada por CTAC sobre las tecnologías MFT™, WFT™ y OFT™.</p>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta band-mid" id="contacto">
-    <div class="topo" aria-hidden="true" style="opacity:.5">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false"><path d="M1164 300C1164 303 1163 306 1164 310C1164 313 1165 317 1165 320C1165 324 1166 329 1164 332C1163 336 1160 340 1155 343C1151 345 1144 347 1139 348C1133 349 1126 349 1120 350C1114 350 1109 350 1103 351C1098 351 1093 352 1088 353C1083 353 1077 354 1072 354C1067 353 1061 352 1057 351C1052 350 1048 348 1043 346C1039 344 1034 343 1030 341C1025 340 1020 339 1015 337C1010 335 1005 333 1001 330C997 328 993 325 990 322C987 318 985 315 983 311C981 308 980 304 980 300C980 296 981 292 984 289C986 285 991 282 995 280C999 277 1005 275 1010 273C1015 271 1019 270 1022 267C1026 265 1028 262 1031 260C1034 257 1037 253 1041 251C1045 248 1050 246 1055 245C1060 244 1066 244 1072 244C1077 244 1083 244 1088 245C1094 245 1099 245 1105 245C1111 246 1117 246 1122 247C1128 248 1133 250 1138 253C1142 255 1145 258 1148 261C1151 264 1153 268 1155 271C1157 274 1159 277 1160 281C1162 284 1163 287 1163 290C1164 294 1163 297 1164 300Z"/><path d="M1258 300C1261 307 1266 314 1268 322C1269 329 1271 338 1267 345C1264 352 1255 359 1246 364C1236 368 1222 371 1210 373C1198 376 1185 376 1175 378C1165 380 1156 382 1147 384C1139 386 1131 390 1123 393C1114 395 1105 398 1095 400C1085 401 1075 402 1065 403C1054 404 1043 404 1032 404C1021 404 1009 404 998 402C987 400 976 397 967 393C958 388 951 382 944 377C938 371 933 364 928 358C923 352 917 346 913 340C908 334 903 327 901 321C899 314 899 307 902 300C905 293 913 287 919 281C925 276 933 271 938 266C942 260 945 255 947 249C950 243 949 235 952 228C956 221 960 213 967 207C974 201 984 196 994 194C1005 191 1018 190 1029 189C1041 188 1052 189 1063 189C1075 190 1086 191 1096 193C1106 195 1116 197 1126 200C1135 203 1143 208 1151 211C1160 215 1167 218 1176 221C1184 225 1194 227 1202 231C1211 235 1220 239 1227 244C1234 249 1239 255 1243 261C1247 267 1247 274 1250 280C1252 287 1255 293 1258 300Z"/><path d="M1333 300C1343 310 1356 321 1359 332C1363 343 1361 356 1355 366C1350 376 1337 386 1325 394C1314 402 1299 409 1285 416C1272 423 1258 429 1243 434C1228 438 1212 442 1196 444C1180 446 1163 446 1147 447C1132 447 1117 446 1102 446C1087 446 1073 447 1058 447C1043 447 1028 447 1013 445C999 443 985 440 971 435C958 431 947 424 935 419C922 414 910 409 895 405C880 400 862 396 846 390C831 383 813 376 803 366C794 357 789 345 790 334C792 323 802 310 811 300C820 290 834 281 843 272C851 264 858 256 863 248C869 240 871 230 876 222C882 213 888 204 896 196C904 188 915 181 927 174C938 167 951 161 964 155C977 149 991 143 1006 139C1021 134 1038 131 1055 130C1071 129 1089 131 1105 133C1121 135 1136 140 1152 144C1167 148 1182 151 1196 156C1211 160 1226 164 1239 170C1251 176 1262 184 1269 193C1276 202 1277 214 1280 223C1282 233 1279 243 1282 251C1285 260 1291 266 1299 275C1308 283 1323 290 1333 300Z"/><path d="M1455 300C1448 314 1430 327 1418 339C1406 351 1393 361 1383 373C1374 384 1370 396 1361 408C1352 419 1345 433 1331 442C1317 451 1298 458 1279 463C1259 468 1236 467 1216 470C1197 472 1179 473 1161 477C1143 482 1128 489 1109 496C1090 503 1070 513 1047 518C1025 524 999 527 976 527C952 527 928 522 906 517C884 511 863 502 845 493C827 483 810 471 800 458C789 446 782 430 780 415C778 401 784 384 786 371C788 357 794 345 794 333C793 321 787 312 782 300C776 288 764 276 760 263C757 250 756 236 761 223C767 211 781 200 794 190C806 180 823 172 836 162C849 152 860 141 873 130C885 118 897 103 914 93C930 82 952 72 974 68C996 64 1023 66 1046 69C1069 73 1091 82 1112 88C1132 95 1150 103 1167 109C1185 116 1202 121 1219 127C1235 134 1251 140 1267 146C1283 153 1298 160 1315 167C1331 175 1350 181 1368 189C1387 198 1410 206 1425 217C1441 228 1456 242 1461 256C1466 270 1462 286 1455 300Z"/><path d="M1585 300C1588 318 1577 339 1565 356C1552 373 1530 389 1510 403C1490 417 1468 430 1446 441C1424 451 1401 461 1377 468C1354 476 1328 480 1306 486C1284 491 1263 495 1243 503C1223 511 1207 521 1186 532C1166 542 1144 557 1120 564C1095 572 1065 578 1038 578C1012 577 984 569 960 562C935 555 915 543 891 535C868 527 844 521 819 514C794 507 762 503 740 492C717 482 693 469 682 453C671 437 672 416 674 397C677 379 693 360 699 344C706 328 713 315 714 300C715 285 708 272 705 257C701 241 694 224 694 207C694 191 698 173 705 156C712 139 723 122 737 106C751 90 767 73 788 60C809 48 836 36 864 31C892 25 926 26 956 29C985 32 1016 43 1042 48C1069 54 1091 62 1115 65C1139 68 1162 66 1186 68C1211 70 1239 69 1261 75C1284 80 1305 90 1322 102C1338 113 1347 129 1361 141C1375 154 1385 165 1404 176C1423 186 1450 194 1474 205C1498 217 1531 230 1550 246C1568 261 1583 282 1585 300Z"/><path d="M1494 300C1490 317 1499 331 1506 349C1512 367 1529 388 1532 408C1534 428 1532 451 1521 469C1511 488 1489 504 1469 520C1450 536 1426 550 1402 565C1379 579 1355 596 1328 608C1300 621 1269 634 1236 641C1204 647 1166 649 1132 647C1098 646 1063 639 1030 632C998 626 967 618 938 609C909 600 880 591 857 577C835 564 815 546 801 529C787 512 784 490 773 474C762 457 757 443 738 431C718 419 688 413 657 402C625 390 578 378 549 362C521 345 493 321 485 300C477 279 489 254 503 233C517 213 548 195 570 178C593 160 616 146 637 130C658 114 674 97 696 83C718 69 742 55 770 45C797 36 830 31 860 26C891 22 921 22 951 18C980 15 1007 11 1036 8C1065 5 1095 0 1125 -1C1155 -1 1186 1 1216 4C1246 8 1274 15 1305 20C1336 25 1368 29 1402 36C1435 43 1476 47 1505 60C1535 72 1567 88 1580 108C1593 128 1591 156 1583 179C1575 202 1547 227 1532 248C1517 268 1499 283 1494 300Z"/><path d="M1590 300C1590 320 1593 338 1601 360C1610 383 1632 408 1642 435C1651 462 1665 496 1657 522C1650 548 1626 574 1594 591C1563 607 1511 614 1469 620C1427 626 1381 623 1342 627C1304 631 1272 637 1238 644C1203 650 1170 663 1135 667C1099 670 1060 670 1026 663C992 656 960 638 932 623C904 609 883 589 857 577C832 565 807 557 776 550C745 542 706 540 671 531C635 523 595 513 562 499C528 485 498 466 471 446C444 426 418 403 400 379C383 354 365 326 365 300C365 274 376 244 400 221C425 198 471 178 510 163C549 148 601 141 635 129C670 118 695 109 716 94C737 79 743 57 761 38C779 19 797 -5 824 -19C850 -33 887 -41 922 -45C956 -49 993 -44 1029 -44C1064 -45 1095 -44 1132 -48C1169 -52 1208 -64 1249 -67C1290 -71 1338 -77 1378 -71C1418 -66 1458 -52 1487 -34C1516 -17 1536 9 1553 33C1570 56 1579 82 1588 105C1597 129 1603 151 1606 174C1608 196 1605 218 1603 239C1600 260 1590 280 1590 300Z"/><path d="M1861 300C1857 329 1846 360 1828 387C1811 414 1788 441 1757 462C1725 484 1681 502 1640 515C1598 528 1546 532 1508 542C1469 551 1437 556 1411 571C1384 587 1373 612 1350 636C1327 661 1306 699 1273 720C1240 742 1193 762 1150 767C1106 773 1055 762 1012 752C970 742 932 721 892 709C853 697 816 688 776 679C735 670 687 666 650 653C612 640 572 623 549 600C526 578 517 546 511 518C506 491 516 461 516 436C516 410 516 389 511 366C506 343 493 323 485 300C477 277 468 254 463 228C458 203 456 178 453 149C451 121 445 90 449 58C452 26 454 -13 474 -42C495 -71 530 -102 573 -116C617 -130 682 -132 737 -127C791 -123 852 -102 901 -91C949 -80 987 -66 1026 -62C1065 -59 1097 -66 1135 -69C1173 -71 1216 -80 1253 -77C1291 -74 1329 -63 1361 -49C1392 -36 1413 -12 1440 4C1467 21 1489 37 1522 50C1556 63 1600 71 1641 85C1682 99 1734 114 1768 135C1803 156 1832 184 1847 211C1863 239 1864 271 1861 300Z"/><path d="M1935 300C1958 331 1974 371 1963 402C1952 434 1909 466 1867 489C1826 513 1761 528 1713 543C1665 558 1618 568 1578 581C1537 594 1505 607 1470 620C1436 634 1403 646 1369 659C1334 673 1301 685 1264 702C1228 719 1193 741 1149 761C1105 782 1055 811 1002 825C949 838 883 849 831 843C778 837 727 813 687 789C647 765 623 727 593 699C564 672 541 646 510 622C479 599 436 582 407 558C378 534 344 508 338 478C331 449 346 412 367 383C388 353 437 325 462 300C487 275 513 258 517 235C522 211 502 188 491 159C479 129 452 92 448 58C444 23 449 -15 466 -47C483 -79 516 -108 552 -133C588 -158 633 -181 681 -197C728 -213 784 -227 837 -228C891 -230 952 -222 1004 -209C1056 -196 1104 -168 1147 -149C1190 -130 1222 -108 1262 -97C1302 -85 1341 -85 1386 -80C1430 -76 1486 -79 1529 -69C1572 -58 1616 -41 1644 -19C1671 4 1680 37 1695 64C1710 91 1711 118 1733 143C1754 168 1790 188 1823 214C1857 240 1912 269 1935 300Z"/><path d="M313 780C312 784 312 787 311 791C311 794 310 798 308 801C306 804 303 808 300 810C296 813 292 815 288 817C285 819 281 821 277 823C273 825 269 827 264 828C260 830 256 831 251 832C246 832 241 832 237 832C232 832 228 831 223 832C218 832 214 833 208 833C203 834 196 836 191 835C185 835 178 834 173 832C169 830 165 826 163 823C161 819 161 814 160 810C159 806 160 803 160 799C159 796 158 793 158 789C157 786 156 783 156 780C156 777 157 774 158 771C159 767 160 765 162 761C163 758 164 755 166 752C167 749 169 745 171 742C174 739 177 736 180 734C184 731 188 729 193 727C197 726 202 724 207 722C211 721 217 719 222 718C227 717 233 717 238 717C243 718 249 721 253 723C257 726 260 730 263 733C266 736 268 740 271 742C274 744 278 745 282 747C286 749 291 750 296 752C300 754 304 756 307 759C310 762 311 766 312 769C313 773 313 776 313 780Z"/><path d="M379 780C379 786 379 793 377 799C374 805 368 811 362 816C357 821 349 824 344 829C338 834 335 838 331 845C328 851 327 859 323 866C319 874 315 883 307 889C300 895 289 899 279 901C269 903 256 901 246 899C235 898 225 893 215 890C206 887 197 884 189 881C181 877 173 874 166 870C159 866 153 861 147 857C141 853 136 848 131 843C125 839 119 835 113 831C107 826 99 822 94 817C89 812 84 806 81 799C79 793 79 787 78 780C78 773 79 767 79 760C78 753 77 746 77 739C78 731 77 722 81 716C86 709 93 702 102 698C111 694 124 693 135 692C147 692 159 694 169 694C178 694 186 694 194 692C202 690 209 687 217 684C226 682 235 678 244 677C253 676 263 676 272 676C282 677 291 679 300 682C309 684 319 687 327 690C335 694 344 698 350 703C357 709 361 715 365 722C368 728 369 735 371 742C372 748 373 755 375 761C376 767 379 774 379 780Z"/><path d="M467 780C468 790 465 801 462 810C458 820 450 829 444 838C438 847 432 856 425 864C418 873 412 883 402 890C393 897 381 904 368 908C355 911 338 911 323 911C309 911 294 907 282 908C269 908 260 909 248 913C236 917 224 926 210 932C196 938 178 946 162 947C146 949 128 948 114 943C100 939 88 929 78 921C68 913 60 902 53 893C46 884 39 874 34 865C29 856 25 846 23 836C21 826 23 816 24 807C25 798 29 789 30 780C32 771 32 763 33 754C34 745 34 736 36 728C39 719 44 710 51 702C57 694 66 688 74 681C82 673 90 666 98 657C105 648 112 637 121 627C131 618 143 606 157 600C171 595 189 592 205 593C221 595 239 604 252 611C266 619 277 630 288 638C299 646 307 652 318 657C328 661 340 663 352 667C363 671 375 675 385 681C396 686 404 694 412 701C421 708 427 716 434 725C441 733 449 741 455 751C460 760 465 770 467 780Z"/><path d="M506 780C507 792 509 804 511 817C513 830 519 844 518 858C517 872 515 887 507 900C499 913 485 924 471 934C457 944 439 951 422 958C405 965 387 971 368 974C350 978 330 980 311 978C292 977 272 971 255 967C238 963 223 955 207 953C191 951 178 952 159 954C141 956 119 964 97 966C76 969 48 971 28 967C8 963 -10 952 -22 941C-33 929 -36 911 -41 897C-45 883 -44 868 -47 855C-51 842 -56 830 -60 818C-64 805 -70 793 -69 780C-68 767 -62 754 -54 743C-46 731 -32 722 -21 712C-10 702 2 694 11 685C21 676 27 666 36 656C45 646 53 635 64 626C74 616 87 607 100 598C114 589 128 580 145 570C161 561 179 550 199 543C218 536 242 528 263 528C284 529 308 535 326 545C343 555 356 573 366 588C377 603 380 621 389 633C397 645 404 653 416 661C427 669 445 674 458 681C471 689 486 698 494 708C502 719 505 732 507 744C509 756 505 768 506 780Z"/><path d="M566 780C577 795 600 811 613 830C626 849 644 873 645 892C645 912 634 934 616 947C598 961 564 969 536 975C508 981 475 980 449 983C423 986 402 989 381 993C360 997 342 1004 322 1007C302 1011 281 1013 261 1013C240 1013 220 1008 200 1006C180 1003 162 999 142 997C121 995 100 996 78 994C56 992 31 990 10 984C-12 979 -33 970 -52 960C-72 950 -88 938 -106 926C-124 913 -144 901 -159 886C-175 871 -194 854 -200 836C-205 819 -204 797 -193 780C-182 763 -155 746 -133 733C-110 719 -78 712 -60 701C-41 691 -29 684 -21 671C-13 659 -17 642 -12 626C-7 609 -4 588 8 574C19 559 38 547 58 538C78 530 103 528 126 524C149 520 172 518 195 516C218 513 242 509 266 509C290 509 315 511 337 516C359 522 380 533 399 543C417 553 432 567 447 579C463 590 478 601 491 614C504 626 518 638 526 652C534 665 538 681 541 696C544 710 540 725 544 739C548 753 554 765 566 780Z"/><path d="M629 780C635 798 646 816 651 835C656 855 663 877 661 897C658 917 649 938 637 957C626 975 608 993 591 1010C574 1028 556 1047 535 1063C513 1078 490 1097 462 1105C433 1114 397 1118 365 1112C333 1107 297 1088 269 1073C241 1058 220 1034 198 1022C176 1011 162 1005 139 1005C115 1005 88 1016 59 1020C30 1024 -8 1031 -37 1028C-67 1025 -95 1014 -116 1001C-137 988 -150 968 -163 951C-177 933 -188 915 -199 896C-210 878 -225 860 -232 840C-239 821 -245 800 -242 780C-239 760 -227 740 -216 722C-204 704 -186 687 -172 671C-157 655 -144 639 -129 624C-114 610 -99 594 -80 582C-60 571 -36 562 -13 554C9 547 35 545 57 537C79 528 96 519 118 504C140 490 159 466 186 450C213 433 248 412 279 406C311 401 350 405 377 417C405 430 427 458 444 480C460 502 466 530 478 550C489 570 499 585 513 600C526 614 546 624 560 637C574 651 588 665 598 680C607 696 610 713 615 730C620 746 623 762 629 780Z"/></svg>
-    </div>
-    <div class="wrap">
-      <div class="cta-grid">
-        <div class="cta-aside rv">
-          <p class="eyebrow">Contacto</p>
-          <h2>Conversemos sobre <em>su proyecto</em></h2>
-          <p class="lead">Comparta la ubicación general, el recurso objetivo y la etapa actual de exploración. Nuestro equipo realizará una evaluación inicial para definir los siguientes pasos.</p>
-          <div class="cta-alt">
-            <span>También puede escribirnos directamente:</span>
-            <a href="mailto:ventas@quantikgeo.com">ventas@quantikgeo.com</a>
-            <a href="https://wa.me/526673907814" target="_blank" rel="noopener">WhatsApp +52 667 390 7814</a>
-          </div>
-        </div>
-
-        <div class="form-card rv">
-          <form name="evaluacion-inicial" method="POST" action="/gracias.html"
-                data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="evaluacion-inicial">
-            <p class="form-hp"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="f-nombre">Nombre<span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="f-nombre" name="nombre" required autocomplete="name">
-              </div>
-              <div class="field">
-                <label for="f-email">Correo<span class="req" aria-hidden="true">*</span></label>
-                <input type="email" id="f-email" name="email" required autocomplete="email">
-              </div>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="f-empresa">Empresa</label>
-                <input type="text" id="f-empresa" name="empresa" autocomplete="organization">
-              </div>
-              <div class="field">
-                <label for="f-telefono">Teléfono</label>
-                <input type="tel" id="f-telefono" name="telefono" autocomplete="tel">
-              </div>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="f-recurso">Recurso objetivo<span class="req" aria-hidden="true">*</span></label>
-                <select id="f-recurso" name="recurso" required>
-                  <option value="">Seleccione una opción</option>
-                  <option value="Minerales">Minerales</option>
-                  <option value="Agua">Agua</option>
-                  <option value="Petróleo y gas">Petróleo y gas</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="f-etapa">Etapa actual</label>
-                <select id="f-etapa" name="etapa">
-                  <option value="">Seleccione una opción</option>
-                  <option value="Exploración inicial">Exploración inicial</option>
-                  <option value="Exploración avanzada">Exploración avanzada</option>
-                  <option value="Proyecto en operación">Proyecto en operación</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="f-ubicacion">Ubicación general del proyecto<span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="f-ubicacion" name="ubicacion" required placeholder="Estado, región o país">
-            </div>
-
-            <div class="field">
-              <label for="f-mensaje">Detalles del proyecto<span class="req" aria-hidden="true">*</span></label>
-              <textarea id="f-mensaje" name="mensaje" rows="4" required placeholder="Superficie aproximada, información disponible y objetivo del trabajo."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary form-submit">Solicitar evaluación inicial</button>
-            <p class="form-note">Los campos marcados con <span style="color:var(--gold)">*</span> son obligatorios. Su información se trata de forma confidencial.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<p>CTAC publica que la fase satelital puede generar mapas 2D de minerales bajo cubierta a profundidades de hasta <span class="fig" data-i18n="k155">9,8 kilómetros</span>.</p>
+<p data-i18n="k156">El alcance efectivo depende del recurso, el área, la escala y las condiciones técnicas del proyecto.</p>
+</div>
+</div>
+</section>
+<!-- PROCESO -->
+<section class="band band-deep" id="proceso">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k157">Cómo trabajamos</p>
+<h2 data-i18n="k158">Cómo se desarrolla un <em>proyecto</em></h2>
+<p class="lead" data-i18n="k159">Cada proyecto se estructura de acuerdo con su ubicación, superficie, recurso objetivo, información disponible y necesidades de validación.</p>
+</div>
+<ol class="timeline rv">
+<li class="tl-step"><span class="tl-n">01</span><h3 data-i18n="k160">Contacto y evaluación inicial</h3><p data-i18n="k161">Revisión del área, el recurso objetivo y la etapa actual de exploración.</p></li>
+<li class="tl-step"><span class="tl-n">02</span><h3 data-i18n="k162">Acuerdo de confidencialidad</h3><p data-i18n="k163">Formalización de la confidencialidad antes de recibir información sensible del proyecto.</p></li>
+<li class="tl-step"><span class="tl-n">03</span><h3 data-i18n="k164">Entrega del polígono y datos disponibles</h3><p data-i18n="k165">Coordenadas del área e información geológica y geofísica con la que ya cuenta el cliente.</p></li>
+<li class="tl-step"><span class="tl-n">04</span><h3 data-i18n="k166">Revisión y definición del alcance con CTAC</h3><p data-i18n="k167">Análisis técnico conjunto para determinar la escala y las fases aplicables al proyecto.</p></li>
+<li class="tl-step"><span class="tl-n">05</span><h3 data-i18n="k168">Propuesta técnica y económica</h3><p data-i18n="k169">Alcance, entregables, tiempos estimados y condiciones comerciales.</p></li>
+<li class="tl-step"><span class="tl-n">06</span><h3 data-i18n="k170">Ejecución de la fase remota</h3><p data-i18n="k171">Espectrografía satelital sobre el área definida.</p></li>
+<li class="tl-step"><span class="tl-n">07</span><h3 data-i18n="k172">Fases de campo, cuando correspondan</h3><p data-i18n="k173">ECECI y SVER, según la tarea técnica y la información disponible del área.</p></li>
+<li class="tl-step"><span class="tl-n">08</span><h3 data-i18n="k174">Procesamiento y reporte</h3><p data-i18n="k175">Análisis de la información adquirida y elaboración del informe.</p></li>
+<li class="tl-step"><span class="tl-n">09</span><h3 data-i18n="k176">Presentación de resultados y recomendaciones</h3><p data-i18n="k177">Entrega y explicación de los resultados, con recomendaciones para las siguientes etapas.</p></li>
+</ol>
+<p class="note rv"><strong data-i18n="k178">Sobre los tiempos.</strong> Se determinan en cada proyecto de acuerdo con la superficie, el recurso, la escala, la topografía, la información disponible y el alcance técnico contratado, y quedan establecidos en la propuesta técnica. Los tiempos de referencia por fase están en <a data-i18n="k179" href="#consideraciones" style="color:var(--gold-soft)">Tiempos de ejecución</a>.</p>
+</div>
+</section>
+<!-- RESULTADOS -->
+<section class="band band-alt" style="padding-bottom:clamp(40px,4.8vw,62px)">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k180">Resultados</p>
+<h2 data-i18n="k181">Qué recibe el <em>cliente</em></h2>
+<p class="lead" data-i18n="k182">Entregables orientados a decidir dónde y cómo continuar el trabajo de campo.</p>
+</div>
+<div aria-hidden="true" class="report-visual rv" style="max-width:640px">
+<svg fill="none" focusable="false" viewbox="0 0 400 268">
+<rect height="252" rx="10" stroke="#aac5dd" stroke-opacity=".18" width="384" x="8" y="8"></rect>
+<path d="M8 44H392" stroke="#aac5dd" stroke-opacity=".18"></path>
+<g fill="#adc0d3" font-family="Inter,sans-serif" font-size="9.6" letter-spacing="1.5">
+<text x="24" y="30">REPORTE TÉCNICO</text>
+<text x="24" y="76">MAPA DE ANOMALÍAS</text>
+<text x="228" y="76">INTERVALOS</text>
+<text x="24" y="238">OBJETIVOS PRIORIZADOS</text>
+</g>
+<rect height="118" rx="4" stroke="#c9a45c" stroke-opacity=".26" width="176" x="24" y="86"></rect>
+<g stroke="#aac5dd" stroke-opacity=".14">
+<path d="M68 86v118M112 86v118M156 86v118M24 116h176M24 146h176M24 176h176"></path>
+</g>
+<path d="M62 168 C70 140 96 132 118 140 C140 148 148 172 132 186 C112 202 74 194 62 168Z" stroke="#c9a45c" stroke-opacity=".75"></path>
+<path d="M78 166 C84 150 102 146 114 152 C126 158 128 172 118 180 C104 190 84 182 78 166Z" stroke="#c9a45c" stroke-opacity=".5"></path>
+<circle cx="102" cy="166" fill="#c9a45c" r="3"></circle>
+<path d="M150 108 C158 98 172 100 176 110 C180 120 170 128 160 124 C152 121 147 116 150 108Z" stroke="#5b8fa8" stroke-opacity=".6"></path>
+<rect height="118" rx="4" stroke="#c9a45c" stroke-opacity=".26" width="148" x="228" y="86"></rect>
+<g stroke="#aac5dd" stroke-opacity=".28">
+<path d="M240 104h124M240 128h124M240 152h124M240 176h124"></path>
+</g>
+<path d="M282 92v106" stroke="#c9a45c" stroke-opacity=".8"></path>
+<rect fill="#c9a45c" fill-opacity=".22" height="14" stroke="#c9a45c" stroke-opacity=".8" width="32" x="266" y="120"></rect>
+<rect fill="#c9a45c" fill-opacity=".22" height="10" stroke="#c9a45c" stroke-opacity=".8" width="24" x="270" y="164"></rect>
+<g stroke="#c9a45c" stroke-opacity=".45"><path d="M312 120v14M312 164v10"></path></g>
+<g>
+<rect fill="#c9a45c" fill-opacity=".85" height="5" rx="2.5" width="46" x="24" y="246"></rect>
+<rect fill="#c9a45c" fill-opacity=".55" height="5" rx="2.5" width="34" x="76" y="246"></rect>
+<rect fill="#c9a45c" fill-opacity=".3" height="5" rx="2.5" width="26" x="116" y="246"></rect>
+<rect fill="#aac5dd" fill-opacity=".22" height="5" rx="2.5" width="18" x="148" y="246"></rect>
+</g>
+</svg>
+</div>
+<div class="rv" style="margin-top:clamp(30px,3.6vw,44px)">
+<ul class="deliver">
+<li data-i18n="k183"><b>01</b>Mapas 2D de anomalías.</li>
+<li data-i18n="k184"><b>02</b>Delimitación de áreas de interés.</li>
+<li data-i18n="k185"><b>03</b>Vista superior de la mineralización.</li>
+<li data-i18n="k186"><b>04</b>Perfiles laterales o verticales.</li>
+<li data-i18n="k187"><b>05</b>Profundidades y espesores aproximados.</li>
+<li data-i18n="k188"><b>06</b>Modelo 3D integrado, cuando el alcance incluya las fases correspondientes.</li>
+<li data-i18n="k189"><b>07</b>Reporte técnico final en formato NI 43-101, con datos para modelos de Micromine o Geociencia.</li>
+<li data-i18n="k190"><b>08</b>Información para orientar perforación dirigida.</li>
+<li data-i18n="k191"><b>09</b>Acompañamiento posterior, según el alcance contratado.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- NOSOTROS / CTAC -->
+<section class="band band-mid" id="nosotros">
+<div class="wrap">
+<div class="sec-head rv" style="max-width:78ch">
+<p class="eyebrow" data-i18n="k192">Quantik Geo + CTAC</p>
+<h2 data-i18n="k193">Una relación técnica y comercial definida</h2>
+<p class="lead" data-i18n="k194" style="max-width:78ch">Las tecnologías MFT™, WFT™ y OFT™ fueron desarrolladas por CTAC, empresa que conserva su propiedad intelectual. Quantik Geo coordina su comercialización, integración y desarrollo con los clientes.</p>
+<p class="lead" data-i18n="k195" style="max-width:78ch;margin-top:16px">Quantik Geo trabaja en coordinación con CTAC para estructurar y desarrollar proyectos de prospección de minerales, agua, petróleo y gas, acompañando al cliente desde la evaluación inicial hasta la entrega de resultados y recomendaciones.</p>
+</div>
+<div class="chain rv">
+<div class="chain-node">
+<span class="chain-role" data-i18n="k196">Desarrollador y propietario</span>
+<div class="chain-box is-light"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></div>
+</div>
+<div aria-hidden="true" class="chain-link"></div>
+<div class="chain-node">
+<span class="chain-role" data-i18n="k197">Tecnología</span>
+<div class="chain-box"><p data-i18n="k198">MFT™ · WFT™ · OFT™</p></div>
+</div>
+<div aria-hidden="true" class="chain-link"></div>
+<div class="chain-node">
+<span class="chain-role" data-i18n="k199">Comercialización e integración</span>
+<div class="chain-box"><img alt="Quantik Geo" height="260" src="assets/quantikgeo-logo.png" width="560"/></div>
+</div>
+<div aria-hidden="true" class="chain-link"></div>
+<div class="chain-node">
+<span class="chain-role" data-i18n="k200">Destinatario</span>
+<div class="chain-box"><p>Cliente<small data-i18n="k201">Proyecto de exploración</small></p></div>
+</div>
+</div>
+<div class="roles">
+<div class="role-card rv">
+<h3>CTAC <span data-i18n="k202">Desarrollador y propietario</span></h3>
+<ul class="bullets">
+<li data-i18n="k203">Desarrollador y propietario de las tecnologías MFT™, WFT™ y OFT™.</li>
+<li data-i18n="k204">Responsable de la metodología y de la ejecución técnica especializada.</li>
+<li>CTAC reporta más de <span class="fig" data-i18n="k205">400 proyectos</span> exitosos de investigación y comerciales.</li>
+</ul>
+</div>
+<div class="role-card rv">
+<h3>Quantik Geo <span data-i18n="k206">Coordinación comercial</span></h3>
+<ul class="bullets">
+<li data-i18n="k207">Evaluación comercial inicial.</li>
+<li data-i18n="k208">Coordinación con el cliente.</li>
+<li data-i18n="k209">Definición del alcance.</li>
+<li data-i18n="k210">Gestión del proyecto.</li>
+<li data-i18n="k211">Acompañamiento durante la presentación y entrega de resultados.</li>
+</ul>
+</div>
+</div>
+<p class="note rv" style="margin-top:clamp(28px,3.4vw,40px)">MFT™, WFT™ y OFT™ son tecnologías propiedad de <strong data-i18n="k212">CTAC</strong>.</p>
+</div>
+</section>
+<!-- OTRAS SOLUCIONES -->
+<section class="band band-deep" id="soluciones">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k213">Otras soluciones</p>
+<h2 data-i18n="k214">Agua, petróleo y gas</h2>
+<p class="lead" data-i18n="k215">CTAC desarrolla además dos tecnologías de prospección remota para otros recursos, que Quantik Geo también comercializa e integra.</p>
+</div>
+<div class="grid g3">
+<article class="card rv">
+<div aria-hidden="true" class="sol-glyph">
+<svg fill="none" stroke="#5b8fa8" stroke-width="1.1" viewbox="0 0 200 66">
+<path d="M0 18 C40 8 60 28 100 18 C140 8 160 28 200 18" opacity=".8"></path>
+<path d="M0 34 C40 24 60 44 100 34 C140 24 160 44 200 34" opacity=".55"></path>
+<path d="M0 50 C40 40 60 60 100 50 C140 40 160 60 200 50" opacity=".3"></path>
+<path d="M100 6 L100 62" opacity=".5" stroke="#c9a45c" stroke-dasharray="3 4"></path>
+<circle cx="100" cy="34" fill="#c9a45c" r="4" stroke="none"></circle>
+</svg>
+</div>
+<div class="sol-mark"><span class="code" data-i18n="k216">WFT</span><span class="tm">™</span></div>
+<h3 data-i18n="k217">Agua</h3>
+<p data-i18n="k218">Tecnología de prospección de depósitos de agua.</p>
+<div class="sol-meta"><span data-i18n="k219">Prospección remota</span></div>
+</article>
+<article class="card rv">
+<div aria-hidden="true" class="sol-glyph">
+<svg fill="none" stroke="#5b8fa8" stroke-width="1.1" viewbox="0 0 200 66">
+<path d="M0 14 H200" opacity=".35"></path>
+<path d="M0 28 H200" opacity=".3"></path>
+<path d="M0 44 H200" opacity=".25"></path>
+<path d="M0 60 H200" opacity=".2"></path>
+<path d="M60 6 L60 66" opacity=".55" stroke="#c9a45c"></path>
+<path d="M60 40 C74 40 78 52 96 52 C112 52 118 44 132 44" opacity=".8" stroke="#c9a45c"></path>
+<circle cx="132" cy="44" fill="#c9a45c" r="4" stroke="none"></circle>
+</svg>
+</div>
+<div class="sol-mark"><span class="code" data-i18n="k220">OFT</span><span class="tm">™</span></div>
+<h3 data-i18n="k221">Petróleo y gas</h3>
+<p data-i18n="k222">Tecnología para la prospección de yacimientos de petróleo y gas, tanto terrestres como costa afuera.</p>
+<div class="sol-meta"><span data-i18n="k223">Prospección remota</span></div>
+</article>
+<article class="card rv">
+<div aria-hidden="true" class="sol-glyph">
+<svg fill="none" stroke="#c9a45c" stroke-width="1.1" viewbox="0 0 200 66">
+<path d="M0 52 L34 34 L58 44 L92 20 L124 32 L158 12 L200 26" opacity=".9"></path>
+<path d="M0 62 L34 46 L58 55 L92 33 L124 44 L158 26 L200 38" opacity=".35" stroke="#5b8fa8"></path>
+<circle cx="92" cy="20" fill="#c9a45c" r="4.5" stroke="none"></circle>
+<circle cx="92" cy="20" opacity=".45" r="10"></circle>
+<path d="M92 30 L92 66" opacity=".3" stroke-dasharray="3 4"></path>
+</svg>
+</div>
+<div class="sol-mark"><span class="code" data-i18n="k224">MFT</span><span class="tm">™</span></div>
+<h3 data-i18n="k225">Minerales</h3>
+<p data-i18n="k226">Tecnología satelital y geofísica de campo para la identificación de anomalías asociadas con depósitos minerales.</p>
+<div class="sol-meta"><a data-i18n="k227" href="#mft" style="color:var(--gold-soft)">Ver la tecnología MFT™</a></div>
+</article>
+</div>
+</div>
+</section>
+<!-- PREGUNTAS FRECUENTES -->
+<section class="band band-alt" id="faq">
+<div class="wrap">
+<div class="sec-head rv">
+<p class="eyebrow" data-i18n="k228">Preguntas frecuentes</p>
+<h2 data-i18n="k229">Dudas habituales sobre MFT™</h2>
+<p class="lead" data-i18n="k230">Dudas habituales sobre la tecnología, los tiempos y el alcance de los proyectos.</p>
+</div>
+<div class="faq rv">
+<div class="faq-group">
+<h3 data-i18n="k231">Tecnología</h3>
+<details name="faq">
+<summary data-i18n="k232">¿Qué es una espectrografía?</summary>
+<div class="answer"><p data-i18n="k233">Es la representación gráfica de las anomalías electromagnéticas, que evidencia la presencia o ausencia del material buscado en el área analizada.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k234">¿Qué tipo de información satelital se utiliza?</summary>
+<div class="answer"><p data-i18n="k235">Información multiespectral proveniente de satélites dedicados a estudios geofísicos, tipo Georesurs-P y DK.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k236">¿Cómo se adquiere la información?</summary>
+<div class="answer"><p data-i18n="k237">La adquisición se realiza desde plataformas pasivas que adquieren información multiespectral.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k238">¿Qué información se obtiene mediante la fase satelital?</summary>
+<div class="answer"><p data-i18n="k239">Metadatos multiespectrales asociados a las coordenadas del área de interés, a partir de los cuales se elaboran los mapas espectrográficos de anomalías.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k240">¿Cómo se procesa la información?</summary>
+<div class="answer"><p data-i18n="k241">La data satelital se transfiere a una plancha satelital en la que la información digital se convierte a análoga, para su análisis espectrométrico en laboratorio de geofísica.</p></div>
+</details>
+</div>
+<div class="faq-group">
+<h3 data-i18n="k242">Resultados y alcance técnico</h3>
+<details name="faq">
+<summary data-i18n="k243">¿Qué precisión y nivel de éxito se publican?</summary>
+<div class="answer"><p>CTAC publica una precisión de hasta <span class="fig">94%</span> y un éxito entre <span class="fig" data-i18n="k244">50% y 70%</span> en el descubrimiento de recursos económicamente viables. Los resultados dependen del alcance y las características de cada proyecto.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k245">¿A qué profundidad puede mapear la fase satelital?</summary>
+<div class="answer">
+<p>CTAC publica que la fase satelital puede generar mapas 2D de minerales bajo cubierta a profundidades de hasta <span class="fig" data-i18n="k246">9,8 kilómetros</span>.</p>
+<p data-i18n="k247">El alcance efectivo depende del recurso, el área, la escala y las condiciones técnicas del proyecto.</p>
+</div>
+</details>
+<details name="faq">
+<summary data-i18n="k248">¿Qué es el modelo 3D y cuándo se entrega?</summary>
+<div class="answer"><p data-i18n="k249">Corresponde a la Fase 3: los resultados de las fases anteriores se integran mediante software de geointeligencia y análisis geofísico para generar un modelo 3D. Se entrega cuando el alcance contratado incluye esa fase.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k250">¿MFT™ sustituye la perforación?</summary>
+<div class="answer"><p data-i18n="k251">MFT™ no sustituye la validación geológica, geofísica ni la perforación. Su función es generar y priorizar objetivos para orientar las siguientes etapas de exploración.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k252">¿MFT™ certifica reservas minerales?</summary>
+<div class="answer"><p data-i18n="k253">MFT™ no constituye por sí sola una certificación de recursos o reservas minerales. Cualquier declaración de recursos o reservas requiere los estudios, validaciones y profesionales competentes aplicables.</p></div>
+</details>
+</div>
+<div class="faq-group">
+<h3 data-i18n="k254">Tiempos y trabajos de campo</h3>
+<details name="faq">
+<summary data-i18n="k255">¿Es necesario realizar trabajos de campo?</summary>
+<div class="answer"><p data-i18n="k256">Las fases 2.1 y 2.2 se ejecutan con instrumentación en campo y son las que aportan la vista superior refinada y la información de profundidad. Su ejecución depende del alcance contratado y de la tarea técnica definida para el proyecto.</p></div>
+</details>
+<details name="faq">
+<summary data-i18n="k257">¿Cuánto tiempo requiere un estudio?</summary>
+<div class="answer">
+<p data-i18n="k258">Tiempos de referencia por fase:</p>
+<ul class="bullets">
+<li><strong data-i18n="k259">Fase 1</strong> — Localización satelital: <span class="fig" data-i18n="k260">8 semanas</span>.</li>
+<li><strong data-i18n="k261">Fase 2.1</strong> — Vista superior: <span class="fig" data-i18n="k262">2 semanas</span>.</li>
+<li><strong data-i18n="k263">Fase 2.2</strong> — Vista lateral: <span class="fig" data-i18n="k264">2 semanas</span>.</li>
+<li><strong data-i18n="k265">Fase 3</strong> — Integración y modelo 3D: <span class="fig" data-i18n="k266">5 semanas</span>.</li>
+</ul>
+<p>Un alcance completo de referencia para las fases 1 a 3 se presenta en aproximadamente <span class="fig" data-i18n="k267">17 semanas</span>. Pueden variar según la superficie, el recurso, la escala, la topografía y el alcance contratado.</p>
+</div>
+</details>
+<details name="faq">
+<summary data-i18n="k268">¿Para qué sirven ECECI y SVER?</summary>
+<div class="answer">
+<p><strong data-i18n="k269">ECECI</strong> delimita en superficie la extensión de la anomalía electromagnética identificada durante la espectrografía.</p>
+<p><strong data-i18n="k270">SVER</strong> determina las profundidades, la cantidad de intervalos polarizados y sus espesores.</p>
+</div>
+</details>
+</div>
+<div class="faq-group">
+<h3 data-i18n="k271">Alcance del proyecto</h3>
+<details name="faq">
+<summary data-i18n="k272">¿Qué información necesita Quantik Geo para evaluar un proyecto?</summary>
+<div class="answer">
+<ul class="bullets two">
+<li data-i18n="k273">Ubicación general.</li>
+<li data-i18n="k274">Polígono o coordenadas.</li>
+<li data-i18n="k275">Mineral objetivo.</li>
+<li data-i18n="k276">Superficie.</li>
+<li data-i18n="k277">Información geológica y geofísica disponible.</li>
+<li data-i18n="k278">Historial de trabajos realizados.</li>
+<li data-i18n="k279">Objetivo del estudio.</li>
+</ul>
+</div>
+</details>
+</div>
+<div class="faq-group">
+<h3 data-i18n="k280">Permisos y confidencialidad</h3>
+<details name="faq">
+<summary data-i18n="k281">¿Se requieren licencias ambientales para utilizar la tecnología?</summary>
+<div class="answer">
+<p data-i18n="k282">MFT™ es una tecnología pasiva y no requiere licencias ambientales para su uso.</p>
+<p data-i18n="k283">Las actividades posteriores, como acceso al terreno, trabajos de exploración directa o perforación, estarán sujetas a los requisitos aplicables de cada proyecto y jurisdicción.</p>
+</div>
+</details>
+<details name="faq">
+<summary data-i18n="k284">¿Cómo se protege la información del cliente?</summary>
+<div class="answer"><p data-i18n="k285">Quantik Geo puede formalizar acuerdos de confidencialidad antes de recibir información sensible del proyecto. El alcance y las condiciones se definen en cada caso.</p></div>
+</details>
+</div>
+</div>
+<p class="source-note rv" data-i18n="k286">Las referencias técnicas de esta sección provienen de la información publicada por CTAC sobre las tecnologías MFT™, WFT™ y OFT™.</p>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="cta band-mid" id="contacto">
+<div aria-hidden="true" class="topo" style="opacity:.5">
+<svg focusable="false" preserveaspectratio="xMidYMid slice" viewbox="0 0 1440 900"><path d="M1164 300C1164 303 1163 306 1164 310C1164 313 1165 317 1165 320C1165 324 1166 329 1164 332C1163 336 1160 340 1155 343C1151 345 1144 347 1139 348C1133 349 1126 349 1120 350C1114 350 1109 350 1103 351C1098 351 1093 352 1088 353C1083 353 1077 354 1072 354C1067 353 1061 352 1057 351C1052 350 1048 348 1043 346C1039 344 1034 343 1030 341C1025 340 1020 339 1015 337C1010 335 1005 333 1001 330C997 328 993 325 990 322C987 318 985 315 983 311C981 308 980 304 980 300C980 296 981 292 984 289C986 285 991 282 995 280C999 277 1005 275 1010 273C1015 271 1019 270 1022 267C1026 265 1028 262 1031 260C1034 257 1037 253 1041 251C1045 248 1050 246 1055 245C1060 244 1066 244 1072 244C1077 244 1083 244 1088 245C1094 245 1099 245 1105 245C1111 246 1117 246 1122 247C1128 248 1133 250 1138 253C1142 255 1145 258 1148 261C1151 264 1153 268 1155 271C1157 274 1159 277 1160 281C1162 284 1163 287 1163 290C1164 294 1163 297 1164 300Z"></path><path d="M1258 300C1261 307 1266 314 1268 322C1269 329 1271 338 1267 345C1264 352 1255 359 1246 364C1236 368 1222 371 1210 373C1198 376 1185 376 1175 378C1165 380 1156 382 1147 384C1139 386 1131 390 1123 393C1114 395 1105 398 1095 400C1085 401 1075 402 1065 403C1054 404 1043 404 1032 404C1021 404 1009 404 998 402C987 400 976 397 967 393C958 388 951 382 944 377C938 371 933 364 928 358C923 352 917 346 913 340C908 334 903 327 901 321C899 314 899 307 902 300C905 293 913 287 919 281C925 276 933 271 938 266C942 260 945 255 947 249C950 243 949 235 952 228C956 221 960 213 967 207C974 201 984 196 994 194C1005 191 1018 190 1029 189C1041 188 1052 189 1063 189C1075 190 1086 191 1096 193C1106 195 1116 197 1126 200C1135 203 1143 208 1151 211C1160 215 1167 218 1176 221C1184 225 1194 227 1202 231C1211 235 1220 239 1227 244C1234 249 1239 255 1243 261C1247 267 1247 274 1250 280C1252 287 1255 293 1258 300Z"></path><path d="M1333 300C1343 310 1356 321 1359 332C1363 343 1361 356 1355 366C1350 376 1337 386 1325 394C1314 402 1299 409 1285 416C1272 423 1258 429 1243 434C1228 438 1212 442 1196 444C1180 446 1163 446 1147 447C1132 447 1117 446 1102 446C1087 446 1073 447 1058 447C1043 447 1028 447 1013 445C999 443 985 440 971 435C958 431 947 424 935 419C922 414 910 409 895 405C880 400 862 396 846 390C831 383 813 376 803 366C794 357 789 345 790 334C792 323 802 310 811 300C820 290 834 281 843 272C851 264 858 256 863 248C869 240 871 230 876 222C882 213 888 204 896 196C904 188 915 181 927 174C938 167 951 161 964 155C977 149 991 143 1006 139C1021 134 1038 131 1055 130C1071 129 1089 131 1105 133C1121 135 1136 140 1152 144C1167 148 1182 151 1196 156C1211 160 1226 164 1239 170C1251 176 1262 184 1269 193C1276 202 1277 214 1280 223C1282 233 1279 243 1282 251C1285 260 1291 266 1299 275C1308 283 1323 290 1333 300Z"></path><path d="M1455 300C1448 314 1430 327 1418 339C1406 351 1393 361 1383 373C1374 384 1370 396 1361 408C1352 419 1345 433 1331 442C1317 451 1298 458 1279 463C1259 468 1236 467 1216 470C1197 472 1179 473 1161 477C1143 482 1128 489 1109 496C1090 503 1070 513 1047 518C1025 524 999 527 976 527C952 527 928 522 906 517C884 511 863 502 845 493C827 483 810 471 800 458C789 446 782 430 780 415C778 401 784 384 786 371C788 357 794 345 794 333C793 321 787 312 782 300C776 288 764 276 760 263C757 250 756 236 761 223C767 211 781 200 794 190C806 180 823 172 836 162C849 152 860 141 873 130C885 118 897 103 914 93C930 82 952 72 974 68C996 64 1023 66 1046 69C1069 73 1091 82 1112 88C1132 95 1150 103 1167 109C1185 116 1202 121 1219 127C1235 134 1251 140 1267 146C1283 153 1298 160 1315 167C1331 175 1350 181 1368 189C1387 198 1410 206 1425 217C1441 228 1456 242 1461 256C1466 270 1462 286 1455 300Z"></path><path d="M1585 300C1588 318 1577 339 1565 356C1552 373 1530 389 1510 403C1490 417 1468 430 1446 441C1424 451 1401 461 1377 468C1354 476 1328 480 1306 486C1284 491 1263 495 1243 503C1223 511 1207 521 1186 532C1166 542 1144 557 1120 564C1095 572 1065 578 1038 578C1012 577 984 569 960 562C935 555 915 543 891 535C868 527 844 521 819 514C794 507 762 503 740 492C717 482 693 469 682 453C671 437 672 416 674 397C677 379 693 360 699 344C706 328 713 315 714 300C715 285 708 272 705 257C701 241 694 224 694 207C694 191 698 173 705 156C712 139 723 122 737 106C751 90 767 73 788 60C809 48 836 36 864 31C892 25 926 26 956 29C985 32 1016 43 1042 48C1069 54 1091 62 1115 65C1139 68 1162 66 1186 68C1211 70 1239 69 1261 75C1284 80 1305 90 1322 102C1338 113 1347 129 1361 141C1375 154 1385 165 1404 176C1423 186 1450 194 1474 205C1498 217 1531 230 1550 246C1568 261 1583 282 1585 300Z"></path><path d="M1494 300C1490 317 1499 331 1506 349C1512 367 1529 388 1532 408C1534 428 1532 451 1521 469C1511 488 1489 504 1469 520C1450 536 1426 550 1402 565C1379 579 1355 596 1328 608C1300 621 1269 634 1236 641C1204 647 1166 649 1132 647C1098 646 1063 639 1030 632C998 626 967 618 938 609C909 600 880 591 857 577C835 564 815 546 801 529C787 512 784 490 773 474C762 457 757 443 738 431C718 419 688 413 657 402C625 390 578 378 549 362C521 345 493 321 485 300C477 279 489 254 503 233C517 213 548 195 570 178C593 160 616 146 637 130C658 114 674 97 696 83C718 69 742 55 770 45C797 36 830 31 860 26C891 22 921 22 951 18C980 15 1007 11 1036 8C1065 5 1095 0 1125 -1C1155 -1 1186 1 1216 4C1246 8 1274 15 1305 20C1336 25 1368 29 1402 36C1435 43 1476 47 1505 60C1535 72 1567 88 1580 108C1593 128 1591 156 1583 179C1575 202 1547 227 1532 248C1517 268 1499 283 1494 300Z"></path><path d="M1590 300C1590 320 1593 338 1601 360C1610 383 1632 408 1642 435C1651 462 1665 496 1657 522C1650 548 1626 574 1594 591C1563 607 1511 614 1469 620C1427 626 1381 623 1342 627C1304 631 1272 637 1238 644C1203 650 1170 663 1135 667C1099 670 1060 670 1026 663C992 656 960 638 932 623C904 609 883 589 857 577C832 565 807 557 776 550C745 542 706 540 671 531C635 523 595 513 562 499C528 485 498 466 471 446C444 426 418 403 400 379C383 354 365 326 365 300C365 274 376 244 400 221C425 198 471 178 510 163C549 148 601 141 635 129C670 118 695 109 716 94C737 79 743 57 761 38C779 19 797 -5 824 -19C850 -33 887 -41 922 -45C956 -49 993 -44 1029 -44C1064 -45 1095 -44 1132 -48C1169 -52 1208 -64 1249 -67C1290 -71 1338 -77 1378 -71C1418 -66 1458 -52 1487 -34C1516 -17 1536 9 1553 33C1570 56 1579 82 1588 105C1597 129 1603 151 1606 174C1608 196 1605 218 1603 239C1600 260 1590 280 1590 300Z"></path><path d="M1861 300C1857 329 1846 360 1828 387C1811 414 1788 441 1757 462C1725 484 1681 502 1640 515C1598 528 1546 532 1508 542C1469 551 1437 556 1411 571C1384 587 1373 612 1350 636C1327 661 1306 699 1273 720C1240 742 1193 762 1150 767C1106 773 1055 762 1012 752C970 742 932 721 892 709C853 697 816 688 776 679C735 670 687 666 650 653C612 640 572 623 549 600C526 578 517 546 511 518C506 491 516 461 516 436C516 410 516 389 511 366C506 343 493 323 485 300C477 277 468 254 463 228C458 203 456 178 453 149C451 121 445 90 449 58C452 26 454 -13 474 -42C495 -71 530 -102 573 -116C617 -130 682 -132 737 -127C791 -123 852 -102 901 -91C949 -80 987 -66 1026 -62C1065 -59 1097 -66 1135 -69C1173 -71 1216 -80 1253 -77C1291 -74 1329 -63 1361 -49C1392 -36 1413 -12 1440 4C1467 21 1489 37 1522 50C1556 63 1600 71 1641 85C1682 99 1734 114 1768 135C1803 156 1832 184 1847 211C1863 239 1864 271 1861 300Z"></path><path d="M1935 300C1958 331 1974 371 1963 402C1952 434 1909 466 1867 489C1826 513 1761 528 1713 543C1665 558 1618 568 1578 581C1537 594 1505 607 1470 620C1436 634 1403 646 1369 659C1334 673 1301 685 1264 702C1228 719 1193 741 1149 761C1105 782 1055 811 1002 825C949 838 883 849 831 843C778 837 727 813 687 789C647 765 623 727 593 699C564 672 541 646 510 622C479 599 436 582 407 558C378 534 344 508 338 478C331 449 346 412 367 383C388 353 437 325 462 300C487 275 513 258 517 235C522 211 502 188 491 159C479 129 452 92 448 58C444 23 449 -15 466 -47C483 -79 516 -108 552 -133C588 -158 633 -181 681 -197C728 -213 784 -227 837 -228C891 -230 952 -222 1004 -209C1056 -196 1104 -168 1147 -149C1190 -130 1222 -108 1262 -97C1302 -85 1341 -85 1386 -80C1430 -76 1486 -79 1529 -69C1572 -58 1616 -41 1644 -19C1671 4 1680 37 1695 64C1710 91 1711 118 1733 143C1754 168 1790 188 1823 214C1857 240 1912 269 1935 300Z"></path><path d="M313 780C312 784 312 787 311 791C311 794 310 798 308 801C306 804 303 808 300 810C296 813 292 815 288 817C285 819 281 821 277 823C273 825 269 827 264 828C260 830 256 831 251 832C246 832 241 832 237 832C232 832 228 831 223 832C218 832 214 833 208 833C203 834 196 836 191 835C185 835 178 834 173 832C169 830 165 826 163 823C161 819 161 814 160 810C159 806 160 803 160 799C159 796 158 793 158 789C157 786 156 783 156 780C156 777 157 774 158 771C159 767 160 765 162 761C163 758 164 755 166 752C167 749 169 745 171 742C174 739 177 736 180 734C184 731 188 729 193 727C197 726 202 724 207 722C211 721 217 719 222 718C227 717 233 717 238 717C243 718 249 721 253 723C257 726 260 730 263 733C266 736 268 740 271 742C274 744 278 745 282 747C286 749 291 750 296 752C300 754 304 756 307 759C310 762 311 766 312 769C313 773 313 776 313 780Z"></path><path d="M379 780C379 786 379 793 377 799C374 805 368 811 362 816C357 821 349 824 344 829C338 834 335 838 331 845C328 851 327 859 323 866C319 874 315 883 307 889C300 895 289 899 279 901C269 903 256 901 246 899C235 898 225 893 215 890C206 887 197 884 189 881C181 877 173 874 166 870C159 866 153 861 147 857C141 853 136 848 131 843C125 839 119 835 113 831C107 826 99 822 94 817C89 812 84 806 81 799C79 793 79 787 78 780C78 773 79 767 79 760C78 753 77 746 77 739C78 731 77 722 81 716C86 709 93 702 102 698C111 694 124 693 135 692C147 692 159 694 169 694C178 694 186 694 194 692C202 690 209 687 217 684C226 682 235 678 244 677C253 676 263 676 272 676C282 677 291 679 300 682C309 684 319 687 327 690C335 694 344 698 350 703C357 709 361 715 365 722C368 728 369 735 371 742C372 748 373 755 375 761C376 767 379 774 379 780Z"></path><path d="M467 780C468 790 465 801 462 810C458 820 450 829 444 838C438 847 432 856 425 864C418 873 412 883 402 890C393 897 381 904 368 908C355 911 338 911 323 911C309 911 294 907 282 908C269 908 260 909 248 913C236 917 224 926 210 932C196 938 178 946 162 947C146 949 128 948 114 943C100 939 88 929 78 921C68 913 60 902 53 893C46 884 39 874 34 865C29 856 25 846 23 836C21 826 23 816 24 807C25 798 29 789 30 780C32 771 32 763 33 754C34 745 34 736 36 728C39 719 44 710 51 702C57 694 66 688 74 681C82 673 90 666 98 657C105 648 112 637 121 627C131 618 143 606 157 600C171 595 189 592 205 593C221 595 239 604 252 611C266 619 277 630 288 638C299 646 307 652 318 657C328 661 340 663 352 667C363 671 375 675 385 681C396 686 404 694 412 701C421 708 427 716 434 725C441 733 449 741 455 751C460 760 465 770 467 780Z"></path><path d="M506 780C507 792 509 804 511 817C513 830 519 844 518 858C517 872 515 887 507 900C499 913 485 924 471 934C457 944 439 951 422 958C405 965 387 971 368 974C350 978 330 980 311 978C292 977 272 971 255 967C238 963 223 955 207 953C191 951 178 952 159 954C141 956 119 964 97 966C76 969 48 971 28 967C8 963 -10 952 -22 941C-33 929 -36 911 -41 897C-45 883 -44 868 -47 855C-51 842 -56 830 -60 818C-64 805 -70 793 -69 780C-68 767 -62 754 -54 743C-46 731 -32 722 -21 712C-10 702 2 694 11 685C21 676 27 666 36 656C45 646 53 635 64 626C74 616 87 607 100 598C114 589 128 580 145 570C161 561 179 550 199 543C218 536 242 528 263 528C284 529 308 535 326 545C343 555 356 573 366 588C377 603 380 621 389 633C397 645 404 653 416 661C427 669 445 674 458 681C471 689 486 698 494 708C502 719 505 732 507 744C509 756 505 768 506 780Z"></path><path d="M566 780C577 795 600 811 613 830C626 849 644 873 645 892C645 912 634 934 616 947C598 961 564 969 536 975C508 981 475 980 449 983C423 986 402 989 381 993C360 997 342 1004 322 1007C302 1011 281 1013 261 1013C240 1013 220 1008 200 1006C180 1003 162 999 142 997C121 995 100 996 78 994C56 992 31 990 10 984C-12 979 -33 970 -52 960C-72 950 -88 938 -106 926C-124 913 -144 901 -159 886C-175 871 -194 854 -200 836C-205 819 -204 797 -193 780C-182 763 -155 746 -133 733C-110 719 -78 712 -60 701C-41 691 -29 684 -21 671C-13 659 -17 642 -12 626C-7 609 -4 588 8 574C19 559 38 547 58 538C78 530 103 528 126 524C149 520 172 518 195 516C218 513 242 509 266 509C290 509 315 511 337 516C359 522 380 533 399 543C417 553 432 567 447 579C463 590 478 601 491 614C504 626 518 638 526 652C534 665 538 681 541 696C544 710 540 725 544 739C548 753 554 765 566 780Z"></path><path d="M629 780C635 798 646 816 651 835C656 855 663 877 661 897C658 917 649 938 637 957C626 975 608 993 591 1010C574 1028 556 1047 535 1063C513 1078 490 1097 462 1105C433 1114 397 1118 365 1112C333 1107 297 1088 269 1073C241 1058 220 1034 198 1022C176 1011 162 1005 139 1005C115 1005 88 1016 59 1020C30 1024 -8 1031 -37 1028C-67 1025 -95 1014 -116 1001C-137 988 -150 968 -163 951C-177 933 -188 915 -199 896C-210 878 -225 860 -232 840C-239 821 -245 800 -242 780C-239 760 -227 740 -216 722C-204 704 -186 687 -172 671C-157 655 -144 639 -129 624C-114 610 -99 594 -80 582C-60 571 -36 562 -13 554C9 547 35 545 57 537C79 528 96 519 118 504C140 490 159 466 186 450C213 433 248 412 279 406C311 401 350 405 377 417C405 430 427 458 444 480C460 502 466 530 478 550C489 570 499 585 513 600C526 614 546 624 560 637C574 651 588 665 598 680C607 696 610 713 615 730C620 746 623 762 629 780Z"></path></svg>
+</div>
+<div class="wrap">
+<div class="cta-grid">
+<div class="cta-aside rv">
+<p class="eyebrow" data-i18n="k287">Contacto</p>
+<h2 data-i18n="k288">Conversemos sobre <em>su proyecto</em></h2>
+<p class="lead" data-i18n="k289">Comparta la ubicación general, el recurso objetivo y la etapa actual de exploración. Nuestro equipo realizará una evaluación inicial para definir los siguientes pasos.</p>
+<div class="cta-alt">
+<span data-i18n="k290">También puede escribirnos directamente:</span>
+<a data-i18n="k291" href="mailto:ventas@quantikgeo.com">ventas@quantikgeo.com</a>
+<a data-i18n="k292" href="https://wa.me/526673907814" rel="noopener" target="_blank">WhatsApp +52 667 390 7814</a>
+</div>
+</div>
+<div class="form-card rv">
+<form action="/gracias.html" data-netlify="true" method="POST" name="evaluacion-inicial" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="evaluacion-inicial"/>
+<p class="form-hp"><label data-i18n="k293">No llenar este campo: <input autocomplete="off" name="bot-field" tabindex="-1"/></label></p>
+<div class="field-row">
+<div class="field">
+<label for="f-nombre">Nombre<span aria-hidden="true" class="req">*</span></label>
+<input autocomplete="name" id="f-nombre" name="nombre" required="" type="text"/>
+</div>
+<div class="field">
+<label for="f-email">Correo<span aria-hidden="true" class="req">*</span></label>
+<input autocomplete="email" id="f-email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label data-i18n="k294" for="f-empresa">Empresa</label>
+<input autocomplete="organization" id="f-empresa" name="empresa" type="text"/>
+</div>
+<div class="field">
+<label data-i18n="k295" for="f-telefono">Teléfono</label>
+<input autocomplete="tel" id="f-telefono" name="telefono" type="tel"/>
+</div>
+</div>
+<div class="field-row">
+<div class="field">
+<label for="f-recurso">Recurso objetivo<span aria-hidden="true" class="req">*</span></label>
+<select id="f-recurso" name="recurso" required="">
+<option data-i18n="k296" value="">Seleccione una opción</option>
+<option data-i18n="k297" value="Minerales">Minerales</option>
+<option data-i18n="k298" value="Agua">Agua</option>
+<option data-i18n="k299" value="Petróleo y gas">Petróleo y gas</option>
+<option data-i18n="k300" value="Otro">Otro</option>
+</select>
+</div>
+<div class="field">
+<label data-i18n="k301" for="f-etapa">Etapa actual</label>
+<select id="f-etapa" name="etapa">
+<option data-i18n="k302" value="">Seleccione una opción</option>
+<option data-i18n="k303" value="Exploración inicial">Exploración inicial</option>
+<option data-i18n="k304" value="Exploración avanzada">Exploración avanzada</option>
+<option data-i18n="k305" value="Proyecto en operación">Proyecto en operación</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="f-ubicacion">Ubicación general del proyecto<span aria-hidden="true" class="req">*</span></label>
+<input id="f-ubicacion" name="ubicacion" placeholder="Estado, región o país" data-i18n-ph="ph1" required="" type="text"/>
+</div>
+<div class="field">
+<label for="f-mensaje">Detalles del proyecto<span aria-hidden="true" class="req">*</span></label>
+<textarea id="f-mensaje" name="mensaje" placeholder="Superficie aproximada, información disponible y objetivo del trabajo." data-i18n-ph="ph2" required="" rows="4"></textarea>
+</div>
+<button class="btn btn-primary form-submit" data-i18n="k306" type="submit">Solicitar evaluación inicial</button>
+<p class="form-note">Los campos marcados con <span style="color:var(--gold)">*</span> son obligatorios. Su información se trata de forma confidencial.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
 </main>
-
 <footer class="footer">
-  <div class="wrap">
-    <div class="f-top">
-      <div class="f-brand">
-        <img src="assets/quantikgeo-logo.png" alt="Quantik Geo">
-        <p>Quantik Geo, S.A.P.I. de C.V. Integración de tecnología satelital y geofísica de campo para exploración de recursos naturales.</p>
-      </div>
-      <div class="f-col">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#mft">Tecnología MFT</a></li>
-          <li><a href="#comparativa">Impacto</a></li>
-          <li><a href="#aplicaciones">Aplicaciones</a></li>
-          <li><a href="#consideraciones">Información oficial</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-          <li><a href="#proceso">Cómo trabajamos</a></li>
-          <li><a href="#nosotros">Quantik Geo + CTAC</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="f-col">
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="mailto:ventas@quantikgeo.com">ventas@quantikgeo.com</a></li>
-          <li><a href="https://wa.me/526673907814" target="_blank" rel="noopener">WhatsApp +52 667 390 7814</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <p style="display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap">
-        <span class="ctac-chip sm" style="margin-top:1px"><img src="assets/ctac-logo.png" alt="CTAC" width="672" height="357"></span>
-        <span style="flex:1;min-width:260px">Las tecnologías MFT™, WFT™ y OFT™ fueron desarrolladas por <strong style="color:var(--text);font-weight:600">CTAC</strong>, empresa que conserva su propiedad intelectual. Quantik Geo coordina su comercialización, integración y desarrollo con los clientes.</span>
-      </p>
-      <p>© <span id="yr">2026</span> Quantik Geo, S.A.P.I. de C.V.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="f-top">
+<div class="f-brand">
+<img alt="Quantik Geo" src="assets/quantikgeo-logo.png"/>
+<p data-i18n="k307">Quantik Geo, S.A.P.I. de C.V. Integración de tecnología satelital y geofísica de campo para exploración de recursos naturales.</p>
+</div>
+<div class="f-col">
+<h4 data-i18n="k308">Navegación</h4>
+<ul>
+<li><a data-i18n="k309" href="#mft">Tecnología MFT</a></li>
+<li><a data-i18n="k310" href="#comparativa">Impacto</a></li>
+<li><a data-i18n="k311" href="#aplicaciones">Aplicaciones</a></li>
+<li><a data-i18n="k312" href="#consideraciones">Información oficial</a></li>
+<li><a data-i18n="k313" href="#faq">Preguntas frecuentes</a></li>
+<li><a data-i18n="k314" href="#proceso">Cómo trabajamos</a></li>
+<li><a data-i18n="k315" href="#nosotros">Quantik Geo + CTAC</a></li>
+<li><a data-i18n="k316" href="#contacto">Contacto</a></li>
+</ul>
+</div>
+<div class="f-col">
+<h4 data-i18n="k317">Contacto</h4>
+<ul>
+<li><a data-i18n="k318" href="mailto:ventas@quantikgeo.com">ventas@quantikgeo.com</a></li>
+<li><a data-i18n="k319" href="https://wa.me/526673907814" rel="noopener" target="_blank">WhatsApp +52 667 390 7814</a></li>
+</ul>
+</div>
+</div>
+<div class="f-bottom">
+<p style="display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap">
+<span class="ctac-chip sm" style="margin-top:1px"><img alt="CTAC" height="357" src="assets/ctac-logo.png" width="672"/></span>
+<span style="flex:1;min-width:260px">Las tecnologías MFT™, WFT™ y OFT™ fueron desarrolladas por <strong data-i18n="k320" style="color:var(--text);font-weight:600">CTAC</strong>, empresa que conserva su propiedad intelectual. Quantik Geo coordina su comercialización, integración y desarrollo con los clientes.</span>
+</p>
+<p>© <span id="yr">2026</span> Quantik Geo, S.A.P.I. de C.V.</p>
+</div>
+</div>
 </footer>
-
 <script>
 (function(){
   var header=document.getElementById('header');
@@ -2000,6 +1932,44 @@ section{position:relative;scroll-margin-top:96px}
   }else{
     document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
   }
+})();
+</script>
+<script>
+(function(){
+  var EN={"k001":"Skip to content","k002":"Technology","k003":"What is MFT™","k004":"Phases","k005":"Impact","k006":"Applications","k007":"Benefits","k008":"How we work","k009":"FAQ","k010":"About us","k011":"Contact","k012":"Evaluate a project","k013":"Find mineral deposits <em>with greater precision, in less time</em>","k014":"Quantik Geo integrates satellite technology and field geophysical instrumentation to locate the resource, prioritise targets and direct drilling with less uncertainty.","k015":"Evaluate a project","k016":"Explore MFT technology","k017":"MFT™, WFT™ and OFT™ technologies developed by","k018":"Up to","k019":"precision","k020":"Success","k021":"in the discovery of economically viable resources","k022":"Up to","k023":"less time","k024":"Up to","k025":"less cost","k026":"Information published by CTAC. Results depend on the scope and characteristics of each project.","k027":"Approach","k028":"Better decisions from the <em>earliest stages</em>","k029":"Natural resource exploration requires deciding where to concentrate time, capital and fieldwork. Quantik Geo helps integrate remote, geological and geophysical information to identify areas of interest and better direct the subsequent validation stages.","k030":"Impact","k031":"Compared with the <em>traditional method</em>","k032":"Comparison between the conventional exploration cycle and a project that incorporates MFT™.","k033":"Traditional method","k034":"With MFT™","k035":"Total cycle time","k036":"6 – 10 years","k037":"1 – 2 years","k038":"Target identification","k039":"Prospecting 2 – 4 years and exploration 3 – 6 years","k040":"17 weeks","k041":"Cost","k042":"USD 20 M – USD 1,000 M","k043":"Up to 80% less","k044":"Discovery of economically viable resources","k045":"About these figures.","k046":"Technology","k047":"What is <em>MFT™</em>","k048":"MFT™ —Mineral Finder Technology— is a multispectral electromagnetic technology developed by CTAC, aimed at the precise location of specific mineral resources. It identifies electromagnetic anomalies associated with mineral deposits by combining multispectral satellite information with field geophysical instrumentation, in order to delimit areas of interest and direct drilling targets.","k049":"Principle","k050":"Detection","k051":"Integration","k052":"Official figure","k053":"More than 30 years of research and work on electromagnetism as the basis of the technology.","k054":"Source","k055":"Results depend on the scale, the characteristics of the area, the information available and the scope of the contracted phases.","k056":"Anomalies are identified from resonance frequencies in the deep blue and ultraviolet range of the electromagnetic spectrum.","k057":"Methodology","k058":"The <em>phases</em> of MFT™","k059":"One satellite laboratory phase, two field instrumentation phases and one integration and modelling phase, with subsequent support according to the contracted scope.","k060":"8 weeks","k061":"Phase 1","k062":"Satellite location","k063":"Satellite ultraviolet electro-resonance spectrography.","k064":"Location of minerals within large areas.","k065":"Generation of preliminary 2D maps.","k066":"Fault location and grade and ranking mapping.","k067":"<b>Method</b>Satellite spectrography (ES).","k068":"2 weeks","k069":"Phase 2.1","k070":"Top view","k071":"Field instrumentation.","k072":"Delimitation and refinement of surface anomalies.","k073":"Generation of 2D maps with greater precision.","k074":"More precise location and grade of the deposit.","k075":"<b>Method</b>Proprietary field survey instrumentation.","k076":"2 weeks","k077":"Phase 2.2","k078":"Side view","k079":"Acquisition of depth information.","k080":"Identification of layers or intervals.","k081":"Approximate depths and thicknesses.","k082":"Preliminary reserve volume.","k083":"<b>Method</b>Surface profiling with proprietary equipment.","k084":"5 weeks","k085":"Phase 3","k086":"Integration and 3D model","k087":"Integration of results from the previous phases.","k088":"Geointelligence software and geophysical analysis.","k089":"Generation of a 3D model and reserve modelling.","k090":"Final technical report in NI 43-101 format and data for Micromine or Geoscience models.","k091":"<b>Method</b>Multispectral algorithmic geointelligence software.","k092":"Phase 4","k093":"Laboratory and field","k094":"Technical support and guidance from drilling through to production, according to the contracted scope.","k095":"Example figures published by CTAC. The deliverables of each project depend on the contracted scope.","k096":"Reference scope.","k097":"17 weeks","k098":"Geophysical methods.","k100":"ECECI","k101":"SVER","k102":"Applications","k103":"Where MFT™ is used","k104":"Application categories for exploration, production and drilling projects.","k105":"Greenfields or exploratory areas","k106":"A starting point for exploring areas not previously studied. Spectrography makes it possible to visualise the prospects present in the area and discard zones where the sought material is not evident.","k107":"Data reinterpretation","k108":"In areas where traditional studies already exist and analysing the information proves complicated, MFT™ can support the interpretation of the presence of the sought material.","k109":"Existing mines","k110":"Supports re-engineering processes aimed at locating mineral accumulation zones not yet found and verifying the existence of mineral in known structures, with a view to optimising recovery from the deposit.","k111":"Drilling prioritisation","k112":"A verification study can provide information on the polarized layers or intervals present, their depths, approximate thicknesses and coordinates towards which to direct subsequent work.","k113":"Other fields of application","k114":"Minerals, water, oil and gas","k115":"Onshore and offshore","k116":"Large areas and precision studies","k117":"Greenfield, brownfield and mature fields","k118":"Refinement and reinterpretation of previous studies","k119":"Pre-salt and sub-salt areas","k120":"MFT™ does not replace drilling or geological and geophysical validation in the field. Its purpose is to generate and prioritise targets to guide the subsequent stages of exploration.","k121":"Benefits","k122":"What it brings to the project","k123":"Applicable according to the scope and characteristics of each project.","k124":"<svg aria-hidden=\"true\" fill=\"none\" stroke=\"#c9a45c\" stroke-width=\"1.3\" viewbox=\"0 0 24 24\">\n<circle cx=\"12\" cy=\"12\" r=\"8.6\"></circle><circle cx=\"12\" cy=\"12\" r=\"4.2\"></circle><circle cx=\"12\" cy=\"12\" fill=\"#c9a45c\" r=\".9\"></circle>\n</svg>\n            Precision and success","k125":"50% and 70%","k126":"<svg aria-hidden=\"true\" fill=\"none\" stroke=\"#c9a45c\" stroke-width=\"1.3\" viewbox=\"0 0 24 24\">\n<circle cx=\"12\" cy=\"12.6\" r=\"8.4\"></circle><path d=\"M12 7.8v5l3.2 2M9 2.6h6\" stroke-linecap=\"round\"></path>\n</svg>\n            Time and cost","k127":"80% less time","k128":"80% less cost","k129":"<svg aria-hidden=\"true\" fill=\"none\" stroke=\"#c9a45c\" stroke-width=\"1.3\" viewbox=\"0 0 24 24\">\n<path d=\"M3 17.6c4-2 6.6 1.4 10.4-.6M3 21c4-2 6.6 1.4 10.4-.6\" stroke-linecap=\"round\" stroke-opacity=\".6\"></path>\n<rect height=\"5.2\" rx=\"1.4\" width=\"7.4\" x=\"9.4\" y=\"3\"></rect><path d=\"M9.4 5.6H4.6M16.8 5.6h2.8\"></path>\n<path d=\"M13.1 8.2v4.6\" stroke-dasharray=\"2 2.6\"></path>\n</svg>\n            Operation and focus","k130":"Passive technology.","k131":"No environmental licences required for its use.","k132":"Highly targeted drilling.","k133":"Greater focus on the precise location of the resource.","k134":"Technical and operational considerations","k135":"Information published by <em>CTAC</em>","k136":"<svg aria-hidden=\"true\" fill=\"none\" stroke=\"#c9a45c\" stroke-width=\"1.3\" viewbox=\"0 0 24 24\">\n<path d=\"M12 2.6 20 6v6c0 4.6-3.4 7.9-8 9.4-4.6-1.5-8-4.8-8-9.4V6z\"></path><path d=\"M8.6 12.2 11 14.6l4.6-4.8\" stroke-linecap=\"round\"></path>\n</svg>\n            Official source","k137":"Technology with zero environmental impact","k138":"The use of MFT™ technology has zero environmental impact: it requires no explosions, generates no noise and causes no damage to flora, fauna or private property.","k139":"The remote phase makes it possible to analyse areas of interest without direct physical intervention on the ground.","k140":"No permits or licences required to use the technology","k141":"No permits or licences are required to use MFT™ technology.","k142":"This characteristic makes it possible to carry out an initial evaluation of large areas before running direct exploration campaigns. Subsequent activities, such as land access, direct exploration work or drilling, will be subject to the applicable requirements of each project and jurisdiction.","k143":"Precision and success","k144":"50% and 70%","k145":"Specific results depend on the study area, its extent, project conditions, the information available and the technical phases contracted.","k146":"Execution times","k147":"Reference times for each phase:","k148":"8 weeks","k149":"2 weeks","k150":"2 weeks","k151":"5 weeks","k152":"17 weeks","k153":"These times are references published by CTAC and may vary according to the surface area, the resource, the scale, the topography and the contracted scope. Definitive timings are set out in the technical proposal for each project.","k154":"<svg aria-hidden=\"true\" fill=\"none\" stroke=\"#c9a45c\" stroke-width=\"1.3\" viewbox=\"0 0 24 24\">\n<path d=\"M3 6.4c4-2 6.6 1.4 10.4-.6 3.4-1.8 5.6.4 7.6-.4\" stroke-linecap=\"round\"></path>\n<path d=\"M3 12h18M3 17.4h18\" stroke-opacity=\".45\"></path>\n<path d=\"M12 5.4v14.4\" stroke-linecap=\"round\"></path><path d=\"M9.4 19.8h5.2\" stroke-linecap=\"round\"></path>\n</svg>\n          Mapping depth","k155":"9.8 kilometres","k156":"The effective range depends on the resource, the area, the scale and the technical conditions of the project.","k157":"How we work","k158":"How a <em>project</em> unfolds","k159":"Each project is structured according to its location, surface area, target resource, available information and validation needs.","k160":"Contact and initial evaluation","k161":"Review of the area, the target resource and the current stage of exploration.","k162":"Confidentiality agreement","k163":"Formalisation of confidentiality before receiving sensitive project information.","k164":"Delivery of the polygon and available data","k165":"Coordinates of the area and geological and geophysical information already held by the client.","k166":"Review and definition of scope with CTAC","k167":"Joint technical analysis to determine the scale and the phases applicable to the project.","k168":"Technical and commercial proposal","k169":"Scope, deliverables, estimated timings and commercial terms.","k170":"Execution of the remote phase","k171":"Satellite spectrography over the defined area.","k172":"Field phases, where applicable","k173":"ECECI and SVER, according to the technical task and the information available for the area.","k174":"Processing and reporting","k175":"Analysis of the acquired information and preparation of the report.","k176":"Presentation of results and recommendations","k177":"Delivery and explanation of the results, with recommendations for the following stages.","k178":"About timings.","k179":"Execution times","k180":"Results","k181":"What the <em>client</em> receives","k182":"Deliverables aimed at deciding where and how to continue fieldwork.","k183":"<b>01</b>2D anomaly maps.","k184":"<b>02</b>Delimitation of areas of interest.","k185":"<b>03</b>Top view of the mineralisation.","k186":"<b>04</b>Lateral or vertical profiles.","k187":"<b>05</b>Approximate depths and thicknesses.","k188":"<b>06</b>Integrated 3D model, when the scope includes the corresponding phases.","k189":"<b>07</b>Final technical report in NI 43-101 format, with data for Micromine or Geoscience models.","k190":"<b>08</b>Information to guide targeted drilling.","k191":"<b>09</b>Subsequent support, according to the contracted scope.","k192":"Quantik Geo + CTAC","k193":"A defined technical and commercial relationship","k194":"MFT™, WFT™ and OFT™ technologies were developed by CTAC, which retains their intellectual property. Quantik Geo coordinates their commercialisation, integration and development with clients.","k195":"Quantik Geo works in coordination with CTAC to structure and develop prospecting projects for minerals, water, oil and gas, supporting the client from the initial evaluation through to the delivery of results and recommendations.","k196":"Developer and owner","k197":"Technology","k198":"MFT™ · WFT™ · OFT™","k199":"Commercialisation and integration","k200":"Recipient","k201":"Exploration project","k202":"Developer and owner","k203":"Developer and owner of the MFT™, WFT™ and OFT™ technologies.","k204":"Responsible for the methodology and for specialised technical execution.","k205":"400 projects","k206":"Commercial coordination","k207":"Initial commercial evaluation.","k208":"Coordination with the client.","k209":"Definition of scope.","k210":"Project management.","k211":"Support during the presentation and delivery of results.","k212":"CTAC","k213":"Other solutions","k214":"Water, oil and gas","k215":"CTAC also develops two remote prospecting technologies for other resources, which Quantik Geo likewise commercialises and integrates.","k217":"Water","k218":"Technology for prospecting water deposits.","k219":"Remote prospecting","k221":"Oil and gas","k222":"Technology for prospecting oil and gas reservoirs, both onshore and offshore.","k223":"Remote prospecting","k225":"Minerals","k226":"Satellite and field geophysical technology for identifying anomalies associated with mineral deposits.","k227":"View MFT™ technology","k228":"FAQ","k229":"Common questions about MFT™","k230":"Common questions about the technology, timings and scope of projects.","k231":"Technology","k232":"What is a spectrography?","k233":"It is the graphical representation of electromagnetic anomalies, showing the presence or absence of the sought material in the analysed area.","k234":"What type of satellite information is used?","k235":"Multispectral information from satellites dedicated to geophysical studies, of the Georesurs-P and DK type.","k236":"How is the information acquired?","k237":"Acquisition is carried out from passive platforms that capture multispectral information.","k238":"What information is obtained through the satellite phase?","k239":"Multispectral metadata associated with the coordinates of the area of interest, from which the spectrographic anomaly maps are produced.","k240":"How is the information processed?","k241":"Satellite data is transferred to a satellite plate on which the digital information is converted to analogue, for spectrometric analysis in a geophysics laboratory.","k242":"Results and technical scope","k243":"What precision and success rate are published?","k244":"50% and 70%","k245":"To what depth can the satellite phase map?","k246":"9.8 kilometres","k247":"The effective range depends on the resource, the area, the scale and the technical conditions of the project.","k248":"What is the 3D model and when is it delivered?","k249":"It corresponds to Phase 3: the results of the previous phases are integrated using geointelligence software and geophysical analysis to generate a 3D model. It is delivered when the contracted scope includes that phase.","k250":"Does MFT™ replace drilling?","k251":"MFT™ does not replace geological or geophysical validation, nor drilling. Its purpose is to generate and prioritise targets to guide the subsequent stages of exploration.","k252":"Does MFT™ certify mineral reserves?","k253":"MFT™ does not in itself constitute a certification of mineral resources or reserves. Any declaration of resources or reserves requires the applicable studies, validations and competent professionals.","k254":"Timings and fieldwork","k255":"Is fieldwork necessary?","k256":"Phases 2.1 and 2.2 are carried out with field instrumentation and are the ones that provide the refined top view and the depth information. Their execution depends on the contracted scope and on the technical task defined for the project.","k257":"How long does a study take?","k258":"Reference times by phase:","k259":"Phase 1","k260":"8 weeks","k261":"Phase 2.1","k262":"2 weeks","k263":"Phase 2.2","k264":"2 weeks","k265":"Phase 3","k266":"5 weeks","k267":"17 weeks","k268":"What are ECECI and SVER for?","k269":"ECECI","k270":"SVER","k271":"Project scope","k272":"What information does Quantik Geo need to evaluate a project?","k273":"General location.","k274":"Polygon or coordinates.","k275":"Target mineral.","k276":"Surface area.","k277":"Available geological and geophysical information.","k278":"History of work carried out.","k279":"Purpose of the study.","k280":"Permits and confidentiality","k281":"Are environmental licences required to use the technology?","k282":"MFT™ is a passive technology and requires no environmental licences for its use.","k283":"Subsequent activities, such as land access, direct exploration work or drilling, will be subject to the applicable requirements of each project and jurisdiction.","k284":"How is the client's information protected?","k285":"Quantik Geo can formalise confidentiality agreements before receiving sensitive project information. The scope and conditions are defined case by case.","k286":"The technical references in this section come from the information published by CTAC on the MFT™, WFT™ and OFT™ technologies.","k287":"Contact","k288":"Let's talk about <em>your project</em>","k289":"Share the general location, the target resource and the current stage of exploration. Our team will carry out an initial evaluation to define the next steps.","k290":"You can also write to us directly:","k291":"ventas@quantikgeo.com","k292":"WhatsApp +52 667 390 7814","k293":"Do not fill in this field: <input autocomplete=\"off\" name=\"bot-field\" tabindex=\"-1\"/>","k294":"Company","k295":"Phone","k296":"Select an option","k297":"Minerals","k298":"Water","k299":"Oil and gas","k300":"Other","k301":"Current stage","k302":"Select an option","k303":"Early exploration","k304":"Advanced exploration","k305":"Project in operation","k306":"Request an initial evaluation","k307":"Quantik Geo, S.A.P.I. de C.V. Integration of satellite and field geophysical technology for natural resource exploration.","k308":"Navigation","k309":"MFT technology","k310":"Impact","k311":"Applications","k312":"Official information","k313":"FAQ","k314":"How we work","k315":"Quantik Geo + CTAC","k316":"Contact","k317":"Contact","k318":"ventas@quantikgeo.com","k319":"WhatsApp +52 667 390 7814","k320":"CTAC","ph1":"State, region or country","ph2":"Approximate area, available information and objective of the work.","_title":"Quantik Geo — Find mineral deposits with greater precision, in less time","_desc":"Quantik Geo integrates satellite technology and field geophysical instrumentation to locate the resource, prioritise targets and direct drilling with less uncertainty."};
+  var nodos=[].slice.call(document.querySelectorAll('[data-i18n]'));
+  var phs=[].slice.call(document.querySelectorAll('[data-i18n-ph]'));
+  var ES={},ESP={};
+  nodos.forEach(function(el){ES[el.dataset.i18n]=el.innerHTML});
+  phs.forEach(function(el){ESP[el.dataset.i18nPh]=el.placeholder});
+  var esTitle=document.title, esDesc=(document.querySelector('meta[name=description]')||{}).content;
+  var btn=document.getElementById('langSwitch');
+
+  function aplicar(l){
+    var en=l==='en';
+    document.documentElement.lang=en?'en':'es';
+    nodos.forEach(function(el){
+      var k=el.dataset.i18n,v=en?(EN[k]||ES[k]):ES[k];
+      if(v!=null&&el.innerHTML!==v)el.innerHTML=v;
+    });
+    phs.forEach(function(el){
+      var k=el.dataset.i18nPh;el.placeholder=en?(EN[k]||ESP[k]):ESP[k];
+    });
+    document.title=en?EN._title:esTitle;
+    var m=document.querySelector('meta[name=description]');
+    if(m)m.content=en?EN._desc:esDesc;
+    if(btn){var sp=btn.children;sp[0].className=en?'':'on';sp[1].className=en?'on':''}
+    try{localStorage.setItem('qg-lang',l)}catch(e){}
+  }
+
+  var guardado=null;
+  try{guardado=localStorage.getItem('qg-lang')}catch(e){}
+  var inicial=guardado||(/^en/i.test(navigator.language||'')?'en':'es');
+  if(inicial==='en')aplicar('en');
+
+  if(btn)btn.addEventListener('click',function(){
+    aplicar(document.documentElement.lang==='en'?'es':'en');
+  });
 })();
 </script>
 </body>
